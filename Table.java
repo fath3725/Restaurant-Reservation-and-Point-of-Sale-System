@@ -1,8 +1,8 @@
 public class Table {
 
 	private int tableID;
-	private int tablePax;
-	private ENUM status;
+	private int tableSize;
+	private Status status;
 
 	/**
 	 * 
@@ -25,19 +25,19 @@ public class Table {
 		this.tableID = tableID;
 	}
 
-	public int getTablePax() {
-		return this.tablePax;
+	public int getTableSize() {
+		return this.tableSize;
 	}
 
 	/**
 	 * 
-	 * @param tablePax
+	 * @param tableSize
 	 */
-	public void setTablePax(int tablePax) {
-		this.tablePax = tablePax;
+	public void setTableSize(int tableSize) {
+		this.tableSize = tableSize;
 	}
 
-	public ENUM getStatus() {
+	public Status getStatus() {
 		return this.status;
 	}
 
@@ -45,28 +45,8 @@ public class Table {
 	 * 
 	 * @param status
 	 */
-	public void setStatus(ENUM status) {
+	public void setStatus(Status status) {
 		this.status = status;
-	}
-
-	public void addOrderItem() {
-		// TODO - implement Table.addOrderItem
-		throw new UnsupportedOperationException();
-	}
-
-	public void viewOrder() {
-		// TODO - implement Table.viewOrder
-		throw new UnsupportedOperationException();
-	}
-
-	public void removeReservation() {
-		// TODO - implement Table.removeReservation
-		throw new UnsupportedOperationException();
-	}
-
-	public void printOrderInvoice() {
-		// TODO - implement Table.printOrderInvoice
-		throw new UnsupportedOperationException();
 	}
 
 }

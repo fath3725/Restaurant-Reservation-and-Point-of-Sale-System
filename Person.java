@@ -1,35 +1,31 @@
 public interface Person {
 
-	String name = '';
-	String gender = '';
-	String title = '';
+	string name = blank;
+	string gender = blank;
+	string id = blank;
 
-	String getName();
+	string getName();
 
 	/**
 	 * 
 	 * @param name
 	 */
-	void setName(String name);
+	void setName(string name);
 
-	String getGender();
+	string getGender();
 
 	/**
 	 * 
 	 * @param gender
 	 */
-	void setGender(String gender);
+	void setGender(string gender);
 
-	String getTitle();
+	string getId();
 
 	/**
 	 * 
-	 * @param title
+	 * @param id
 	 */
-	void setTitle(String title);
-
-	void addPerson();
-
-	void removePerson();
+	void setId(string id);
 
 }

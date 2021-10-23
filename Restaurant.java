@@ -1,7 +1,10 @@
 public class Restaurant {
 
 	private float GST;
-	private int NoOfTables;
+	private ArrayList<Staff> staffs;
+	private ArrayList<Table> tables;
+	private ArrayList<Table> availTables;
+	private ArrayList<Member> members;
 
 	public float getGST() {
 		// TODO - implement Restaurant.getGST
@@ -17,31 +20,38 @@ public class Restaurant {
 		throw new UnsupportedOperationException();
 	}
 
-	public int getNoOfTables() {
-		// TODO - implement Restaurant.getNoOfTables
+	public void addStaff() {
+		// TODO - implement Restaurant.addStaff
 		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * 
-	 * @param NoOfTables
-	 */
-	public void setNoOfTables(int NoOfTables) {
-		// TODO - implement Restaurant.setNoOfTables
+	public void removeStaff() {
+		// TODO - implement Restaurant.removeStaff
 		throw new UnsupportedOperationException();
 	}
 
-	public void salesRevenueReport() {
-		// TODO - implement Restaurant.salesRevenueReport
+	public void addTable() {
+		// TODO - implement Restaurant.addTable
 		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * 
-	 * @param pax
-	 */
-	public void checkTableAvailability(int pax) {
-		// TODO - implement Restaurant.checkTableAvailability
+	public void removeTable() {
+		// TODO - implement Restaurant.removeTable
+		throw new UnsupportedOperationException();
+	}
+
+	public void addMember() {
+		// TODO - implement Restaurant.addMember
+		throw new UnsupportedOperationException();
+	}
+
+	public void removeMember() {
+		// TODO - implement Restaurant.removeMember
+		throw new UnsupportedOperationException();
+	}
+
+	public void checkAvailTables() {
+		// TODO - implement Restaurant.checkAvailTables
 		throw new UnsupportedOperationException();
 	}
 

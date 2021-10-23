@@ -1,6 +1,8 @@
 public class Menu {
 
-	private MenuItem[] menu;
+	private ArrayList<AlaCarte> alaCartes;
+	private ArrayList<Package> pakages;
+	private ArrayList<PromotionPackage> promotionPackages;
 
 	public Menu() {
 		// TODO - implement Menu.Menu
@@ -19,11 +21,6 @@ public class Menu {
 
 	public void editMenuItems() {
 		// TODO - implement Menu.editMenuItems
-		throw new UnsupportedOperationException();
-	}
-
-	public void viewMenuItems() {
-		// TODO - implement Menu.viewMenuItems
 		throw new UnsupportedOperationException();
 	}
 
