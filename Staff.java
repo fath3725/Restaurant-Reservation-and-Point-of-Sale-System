@@ -21,5 +21,41 @@ public class Staff implements Person {
 	public void setJobTitle(String jobTitle) {
 		this.jobTitle = jobTitle;
 	}
+	
+	public String getName() {
+		return this.name;
+	}
+
+	/**
+	 * Set employee's name
+	 * @param String name
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getGender() {
+		return this.gender;
+	}
+
+	/**
+	 * Set employee's gender
+	 * @param String gender
+	 */
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	
+	public String getID() {
+		return this.id;
+	}
+
+	/**
+	 * Set employee's ID
+	 * @param String ID
+	 */
+	public void setID(String id) {
+		this.id = id;
+	}
 
 }
