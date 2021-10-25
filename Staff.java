@@ -2,8 +2,11 @@ public class Staff implements Person {
 
 	private String jobTitle;
 
-	public Staff() {
-		// TODO - implement Staff.Staff
+	public Staff(String name, String gender, String id, String jobTitle) {
+		this.name = name;
+		this.gender = gender;
+		this.id - id;
+		this.jobTitle = jobTitle;
 		throw new UnsupportedOperationException();
 	}
 
@@ -12,8 +15,8 @@ public class Staff implements Person {
 	}
 
 	/**
-	 * 
-	 * @param jobTitle
+	 * Set employee's job title
+	 * @param String jobTitle
 	 */
 	public void setJobTitle(String jobTitle) {
 		this.jobTitle = jobTitle;
