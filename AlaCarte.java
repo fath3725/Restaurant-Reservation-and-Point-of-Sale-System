@@ -3,11 +3,12 @@ public class AlaCarte extends MenuItem {
 	private Category category;
 
 	public AlaCarte(String name, Category category, String id, float price, String description) {
-		this.name = name;
+		super();
+		super.name = name;
 		this.category = category;
-		this.id = id;
-		this.price = price;
-		this.description = description;
+		super.id = id;
+		super.price = price;
+		super.description = description;
 		throw new UnsupportedOperationException();
 	}
 
@@ -17,8 +18,8 @@ public class AlaCarte extends MenuItem {
 	}
 
 	/**
-	 * 
-	 * @param category
+	 * Set the food's category (MainCourse, Drink, Dessert)
+	 * @param Category category
 	 */
 	public void setCategory(Category category) {
 		this.category = category;
