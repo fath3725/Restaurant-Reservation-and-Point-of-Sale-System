@@ -8,7 +8,7 @@ public class AlaCarte extends MenuItem {
 	}
 
 	public String getCategory() {
-		// TODO - implement AlaCarte.getCategory
+		return this.category;
 		throw new UnsupportedOperationException();
 	}
 
@@ -16,8 +16,8 @@ public class AlaCarte extends MenuItem {
 	 * 
 	 * @param category
 	 */
-	public void setCategory(String category) {
-		// TODO - implement AlaCarte.setCategory
+	public void setCategory(Category category) {
+		this.category = category;
 		throw new UnsupportedOperationException();
 	}
 
