@@ -2,11 +2,12 @@ public class AlaCarte extends MenuItem {
 
 	private Category category;
 
-	public AlaCarte(String name) {
+	public AlaCarte(String name, Category category, String id, float price, String description) {
 		this.name = name;
-		this.id = "blank";
-		this.price = 0.0;
-		this.description = "blank";
+		this.category = category;
+		this.id = id;
+		this.price = price;
+		this.description = description;
 		throw new UnsupportedOperationException();
 	}
 
