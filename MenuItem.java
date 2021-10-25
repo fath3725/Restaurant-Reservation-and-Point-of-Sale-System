@@ -11,11 +11,11 @@ public class MenuItem {
 	}
 
 	/**
-	 * 
-	 * @param id
+	 * Set MenuItem ID
+	 * @param String id
 	 */
-	public void setId(string id) {
-		// TODO - implement MenuItem.setId
+	public void setId(String id) {
+		this.id = id;
 		throw new UnsupportedOperationException();
 	}
 
@@ -24,8 +24,8 @@ public class MenuItem {
 	}
 
 	/**
-	 * 
-	 * @param name
+	 * Set MenuItem Name
+	 * @param String name
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -36,8 +36,8 @@ public class MenuItem {
 	}
 
 	/**
-	 * 
-	 * @param price
+	 * Set MenuItem Price
+	 * @param float price
 	 */
 	public void setPrice(float price) {
 		this.price = price;
@@ -48,8 +48,8 @@ public class MenuItem {
 	}
 
 	/**
-	 * 
-	 * @param description
+	 * Set MenuItem Description
+	 * @param String description
 	 */
 	public void setDescription(String description) {
 		this.description = description;
@@ -60,8 +60,8 @@ public class MenuItem {
 	}
 
 	/**
-	 * 
-	 * @param quantity
+	 * Set MenuItem Quantity
+	 * @param int quantity
 	 */
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
