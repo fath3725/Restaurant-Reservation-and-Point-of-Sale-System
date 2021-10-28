@@ -1,31 +1,27 @@
-public interface Person {
+class Person {
 
-	string name = blank;
-	string gender = blank;
-	string id = blank;
+	private String gender;
+	private String name;
 
-	string getName();
+	protected Person(String name,String gender){
+		this.name=name;
+		this.gender=gender;
+	} 
 
-	/**
-	 * 
-	 * @param name
-	 */
-	void setName(string name);
+	protected String getName(){
+		return this.name;
+	};
 
-	string getGender();
+	protected void setName(String name){
+		this.name=name;
+	};
 
-	/**
-	 * 
-	 * @param gender
-	 */
-	void setGender(string gender);
+	protected String getGender(){
+		return this.gender;
+	};
 
-	string getId();
-
-	/**
-	 * 
-	 * @param id
-	 */
-	void setId(string id);
+	protected void setGender(String gender){
+		this.gender=gender;
+	};
 
 }

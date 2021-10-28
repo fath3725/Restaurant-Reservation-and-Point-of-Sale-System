@@ -1,33 +1,23 @@
+import java.util.ArrayList;
+
 public class PromotionPackage extends MenuItem {
+	//alacarte and promotionpackage have an association rlnshp
+	private ArrayList<AlaCarte> packageItems;
 
-	private ArrayList<Package> listOfPackages;
-	private int numOfPackages;
-
-	public PromotionPackage() {
-		// TODO - implement PromotionPackage.PromotionPackage
-		throw new UnsupportedOperationException();
+	public PromotionPackage(int id,String name,float price,String description,int quantity,ArrayList<AlaCarte> packageItems) {
+		super(id,name,price,description,quantity);
+		this.packageItems=packageItems;
 	}
 
-	public int getNumOfPackages() {
-		return this.numOfPackages;
+	public void addPackageItem(AlaCarte item) {
+		this.packageItems.add(item);
 	}
 
-	/**
-	 * 
-	 * @param numOfPackages
-	 */
-	public void setNumOfPackages(int numOfPackages) {
-		this.numOfPackages = numOfPackages;
+	public void removePackageItem(int index) {
+		this.packageItems.remove(index);
 	}
 
-	public void addPackage() {
-		// TODO - implement PromotionPackage.addPackage
-		throw new UnsupportedOperationException();
+	public ArrayList<AlaCarte> getPackageItems(){
+		return this.packageItems;
 	}
-
-	public void removePackage() {
-		// TODO - implement PromotionPackage.removePackage
-		throw new UnsupportedOperationException();
-	}
-
 }

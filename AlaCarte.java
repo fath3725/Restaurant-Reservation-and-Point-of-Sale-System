@@ -1,29 +1,18 @@
 public class AlaCarte extends MenuItem {
 
-	private Category category;
+	private AlaCarteCategory category;
 
-	public AlaCarte(String name, Category category, String id, float price, String description) {
-		super();
-		super.name = name;
-		this.category = category;
-		super.id = id;
-		super.price = price;
-		super.description = description;
-		throw new UnsupportedOperationException();
+	public AlaCarte(String name, AlaCarteCategory category, String id, float price, String description,int quantity) {
+		super(id,name,price,description,quantity);
+		this.category=category;
 	}
 
 	public String getCategory() {
-		return this.category;
-		throw new UnsupportedOperationException();
+		return this.category.toString();
 	}
 
-	/**
-	 * Set the food's category (MainCourse, Drink, Dessert)
-	 * @param Category category
-	 */
-	public void setCategory(Category category) {
+	public void setCategory(AlaCarteCategory category) {
 		this.category = category;
-		throw new UnsupportedOperationException();
 	}
 
 }
