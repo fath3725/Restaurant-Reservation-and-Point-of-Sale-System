@@ -17,11 +17,11 @@ class MenuItem {
 		this.quantity=quantity;
 	}
 
-	public String getId() {
+	public int getId() {
 		return this.id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 		throw new UnsupportedOperationException();
 	}
