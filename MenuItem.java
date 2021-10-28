@@ -3,13 +3,13 @@ class MenuItem {
 	//as addMenuItem actually calls the methods in MenuItem,
 	//but the user (staff/manager) doesn't know that
 	//i.e. they know can addmenuitems but don't know how it works
-	private String id;
+	private int id;
 	private String name;
 	private float price;
 	private String description;
 	private int quantity;
 
-	public MenuItem(String id,String name,float price,String description,int quantity){
+	public MenuItem(int id,String name,float price,String description,int quantity){
 		this.id=id;
 		this.name=name;
 		this.price=price;

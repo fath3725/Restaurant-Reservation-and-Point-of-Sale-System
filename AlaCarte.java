@@ -2,7 +2,7 @@ public class AlaCarte extends MenuItem {
 
 	private AlaCarteCategory category;
 
-	public AlaCarte(String name, AlaCarteCategory category, String id, float price, String description,int quantity) {
+	public AlaCarte(int id,String name, float price, String description,int quantity,AlaCarteCategory category) {
 		super(id,name,price,description,quantity);
 		this.category=category;
 	}

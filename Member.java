@@ -11,7 +11,6 @@ public class Member extends Person {
 		this.phoneNumber = phoneNumber;
 	}
 
-
 	public int getMemberId() {
 		return this.memberId;
 	}
