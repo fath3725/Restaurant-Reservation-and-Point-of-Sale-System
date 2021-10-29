@@ -1,5 +1,10 @@
 your_branch:
+// do this when you want to commit
+git add --all
+git commit -m "message"
+git push 
 git checkout main
+
 main:
 git pull
 git checkout your_branch
