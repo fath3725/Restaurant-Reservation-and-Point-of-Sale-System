@@ -1,0 +1,17 @@
+your_branch:
+git checkout main
+main:
+git pull
+git checkout your_branch
+your_branch:
+git stash
+git rebase main (merging step)
+git stash pop
+//solve all the conflicts
+git add --all
+git commit -m "your message"
+git checkout main
+main:
+git merge your_branch
+(might have to add and commit again here)
+git push
