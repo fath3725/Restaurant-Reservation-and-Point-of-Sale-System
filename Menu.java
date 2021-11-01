@@ -1,14 +1,19 @@
+import java.util.ArrayList;
+
 public class Menu {
 
-	private AlaCarte[] alaCartes;
-	private PromotionPackage[] promotionPackages;
+	private ArrayList<AlaCarte> alaCartes;
+	private ArrayList<PromotionPackage> promotionPackages;
 
+	/**
+	 * Gets the time stamp of this reservation.
+	 * @return this reservation's timeStamp.
+	 */
 	public Menu() {
 		// TODO - implement Menu.Menu
 		throw new UnsupportedOperationException();
 	}
 
-	//can make this polymorphic? add to menu or add to order
 	public void addMenuItems() {
 		// TODO - implement Menu.addMenuItems
 		throw new UnsupportedOperationException();

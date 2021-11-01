@@ -5,7 +5,7 @@ public class Restaurant {
 	/**
 	 * Constant number for GST.
 	 */
-	final float GST = 0.07;
+	final double GST = 0.07;
 	/**
 	 * The array that stores all staffs.
 	 */
