@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 
 public class PromotionPackage extends MenuItem {
-	//alacarte and promotionpackage have an association rlnshp
+
 	private ArrayList<AlaCarte> packageItems;
+	
 	/**
 	 * Creates a new PromotionPackage with the given packageId, name, price and description and quantity.
 	 * @param packageId This PromotionPackage's packageId.
@@ -16,16 +17,23 @@ public class PromotionPackage extends MenuItem {
 		super(packageId,name,price,description,quantity);
 		this.packageItems=packageItems;
 	}
-
+	/**
+	 * Gets the packageItems of this promotionPackage.
+	 * @return this promotionPackages's packageItems.
+	 */
+	public ArrayList<AlaCarte> viewPackageItems() {
+		return this.packageItems;
+	}
+	/**
+	 * Adds AlaCartes to the packageItems of this promotionPackage.
+	 */
 	public void addPackageItem(AlaCarte item) {
 		this.packageItems.add(item);
 	}
-
+	/**
+	 * Removes AlaCartes from the packageItems of this promotionPackage.
+	 */
 	public void removePackageItem(int index) {
 		this.packageItems.remove(index);
-	}
-
-	public ArrayList<AlaCarte> getPackageItems(){
-		return this.packageItems;
 	}
 }
