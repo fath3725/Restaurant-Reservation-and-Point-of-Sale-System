@@ -10,7 +10,7 @@ public class PromotionPackage extends MenuItem {
 	 * @param price This PromotionPackage's price.
 	 * @param description This PromotionPackage's description.
 	 * @param quantity This PromotionPackage's quantity.
-	 * @param ArrayList<AlaCarte>packageItems This PromotionPackage's arrayslist of AlaCartes
+	 * @param ArrayList<AlaCarte>packageItems This PromotionPackage's arraylist of AlaCartes
 	 */
 	public PromotionPackage(int id,String name,float price,String description,int quantity,ArrayList<AlaCarte> packageItems) {
 		super(id,name,price,description,quantity);
