@@ -17,12 +17,11 @@ class MenuItem {
 	 * @param description This menuitem's description.
 	 * @param quantity This menuitem's quantity.
 	 */
-	public MenuItem(int id,String name,float price,String description,int quantity){
+	public MenuItem(int id,String name,float price,String description){
 		this.id=id;
 		this.name=name;
 		this.price=price;
 		this.description=description;
-		this.quantity=quantity;
 	}
 	/**
 	 * Gets the id of this menuitem.
