@@ -17,7 +17,10 @@ public class PromotionPackage extends MenuItem {
 		super(packageId,name,price,description);
 		this.packageItems=packageItems;
 	}
-
+	/**
+	 * Create new Promotion Package instance.
+	 * @return new PromotionPackage instance.
+	 */
 	public static PromotionPackage newPromotionPackage(ArrayList<AlaCarte> alaCartes){
 		Scanner sc = new Scanner(System.in);
 		ArrayList<AlaCarte>packageItems=new ArrayList<AlaCarte>();
@@ -49,7 +52,9 @@ public class PromotionPackage extends MenuItem {
 		sc.close();
 		return newpromotionpackage;
 	}
-
+	/**
+	 * Edits the attributes of this promotionPackage.
+	 */
 	public void editPromotionPackage(ArrayList<AlaCarte> alaCartes){
 		Scanner sc = new Scanner(System.in);
 		while (true){
@@ -107,7 +112,9 @@ public class PromotionPackage extends MenuItem {
 		}
 		sc.close();
 	}
-
+	/**
+	 * Views the packageItems of this promotionPackage.
+	 */
 	public void viewPackageItems(){
 		System.out.println("Package Items:");
 		for (int i=0;i<packageItems.size();i++){

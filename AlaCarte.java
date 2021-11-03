@@ -100,7 +100,7 @@ public class AlaCarte extends MenuItem {
 	 * @return this menuitem's category.
 	 */
 	public AlaCarteCategory getCategory() {
-		return category;
+		return this.category;
 	}
 	/**
 	 * Sets the category of this menuitem.

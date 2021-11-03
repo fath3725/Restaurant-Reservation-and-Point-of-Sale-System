@@ -5,20 +5,30 @@ public class Menu {
 
 	private ArrayList<AlaCarte> alaCartes;
 	private ArrayList<PromotionPackage> promotionPackages;
-
+	/**
+	 * Creates a new Menu 
+	 */
 	public Menu() {
 		alaCartes=new ArrayList<AlaCarte>();
 		promotionPackages=new ArrayList<PromotionPackage>();
 	}
-
+	/**
+	 * Gets the alaCartes of this Menu.
+	 * @return ArrayList<AlaCarte>alaCartes
+	 */
 	public ArrayList<AlaCarte> getAlaCarte(){
-		return alaCartes;
+		return this.alaCartes;
 	}
-
+	/**
+	 * Gets the alaCartes of this Menu.
+	 * @return ArrayList<PromotionPackage>promotionPackages
+	 */
 	public ArrayList<PromotionPackage> getPromotionPackage(){
-		return promotionPackages;
+		return this.promotionPackages;
 	}
-
+	/**
+	 * Views the alaCartes of this Menu.
+	 */
 	public void viewAlaCartes(){
 		if (alaCartes.size()==0){
 			System.out.println("No AlaCartes in menu at the moment");
@@ -44,7 +54,9 @@ public class Menu {
 			System.out.println("");
 		}
 	}
-
+	/**
+	 * Views the promotionPackages of this Menu.
+	 */
 	public void viewPromotionPackages(){
 		if (promotionPackages.size()==0){
 			System.out.println("No PromotionPackages in menu at the moment");
@@ -64,7 +76,9 @@ public class Menu {
 			System.out.println("");
 		}
 	}
-
+	/**
+	 * Adds alaCartes into this Menu.
+	 */
 	public void addItems(Menu menu) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Add Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package");
@@ -79,7 +93,9 @@ public class Menu {
 		}
 		sc.close();
 	}
-
+	/**
+	 * Removes from alaCartes/promotionPackages in this Menu.
+	 */
 	public void removeItems() {
 		Scanner sc = new Scanner(System.in);
 		while(true){
@@ -117,7 +133,9 @@ public class Menu {
 		}
 		sc.close();
 	}
-
+	/**
+	 * Edit from alaCartes/promotionpackages in this Menu.
+	 */
 	public void editItems() {
 		Scanner sc = new Scanner(System.in);
 		while(true){
