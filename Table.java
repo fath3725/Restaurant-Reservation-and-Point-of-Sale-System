@@ -27,8 +27,9 @@ public class Table {
 	 */
 	public Table(int tableSize) {
 		this.tableID = tableIdCount++;
-		this. tableSize = tableSize;
-		this.status = AVAILABLE;
+		this.tableSize = tableSize;
+		this.tablePax = 0;
+		this.status = status.AVAILABLE;
 	}
 	/**
 	 * Gets the ID of this table.
