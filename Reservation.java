@@ -1,3 +1,8 @@
+import java.util.Date;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar;
+
 public class Reservation {
 
 	/**
@@ -7,7 +12,7 @@ public class Reservation {
 	/**
 	 * The phone number used for reservation.
 	 */
-	private String contactReservedUnder;
+	private int contactReservedUnder;
 	/**
 	 * The name used for reservation.
 	 */
@@ -19,7 +24,7 @@ public class Reservation {
 	/**
 	 * The time of reservation.
 	 */
-	private Timestamp timeStamp;
+	private Date timeStamp;
 
 	/**
 	 * Creates a new reservation with the given pax, contact, name, table and timeStamp.
@@ -29,12 +34,12 @@ public class Reservation {
 	 * @param table
 	 * @param timeStamp
 	 */
-	public Reservation(int pax, int contact, String name, int table, Timestamp timeStamp) {
+	public Reservation(int pax, int contact, String name, int table) {
 		this.paxReserved = pax;
 		this.contactReservedUnder = contact;
 		this.nameReservedUnder = name;
 		this.tableReserved = table;
-		this.timeStamp = timeStamp;
+		this.timeStamp = new Date();
 	}
 	/**
 	 * Gets the pax reserved for this reservation.
@@ -54,14 +59,14 @@ public class Reservation {
 	 * Gets the contact number used for this reservation.
 	 * @return this reservation's getContactReservedUnder.
 	 */
-	public String getContactReservedUnder() {
+	public int getContactReservedUnder() {
 		return this.contactReservedUnder;
 	}
 	/**
 	 * Changes the contact number used for this reservation.
 	 * @param contactReservedUnder This reservation's new contactReservedUnder.
 	 */
-	public void setContactReservedUnder(String contactReservedUnder) {
+	public void setContactReservedUnder(int contactReservedUnder) {
 		this.contactReservedUnder = contactReservedUnder;
 	}
 	/**
@@ -79,19 +84,31 @@ public class Reservation {
 		this.nameReservedUnder = nameReservedUnder;
 	}
 	/**
+	 * Gets the table ID used for this reservation.
+	 * @return this reservation's tableReserved.
+	 */
+	public int getTableReserved() {
+		return this.tableReserved;
+	}
+	/**
+	 * Changes the table ID used for this reservation.
+	 * @param tableReserved This reservation's new tableReserved.
+	 */
+	public void setTableReserved(int tableReserved) {
+		this.tableReserved = tableReserved;
+	}
+	/**
 	 * Gets the time stamp of this reservation.
 	 * @return this reservation's timeStamp.
 	 */
-	publi
-	public Timestamp getTimeStamp() {
+	public Date getTimeStamp() {
 		return this.timeStamp;
 	}
 	/**
 	 * Changes the time stmap of this reservation.
 	 * @param timeStamp This reservation's new timeStamp.
 	 */
-	public void setTimeStamp(Timestamp timeStamp) {
+	public void setTimeStamp(Date timeStamp) {
 		this.timeStamp = timeStamp;
 	}
-
 }

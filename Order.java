@@ -1,19 +1,39 @@
-public class Order {
+import java.util.Date;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar;
+import java.util.*;
+import java.io.*;
 
-	private Staff staff;
-	private Table table;
-	private ArrayList<MenuItem> oderItems;
-	private Timestamp timeStamp;
-	private float discount;
+public class Order extends Menu {
+	
+	private int orderStaffID;
+	private int orderTableID;
+	private Date timeStamp;
 
-	public Order() {
-		// TODO - implement Order.Order
-		throw new UnsupportedOperationException();
+	public Order(int orderStaffID, int orderTableID) {
+		this.orderStaffID = orderStaffID;
+		this.orderTableID = orderTableID;
+		this.timeStamp = new Date();
 	}
-
 	public void print() {
 		// TODO - implement Order.print
 		throw new UnsupportedOperationException();
+	}
+	public int getOrderTableID() {
+		return this.orderTableID;
+	}
+	public double viewOrder(){
+		for(int i=0; i<orderItems.size(); i++){
+			double total = (orderItems.get(i)).getPrice()) * (orderItems.get(i)).getQuantity()
+			double finalAmount = finalAmount + total;
+			System.out.println((orderItems.get(i)).getQuantity()+" - "+(orderItems.get(i)).getName()+"		"+total);
+		}
+		return finalAmount;
+	}
+
+	public void setOrderTableID(int orderTableID) {
+		this.orderTableID = orderTableID;
 	}
 
 	public void addOrderItem() {
@@ -31,7 +51,7 @@ public class Order {
 		throw new UnsupportedOperationException();
 	}
 
-	public Timestamp getTimeStamp() {
+	public Date getTimeStamp() {
 		return this.timeStamp;
 	}
 
@@ -39,7 +59,7 @@ public class Order {
 	 * 
 	 * @param timeStamp
 	 */
-	public void setTimeStamp(Timestamp timeStamp) {
+	public void setTimeStamp(Date timeStamp) {
 		this.timeStamp = timeStamp;
 	}
 

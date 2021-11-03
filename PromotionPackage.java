@@ -18,20 +18,18 @@ public class PromotionPackage extends MenuItem {
 		this.packageItems=packageItems;
 	}
 
-	public static PromotionPackage newPromotionPackage(){
+	public static PromotionPackage newPromotionPackage(ArrayList<AlaCarte> alaCartes){
 		Scanner sc = new Scanner(System.in);
-		System.out.println("New Promotion Package creation");
 		ArrayList<AlaCarte>packageItems=new ArrayList<AlaCarte>();
-		Menu.viewMenuAlaCartes();
 		while (true){
 			System.out.println("Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.");
 			System.out.print("Id: ");
 			int id = sc.nextInt();
 			if (id==-1) break;
 			boolean found=false;
-			for (int i=0;i<Menu.getAlaCarte().size();i++){
-				if (Menu.getAlaCarte().get(i).getId()==id) {
-					packageItems.add((Menu.getAlaCarte().get(i)));
+			for (int i=0;i<alaCartes.size();i++){
+				if (alaCartes.get(i).getId()==id) {
+					packageItems.add((alaCartes.get(i)));
 					found=true;
 					break;
 				}
@@ -52,7 +50,7 @@ public class PromotionPackage extends MenuItem {
 		return newpromotionpackage;
 	}
 
-	public void editPromotionPackage(){
+	public void editPromotionPackage(ArrayList<AlaCarte> alaCartes){
 		Scanner sc = new Scanner(System.in);
 		while (true){
 			System.out.println(
@@ -87,18 +85,21 @@ public class PromotionPackage extends MenuItem {
 				System.out.println("1.Remove item from package\n2.Add item to package");
 				System.out.print("Choice: ");
 				int option = sc.nextInt();
+				viewPackageItems();
 				if (option==1){
 					System.out.println("Remove which Id: ");
 					int packageitemid = sc.nextInt();
 					removePackageItem(packageitemid);
 				}else if (option==2){
-					Menu.viewMenuAlaCartes();
+					System.out.println("Menu AlaCarte Items: ");
+					for(int i=0; i<alaCartes.size(); i++){
+						System.out.printf("%d %s\n",alaCartes.get(i).getId(),alaCartes.get(i).getName());
+					}
 					System.out.println("Add which Id: ");
 					int packageitemid = sc.nextInt();
-					ArrayList<AlaCarte> menuAlacartes=Menu.getAlaCarte();
-					for (int i=0;i<menuAlacartes.size();i++){
-						if (packageitemid==menuAlacartes.get(i).getId()){
-							addPackageItem(menuAlacartes.get(i));
+					for (int i=0;i<alaCartes.size();i++){
+						if (packageitemid==alaCartes.get(i).getId()){
+							addPackageItem(alaCartes.get(i));
 						}
 					}
 				}
@@ -108,6 +109,7 @@ public class PromotionPackage extends MenuItem {
 	}
 
 	public void viewPackageItems(){
+		System.out.println("Package Items:");
 		for (int i=0;i<packageItems.size();i++){
 			System.out.printf("%d %s\n",packageItems.get(i).getId(),packageItems.get(i).getName());
 		}

@@ -1,31 +1,25 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//final as menu should not be extended
-//menu is a 'static' class
-public final class Menu {
+public class Menu {
 
-	private static ArrayList<AlaCarte> alaCartes;
-	private static ArrayList<PromotionPackage> promotionPackages;
+	private ArrayList<AlaCarte> alaCartes;
+	private ArrayList<PromotionPackage> promotionPackages;
 
-	/**
-	 * Gets the time stamp of this reservation.
-	 * @return this reservation's timeStamp.
-	 */
-	private Menu() {
-		Menu.alaCartes=new ArrayList<AlaCarte>();
-		Menu.promotionPackages=new ArrayList<PromotionPackage>();
+	public Menu() {
+		alaCartes=new ArrayList<AlaCarte>();
+		promotionPackages=new ArrayList<PromotionPackage>();
 	}
 
-	public static ArrayList<AlaCarte> getAlaCarte(){
+	public ArrayList<AlaCarte> getAlaCarte(){
 		return alaCartes;
 	}
 
-	public static ArrayList<PromotionPackage> getPromotionPackage(){
+	public ArrayList<PromotionPackage> getPromotionPackage(){
 		return promotionPackages;
 	}
 
-	public static void viewMenuAlaCartes(){
+	public void viewAlaCartes(){
 		if (alaCartes.size()==0){
 			System.out.println("No AlaCartes in menu at the moment");
 			return;
@@ -51,7 +45,7 @@ public final class Menu {
 		}
 	}
 
-	public static void viewMenuPromotionPackages(){
+	public void viewPromotionPackages(){
 		if (promotionPackages.size()==0){
 			System.out.println("No PromotionPackages in menu at the moment");
 			return;
@@ -71,20 +65,22 @@ public final class Menu {
 		}
 	}
 
-	//polymorphic with Order addMenuItems
-	public static void addMenuItems() {
+	public void addItems(Menu menu) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Add Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package");
 		int type = sc.nextInt();
 		if (type==1){
 			alaCartes.add(AlaCarte.newAlaCarte());
-		} else if (type==2){
-			promotionPackages.add(PromotionPackage.newPromotionPackage());
+		} 
+		else if (type==2){
+			System.out.println("New Promotion Package creation");
+			menu.viewAlaCartes();
+			promotionPackages.add(PromotionPackage.newPromotionPackage(alaCartes));
 		}
 		sc.close();
 	}
 
-	public static void removeMenuItems() {
+	public void removeItems() {
 		Scanner sc = new Scanner(System.in);
 		while(true){
 			System.out.print("Remove Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
@@ -92,7 +88,7 @@ public final class Menu {
 			if (type==1){
 				while(true){
 					System.out.println("Select Ala Carte id to remove, or enter -1 to quit: ");
-					viewMenuAlaCartes();
+					viewAlaCartes();
 					System.out.print("Id: ");
 					int id = sc.nextInt();
 					if (id==-1) break;
@@ -106,7 +102,7 @@ public final class Menu {
 			} else if (type==2){
 				while(true){
 					System.out.println("Select Promotion package id to remove, or enter -1 to quit: ");
-					viewMenuPromotionPackages();
+					viewPromotionPackages();
 					System.out.print("Id: ");
 					int id = sc.nextInt();
 					if (id==-1) break;
@@ -122,7 +118,7 @@ public final class Menu {
 		sc.close();
 	}
 
-	public static void editMenuItems() {
+	public void editItems() {
 		Scanner sc = new Scanner(System.in);
 		while(true){
 			System.out.print("Edit Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
@@ -130,7 +126,7 @@ public final class Menu {
 			if (type==1){
 				while(true){
 					System.out.println("Select Ala Carte id to edit, or enter -1 to quit: ");
-					viewMenuAlaCartes();
+					viewAlaCartes();
 					System.out.print("Id: ");
 					int id=sc.nextInt();
 					for (int i=0;i<alaCartes.size();i++){
@@ -143,13 +139,13 @@ public final class Menu {
 			} else if (type==2){
 				while(true){
 					System.out.println("Select Promotion package id to edit, or enter -1 to quit: ");
-					viewMenuPromotionPackages();
+					viewPromotionPackages();
 					System.out.print("Id: ");
 					int id = sc.nextInt();
 					if (id==-1) break;
 					for (int i=0;i<promotionPackages.size();i++){
 						if (id == promotionPackages.get(i).getId()){
-							promotionPackages.get(i).editPromotionPackage();
+							promotionPackages.get(i).editPromotionPackage(alaCartes);
 							break;
 						}
 					}
