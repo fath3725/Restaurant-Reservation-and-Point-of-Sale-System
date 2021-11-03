@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Menu {
 
-	private ArrayList<AlaCarte> alaCartes;
-	private ArrayList<PromotionPackage> promotionPackages;
+	protected ArrayList<AlaCarte> alaCartes;
+	protected ArrayList<PromotionPackage> promotionPackages;
 
 	public Menu() {
 		alaCartes=new ArrayList<AlaCarte>();
