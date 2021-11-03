@@ -1,7 +1,4 @@
 import java.util.*;
-import java.io.*;
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
 
 public class Restaurant {
 	/**
@@ -74,7 +71,7 @@ public class Restaurant {
 			int memPhoneNumber = sc.nextInt();
 			members.add(new Member(memName, memGender, memPhoneNumber)); //adds new member into arraylist
 		}
-		
+		sc.close();
 	}
 	/**
 	 * Creates and add a new staff into the staffs array.
@@ -92,11 +89,13 @@ public class Restaurant {
 		for(int i=0; i<staffs.size(); i++){
 			if((staffs.get(i)).getName() == staffName && (staffs.get(i)).getGender() == staffGender && (staffs.get(i)).getJobTitle() == staffJob){
 				System.out.println("Staff already exist");
+				sc.close();
 				return;
 			}
 		}
 		staffs.add(new Staff(staffName, staffGender, staffJob));
 		System.out.println("Staff added");
+		sc.close();
 		throw new UnsupportedOperationException();
 	}
 	/**
@@ -117,10 +116,12 @@ public class Restaurant {
 		System.out.println("Which staff to remove? (Enter invalid choice to terminate process): ");
 		int temp = sc.nextInt();
 		if(temp > staffs.size()){
+			sc.close();
 			return;
 		}
 		staffs.remove(temp-1);
 		System.out.println("Staff removed");
+		sc.close();
 	}
 		
 	/**
@@ -131,7 +132,7 @@ public class Restaurant {
 		System.out.println("Enter table size: ");
 		int tableSize = sc.nextInt();
 		tables.add(new Table(tableSize));
-		throw new UnsupportedOperationException();
+		sc.close();
 	}
 	/**
 	 * Prints all table information.
@@ -151,10 +152,12 @@ public class Restaurant {
 		System.out.println("Which table to remove? (Enter invalid choice to terminate process): ");
 		int temp = sc.nextInt();
 		if(temp > tables.size()){
+			sc.close();
 			return;
 		}
 		tables.remove(temp-1);
 		System.out.println("Table removed");
+		sc.close();
 	}
 		
 	/**
@@ -171,11 +174,12 @@ public class Restaurant {
 		for(int i=0; i<members.size(); i++){
 			if((members.get(i)).getName() == memName && (members.get(i)).getGender() == memGender && (members.get(i)).getPhoneNumber() == memPhone){
 				System.out.println("Member already exist");
+				sc.close();
 				return;
 			}
 		}
 		members.add(new Member(memName, memGender, memPhone));
-		throw new UnsupportedOperationException();
+		sc.close();
 	}
 	/**
 	 * Prints all member information.
@@ -195,10 +199,12 @@ public class Restaurant {
 		System.out.println("Which member to remove? (Enter invalid choice to terminate process): ");
 		int temp = sc.nextInt();
 		if(temp > members.size()){
+			sc.close();
 			return;
 		}
 		members.remove(temp-1);
 		System.out.println("Member removed");
+		sc.close();
 	}
 	
 	/**
@@ -263,17 +269,21 @@ public class Restaurant {
 		System.out.println("Enter customer's name: ");
 		String customerName = sc.nextLine();
 		int check = printAvailableTables();
-		if(check == 0)
+		if(check == 0) {
+			sc.close();
 			return;
+		}
 		System.out.println("Enter table selected for reservation: ");
 		int resTableID = sc.nextInt();
 		currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID));
 		for(int i=0; i<tables.size(); i++){
 			if(tables.get(i).getTableID() == resTableID){
 				tables.get(i).setStatus(Status.RESERVED);
+				sc.close();
 				return;
 			}
 		}
+		sc.close();
 	}
 	/**
 	 * Prints all current reservation information and allow user to choose which reservation to cancel.
@@ -284,6 +294,7 @@ public class Restaurant {
 		System.out.println("Which reservation to remove? (Enter invalid choice to terminate process): ");
 		int temp = sc.nextInt();
 		if(temp > currentReservations.size()){
+			sc.close();
 			return;
 		}
 		int toRemove = currentReservations.get(temp-1).getTableReserved();
@@ -292,9 +303,11 @@ public class Restaurant {
 		for(int i=0; i<tables.size(); i++){
 			if(tables.get(i).getTableID() == toRemove){
 				tables.get(i).setStatus(Status.AVAILABLE);
+				sc.close();
 				return;
 			}
 		}
+		sc.close();
 	}
 	/**
 	 * Prints all current reservation information.
@@ -319,8 +332,10 @@ public class Restaurant {
 			System.out.println("How many pax?: ");
 			int numberOfPeople = sc.nextInt();
 			int check = printAvailableTables(numberOfPeople);
-			if(check == 0)
+			if(check == 0) {				
+				sc.close();
 				return;
+			}
 			System.out.println("Choose table ID to seat customer? (Enter invalid choice to terminate process): ");
 			int temp = sc.nextInt();
 			for(int i=0; i<tables.size(); i++){
@@ -328,6 +343,7 @@ public class Restaurant {
 					System.out.println("Customer Seated at Table "+(tables.get(i)).getTableID());
 					tables.get(i).setStatus(Status.OCCUPIED);
 					tables.get(i).setTablePax(numberOfPeople);
+					sc.close();
 					return;
 				}
 			}
@@ -344,6 +360,7 @@ public class Restaurant {
 							System.out.println("Customer Seated at Table "+(currentReservations.get(i)).getTableReserved());
 							tables.get(j).setStatus(Status.OCCUPIED);
 							tables.get(j).setTablePax((currentReservations.get(i)).getPaxReserved());
+							sc.close();
 							return;
 						}
 					}
@@ -351,6 +368,7 @@ public class Restaurant {
 			}
 			System.out.println("Invalid Reservation!");
 			System.out.println("Returning to main page");
+			sc.close();
 		}
 	}
 	/**
@@ -360,8 +378,10 @@ public class Restaurant {
 	public void paymentCustomer(){
 		Scanner sc = new Scanner(System.in);
 		int temp = printOccupiedTables();
-		if(temp == 0)
+		if(temp == 0) {
+			sc.close();
 			return;
+		}
 		System.out.println("Choose table ID for payment? (Enter invalid choice to terminate process): ");
 		int choice = sc.nextInt();
 		for(int i=0; i<orders.size(); i++){
@@ -370,37 +390,53 @@ public class Restaurant {
 				System.out.println("---------------------------------------");
 				double finalAmt = (orders.get(i)).viewOrder();
 				System.out.println("---------------------------------------");
-				System.out.println("Sub Total: %.2f"+finalAmt);
-				System.out.println("7% GST: %.2f"+(finalAmt*GST));
-				System.out.println("Total: %.2f"+((finalAmt*GST)+finalAmt));
+				System.out.printf("Sub Total: %.2f\n"+finalAmt);
+				System.out.printf("7% GST: %.2f\n"+(finalAmt*GST));
+				System.out.printf("Total: %.2f\n"+((finalAmt*GST)+finalAmt));
 				System.out.println("-----Thank you for dining with us!-----");
 				tables.get(i).setStatus(Status.AVAILABLE);
 				tables.get(i).setTablePax(0);
+				sc.close();
 				return;
 			}
 		}
+		sc.close();
 	}
-	//
+	/**
+	 * Allows user to create a new order to add into the orders array.
+	 */
 	public void addOrder() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter number of pax: ");
-		int noOfPax = sc.nextInt();
-		System.out.println("Enter customer's contact number: ");
-		int contactNumber = sc.nextInt();
-		System.out.println("Enter customer's name: ");
-		String customerName = sc.nextLine();
-		int check = printAvailableTables();
-		if(check == 0)
-			return;
-		System.out.println("Enter table selected for reservation: ");
-		int resTableID = sc.nextInt();
-		currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID));
-		for(int i=0; i<tables.size(); i++){
-			if(tables.get(i).getTableID() == resTableID){
-				tables.get(i).setStatus(Status.RESERVED);
+		System.out.println("Enter Staff's ID: ");
+		int orderStaffID = sc.nextInt();
+		System.out.println("Enter Table's ID: ");
+		int orderTableID = sc.nextInt();
+		orders.add(new Order(orderStaffID, orderTableID));
+		for(int i=0; i<orders.size(); i++){
+			if(orders.get(i).getOrderTableID() == orderTableID){
+				orders.get(i).addItems(menu);
+				sc.close();
 				return;
 			}
 		}
+		sc.close();
+	}
+	/**
+	 * Allows user to view all current order in the orders array.
+	 */
+	public void printSpecificOrder() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Table's ID: ");
+		int orderTableID = sc.nextInt();
+		for(int i=0; i<orders.size(); i++){
+			if(orders.get(i).getOrderTableID() == orderTableID){
+				double finalAmt = orders.get(i).viewOrder();
+				System.out.printf("Current Total exclude GST: %.2f", finalAmt);
+				sc.close();
+				return;
+			}
+		}
+		sc.close();
 	}
 	/**
 	 * Gets the menu of this restaurant.

@@ -1,5 +1,4 @@
 public class Table {
-
 	/**
 	 * The indexing for each table added/removed.
 	 */
@@ -29,7 +28,7 @@ public class Table {
 		this.tableID = tableIdCount++;
 		this.tableSize = tableSize;
 		this.tablePax = 0;
-		this.status = status.AVAILABLE;
+		this.status = Status.AVAILABLE;
 	}
 	/**
 	 * Gets the ID of this table.

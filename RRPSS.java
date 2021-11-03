@@ -1,17 +1,10 @@
 import java.util.*;
-import java.io.*;
 
 public class RRPSS {
 
 	public static void main(String[] args){
 		
-		float totalRevenue;
-		ArrayList<Order> orderRecord;
-		ArrayList<Reservation> reservationRecord;
-		ArrayList<Order> currentOrders;
 		Restaurant restaurant = new Restaurant();
-
-		
 		Scanner sc = new Scanner(System.in);
 		int choice, innerChoice;
 		do {
@@ -137,6 +130,7 @@ public class RRPSS {
 				}
 			}
 		while(choice <23);
+		sc.close();
 		}
 
 		
@@ -194,7 +188,7 @@ public class RRPSS {
 			// TODO - implement RRPSS.editReservation
 			throw new UnsupportedOperationException();
 		}
-
+		
 	}
 
 	

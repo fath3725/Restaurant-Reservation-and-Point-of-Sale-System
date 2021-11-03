@@ -3,11 +3,9 @@ import java.util.Scanner;
 
 public class Menu {
 
-	private ArrayList<AlaCarte> alaCartes;
-	private ArrayList<PromotionPackage> promotionPackages;
-	/**
-	 * Creates a new Menu 
-	 */
+	protected ArrayList<AlaCarte> alaCartes;
+	protected ArrayList<PromotionPackage> promotionPackages;
+
 	public Menu() {
 		alaCartes=new ArrayList<AlaCarte>();
 		promotionPackages=new ArrayList<PromotionPackage>();

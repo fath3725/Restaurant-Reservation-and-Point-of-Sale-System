@@ -1,7 +1,6 @@
 import java.util.Date;
 
 public class Reservation {
-
 	/**
 	 * The pax reserved.
 	 */
