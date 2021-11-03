@@ -1,0 +1,405 @@
+*As so many functions, Im only able to write detailed test cases for the main ones: reservations and orders.
+*Feel free to change, extend and make the app more user friendly. Dont code exactly like this, it just a demo
+
+Dashboard
+(1) Menu 
+(2) Sale revenue 
+(3) Orders
+(4) Reservations
+(5) Restaurant information
+(6) Make payment
+(7) Exit
+Enter your choice: 1
+
+Dashboard/Menu
+(1) View menu
+(2) View menu item 
+(3) Add menu item 
+(4) Edit menu item
+(5) Remove item 
+(6) Back
+Enter your choice : 1 
+(show organized menu, otherwise: "menu is empty")
+Enter your choice: 2
+(require id or name of item -> if item found, show all item's info, otherwise: "item doesnt exist")
+Enter your choice: 3
+(require all new item's info -> "successful")
+Enter your choice: 4
+(require name or id of item -> show all item's info (or "item doesnt exist") -> require attributes 
+need to changed -> show all item's info again)
+Enter your choice: 5
+(require id or name of item -> if item found, "successful", otherwise "item doesnt exist")
+Enter your choice: 6
+
+Dashboard
+(1) Menu 
+(2) Sale revenue 
+(3) Orders
+(4) Reservations
+(5) Restaurant information
+(6) Make payment
+(7) Exit
+Enter your choice: 2
+
+Dashboard/Revenue
+(1)Total revenue
+(2)Detailed history
+(3)Back
+Enter your choice: 2
+(print all finished orders)
+Enter your choice: 3 
+
+Dashboard
+(1) Menu 
+(2) Sale revenue 
+(3) Orders
+(4) Reservations
+(5) Restaurant information
+(6) Make payment
+(7) Exit
+Enter your choice: 5
+
+Dashboard/Restaurant
+(1) GST(set,get)
+(2) Staffs (view,edit,add,remove)
+(3) Members (same as staffs)
+(4) Table (same as staffs)
+(5) Back
+Enter your choice: 5
+
+Dashboard
+(1) Menu 
+(2) Sale revenue 
+(3) Orders
+(4) Reservations
+(5) Restaurant information
+(6) Make payment
+(7) Exit
+Enter your choice: 6
+(require table id, -> print order -> ask "payment finished yet?" -> if yes, set order as finished)
+
+
+# TEST ORDER FUNCTION
+(1) Menu 
+(2) Sale revenue 
+(3) Orders
+(4) Reservations
+(5) Restaurant information
+(6) Make payment
+(7) Exit
+Enter your choice: 3
+
+Dashboard/Orders
+(1)View order
+(2)Create order
+(3)Remove order
+(4)Edit order
+(5)View order history
+(6)Back
+Enter your choice: 1
+-No avail order
+Enter your choice: 2
+
+Dashboard/Order/Create
+-(show brief menu)
+(1) Input employee
+(2) Input table id
+(3) Input order items
+(4) Submit
+(5) Back
+Enter your choice: 1
+Enter employee id: abc 
+-Employee not found
+Enter your choice: 1
+Enter employee id: 123 
+-Done
+Enter your choice: 2
+Enter table id: 1
+-Done
+Enter your choice: 3
+Enter a list of id item and quantity (e.g A1 2 A3 4): A1 2 A3 4 
+-Done (or item A1 out of stock) (or item A2 not found) (or quantity for A1 must be > 0) try with these invalid
+Enter your choice: 4
+-Done (after done, navigate user to dashboard/order)
+
+Dashboard/Orders
+(1)View order
+(2)Create order
+(3)Remove order
+(4)Edit order
+(5)View order history
+(6)Back
+Enter your choice: 1
+-(return the order just created)
+Enter your choice: 2
+
+Dashboard/Order/Create
+-(show brief menu)
+(1) Input employee
+(2) Input table id
+(3) Input order items
+(4) Submit
+(5) Back
+Enter your choice: 2
+Enter table id: 1 
+-This table is occupied (already has an unfinished order) 
+Enter your choice: 5
+
+Dashboard/Orders
+(1)View order
+(2)Create order
+(3)Remove order
+(4)Edit order
+(5)View order history
+(6)Back
+Enter your choice: 4
+Enter table id of the order: 1
+
+Dashboard/Orders/Edit
+(1) Change order item
+(2) Change table id 
+(3) Change staff 
+(4) Back
+Enter your choice: 2
+Enter new table id: 2
+-Done
+Enter your choice: 4
+
+Dashboard/Orders
+(1)View order
+(2)Create order
+(3)Remove order
+(4)Edit order
+(5)View order history
+(6)Back
+Enter your choice: 2
+
+Dashboard/Order/Create
+-(show brief menu)
+(1) Input employee
+(2) Input table id
+(3) Input order items
+(4) Submit
+(5) Back
+Enter your choice: 1
+Enter employee id: 1234
+-Done
+Enter your choice: 2
+Enter table id: 1 (now table 1 is valid)
+-Done
+Enter your choice: 4
+-Please input order items
+Enter your choice:3
+Enter a list of id item and quantity (e.g A1 2 A3 4): B5 1
+-Done
+Enter your choice: 4
+-Done
+
+Dashboard/Orders
+(1)View order
+(2)Create order
+(3)Remove order
+(4)Edit order
+(5)View order history
+(6)Back
+Enter your choice: 1
+Enter table id of order: 2
+-(return the first order)
+Enter your choice: 5
+-(return 2 orders, sorted by timestamp or ...)
+Enter your choice: 6
+
+Dashboard
+(1) Menu 
+(2) Sale revenue 
+(3) Orders
+(4) Reservations
+(5) Restaurant information
+(6) Make payment
+(7) Exit
+Enter your choice: 6
+Enter table id of order: 3
+-No order for this table
+Enter your choice: 6
+Enter table id of order: 2
+
+Dashboard/Payment
+(1) Print order (payment has been made, auto set order as finished) 
+(2) Discount 
+(3) Back
+Enter your choice: 2
+Enter member id: sjsjs
+-member for this id not exist
+Enter your choice: 2
+Enter member id: abc
+-done
+Enter your choice: 3
+ 
+Dashboard
+(1) Menu 
+(2) Sale revenue 
+(3) Orders
+(4) Reservations
+(5) Restaurant information
+(6) Make payment
+(7) Exit
+Enter your choice: 3
+
+Dashboard/Orders
+(1)View order
+(2)Create order
+(3)Remove order
+(4)Edit order
+(5)View order history
+(6)Back
+Enter your choice: 1
+Enter table id of order: 2
+-Order may not exist or finished already
+Enter your choice: 5
+Current:
+At table 1, total price:, created at:, created by
+Finished:
+At table 2, total price:, created at:, created by
+
+Try creating more and editing, removing some orders and repeat this test with new inputs
+I forgot adding: view all current order, which return only order in table 1.
+
+
+#TEST RESERVATION FUNCTION
+Dashboard
+(1) Menu 
+(2) Sale revenue 
+(3) Orders
+(4) Reservations
+(5) Restaurant information
+(6) Make payment
+(7) Exit
+Enter your choice: 4
+
+Dashboard/Reservations
+(1) View reservation 
+(2) View current reservations
+(3) View all reservations
+(4) Create reservation
+(5) Edit reservations
+(6) Remove reservations
+(7) Back
+Enter your choice: 1 (or 2, or 3)
+-No avail reservation
+Enter your choice: 4
+
+Dashboard/Reservations/Create
+(1) Input timeStamp
+(2) Input customer info
+(3) Input pax number
+(4) Input table id
+(5) Submit
+(6) Back 
+Enter your choice: 5
+-Please input timeStamp, customer info, pax number, table id
+Enter your choice: 1
+Enter detailed timeStamp (must > now): (enter a due date)
+-Invalid timeStamp
+Enter your choice: 1
+Enter detailed timeStamp (must > now): (enter a valid date)
+-Done
+Enter your choice:2
+Enter customer info: ...
+-Done
+Enter your choice: 3
+Enter pax number: 1 (or 20)
+-Too few (or many) people
+Enter your choice: 3
+Enter pax number: 8
+-Done (or currently there is no table for 8, maybe they all are occupied or reserved)
+Enter your choice: 4
+-(show all table with size > pax numbers)
+Enter table id: 3
+-Done
+Enter your choice: 5
+-Done
+
+Dashboard/Reservations
+(1) View reservation 
+(2) View current reservations
+(3) View all reservations
+(4) Create reservation
+(5) Edit reservations
+(6) Remove reservations
+(7) Back
+Enter your choice: 1
+- return the reservations just created
+Enter your choice: 5
+
+Dashboard/Reservations/Edit
+(1) Edit timeStamp
+(2) Edit customer info
+(3) Edit pax number
+(4) Edit table id
+(5) Confirm
+(6) Back 
+Enter your choice: 3
+Enter new pax number: 10
+-Current table (table 3) has size 8 < 10, pls change table 
+Enter new table id: 1 (from test case of order function)
+-This table currently is occupied (has an order), pls change table
+Enter new table id: 4
+-Done
+Enter your choice: 5
+
+Dashboard/Reservations
+(1) View reservation 
+(2) View current reservations
+(3) View all reservations
+(4) Create reservation
+(5) Edit reservations
+(6) Remove reservations
+(7) Back
+Enter your choice: 7
+
+Dashboard
+(1) Menu 
+(2) Sale revenue 
+(3) Orders
+(4) Reservations
+(5) Restaurant information
+(6) Make payment
+(7) Exit
+Enter your choice: 3
+
+Dashboard/Orders
+(1)View order
+(2)Create order
+(3)Remove order
+(4)Edit order
+(5)View order history
+(6)Back
+Enter your choice: 2
+
+Dashboard/Order/Create
+-(show brief menu)
+(1) Input employee
+(2) Input table id
+(3) Input order items
+(4) Submit
+(5) Back
+Enter your choice: 2
+Enter table id of order: 4
+-This table is reserved- pls change table
+Enter your choice: 5
+
+Now, set the date pass the time stamp of above reservation
+Dashboard/Reservations
+(1) View reservation 
+(2) View current reservations
+(3) View all reservations
+(4) Create reservation
+(5) Edit reservations
+(6) Remove reservations
+(7) Back
+Enter your choice: 1
+-Empty
+
+Note: In case customers come before timeStamp in reservation and want to order, because 
+they cannot make an order while reservation is still there, so we just need to edit reservation and set 
+the timeStamp to current time. (or remove reservation but we lose it from database) 
