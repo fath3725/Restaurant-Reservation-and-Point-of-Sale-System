@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 //final as menu should not be extended
+//menu is a 'static' class
 public final class Menu {
 
 	private static ArrayList<AlaCarte> alaCartes;
@@ -50,7 +51,7 @@ public final class Menu {
 		}
 	}
 
-	public void viewMenuPromotionPackages(){
+	public static void viewMenuPromotionPackages(){
 		if (promotionPackages.size()==0){
 			System.out.println("No PromotionPackages in menu at the moment");
 			return;
@@ -71,7 +72,7 @@ public final class Menu {
 	}
 
 	//polymorphic with Order addMenuItems
-	public void addMenuItems() {
+	public static void addMenuItems() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Add Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package");
 		int type = sc.nextInt();
@@ -83,7 +84,7 @@ public final class Menu {
 		sc.close();
 	}
 
-	public void removeMenuItems() {
+	public static void removeMenuItems() {
 		Scanner sc = new Scanner(System.in);
 		while(true){
 			System.out.print("Remove Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
@@ -121,7 +122,7 @@ public final class Menu {
 		sc.close();
 	}
 
-	public void editMenuItems() {
+	public static void editMenuItems() {
 		Scanner sc = new Scanner(System.in);
 		while(true){
 			System.out.print("Edit Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
