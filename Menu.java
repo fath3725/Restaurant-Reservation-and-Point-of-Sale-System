@@ -5,7 +5,9 @@ public class Menu {
 
 	protected ArrayList<AlaCarte> alaCartes;
 	protected ArrayList<PromotionPackage> promotionPackages;
-
+	/**
+	 * Creates a new Menu 
+	 */
 	public Menu() {
 		alaCartes=new ArrayList<AlaCarte>();
 		promotionPackages=new ArrayList<PromotionPackage>();
