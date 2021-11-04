@@ -137,4 +137,93 @@ public class Order extends Menu {
 		}
 		sc.close();
 	}
+	
+	/**
+	 * Edit the quantity of the menu item in this order.
+	 */
+	public void editItems(Menu menu) {
+		Scanner sc = new Scanner(System.in);
+		while(true){
+			System.out.print("Next Action?\n"+"1. Add item\n"+"2. Remove item\n"+"3. Change quantity\n"+"4. Exit\n");
+			int type = sc.nextInt();
+			if (type==1){
+				addItems(menu);
+			}
+			else if(type==2){
+				System.out.print("Remove Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
+				int choice = sc.nextInt();
+				if(choice == 1){
+					System.out.println("Select Ala Carte id to remove, or enter -1 to quit: ");
+					viewAlaCartes();
+					System.out.print("Id: ");
+					int id=sc.nextInt();
+					if(id == -1)
+						break;
+					for (int i=0; i<this.alaCartes.size(); i++){
+						if (id == this.alaCartes.get(i).getId()){		
+							System.out.println("Ala Carte ID-"+this.alaCartes.get(i).getId()+" is removed from order");
+							this.alaCartes.remove(i);
+							break;
+						}
+					}
+				}
+				else if(choice==2){
+					System.out.println("Select Promotion Package id to remove, or enter -1 to quit: ");
+					viewPromotionPackages();
+					System.out.print("Id: ");
+					int id=sc.nextInt();
+					if(id == -1)
+						break;
+					for (int i=0; i<this.promotionPackages.size(); i++){
+						if (id == this.promotionPackages.get(i).getId()){		
+							System.out.println("Promotion Package ID-"+this.promotionPackages.get(i).getId()+" is removed from order");
+							this.promotionPackages.remove(i);
+							break;
+						}
+					}
+				}
+				else
+					break;
+			}
+			else if(type==3){
+				System.out.print("Edit quantity of which Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
+				int choice = sc.nextInt();
+				if(choice == 1){
+					System.out.println("Select Ala Carte id to edit quantity, or enter -1 to quit: ");
+					viewAlaCartes();
+					System.out.print("Id: ");
+					int id=sc.nextInt();
+					if(id == -1)
+						break;
+					for (int i=0; i<this.alaCartes.size(); i++){
+						if (id == this.alaCartes.get(i).getId()){		
+							System.out.println("Enter new quantity: ");
+							int newAmt = sc.nextInt();
+							this.alaCartes.get(i).setQuantity(newAmt);
+							break;
+						}
+					}
+				}
+				else if(choice==2){
+					System.out.println("Select Promotion Package id to edit quantity, or enter -1 to quit: ");
+					viewPromotionPackages();
+					System.out.print("Id: ");
+					int id=sc.nextInt();
+					if(id == -1)
+						break;
+					for (int i=0; i<this.promotionPackages.size(); i++){
+						if (id == this.promotionPackages.get(i).getId()){		
+							System.out.println("Enter new quantity: ");
+							int newAmt = sc.nextInt();
+							this.promotionPackages.get(i).setQuantity(newAmt);
+							break;
+						}
+					}
+				}
+				else
+					break;
+			}
+		}
+		sc.close();
+	}
 }

@@ -514,6 +514,23 @@ public class Restaurant {
 		}
 	}
 	/**
+	 * Allows user to edit a existing order.
+	 */
+	public void editOrder() {
+		Scanner sc = new Scanner(System.in);
+		printAllOrder();
+		System.out.println("Choose Table ID of order to edit: ");
+		int orderTableID = sc.nextInt();
+		for(int i=0; i<orders.size(); i++){
+			if(orders.get(i).getOrderTableID() == orderTableID){
+				orders.get(i).editItems(menu);
+				sc.close();
+				return;
+			}
+		}
+		sc.close();
+	}
+	/**
 	 * Gets the menu of this restaurant.
 	 * @return this menu.
 	 */
