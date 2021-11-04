@@ -1,8 +1,9 @@
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class RRPSS {
 	private double totalRevenue;
-	public static void main(String[] args){
+	public static void main(String[] args) throws FileNotFoundException{
 		
 		Restaurant restaurant = new Restaurant();
 		Scanner sc = new Scanner(System.in);
@@ -32,7 +33,7 @@ public class RRPSS {
 			System.out.println("(21) View all Reservations"); //view current reservations
 			System.out.println("(22) Seat Customer"); //set tables status to occupy and set pax
 			System.out.println("(23) Pay and Print Invoice"); //set tables status to available and set pax to 0, print invoice
-			System.out.println("(24) View Total Revenue Report");
+			System.out.println("(24) Create Total Revenue Report");
 			System.out.println("(25) Exit");
 			System.out.println("---------------------------------------------------------------");
 			System.out.println("Enter the number of your choice: ");
@@ -136,6 +137,7 @@ public class RRPSS {
 					restaurant.paymentCustomer();
 					break;
 				case 24:
+					restaurant.transferToTxt();
 					break;
 				default:
 					System.out.println("Program terminating ...");

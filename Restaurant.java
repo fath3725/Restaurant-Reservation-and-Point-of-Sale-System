@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 public class Restaurant {
 	/**
@@ -25,6 +26,10 @@ public class Restaurant {
 	 * The array that stores all order.
 	 */
 	private ArrayList<Reservation> currentReservations;
+	/**
+	 * The array that stores all order records.
+	 */
+	private ArrayList<Order> orderRecord;
 	/**
 	 * Creates new menu object that will hold all menu items.
 	 */
@@ -379,6 +384,7 @@ public class Restaurant {
 	}
 	/**
 	 * Allows user to choose with table is going for payment.
+	 * Print this final invoice and moves old order into array to be stored under records.
 	 */
 	public void paymentCustomer(){
 		Scanner sc = new Scanner(System.in);
@@ -401,12 +407,13 @@ public class Restaurant {
 				System.out.println("---------------------------------------");
 				double finalAmt = (orders.get(i)).viewOrder();
 				System.out.println("---------------------------------------");
-				System.out.printf("Sub Total: %.2f\n"+finalAmt);
-				System.out.printf("7% GST: %.2f\n"+(finalAmt*GST));
-				System.out.printf("Total: %.2f\n"+((finalAmt*GST)+finalAmt));
+				System.out.printf("Sub Total: %.2f\n",finalAmt);
+				System.out.printf("7% GST: %.2f\n",(finalAmt*GST));
+				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
 				System.out.println("-----Thank you for dining with us!-----");
 				tables.get(i).setStatus(Status.AVAILABLE);
 				tables.get(i).setTablePax(0);
+				orderRecord.add(orders.get(i));
 				removeOrder(choice);
 				sc.close();
 				return;
@@ -530,6 +537,37 @@ public class Restaurant {
 		}
 		sc.close();
 	}
+	public void transferToTxt() throws FileNotFoundException {
+		// Open the file.
+        PrintWriter out = new PrintWriter("Final Sales Report.txt"); // Step 2
+		double finalAmt = 0;
+        // Write the name of four oceans to the file
+        for(int i=0; i<orderRecord.size(); i++){
+			out.println((i+1)+") Order --------");
+			double finalAmount=0;
+			for(int j=0; j<orderRecord.get(i).alaCartes.size(); j++){
+				if(orderRecord.get(i).alaCartes.get(j).getQuantity() == 0)
+					continue;
+				double total = (orderRecord.get(i).alaCartes.get(j).getPrice()) * (orderRecord.get(i).alaCartes.get(j).getQuantity());
+				finalAmount = finalAmount + total;
+				finalAmt = finalAmt + total;
+				out.println(orderRecord.get(i).alaCartes.get(j).getQuantity()+" - "+orderRecord.get(i).alaCartes.get(j).getName()+"		"+total+"\n");
+			}
+
+			for(int j=0; j<orderRecord.get(i).promotionPackages.size(); j++){
+				if(orderRecord.get(i).promotionPackages.get(j).getQuantity() == 0)
+					continue;
+				double total = (orderRecord.get(i).promotionPackages.get(j).getPrice()) * (orderRecord.get(i).promotionPackages.get(j).getQuantity());
+				finalAmount = finalAmount + total;
+				finalAmt = finalAmt + total;
+				out.println(orderRecord.get(i).promotionPackages.get(j).getQuantity()+" - "+orderRecord.get(i).promotionPackages.get(j).getName()+"		"+total+"\n");
+			}
+			out.printf("Total amount for the order above = %.2f\n", finalAmount);
+		}
+		out.printf("Total Sales Revenue = %.2f\n", finalAmt);
+        // Close the file.
+        out.close();
+	}
 	/**
 	 * Gets the menu of this restaurant.
 	 * @return this menu.
@@ -557,5 +595,12 @@ public class Restaurant {
 	 */
 	public ArrayList<Member> getMemberArray(){
 		return this.members;
+	}
+	/**
+	 * Gets the order record array of this restaurant.
+	 * @return this orderRecord.
+	 */
+	public ArrayList<Order> getOrderRecord(){
+		return this.orderRecord;
 	}
 }
