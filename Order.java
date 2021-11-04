@@ -133,9 +133,4 @@ public class Order extends Menu {
 		}
 		sc.close();
 	}
-
-	public void editOrderItem() {
-		// TODO - implement Order.editOrderItem
-	}
-	
 }
