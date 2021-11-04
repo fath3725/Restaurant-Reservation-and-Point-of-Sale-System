@@ -78,7 +78,7 @@ public class Order extends Menu {
 				continue;
 			double total = (this.alaCartes.get(i).getPrice()) * (this.alaCartes.get(i).getQuantity());
 			finalAmount = finalAmount + total;
-			System.out.println(this.alaCartes.get(i).getQuantity()+" - "+this.alaCartes.get(i).getName()+"		"+total);
+			System.out.println(this.alaCartes.get(i).getQuantity()+" - "+this.alaCartes.get(i).getName()+"		"+total+"\n");
 		}
 
 		for(int i=0; i<this.promotionPackages.size(); i++){
@@ -86,7 +86,7 @@ public class Order extends Menu {
 				continue;
 			double total = (this.promotionPackages.get(i).getPrice()) * (this.promotionPackages.get(i).getQuantity());
 			finalAmount = finalAmount + total;
-			System.out.println(this.promotionPackages.get(i).getQuantity()+" - "+this.promotionPackages.get(i).getName()+"		"+total);
+			System.out.println(this.promotionPackages.get(i).getQuantity()+" - "+this.promotionPackages.get(i).getName()+"		"+total+"\n");
 		}
 		return finalAmount;
 	}
