@@ -1,4 +1,4 @@
-import java.util.Date;
+import java.util.*;
 
 public class Reservation {
 	/**
@@ -18,24 +18,36 @@ public class Reservation {
 	 */
 	private int tableReserved;
 	/**
-	 * The time of reservation.
+	 * The time of reservation was made.
 	 */
 	private Date timeStamp;
+	/**
+	 * The time customer wish to reserve table for.
+	 */
+	private Calendar reservedForTime;
 
 	/**
-	 * Creates a new reservation with the given pax, contact, name, table and timeStamp.
+	 * Creates a new reservation with the given pax, contact, name, table and time reserved for using hours and mins.
 	 * @param pax
 	 * @param contact
 	 * @param name
 	 * @param table
 	 * @param timeStamp
+	 * @param hour
+	 * @param min
 	 */
-	public Reservation(int pax, int contact, String name, int table) {
+	public Reservation(int pax, int contact, String name, int table, int hour, int min) {
 		this.paxReserved = pax;
 		this.contactReservedUnder = contact;
 		this.nameReservedUnder = name;
 		this.tableReserved = table;
-		this.timeStamp = new Date();
+		Calendar cal = Calendar.getInstance();
+		this.timeStamp = cal.getTime();
+
+		int year = cal.get(Calendar.YEAR);
+      	int month = cal.get(Calendar.MONTH);      // NOTE!!! : Month from 0 to 11
+      	int day = cal.get(Calendar.DAY_OF_MONTH);
+		this.reservedForTime = new GregorianCalendar(year, month, day, hour, min);
 	}
 	/**
 	 * Gets the pax reserved for this reservation.
@@ -106,5 +118,12 @@ public class Reservation {
 	 */
 	public void setTimeStamp(Date timeStamp) {
 		this.timeStamp = timeStamp;
+	}
+	/**
+	 * Gets the time reserved for this reservation.
+	 * @return this reservation's reservedForTime.
+	 */
+	public Calendar getReservedForTime() {
+		return this.reservedForTime;
 	}
 }
