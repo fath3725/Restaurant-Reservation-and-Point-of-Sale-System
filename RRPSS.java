@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class RRPSS {
-
+	private double totalRevenue;
 	public static void main(String[] args){
 		
 		Restaurant restaurant = new Restaurant();
@@ -26,12 +26,14 @@ public class RRPSS {
 			System.out.println("(15) Remove Order"); //remove order 
 			System.out.println("(16) View specific Order"); //view specific order
 			System.out.println("(17) View all Orders"); //view all current order
-			System.out.println("(18) Creat Reservation"); //create reservation
-			System.out.println("(19) Cancel Reservation"); //cancel reservation, if reserved customer is seated, reservation will be removed and placed into records automatically
-			System.out.println("(20) View all Reservations"); //view current reservations
-			System.out.println("(21) Seat Customer"); //set tables status to occupy and set pax
-			System.out.println("(22) Pay and Print Invoice"); //set tables status to available and set pax to 0, print invoice, order move to old order(reservation too) 
-			System.out.println("(23) Exit");
+			System.out.println("(18) Edit Orders"); //edit an order
+			System.out.println("(19) Creat Reservation"); //create reservation
+			System.out.println("(20) Cancel Reservation"); //cancel reservation, if reserved customer is seated, reservation will be removed and placed into records automatically
+			System.out.println("(21) View all Reservations"); //view current reservations
+			System.out.println("(22) Seat Customer"); //set tables status to occupy and set pax
+			System.out.println("(23) Pay and Print Invoice"); //set tables status to available and set pax to 0, print invoice
+			System.out.println("(24) View Total Revenue Report");
+			System.out.println("(25) Exit");
 			System.out.println("---------------------------------------------------------------");
 			System.out.println("Enter the number of your choice: ");
 			choice = sc.nextInt();
@@ -116,86 +118,34 @@ public class RRPSS {
 					restaurant.printAllOrder();
 					break;
 				case 18:
-					restaurant.addReservation();
+					restaurant.editOrder();
 					break;
 				case 19:
-					restaurant.removeReservation();
+					restaurant.addReservation();
 					break;
 				case 20:
-					restaurant.viewCurrentReservations();
+					restaurant.removeReservation();
 					break;
 				case 21:
-					restaurant.seatCustomer();
+					restaurant.viewCurrentReservations();
 					break;
 				case 22:
-					restaurant.paymentCustomer();
+					restaurant.seatCustomer();
 					break;
 				case 23:
+					restaurant.paymentCustomer();
+					break;
+				case 24:
 					break;
 				default:
 					System.out.println("Program terminating ...");
 				}
 			}
-		while(choice <24);
+		while(choice <25);
 		sc.close();
-		}
-
-		
-		public void salesRevenueReport() {
-			// TODO - implement RRPSS.salesRevenueReport
-			throw new UnsupportedOperationException();
-		}
-
-		public void viewMenu() {
-			// TODO - implement RRPSS.viewMenu
-			throw new UnsupportedOperationException();
-		}
-
-		public void viewOrder() {
-			// TODO - implement RRPSS.viewOrder
-			throw new UnsupportedOperationException();
-		}
-
-		public void createOrder() {
-			// TODO - implement RRPSS.createOrder
-			throw new UnsupportedOperationException();
-		}
-
-		public void removeOrder() {
-			// TODO - implement RRPSS.removeOrder
-			throw new UnsupportedOperationException();
-		}
-
-		public void editOrder() {
-			// TODO - implement RRPSS.editOrder
-			throw new UnsupportedOperationException();
-		}
-
-		public void printOrderInvoice() {
-			// TODO - implement RRPSS.printOrderInvoice
-			throw new UnsupportedOperationException();
-		}
-
-		public void createReservation() {
-			// TODO - implement RRPSS.createReservation
-			throw new UnsupportedOperationException();
-		}
-
-		public void viewReservations() {
-			// TODO - implement RRPSS.viewReservations
-			throw new UnsupportedOperationException();
-		}
-
-		public void removeReservation() {
-			// TODO - implement RRPSS.removeReservation
-			throw new UnsupportedOperationException();
-		}
-
-		public void editReservation() {
-			// TODO - implement RRPSS.editReservation
-			throw new UnsupportedOperationException();
-		}
-		
 	}
+
+		
+}
 
 	
