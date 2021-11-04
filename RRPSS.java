@@ -24,13 +24,14 @@ public class RRPSS {
 			System.out.println("(13) View all Members"); //view all member
 			System.out.println("(14) Create Order"); //create order
 			System.out.println("(15) Remove Order"); //remove order 
-			System.out.println("(16) View all Orders"); //view all current order
-			System.out.println("(17) Creat Reservation"); //create reservation
-			System.out.println("(18) Cancel Reservation"); //cancel reservation, if reserved customer is seated, reservation will be removed and placed into records automatically
-			System.out.println("(19) View all Reservations"); //view current reservations
-			System.out.println("(20) Seat Customer"); //set tables status to occupy and set pax
-			System.out.println("(21) Pay and Print Invoice"); //set tables status to available and set pax to 0, print invoice, order move to old order(reservation too) 
-			System.out.println("(22) Exit");
+			System.out.println("(16) View specific Order"); //view specific order
+			System.out.println("(17) View all Orders"); //view all current order
+			System.out.println("(18) Creat Reservation"); //create reservation
+			System.out.println("(19) Cancel Reservation"); //cancel reservation, if reserved customer is seated, reservation will be removed and placed into records automatically
+			System.out.println("(20) View all Reservations"); //view current reservations
+			System.out.println("(21) Seat Customer"); //set tables status to occupy and set pax
+			System.out.println("(22) Pay and Print Invoice"); //set tables status to available and set pax to 0, print invoice, order move to old order(reservation too) 
+			System.out.println("(23) Exit");
 			System.out.println("---------------------------------------------------------------");
 			System.out.println("Enter the number of your choice: ");
 			choice = sc.nextInt();
@@ -103,33 +104,39 @@ public class RRPSS {
 					restaurant.viewMember();
 					break;
 				case 14:
+					restaurant.addOrder();
 					break;
 				case 15:
+					restaurant.removeOrder();
 					break;
 				case 16:
+					restaurant.printSpecificOrder();
 					break;
 				case 17:
-					restaurant.addReservation();
+					restaurant.printAllOrder();
 					break;
 				case 18:
-					restaurant.removeReservation();
+					restaurant.addReservation();
 					break;
 				case 19:
-					restaurant.viewCurrentReservations();
+					restaurant.removeReservation();
 					break;
 				case 20:
-					restaurant.seatCustomer();
+					restaurant.viewCurrentReservations();
 					break;
 				case 21:
-					restaurant.paymentCustomer();
+					restaurant.seatCustomer();
 					break;
 				case 22:
+					restaurant.paymentCustomer();
+					break;
+				case 23:
 					break;
 				default:
 					System.out.println("Program terminating ...");
 				}
 			}
-		while(choice <23);
+		while(choice <24);
 		sc.close();
 		}
 

@@ -275,7 +275,13 @@ public class Restaurant {
 		}
 		System.out.println("Enter table selected for reservation: ");
 		int resTableID = sc.nextInt();
-		currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID));
+		Date now = new Date();
+		System.out.println("Now is: "+ now.toString());
+		System.out.println("What time do you want the reservation? (Enter the hour 1-24): ");
+		int hour = sc.nextInt();
+		System.out.println("What time do you want the reservation? (Enter the minutes 1-60): ");
+		int min = sc.nextInt();
+		currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID, hour, min));
 		for(int i=0; i<tables.size(); i++){
 			if(tables.get(i).getTableID() == resTableID){
 				tables.get(i).setStatus(Status.RESERVED);
@@ -316,7 +322,7 @@ public class Restaurant {
 		for(int i=0; i<currentReservations.size(); i++){
 			System.out.println((i+1)+") "+(currentReservations.get(i)).getNameReservedUnder()+" -Contact No.: "+(currentReservations.get(i)).getContactReservedUnder()+
 			" -Table ID: "+(currentReservations.get(i)).getTableReserved()+" -Pax: "+(currentReservations.get(i)).getPaxReserved()+ " -Date Reserved: "
-			+(currentReservations.get(i)).getTimeStamp());
+			+(currentReservations.get(i)).getReservedForTime().getTime());
 		}
 	}
 	/**
@@ -373,17 +379,22 @@ public class Restaurant {
 	}
 	/**
 	 * Allows user to choose with table is going for payment.
-	 * 
 	 */
 	public void paymentCustomer(){
 		Scanner sc = new Scanner(System.in);
 		int temp = printOccupiedTables();
 		if(temp == 0) {
+			System.out.println("No table to checkout");
 			sc.close();
 			return;
 		}
-		System.out.println("Choose table ID for payment? (Enter invalid choice to terminate process): ");
+		System.out.println("Choose table ID for payment (Enter -1 to terminate process): ");
 		int choice = sc.nextInt();
+		if(choice == -1){
+			sc.close();
+			return;
+		}
+			
 		for(int i=0; i<orders.size(); i++){
 			if((orders.get(i)).getOrderTableID() == choice){
 				System.out.println("----------------Invoice----------------");
@@ -396,6 +407,7 @@ public class Restaurant {
 				System.out.println("-----Thank you for dining with us!-----");
 				tables.get(i).setStatus(Status.AVAILABLE);
 				tables.get(i).setTablePax(0);
+				removeOrder(choice);
 				sc.close();
 				return;
 			}
@@ -407,10 +419,21 @@ public class Restaurant {
 	 */
 	public void addOrder() {
 		Scanner sc = new Scanner(System.in);
+		int temp = printOccupiedTables();
+		if(temp == 0) {
+			System.out.println("No table occupied to place order");
+			sc.close();
+			return;
+		}
+		System.out.println("Choose table ID to place order (Enter -1 to terminate process): ");
+		int orderTableID = sc.nextInt();
+
+		if(orderTableID == -1){
+			sc.close();
+			return;
+		}
 		System.out.println("Enter Staff's ID: ");
 		int orderStaffID = sc.nextInt();
-		System.out.println("Enter Table's ID: ");
-		int orderTableID = sc.nextInt();
 		orders.add(new Order(orderStaffID, orderTableID));
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID){
@@ -422,7 +445,48 @@ public class Restaurant {
 		sc.close();
 	}
 	/**
-	 * Allows user to view all current order in the orders array.
+	 * Allows user to remove an order from the orders array.
+	 */
+	public void removeOrder() {
+		Scanner sc = new Scanner(System.in);
+		int temp = printOccupiedTables();
+		if(temp == 0) {
+			System.out.println("No table occupied to remove order");
+			sc.close();
+			return;
+		}
+		System.out.println("Choose table ID to remove order (Enter -1 to terminate process): ");
+		int orderTableID = sc.nextInt();
+		if(orderTableID == -1){
+			sc.close();
+			return;
+		}
+		System.out.println("Enter Staff's ID: ");
+		int orderStaffID = sc.nextInt();
+		for(int i=0; i<orders.size(); i++){
+			if(orders.get(i).getOrderTableID() == orderTableID && orders.get(i).getOrderStaffID() == orderStaffID) {
+				System.out.println("Order for table ID "+orders.get(i).getOrderTableID()+" removed");
+				orders.remove(i);
+				sc.close();
+				return;
+			}
+		}
+		sc.close();
+	}
+	/**
+	 * Allows user to remove a specific order from the orders array when customers made payment.
+	 */
+	public void removeOrder(int tableID) {
+		for(int i=0; i<orders.size(); i++){
+			if(orders.get(i).getOrderTableID() == tableID) {
+				System.out.println("Order for table ID "+orders.get(i).getOrderTableID()+" paid and removed");
+				orders.remove(i);
+				return;
+			}
+		}
+	}
+	/**
+	 * Allows user to view specific order in the orders array.
 	 */
 	public void printSpecificOrder() {
 		Scanner sc = new Scanner(System.in);
@@ -437,6 +501,17 @@ public class Restaurant {
 			}
 		}
 		sc.close();
+	}
+	/**
+	 * Allows user to view all order in the orders array.
+	 */
+	public void printAllOrder() {
+		for(int i=0; i<orders.size(); i++) {
+			System.out.println("-----------------------------------------------------");
+			System.out.println("Order for Table ID: "+orders.get(i).getOrderTableID());
+			double finalAmt = orders.get(i).viewOrder();
+			System.out.printf("Current Total for Table ID-"+orders.get(i).getOrderTableID()+" exclude GST: %.2f", finalAmt);
+		}
 	}
 	/**
 	 * Gets the menu of this restaurant.
