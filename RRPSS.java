@@ -7,7 +7,7 @@ public class RRPSS {
 		Restaurant restaurant = new Restaurant();
 		Scanner sc = new Scanner(System.in);
 		int choice, innerChoice;
-		do {
+		while (true) {
 			System.out.println("---------------------------------------------------------------");
 			System.out.println("(1) Add item into Menu"); //add menu item into menu
 			System.out.println("(2) Remove item from Menu"); //remove menu item from menu
@@ -27,7 +27,7 @@ public class RRPSS {
 			System.out.println("(16) View specific Order"); //view specific order
 			System.out.println("(17) View all Orders"); //view all current order
 			System.out.println("(18) Edit Orders"); //edit an order
-			System.out.println("(19) Creat Reservation"); //create reservation
+			System.out.println("(19) Create Reservation"); //create reservation
 			System.out.println("(20) Cancel Reservation"); //cancel reservation, if reserved customer is seated, reservation will be removed and placed into records automatically
 			System.out.println("(21) View all Reservations"); //view current reservations
 			System.out.println("(22) Seat Customer"); //set tables status to occupy and set pax
@@ -35,9 +35,9 @@ public class RRPSS {
 			System.out.println("(24) Create Total Revenue Report"); //create txt file which contains all order information
 			System.out.println("(25) Exit");
 			System.out.println("---------------------------------------------------------------");
-			System.out.println("Enter the number of your choice: ");
+			System.out.print("Enter the number of your choice: ");
 			choice = sc.nextInt();
-
+			if (choice==25)break;
 			switch(choice) {
 				case 1:
 					restaurant.getMenu().addItems(restaurant.getMenu());
@@ -142,11 +142,15 @@ public class RRPSS {
 						e.printStackTrace();
 					}
 					break;
-				default:
+				case 25:
 					System.out.println("Program terminating ...");
+					break;
+				default:
+					System.out.println("Invalid Command.");
+					break;
 				}
+			
 			}
-		while(choice <25);
 		sc.close();
 	}
 }

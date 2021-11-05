@@ -69,10 +69,7 @@ public class Menu {
 			System.out.println("Price: "+promotionPackages.get(i).getPrice());
 			System.out.println("Description: "+promotionPackages.get(i).getDescription());
 			System.out.println("Package contains:");
-			ArrayList<AlaCarte> packageitems = promotionPackages.get(i).getPackageItems();
-			for (int j=0;j<packageitems.size();j++){
-				System.out.printf("%d %s",packageitems.get(j).getId(),packageitems.get(j).getName());
-			}
+			promotionPackages.get(i).viewPackageItems();
 			System.out.println("");
 		}
 	}
@@ -81,17 +78,27 @@ public class Menu {
 	 */
 	public void addItems(Menu menu) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Add Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package");
-		int type = sc.nextInt();
-		if (type==1){
-			alaCartes.add(AlaCarte.newAlaCarte());
-		} 
-		else if (type==2){
-			System.out.println("New Promotion Package creation");
-			menu.viewAlaCartes();
-			promotionPackages.add(PromotionPackage.newPromotionPackage(alaCartes));
+		while(true){
+			System.out.print("Add Menu Item type?\n"+
+											"1. Ala Carte\n"+
+											"2. Promotion Package\n"+
+											"3. Exit\n"+
+											"Choice: ");
+			int type = sc.nextInt();
+
+			if (type==1){
+				alaCartes.add(AlaCarte.newAlaCarte());
+			} 
+			else if (type==2){
+				System.out.println("New Promotion Package creation");
+				menu.viewAlaCartes();
+				if (alaCartes.size()==0){
+					System.out.println("No alacartes to add into package. Cannot make new package.");
+					continue;
+				}
+				promotionPackages.add(PromotionPackage.newPromotionPackage(alaCartes));
+			}else break;
 		}
-		sc.close();
 	}
 	/**
 	 * Removes from alaCartes/promotionPackages in this Menu.
@@ -102,6 +109,10 @@ public class Menu {
 			System.out.print("Remove Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
 			int type = sc.nextInt();
 			if (type==1){
+				if (alaCartes.size()==0){
+					System.out.println("No alacartes in menu to remove");
+					continue;
+				}
 				while(true){
 					System.out.println("Select Ala Carte id to remove, or enter -1 to quit: ");
 					viewAlaCartes();
@@ -116,6 +127,10 @@ public class Menu {
 					}
 				}
 			} else if (type==2){
+				if (promotionPackages.size()==0){
+					System.out.println("No promotion packages in menu to remove");
+					continue;
+				}
 				while(true){
 					System.out.println("Select Promotion package id to remove, or enter -1 to quit: ");
 					viewPromotionPackages();
@@ -131,7 +146,7 @@ public class Menu {
 				}
 			} else if (type==3) break;
 		}
-		sc.close();
+		
 	}
 	/**
 	 * Edit from alaCartes/promotionpackages in this Menu.
@@ -139,7 +154,7 @@ public class Menu {
 	public void editItems() {
 		Scanner sc = new Scanner(System.in);
 		while(true){
-			System.out.print("Edit Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
+			System.out.print("Edit Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit\nType: ");
 			int type = sc.nextInt();
 			if (type==1){
 				while(true){
@@ -170,7 +185,7 @@ public class Menu {
 				}
 			} else if (type==3) break;
 		}
-		sc.close();
+		
 	}
 
 }

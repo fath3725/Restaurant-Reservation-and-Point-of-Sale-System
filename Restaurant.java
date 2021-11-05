@@ -37,19 +37,19 @@ public class Restaurant {
 	/**
 	 * Creates a new restaurant.
 	 */
-	 public Restaurant(){
+	public Restaurant(){
 		this.tables = new ArrayList<Table>();
 		this.staffs = new ArrayList<Staff>();
 		this.members = new ArrayList<Member>();
 		this.orders = new ArrayList<Order>();
 		this.orderRecord = new ArrayList<Order>();
-		Scanner scan = new Scanner(System.in);
-		System.out.println("How many tables will this restaurant have? : ");
-		int numOfTable = scan.nextInt();
+		Scanner sc = new Scanner(System.in);
+		System.out.print("How many tables will this restaurant have?\nNumber of Tables: ");
+		int numOfTable = sc.nextInt();
 		for(int i=0; i<numOfTable; i++){
 			while(true) {
-				System.out.println("Enter table size (Even number up to ten): ");
-				int tableSize = scan.nextInt();
+				System.out.print("Enter table size (Even number up to ten): ");
+				int tableSize = sc.nextInt();
 				if(tableSize%2 != 0 || tableSize>10 || tableSize<2){
 					System.out.println("Invalid size, even numbers up to ten");
 					continue;
@@ -58,58 +58,60 @@ public class Restaurant {
 				break;
 			}
 		}
-		System.out.println("How many staffs will this restaurant have? : ");
-		int numOfStaff = scan.nextInt();
-		scan.nextLine();
+		System.out.print("How many staffs will this restaurant have? : ");
+		int numOfStaff = sc.nextInt();
+		sc.nextLine();
 		for(int i=0; i<numOfStaff; i++){
-			System.out.println("Enter Staff's full name: ");
-			String staffName = scan.nextLine();
-			System.out.println("Enter Staff's gender (Female/Male): ");
-			String staffGender = scan.nextLine();
-			System.out.println("Enter Staff's job title: ");
-			String staffJob = scan.nextLine();
+			System.out.print("Enter Staff's full name: ");
+			String staffName = sc.nextLine();
+			String staffGender;
+			while(true){
+				System.out.print("Enter Staff's gender (Female/Male): ");
+				staffGender=sc.nextLine();
+				if (!staffGender.equals("Female") && !staffGender.equals("Male")){
+					System.out.println("Invalid gender. Gender is binary.");
+					continue;
+				}
+				break;
+			}
+			System.out.print("Enter Staff's job title: ");
+			String staffJob = sc.nextLine();
 			staffs.add(new Staff(staffName, staffGender, staffJob)); //adds new staff into arraylist
 		}
 
-		System.out.println("How many special member will this restaurant have? : ");
-		int numOfMem = scan.nextInt();
-		scan.nextLine();
-		for(int i=0; i<numOfMem; i++){
-			System.out.println("Enter Member's full name: ");
-			String memName = scan.nextLine();
-			System.out.println("Enter Member's gender (Female/Male): ");
-			String memGender = scan.nextLine();
-			System.out.println("Enter Member's phone number: ");
-			int memPhoneNumber = scan.nextInt();
-			scan.nextLine();
-			members.add(new Member(memName, memGender, memPhoneNumber)); //adds new member into arraylist
-		}
-		scan.close();
+		
 	}
 	/**
 	 * Creates and add a new staff into the staffs array.
 	 * Checks whether staff already exist before addition.
 	 */
 	public void addStaff() {
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Staff's full name: ");
-		String staffName = scan.nextLine();
-		System.out.println("Enter Staff's gender (Female/Male): ");
-		String staffGender = scan.nextLine();
-		System.out.println("Enter Staff's job title: ");
-		String staffJob = scan.nextLine();
+		String staffName = sc.nextLine();
+		String staffGender;
+		while(true){
+			System.out.print("Enter Staff's gender (Female/Male): ");
+			staffGender=sc.nextLine();
+			if (!staffGender.equals("Female") && !staffGender.equals("Male")){
+				System.out.println("Invalid gender. Gender is binary.");
+				continue;
+			}
+			break;
+		}
+		System.out.print("Enter Staff's job title: ");
+		String staffJob = sc.nextLine();
 		
 		for(int i=0; i<staffs.size(); i++){
 			if((staffs.get(i)).getName() == staffName && (staffs.get(i)).getGender() == staffGender && (staffs.get(i)).getJobTitle() == staffJob){
 				System.out.println("Staff already exist");
-				scan.close();
+				
 				return;
 			}
 		}
 		staffs.add(new Staff(staffName, staffGender, staffJob));
 		System.out.println("Staff added");
-		scan.close();
-		throw new UnsupportedOperationException();
+		
 	}
 	/**
 	 * Prints all staff information.
@@ -118,34 +120,33 @@ public class Restaurant {
 		for(int i=0; i<staffs.size(); i++){
 			System.out.println((i+1)+") "+(staffs.get(i)).getName()+" -Gender: "+(staffs.get(i)).getGender()+" -Staff ID: "+(staffs.get(i)).getStaffId()+" -Job Title: "+(staffs.get(i)).getJobTitle());
 		}
-		throw new UnsupportedOperationException();
 	}
 	/**
 	 * Prints all staff information and allow user to choose which staff to remove.
 	 */
 	public void removeStaff() {
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		viewStaff();
-		System.out.println("Which staff to remove? (Enter invalid choice to terminate process): ");
-		int temp = scan.nextInt();
+		System.out.print("Which staff to remove? (Enter invalid choice to terminate process): ");
+		int temp = sc.nextInt();
 		if(temp > staffs.size()){
-			scan.close();
+			
 			return;
 		}
 		staffs.remove(temp-1);
 		System.out.println("Staff removed");
-		scan.close();
+		
 	}
 		
 	/**
 	 * Creates and add a new table into the tables array.
 	 */
 	public void addTable() {
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter table size: ");
-		int tableSize = scan.nextInt();
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter table size: ");
+		int tableSize = sc.nextInt();
 		tables.add(new Table(tableSize));
-		scan.close();
+		
 	}
 	/**
 	 * Prints all table information.
@@ -154,45 +155,52 @@ public class Restaurant {
 		for(int i=0; i<tables.size(); i++){
 			System.out.println((i+1)+") Table ID: "+(tables.get(i)).getTableID()+" -Status: "+(tables.get(i)).getStatus()+" -Current Pax: "+(tables.get(i)).getTablePax()+"/"+(tables.get(i)).getTableSize());
 		}
-		throw new UnsupportedOperationException();
 	}
 	/**
 	 * Prints all table information and allow user to choose which table to remove.
 	 */
 	public void removeTable() {
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		viewTable();
-		System.out.println("Which table to remove? (Enter invalid choice to terminate process): ");
-		int temp = scan.nextInt();
+		System.out.print("Which table to remove? (Enter invalid choice to terminate process): ");
+		int temp = sc.nextInt();
 		if(temp > tables.size()){
-			scan.close();
+			
 			return;
 		}
 		tables.remove(temp-1);
 		System.out.println("Table removed");
-		scan.close();
+		
 	}
 		
 	/**
 	 * Creates and add a new member into the members array.
 	 */
 	public void addMember() {
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter Member's full name: ");
-		String memName = scan.nextLine();
-		System.out.println("Enter Member's gender (Female/Male): ");
-		String memGender = scan.nextLine();
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Member's full name: ");
+		String memName = sc.nextLine();
+		String memGender;
+		while(true){
+			System.out.print("Enter Staff's gender (Female/Male): ");
+			memGender=sc.nextLine();
+			if (!memGender.equals("Female") && !memGender.equals("Male")){
+				System.out.println("Invalid gender. Gender is binary.");
+				continue;
+			}
+			break;
+		}
 		System.out.println("Enter Member's phone number: ");
-		int memPhone = scan.nextInt();
+		int memPhone = sc.nextInt();
 		for(int i=0; i<members.size(); i++){
 			if((members.get(i)).getName() == memName && (members.get(i)).getGender() == memGender && (members.get(i)).getPhoneNumber() == memPhone){
 				System.out.println("Member already exist");
-				scan.close();
+				
 				return;
 			}
 		}
 		members.add(new Member(memName, memGender, memPhone));
-		scan.close();
+		
 	}
 	/**
 	 * Prints all member information.
@@ -201,23 +209,22 @@ public class Restaurant {
 		for(int i=0; i<members.size(); i++){
 			System.out.println((i+1)+") "+(members.get(i)).getName()+" -Gender: "+(members.get(i)).getGender()+" -Member ID: "+(members.get(i)).getMemberId()+" -Phone Number: "+(members.get(i)).getPhoneNumber());
 		}
-		throw new UnsupportedOperationException();
 	}
 	/**
 	 * Prints all member information and allow user to choose which member to remove.
 	 */
 	public void removeMember() {
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		viewMember();
-		System.out.println("Which member to remove? (Enter invalid choice to terminate process): ");
-		int temp = scan.nextInt();
+		System.out.print("Which member to remove? (Enter invalid choice to terminate process): ");
+		int temp = sc.nextInt();
 		if(temp > members.size()){
-			scan.close();
+			
 			return;
 		}
 		members.remove(temp-1);
 		System.out.println("Member removed");
-		scan.close();
+		
 	}
 	
 	/**
@@ -263,6 +270,7 @@ public class Restaurant {
 		for(int i=0; i<tables.size(); i++){
 			if((tables.get(i)).getStatus() == Status.OCCUPIED){
 				System.out.println("Table ID: "+(tables.get(i)).getTableID()+" -Currently seated: "+(tables.get(i)).getTablePax()+"/"+(tables.get(i)).getTableSize());
+				count++;
 			}
 		}
 		if(count == 0){
@@ -274,46 +282,45 @@ public class Restaurant {
 	 * Creates and add a new reservation into the current reservation array.
 	 */
 	public void addReservation() {
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter number of pax: ");
-		int noOfPax = scan.nextInt();
-		System.out.println("Enter customer's contact number: ");
-		int contactNumber = scan.nextInt();
-		System.out.println("Enter customer's name: ");
-		String customerName = scan.nextLine();
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter number of pax: ");
+		int noOfPax = sc.nextInt();
+		System.out.print("Enter customer's contact number: ");
+		int contactNumber = sc.nextInt();
+		System.out.print("Enter customer's name: ");
+		String customerName = sc.nextLine();
 		int check = printAvailableTables();
 		if(check == 0) {
-			scan.close();
+			
 			return;
 		}
 		System.out.println("Enter table selected for reservation: ");
-		int resTableID = scan.nextInt();
+		int resTableID = sc.nextInt();
 		Date now = new Date();
-		System.out.println("Now is: "+ now.toString());
-		System.out.println("What time do you want the reservation? (Enter the hour 1-24): ");
-		int hour = scan.nextInt();
-		System.out.println("What time do you want the reservation? (Enter the minutes 1-60): ");
-		int min = scan.nextInt();
+		System.out.print("Now is: "+ now.toString());
+		System.out.print("What time do you want the reservation? (Enter the hour 1-24): ");
+		int hour = sc.nextInt();
+		System.out.print("What time do you want the reservation? (Enter the minutes 1-60): ");
+		int min = sc.nextInt();
 		currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID, hour, min));
 		for(int i=0; i<tables.size(); i++){
 			if(tables.get(i).getTableID() == resTableID){
 				tables.get(i).setStatus(Status.RESERVED);
-				scan.close();
 				return;
 			}
 		}
-		scan.close();
+		
 	}
 	/**
 	 * Prints all current reservation information and allow user to choose which reservation to cancel.
 	 */
 	public void removeReservation() {
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		viewCurrentReservations();
-		System.out.println("Which reservation to remove? (Enter invalid choice to terminate process): ");
-		int temp = scan.nextInt();
+		System.out.print("Which reservation to remove? (Enter invalid choice to terminate process): ");
+		int temp = sc.nextInt();
 		if(temp > currentReservations.size()){
-			scan.close();
+			
 			return;
 		}
 		int toRemove = currentReservations.get(temp-1).getTableReserved();
@@ -322,11 +329,11 @@ public class Restaurant {
 		for(int i=0; i<tables.size(); i++){
 			if(tables.get(i).getTableID() == toRemove){
 				tables.get(i).setStatus(Status.AVAILABLE);
-				scan.close();
+				
 				return;
 			}
 		}
-		scan.close();
+		
 	}
 	/**
 	 * Prints all current reservation information.
@@ -344,34 +351,34 @@ public class Restaurant {
 	 * If no: check for table availability and assign a table based on pax and sets the table's status to OCCUPIED
 	 */
 	public void seatCustomer(){
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Reservation? (True/False): ");
-		boolean answer = scan.nextBoolean();
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Reservation? (True/False): ");
+		boolean answer = sc.nextBoolean();
 		if(!answer) {
-			System.out.println("How many pax?: ");
-			int numberOfPeople = scan.nextInt();
+			System.out.print("How many pax?: ");
+			int numberOfPeople = sc.nextInt();
 			int check = printAvailableTables(numberOfPeople);
 			if(check == 0) {				
-				scan.close();
+				
 				return;
 			}
 			System.out.println("Choose table ID to seat customer? (Enter invalid choice to terminate process): ");
-			int temp = scan.nextInt();
+			int temp = sc.nextInt();
 			for(int i=0; i<tables.size(); i++){
 				if((tables.get(i)).getTableID() == temp){
 					System.out.println("Customer Seated at Table "+(tables.get(i)).getTableID());
 					tables.get(i).setStatus(Status.OCCUPIED);
 					tables.get(i).setTablePax(numberOfPeople);
-					scan.close();
+					
 					return;
 				}
 			}
 		}
 		else{
-			System.out.println("Name reserved under: ");
-			String reservedBy = scan.nextLine();
-			System.out.println("Contact Number reserved under: ");
-			int reservedCon = scan.nextInt();
+			System.out.print("Name reserved under: ");
+			String reservedBy = sc.nextLine();
+			System.out.print("Contact Number reserved under: ");
+			int reservedCon = sc.nextInt();
 			for(int i=0; i<currentReservations.size(); i++){
 				if((currentReservations.get(i)).getNameReservedUnder() == reservedBy && (currentReservations.get(i)).getContactReservedUnder() == reservedCon){
 					for(int j=0; j<tables.size(); i++) {
@@ -379,7 +386,7 @@ public class Restaurant {
 							System.out.println("Customer Seated at Table "+(currentReservations.get(i)).getTableReserved());
 							tables.get(j).setStatus(Status.OCCUPIED);
 							tables.get(j).setTablePax((currentReservations.get(i)).getPaxReserved());
-							scan.close();
+							
 							return;
 						}
 					}
@@ -387,7 +394,7 @@ public class Restaurant {
 			}
 			System.out.println("Invalid Reservation!");
 			System.out.println("Returning to main page");
-			scan.close();
+			
 		}
 	}
 	/**
@@ -395,17 +402,17 @@ public class Restaurant {
 	 * Print this final invoice and moves old order into array to be stored under records.
 	 */
 	public void paymentCustomer(){
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int temp = printOccupiedTables();
 		if(temp == 0) {
 			System.out.println("No table to checkout");
-			scan.close();
+			
 			return;
 		}
 		System.out.println("Choose table ID for payment (Enter -1 to terminate process): ");
-		int choice = scan.nextInt();
+		int choice = sc.nextInt();
 		if(choice == -1){
-			scan.close();
+			
 			return;
 		}
 			
@@ -423,78 +430,85 @@ public class Restaurant {
 				tables.get(i).setTablePax(0);
 				orderRecord.add(orders.get(i));
 				removeOrder(choice);
-				scan.close();
+				
 				return;
 			}
 		}
-		scan.close();
+		
 	}
 	/**
 	 * Allows user to create a new order to add into the orders array.
 	 */
 	public void addOrder() {
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int temp = printOccupiedTables();
 		if(temp == 0) {
 			System.out.println("No table occupied to place order");
-			scan.close();
 			return;
 		}
-		System.out.println("Choose table ID to place order (Enter -1 to terminate process): ");
-		int orderTableID = scan.nextInt();
+		System.out.print("Choose table ID to place order (Enter -1 to terminate process): ");
+		int orderTableID = sc.nextInt();
 
 		if(orderTableID == -1){
-			scan.close();
+			
 			return;
 		}
-		System.out.println("Enter Staff's ID: ");
-		int orderStaffID = scan.nextInt();
+		System.out.print("Enter Staff's ID: ");
+		int orderStaffID = sc.nextInt();
 		orders.add(new Order(orderStaffID, orderTableID));
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID){
 				orders.get(i).addItems(menu);
-				scan.close();
+				
 				return;
 			}
 		}
-		scan.close();
+		
 	}
 	/**
 	 * Allows user to remove an order from the orders array.
 	 */
 	public void removeOrder() {
-		Scanner scan = new Scanner(System.in);
+		if (orders.size()==0) {
+			System.out.println("No orders to remove");
+			return;
+		}
+		Scanner sc = new Scanner(System.in);
 		int temp = printOccupiedTables();
 		if(temp == 0) {
 			System.out.println("No table occupied to remove order");
-			scan.close();
+			
 			return;
 		}
-		System.out.println("Choose table ID to remove order (Enter -1 to terminate process): ");
-		int orderTableID = scan.nextInt();
+		System.out.print("Choose table ID to remove order (Enter -1 to terminate process): ");
+		int orderTableID = sc.nextInt();
 		if(orderTableID == -1){
-			scan.close();
+			
 			return;
 		}
-		System.out.println("Enter Staff's ID: ");
-		int orderStaffID = scan.nextInt();
+		System.out.print("Enter Staff's ID: ");
+		int orderStaffID = sc.nextInt();
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID && orders.get(i).getOrderStaffID() == orderStaffID) {
 				System.out.println("Order for table ID "+orders.get(i).getOrderTableID()+" removed");
 				orders.remove(i);
-				scan.close();
+				
 				return;
 			}
 		}
-		scan.close();
+		
 	}
 	/**
 	 * Allows user to remove a specific order from the orders array when customers made payment.
 	 */
 	public void removeOrder(int tableID) {
+		if (orders.size()==0) {
+			System.out.println("No orders to remove");
+			return;
+		}
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == tableID) {
-				System.out.println("Order for table ID "+orders.get(i).getOrderTableID()+" paid and removed");
+				System.out.print("Order for table ID "+orders.get(i).getOrderTableID()+" paid and removed");
 				orders.remove(i);
 				return;
 			}
@@ -504,23 +518,31 @@ public class Restaurant {
 	 * Allows user to view specific order in the orders array.
 	 */
 	public void printSpecificOrder() {
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter Table's ID: ");
-		int orderTableID = scan.nextInt();
+		if (orders.size()==0) {
+			System.out.println("No orders to print");
+			return;
+		}
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Table's ID: ");
+		int orderTableID = sc.nextInt();
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID){
 				double finalAmt = orders.get(i).viewOrder();
 				System.out.printf("Current Total exclude GST: %.2f", finalAmt);
-				scan.close();
+				
 				return;
 			}
 		}
-		scan.close();
+		
 	}
 	/**
 	 * Allows user to view all order in the orders array.
 	 */
 	public void printAllOrder() {
+		if (orders.size()==0) {
+			System.out.println("No orders to print");
+			return;
+		}
 		for(int i=0; i<orders.size(); i++) {
 			System.out.println("-----------------------------------------------------");
 			System.out.println("Order for Table ID: "+orders.get(i).getOrderTableID());
@@ -532,18 +554,21 @@ public class Restaurant {
 	 * Allows user to edit a existing order.
 	 */
 	public void editOrder() {
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		printAllOrder();
-		System.out.println("Choose Table ID of order to edit: ");
-		int orderTableID = scan.nextInt();
+		if (orders.size()==0) {
+			System.out.println("No orders to edit");
+			return;
+		}
+		System.out.print("Choose Table ID of order to edit: ");
+		int orderTableID = sc.nextInt();
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID){
 				orders.get(i).editItems(menu);
-				scan.close();
 				return;
 			}
 		}
-		scan.close();
+		
 	}
 	public void transferToTxt() throws FileNotFoundException {
 		// Open the file.

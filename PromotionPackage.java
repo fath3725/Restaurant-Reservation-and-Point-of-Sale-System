@@ -24,32 +24,35 @@ public class PromotionPackage extends MenuItem {
 	public static PromotionPackage newPromotionPackage(ArrayList<AlaCarte> alaCartes){
 		Scanner sc = new Scanner(System.in);
 		ArrayList<AlaCarte>packageItems=new ArrayList<AlaCarte>();
+		System.out.println("Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.");
 		while (true){
-			System.out.println("Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.");
 			System.out.print("Id: ");
 			int id = sc.nextInt();
 			if (id==-1) break;
 			boolean found=false;
 			for (int i=0;i<alaCartes.size();i++){
 				if (alaCartes.get(i).getId()==id) {
+					//check if packageitems already contains item
 					packageItems.add((alaCartes.get(i)));
 					found=true;
 					break;
 				}
 			}
 			if (!found) System.out.println("Not a valid AlaCarte id.");
-			else System.out.println("Added AlaCarte.");
+			else System.out.println("Added AlaCarte.\nContinue?");
 		}
-		System.out.print("\nPackage id:");
+		System.out.print("Promotion Package id: ");
 		int packageId = sc.nextInt();
-		System.out.print("\nPackage name:");
+		System.out.print("Promotion Package name: ");
+		sc.nextLine();
 		String name = sc.nextLine();
-		System.out.print("\nPackage price:");
+		System.out.print("Promotion Package price: ");
 		Float price = sc.nextFloat();
-		System.out.print("\nPackage description:");
+		System.out.print("Promotion Package description: ");
+		sc.nextLine();
 		String description = sc.nextLine();
 		PromotionPackage newpromotionpackage = new PromotionPackage(packageId,name,price,description,packageItems);
-		sc.close();
+		
 		return newpromotionpackage;
 	}
 	/**
@@ -59,7 +62,11 @@ public class PromotionPackage extends MenuItem {
 		Scanner sc = new Scanner(System.in);
 		while (true){
 			System.out.println(
-				"What attribute would you like to edit?"+
+				"Id: "+getId()+
+				"\nName: "+getName()+
+				"\nPrice: "+getPrice()+
+				"\nDescription: "+getDescription()+
+				"\nWhat attribute would you like to edit?"+
 				"\n1.Id"+
 				"\n2.Price"+
 				"\n3.Name"+
@@ -78,10 +85,12 @@ public class PromotionPackage extends MenuItem {
 				this.setPrice(packageprice);
 			}else if (choice==3){
 				System.out.printf("Name: %s\nNew name: ");
+				sc.nextLine();
 				String packagename = sc.nextLine();
 				this.setName(packagename);
 			}else if (choice==4){
 				System.out.printf("Description: %s\nNew description: ");
+				sc.nextLine();
 				String packagedescription = sc.nextLine();
 				this.setDescription(packagedescription);
 			}else if (choice==5){
@@ -110,15 +119,16 @@ public class PromotionPackage extends MenuItem {
 				}
 			}else break;
 		}
-		sc.close();
+		
 	}
 	/**
 	 * Views the packageItems of this promotionPackage.
 	 */
 	public void viewPackageItems(){
 		System.out.println("Package Items:");
+		System.out.println("Id  Quantity_and_Name");
 		for (int i=0;i<packageItems.size();i++){
-			System.out.printf("%d %s\n",packageItems.get(i).getId(),packageItems.get(i).getName());
+			System.out.printf("%d  %dx%s\n",packageItems.get(i).getQuantity(),packageItems.get(i).getId(),packageItems.get(i).getName());
 		}
 	}
 	/**
@@ -132,12 +142,32 @@ public class PromotionPackage extends MenuItem {
 	 * Adds AlaCartes to the packageItems of this promotionPackage.
 	 */
 	public void addPackageItem(AlaCarte item) {
-		this.packageItems.add(item);
+		boolean found=false;
+		for (AlaCarte packageItem : packageItems){
+			if (packageItem.getId()==item.getId()){
+				item.setQuantity(item.getQuantity()+1);
+				found=true;
+				break;
+			}
+		}
+		if (!found)
+			this.packageItems.add(item);
 	}
 	/**
 	 * Removes AlaCartes from the packageItems of this promotionPackage.
 	 */
-	public void removePackageItem(int index) {
-		this.packageItems.remove(index);
+	public void removePackageItem(int id) {
+		boolean found=false;
+		for (int i=0; i<packageItems.size();i++){
+			if (packageItems.get(i).getId()==id){
+				if (packageItems.get(i).getQuantity()==1)
+					this.packageItems.remove(i);
+				else
+				packageItems.get(i).setQuantity(packageItems.get(i).getQuantity()-1);
+				found=true;
+				break;
+			}
+		}
+		if (!found) System.out.println("Package with that id not found.");
 	}
 }

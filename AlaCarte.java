@@ -17,15 +17,17 @@ public class AlaCarte extends MenuItem {
 	}
 	public static AlaCarte newAlaCarte(){
 		Scanner sc = new Scanner(System.in);
-		System.out.print("\nAlaCarte id:");
+		System.out.print("AlaCarte id: ");
 		int alacarteId = sc.nextInt();
-		System.out.print("\nAlaCarte name:");
+		System.out.print("AlaCarte name: ");
+		sc.nextLine();
 		String name = sc.nextLine();
-		System.out.print("\nAlaCarte price:");
+		System.out.print("AlaCarte price: ");
 		Float price = sc.nextFloat();
-		System.out.print("\nAlaCarte description:");
+		System.out.print("AlaCarte description: ");
+		sc.nextLine();
 		String description = sc.nextLine();
-		System.out.print("\nAlaCarte category:"+"\n1.MAIN_COURSE\n2.DRINK\n3.DESSERT\n");
+		System.out.print("AlaCarte category: "+"\n1.MAIN_COURSE\n2.DRINK\n3.DESSERT\nCategory: ");
 		int category=sc.nextInt();
 		AlaCarteCategory accat = AlaCarteCategory.MAIN_COURSE;
 		switch(category){
@@ -36,12 +38,13 @@ public class AlaCarte extends MenuItem {
 				break;
 			case 3:
 				accat=AlaCarteCategory.DESSERT;
+				break;
 			default:
 				System.out.println("Not a valid category.");
 				break;
 		}
 		AlaCarte newalacarte = new AlaCarte(alacarteId,name,price,description,accat);
-		sc.close();
+		System.out.println("New alacarte added.");
 		return newalacarte;
 	}
 
@@ -49,7 +52,12 @@ public class AlaCarte extends MenuItem {
 		Scanner sc = new Scanner(System.in);
 		while (true){
 			System.out.println(
-				"What attribute would you like to edit?"+
+				"Id: "+getId()+
+				"\nName: "+getName()+
+				"\nPrice: "+getPrice()+
+				"\nCategory: "+getCategory()+
+				"\nDescription: "+getDescription()+
+				"\nWhat attribute would you like to edit?"+
 				"\n1.Id"+
 				"\n2.Price"+
 				"\n3.Name"+
@@ -63,29 +71,34 @@ public class AlaCarte extends MenuItem {
 				int alacarteid = sc.nextInt();
 				this.setId(alacarteid);
 			}else if (choice==2){
-				System.out.printf("Price: %s\nNew price: ");
+				System.out.printf("Price: %s\nNew price: ",this.getPrice());
 				float alacarteprice = sc.nextFloat();
 				this.setPrice(alacarteprice);
 			}else if (choice==3){
-				System.out.printf("Name: %s\nNew name: ");
+				System.out.printf("Name: %s\nNew name: ",this.getName());
+				sc.nextLine();
 				String alacartename = sc.nextLine();
 				this.setName(alacartename);
 			}else if (choice==4){
-				System.out.printf("Description: %s\nNew description: ");
+				System.out.printf("Description: %s\nNew description: ",this.getDescription());
+				sc.nextLine();
 				String alacartedescription = sc.nextLine();
 				this.setDescription(alacartedescription);
 			}else if (choice==5){
-				System.out.print("\nAlaCarte category:"+"\n1.MAIN_COURSE\n2.DRINK\n3.DESSERT\n");
+				System.out.print("AlaCarte category:"+"\n1.MAIN_COURSE\n2.DRINK\n3.DESSERT\nCategory: ");
 				int category=sc.nextInt();
 				switch(category){
 					case 1:
 						this.setCategory(AlaCarteCategory.MAIN_COURSE);
+						System.out.println("Category set as main course");
 						break;
 					case 2:
 						this.setCategory(AlaCarteCategory.DRINK);
+						System.out.println("Category set as drink");
 						break;
 					case 3:
 						this.setCategory(AlaCarteCategory.DESSERT);
+						System.out.println("Category set as dessert");
 						break;
 					default:
 						System.out.println("Not a valid category.");
@@ -93,7 +106,7 @@ public class AlaCarte extends MenuItem {
 				}
 			}else break;
 		}
-		sc.close();
+		
 	}
 	/**
 	 * Gets the category of this menuitem.

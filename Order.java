@@ -20,7 +20,6 @@ public class Order extends Menu {
 	 * @param orderTableID This table's ID.
 	 */
 	public Order(int orderStaffID, int orderTableID) {
-		super();
 		this.orderStaffID = orderStaffID;
 		this.orderTableID = orderTableID;
 		this.timeStamp = new Date();
@@ -131,7 +130,7 @@ public class Order extends Menu {
 				}
 			}
 		}
-		sc.close();
+		
 	}
 	
 	/**
@@ -220,6 +219,6 @@ public class Order extends Menu {
 					break;
 			}
 		}
-		sc.close();
+		
 	}
 }

@@ -1,0 +1,3 @@
+when we remove alacarte from menu, need to remove from packages that contain that also
+have to clone stuff when ordering
+have to check for conflict id when adding
