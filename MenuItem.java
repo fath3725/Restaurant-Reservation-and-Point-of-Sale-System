@@ -7,7 +7,7 @@ class MenuItem {
 	private String name;
 	private float price;
 	private String description;
-	private int quantity=0;
+	private int quantity=1;
 
 	/**
 	 * Creates a new menuitem with the given id, name, price and description and quantity.

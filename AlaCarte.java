@@ -44,7 +44,6 @@ public class AlaCarte extends MenuItem {
 				break;
 		}
 		AlaCarte newalacarte = new AlaCarte(alacarteId,name,price,description,accat);
-		System.out.println("New alacarte added.");
 		return newalacarte;
 	}
 

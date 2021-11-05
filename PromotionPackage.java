@@ -33,8 +33,17 @@ public class PromotionPackage extends MenuItem {
 			for (int i=0;i<alaCartes.size();i++){
 				if (alaCartes.get(i).getId()==id) {
 					//check if packageitems already contains item
-					packageItems.add((alaCartes.get(i)));
-					found=true;
+					for (AlaCarte a : packageItems){
+						if (a.getId()==id){
+							a.setQuantity(a.getQuantity()+1);
+							found=true;
+							break;
+						}
+					}
+					if (!found){
+						packageItems.add((alaCartes.get(i)));
+						found=true;
+					}
 					break;
 				}
 			}
@@ -128,7 +137,7 @@ public class PromotionPackage extends MenuItem {
 		System.out.println("Package Items:");
 		System.out.println("Id  Quantity_and_Name");
 		for (int i=0;i<packageItems.size();i++){
-			System.out.printf("%d  %dx%s\n",packageItems.get(i).getQuantity(),packageItems.get(i).getId(),packageItems.get(i).getName());
+			System.out.printf("%d   %dx%s\n",packageItems.get(i).getId(),packageItems.get(i).getQuantity(),packageItems.get(i).getName());
 		}
 	}
 	/**
@@ -159,11 +168,11 @@ public class PromotionPackage extends MenuItem {
 	public void removePackageItem(int id) {
 		boolean found=false;
 		for (int i=0; i<packageItems.size();i++){
-			if (packageItems.get(i).getId()==id){
-				if (packageItems.get(i).getQuantity()==1)
+			if (this.packageItems.get(i).getId()==id){
+				if (this.packageItems.get(i).getQuantity()==1)
 					this.packageItems.remove(i);
 				else
-				packageItems.get(i).setQuantity(packageItems.get(i).getQuantity()-1);
+					this.packageItems.get(i).setQuantity(this.packageItems.get(i).getQuantity()-1);
 				found=true;
 				break;
 			}

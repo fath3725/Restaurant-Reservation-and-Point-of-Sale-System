@@ -1,1 +1,428 @@
-1 2 1 \nfrancis\nMale\nManager1
+Testing Menu functions
+
+How many tables will this restaurant have?
+Number of Tables: 1
+Enter table size (Even number up to ten): 2
+How many staffs will this restaurant have? : 1
+Enter Staff's full name: Francis
+Enter Staff's gender (Female/Male): na  
+Invalid gender. Gender is binary.
+Enter Staff's gender (Female/Male): MAle
+Invalid gender. Gender is binary.
+Enter Staff's gender (Female/Male): Male
+Enter Staff's job title: Manager
+---------------------------------------------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Add Staff into Restaurant
+(6) Remove Staff from Restaurant
+(7) View all Staffs
+(8) Add Tables into Restaurant
+(9) Remove Tables from Restaurant
+(10) View all Tables
+(11) Add Member into Restaurant
+(12) Remove Member from Restaurant
+(13) View all Members
+(14) Create Order
+(15) Remove Order
+(16) View specific Order
+(17) View all Orders
+(18) Edit Orders
+(19) Create Reservation
+(20) Cancel Reservation
+(21) View all Reservations
+(22) Seat Customer
+(23) Pay and Print Invoice
+(24) Create Total Revenue Report
+(25) Exit
+---------------------------------------------------------------
+Enter the number of your choice: 1
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 1
+AlaCarte id: 1
+AlaCarte name: Fish and chips
+AlaCarte price: 5.5
+AlaCarte description: Homemade fish and chips
+AlaCarte category: 
+1.MAIN_COURSE
+2.DRINK
+3.DESSERT
+Category: 1
+New alacarte added.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 1
+AlaCarte id: 1
+AlaCarte name: fish fingers
+AlaCarte price: 2.5
+AlaCarte description: 
+AlaCarte category: 
+1.MAIN_COURSE
+2.DRINK
+3.DESSERT
+Category: 1
+Alacarte with this id already exists. Use a different id.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 1
+AlaCarte id: 2
+AlaCarte name: Fish fingers
+AlaCarte price: 2.5
+AlaCarte description: 
+AlaCarte category: 
+1.MAIN_COURSE
+2.DRINK
+3.DESSERT
+Category: 1
+New alacarte added.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 2
+New Promotion Package creation
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade fish and chips
+
+AlaCarte Id: 2
+Name: Fish fingers
+Price: 2.5
+Description: 
+
+Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.
+Id: 1
+Added AlaCarte.
+Continue?
+Id: 2
+Added AlaCarte.
+Continue?
+Id: 2
+Added AlaCarte.
+Continue?
+Id: 2
+Added AlaCarte.
+Continue?
+Id: 3
+Not a valid AlaCarte id.
+Id: -1
+Promotion Package id: 1
+Promotion Package name: Seafood combo
+Promotion Package price: 9
+Promotion Package description: Enjoy the taste of the sea
+New promotion package added.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 3
+---------------------------------------------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Add Staff into Restaurant
+(6) Remove Staff from Restaurant
+(7) View all Staffs
+(8) Add Tables into Restaurant
+(9) Remove Tables from Restaurant
+(10) View all Tables
+(11) Add Member into Restaurant
+(12) Remove Member from Restaurant
+(13) View all Members
+(14) Create Order
+(15) Remove Order
+(16) View specific Order
+(17) View all Orders
+(18) Edit Orders
+(19) Create Reservation
+(20) Cancel Reservation
+(21) View all Reservations
+(22) Seat Customer
+(23) Pay and Print Invoice
+(24) Create Total Revenue Report
+(25) Exit
+---------------------------------------------------------------
+Enter the number of your choice: 2
+Remove Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Type: 1
+Select Ala Carte id to remove, or enter -1 to quit: 
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade fish and chips
+
+AlaCarte Id: 2
+Name: Fish fingers
+Price: 2.5
+Description: 
+
+Id: 2
+AlaCarte removed.
+Package 1 has removed alacarte id 2 from its packageItems
+Select Ala Carte id to remove, or enter -1 to quit: 
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade fish and chips
+
+Id: -1
+Remove Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Type: 3
+---------------------------------------------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Add Staff into Restaurant
+(6) Remove Staff from Restaurant
+(7) View all Staffs
+(8) Add Tables into Restaurant
+(9) Remove Tables from Restaurant
+(10) View all Tables
+(11) Add Member into Restaurant
+(12) Remove Member from Restaurant
+(13) View all Members
+(14) Create Order
+(15) Remove Order
+(16) View specific Order
+(17) View all Orders
+(18) Edit Orders
+(19) Create Reservation
+(20) Cancel Reservation
+(21) View all Reservations
+(22) Seat Customer
+(23) Pay and Print Invoice
+(24) Create Total Revenue Report
+(25) Exit
+---------------------------------------------------------------
+Enter the number of your choice: 3
+(1) View Ala Carte Menu
+(2) View Promotion Packages Menu
+Enter the number of your choice: 
+1
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade fish and chips
+
+---------------------------------------------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Add Staff into Restaurant
+(6) Remove Staff from Restaurant
+(7) View all Staffs
+(8) Add Tables into Restaurant
+(9) Remove Tables from Restaurant
+(10) View all Tables
+(11) Add Member into Restaurant
+(12) Remove Member from Restaurant
+(13) View all Members
+(14) Create Order
+(15) Remove Order
+(16) View specific Order
+(17) View all Orders
+(18) Edit Orders
+(19) Create Reservation
+(20) Cancel Reservation
+(21) View all Reservations
+(22) Seat Customer
+(23) Pay and Print Invoice
+(24) Create Total Revenue Report
+(25) Exit
+---------------------------------------------------------------
+Enter the number of your choice: 3
+(1) View Ala Carte Menu
+(2) View Promotion Packages Menu
+Enter the number of your choice: 
+2
+----------PromotionPackages----------
+Promotion Package Id: 1
+Name: Seafood combo
+Price: 9.0
+Description: Enjoy the taste of the sea
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   1xFish and chips
+
+---------------------------------------------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Add Staff into Restaurant
+(6) Remove Staff from Restaurant
+(7) View all Staffs
+(8) Add Tables into Restaurant
+(9) Remove Tables from Restaurant
+(10) View all Tables
+(11) Add Member into Restaurant
+(12) Remove Member from Restaurant
+(13) View all Members
+(14) Create Order
+(15) Remove Order
+(16) View specific Order
+(17) View all Orders
+(18) Edit Orders
+(19) Create Reservation
+(20) Cancel Reservation
+(21) View all Reservations
+(22) Seat Customer
+(23) Pay and Print Invoice
+(24) Create Total Revenue Report
+(25) Exit
+---------------------------------------------------------------
+Enter the number of your choice: 4
+Edit Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Type: 1
+Select Ala Carte id to edit, or enter -1 to quit: 
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade fish and chips
+
+Id: 1
+Id: 1
+Name: Fish and chips
+Price: 5.5
+Category: MAIN_COURSE
+Description: Homemade fish and chips
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.Category
+6.Exit
+Choice: 2
+Price: 5.5
+New price: 5.9
+Id: 1
+Name: Fish and chips
+Price: 5.9
+Category: MAIN_COURSE
+Description: Homemade fish and chips
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.Category
+6.Exit
+Choice: 6
+Select Ala Carte id to edit, or enter -1 to quit: 
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.9
+Description: Homemade fish and chips
+
+Id: -1
+Edit Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Type: 2
+Select Promotion package id to edit, or enter -1 to quit: 
+----------PromotionPackages----------
+Promotion Package Id: 1
+Name: Seafood combo
+Price: 9.0
+Description: Enjoy the taste of the sea
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   1xFish and chips
+
+Id: 1
+Id: 1
+Name: Seafood combo
+Price: 9.0
+Description: Enjoy the taste of the sea
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.PackageItems
+6.Exit
+Choice: 5
+Package Items:
+Package Items:
+Id  Quantity_and_Name
+1   1xFish and chips
+1.Remove item from package
+2.Add item to package
+Choice: 2
+Package Items:
+Id  Quantity_and_Name
+1   1xFish and chips
+Menu AlaCarte Items: 
+1 Fish and chips
+Add which Id: 
+1
+Id: 1
+Name: Seafood combo
+Price: 9.0
+Description: Enjoy the taste of the sea
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.PackageItems
+6.Exit
+Choice: 6
+Select Promotion package id to edit, or enter -1 to quit: 
+----------PromotionPackages----------
+Promotion Package Id: 1
+Name: Seafood combo
+Price: 9.0
+Description: Enjoy the taste of the sea
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   2xFish and chips
+
+Id: -1
+Edit Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Type: 3
+
+Testing Restaurant Staff functions
+

@@ -87,7 +87,19 @@ public class Menu {
 			int type = sc.nextInt();
 
 			if (type==1){
-				alaCartes.add(AlaCarte.newAlaCarte());
+				AlaCarte newAlaCarte=AlaCarte.newAlaCarte();
+				boolean exists=false;
+				for (AlaCarte ac : alaCartes){
+					if (newAlaCarte.getId()==ac.getId()){
+						System.out.println("Alacarte with this id already exists. Use a different id.");
+						exists=true;
+						break;
+					}
+				}
+				if (!exists){
+					alaCartes.add(newAlaCarte);
+					System.out.println("New alacarte added.");
+				}
 			} 
 			else if (type==2){
 				System.out.println("New Promotion Package creation");
@@ -96,7 +108,19 @@ public class Menu {
 					System.out.println("No alacartes to add into package. Cannot make new package.");
 					continue;
 				}
-				promotionPackages.add(PromotionPackage.newPromotionPackage(alaCartes));
+				PromotionPackage newPromotionPackage=PromotionPackage.newPromotionPackage(alaCartes);
+				boolean exists=false;
+				for (PromotionPackage ac : promotionPackages){
+					if (newPromotionPackage.getId()==ac.getId()){
+						System.out.println("PromotionPackage with this id already exists. Use a different id.");
+						exists=true;
+						break;
+					}
+				}
+				if (!exists){
+					System.out.println("New promotion package added.");
+					promotionPackages.add(newPromotionPackage);
+				}
 			}else break;
 		}
 	}
@@ -106,7 +130,7 @@ public class Menu {
 	public void removeItems() {
 		Scanner sc = new Scanner(System.in);
 		while(true){
-			System.out.print("Remove Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
+			System.out.print("Remove Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit\nType: ");
 			int type = sc.nextInt();
 			if (type==1){
 				if (alaCartes.size()==0){
@@ -122,6 +146,20 @@ public class Menu {
 					for (int i=0;i<alaCartes.size();i++){
 						if (id == alaCartes.get(i).getId()){
 							alaCartes.remove(i);
+							System.out.println("AlaCarte removed.");
+							//we have to remove from promotion package also
+							for (PromotionPackage p : promotionPackages){
+								for (AlaCarte a: p.getPackageItems()){
+									if (a.getId()==id){
+										//remove all such item from packageitems
+										int initq=a.getQuantity();
+										for (int j=0;j<initq;j++)
+											p.removePackageItem(id);
+										System.out.printf("Package %d has removed alacarte id %d from its packageItems\n",p.getId(),id);
+										break;
+									}
+								}
+							}
 							break;
 						}
 					}
@@ -162,6 +200,7 @@ public class Menu {
 					viewAlaCartes();
 					System.out.print("Id: ");
 					int id=sc.nextInt();
+					if (id==-1) break;
 					for (int i=0;i<alaCartes.size();i++){
 						if (id==alaCartes.get(i).getId()){
 							alaCartes.get(i).editAlaCarte();
