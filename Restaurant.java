@@ -167,7 +167,7 @@ public class Restaurant {
 		viewTable();
 		System.out.print("Which table to remove? (Enter invalid choice to terminate process): ");
 		int temp = sc.nextInt();
-		if(temp > tables.size()){
+		if(temp > tables.size() || temp <= 0){
 			
 			return;
 		}
@@ -220,7 +220,7 @@ public class Restaurant {
 		viewMember();
 		System.out.print("Which member to remove? (Enter invalid choice to terminate process): ");
 		int temp = sc.nextInt();
-		if(temp > members.size()){
+		if(temp > members.size() || temp <= 0){
 			
 			return;
 		}
@@ -404,6 +404,7 @@ public class Restaurant {
 	}
 	/**
 	 * Allows user to choose with table is going for payment.
+	 * Ask for membership, total bill minus 5% if member
 	 * Print this final invoice and moves old order into array to be stored under records.
 	 */
 	public void paymentCustomer(){
@@ -411,7 +412,6 @@ public class Restaurant {
 		int temp = printOccupiedTables();
 		if(temp == 0) {
 			System.out.println("No table to checkout");
-			
 			return;
 		}
 		System.out.println("Choose table ID for payment (Enter -1 to terminate process): ");
@@ -419,30 +419,81 @@ public class Restaurant {
 		if(choice == -1){
 			return;
 		}
-			
+		
 		for(int i=0; i<orders.size(); i++){
 			if((orders.get(i)).getOrderTableID() == choice){
-				System.out.println("----------------Invoice----------------");
-				System.out.println("---------------------------------------");
-				double finalAmt = (orders.get(i)).viewOrder();
-				System.out.println("---------------------------------------");
-				System.out.printf("Sub Total: %.2f\n",finalAmt);
-				System.out.printf("7% GST: %.2f\n",(finalAmt*GST));
-				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
-				System.out.println("-----Thank you for dining with us!-----");
-				if(tables.get(i).getStatus() == Status.OCCUPIED){
-					tables.get(i).setStatus(Status.AVAILABLE);
+				System.out.println("Are you a member?: (True/False) ");
+				Boolean answer = sc.nextBoolean();
+				sc.nextLine();
+				if(answer){
+					System.out.print("Member name: ");
+					String memberName = sc.nextLine();
+					System.out.print("Member contact number: ");
+					int memberContact = sc.nextInt();
+					for(int j=0; j<members.size(); j++){
+						if(memberName.equals(members.get(j).getName()) && members.get(j).getPhoneNumber() == memberContact){
+							System.out.println("----------------Invoice----------------");
+							System.out.println("---------------------------------------");
+							double finalAmt = (orders.get(i)).viewOrder();
+							System.out.println("---------------------------------------");
+							System.out.printf("Sub Total: %.2f\n",finalAmt);
+							System.out.printf("7% GST: %.2f\n",(finalAmt*GST));
+							System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt)*0.95);
+							System.out.println("-----Thank you for dining with us!-----");
+							if(tables.get(i).getStatus() == Status.OCCUPIED){
+								tables.get(i).setStatus(Status.AVAILABLE);
+							}
+							else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
+								tables.get(i).setStatus(Status.RESERVED);
+							}
+							tables.get(i).setTablePax(0);
+							orderRecord.add(orders.get(i));
+							removeOrder(choice);
+							return;
+						}
+					}
+					System.out.println("Invalid Member!...");
+					System.out.println("----------------Invoice----------------");
+					System.out.println("---------------------------------------");
+					double finalAmt = (orders.get(i)).viewOrder();
+					System.out.println("---------------------------------------");
+					System.out.printf("Sub Total: %.2f\n",finalAmt);
+					System.out.printf("7% GST: %.2f\n",(finalAmt*GST));
+					System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
+					System.out.println("-----Thank you for dining with us!-----");
+					if(tables.get(i).getStatus() == Status.OCCUPIED){
+						tables.get(i).setStatus(Status.AVAILABLE);
+					}
+					else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
+						tables.get(i).setStatus(Status.RESERVED);
+					}
+					tables.get(i).setTablePax(0);
+					orderRecord.add(orders.get(i));
+					removeOrder(choice);
+					return;
 				}
-				else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
-					tables.get(i).setStatus(Status.RESERVED);
+				else{
+					System.out.println("----------------Invoice----------------");
+					System.out.println("---------------------------------------");
+					double finalAmt = (orders.get(i)).viewOrder();
+					System.out.println("---------------------------------------");
+					System.out.printf("Sub Total: %.2f\n",finalAmt);
+					System.out.printf("7% GST: %.2f\n",(finalAmt*GST));
+					System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
+					System.out.println("-----Thank you for dining with us!-----");
+					if(tables.get(i).getStatus() == Status.OCCUPIED){
+						tables.get(i).setStatus(Status.AVAILABLE);
+					}
+					else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
+						tables.get(i).setStatus(Status.RESERVED);
+					}
+					tables.get(i).setTablePax(0);
+					orderRecord.add(orders.get(i));
+					removeOrder(choice);
+					return;
 				}
-				tables.get(i).setTablePax(0);
-				orderRecord.add(orders.get(i));
-				removeOrder(choice);
-				return;
 			}
 		}
-		
 	}
 	/**
 	 * Allows user to create a new order to add into the orders array.
