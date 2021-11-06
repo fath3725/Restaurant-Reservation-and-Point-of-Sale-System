@@ -93,7 +93,7 @@ public class Order extends Menu {
 				continue;
 			double total = (this.promotionPackages.get(i).getPrice()) * (this.promotionPackages.get(i).getQuantity());
 			finalAmount = finalAmount + total;
-			System.out.println(this.promotionPackages.get(i).getQuantity()+" - "+this.promotionPackages.get(i).getName()+"		"+total);
+			System.out.println(this.promotionPackages.get(i).getQuantity()+" - "+this.promotionPackages.get(i).getName()+"		"+total+"\n");
 		}
 		return finalAmount;
 	}
