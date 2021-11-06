@@ -7,6 +7,10 @@ public class Restaurant {
 	 */
 	final double GST = 0.07;
 	/**
+	 * Timer for reservation.
+	 */
+	Timer timer;
+	/**
 	 * The array that stores all staffs.
 	 */
 	private ArrayList<Staff> staffs;
@@ -23,7 +27,7 @@ public class Restaurant {
 	 */
 	private ArrayList<Order> orders;
 	/**
-	 * The array that stores all order.
+	 * The array that stores current reserveration.
 	 */
 	private ArrayList<Reservation> currentReservations;
 	/**
@@ -226,7 +230,6 @@ public class Restaurant {
 		System.out.println("Member removed");
 		
 	}
-	
 	/**
 	 * Prints all available table.
 	 */
@@ -287,30 +290,35 @@ public class Restaurant {
 		int noOfPax = sc.nextInt();
 		System.out.print("Enter customer's contact number: ");
 		int contactNumber = sc.nextInt();
+		sc.nextLine();
 		System.out.print("Enter customer's name: ");
 		String customerName = sc.nextLine();
-		int check = printAvailableTables();
-		if(check == 0) {
-			
-			return;
-		}
-		System.out.println("Enter table selected for reservation: ");
+		viewTable();
+		System.out.println("Enter table ID selected for reservation: ");
 		int resTableID = sc.nextInt();
 		Date now = new Date();
 		System.out.print("Now is: "+ now.toString());
+		System.out.print("Only can make reservation for this year...");
+		System.out.print("What month do you want the reservation? (Enter 1-12): ");
+		int month = sc.nextInt();
+		System.out.print("What day do you want the reservation? (Enter 1-30/31): ");
+		int day = sc.nextInt();
 		System.out.print("What time do you want the reservation? (Enter the hour 1-24): ");
 		int hour = sc.nextInt();
 		System.out.print("What time do you want the reservation? (Enter the minutes 1-60): ");
 		int min = sc.nextInt();
-		currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID, hour, min));
-		for(int i=0; i<tables.size(); i++){
-			if(tables.get(i).getTableID() == resTableID){
-				tables.get(i).setStatus(Status.RESERVED);
-				return;
-			}
-		}
-		
+		Calendar cal = Calendar.getInstance();
+		int year = cal.get(Calendar.YEAR); //assume reservation can only make for the current year
+		Calendar reservedTableTime = new GregorianCalendar(year, month-1, day, hour-1, min); // NOTE!!! : Month from 0 to 11 and book table 1hour before.
+		Calendar reservedForTime = new GregorianCalendar(year, month-1, day, hour, min); //actual booking timing
+		Calendar reservedTillTime = new GregorianCalendar(year, month-1, day, hour, min+30); //actual booking timing
+		currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID, reservedForTime));
+		timer = new Timer();
+		Date time = reservedTableTime.getTime(); //table reserving time which is 1 hour before actual booking time
+		timer.schedule(new TimerReservation(tables, currentReservations, resTableID, reservedForTime, reservedTillTime), time); 
+		//creates a timer at 1hour before actual booking time that sets table to reserve and creates the 30min grace period timer
 	}
+	
 	/**
 	 * Prints all current reservation information and allow user to choose which reservation to cancel.
 	 */
