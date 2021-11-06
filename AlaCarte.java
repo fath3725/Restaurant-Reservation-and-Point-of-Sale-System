@@ -50,7 +50,7 @@ public class AlaCarte extends MenuItem {
 	 * Create a clone of a AlaCarte instance.
 	 * @return cloned AlaCarte instance.
 	 */
-	public AlaCarte cloneAlaCarte(AlaCarte ac){
+	public static AlaCarte cloneAlaCarte(AlaCarte ac){
 		return new AlaCarte(ac.getId(),ac.getName(),ac.getPrice(),ac.getDescription(),ac.getCategory());
 	}
 	/**

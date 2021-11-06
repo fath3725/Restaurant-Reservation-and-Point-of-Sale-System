@@ -35,7 +35,6 @@ class MenuItem {
 	 */
 	public void setId(int id) {
 		this.id = id;
-		throw new UnsupportedOperationException();
 	}
 	/**
 	 * Gets the name of this menuitem.

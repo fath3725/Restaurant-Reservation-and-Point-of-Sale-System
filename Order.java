@@ -115,7 +115,7 @@ public class Order extends Menu {
 				int alaCarteQuantity = sc.nextInt();
 				for(int i=0; i<menu.getAlaCarte().size(); i++){
 					if(menu.getAlaCarte().get(i).getId() == alaCarteID){
-						AlaCarte temp = menu.getAlaCarte().get(i); //might need to clone here instead
+						AlaCarte temp = AlaCarte.cloneAlaCarte(menu.getAlaCarte().get(i)); //clone instance
 						temp.setQuantity(alaCarteQuantity);
 						this.alaCartes.add(temp);
 						break;
@@ -130,7 +130,7 @@ public class Order extends Menu {
 				int packQuantity = sc.nextInt();
 				for(int i=0; i<menu.getPromotionPackage().size(); i++){
 					if(menu.getPromotionPackage().get(i).getId() == packID){
-						PromotionPackage temp = menu.getPromotionPackage().get(i);
+						PromotionPackage temp = PromotionPackage.clonePromotionPackage(menu.getPromotionPackage().get(i)); //clone instance
 						temp.setQuantity(packQuantity);
 						this.promotionPackages.add(temp);
 						break;
@@ -225,7 +225,5 @@ public class Order extends Menu {
 				}
 			} else if (type==4) break;
 		}
-		
 	}
-	
 }

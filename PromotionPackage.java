@@ -32,16 +32,20 @@ public class PromotionPackage extends MenuItem {
 			boolean found=false;
 			for (int i=0;i<alaCartes.size();i++){
 				if (alaCartes.get(i).getId()==id) {
+					AlaCarte newalacarte = AlaCarte.cloneAlaCarte(alaCartes.get(i)); 
+					System.out.print("Quantity: ");
+					int quantity = sc.nextInt();
 					//check if packageitems already contains item
 					for (AlaCarte a : packageItems){
 						if (a.getId()==id){
-							a.setQuantity(a.getQuantity()+1);
+							a.setQuantity(quantity);
 							found=true;
 							break;
 						}
 					}
 					if (!found){
-						packageItems.add((alaCartes.get(i)));
+						newalacarte.setQuantity(quantity);
+						packageItems.add(newalacarte);
 						found=true;
 					}
 					break;
@@ -61,14 +65,13 @@ public class PromotionPackage extends MenuItem {
 		sc.nextLine();
 		String description = sc.nextLine();
 		PromotionPackage newpromotionpackage = new PromotionPackage(packageId,name,price,description,packageItems);
-		
 		return newpromotionpackage;
 	}
 	/**
 	 * Create a clone of a Promotion Package instance.
 	 * @return cloned PromotionPackage instance.
 	 */
-	public PromotionPackage clonePromotionPackage(PromotionPackage pp){
+	public static PromotionPackage clonePromotionPackage(PromotionPackage pp){
 		return new PromotionPackage(pp.getId(),pp.getName(),pp.getPrice(),pp.getDescription(),pp.getPackageItems());
 	}
 	/**
@@ -129,11 +132,16 @@ public class PromotionPackage extends MenuItem {
 					int packageitemid = sc.nextInt();
 					for (int i=0;i<alaCartes.size();i++){
 						if (packageitemid==alaCartes.get(i).getId()){
-							addPackageItem(alaCartes.get(i));
+							AlaCarte toadd = AlaCarte.cloneAlaCarte(alaCartes.get(i));
+							System.out.print("How many of it?\nQuantity: ");
+							int quantity = sc.nextInt();
+							toadd.setQuantity(quantity);
+							addPackageItem(toadd);
+							break;
 						}
 					}
 				}
-			}else break;
+			}else if (choice==6) break;
 		}
 		
 	}
