@@ -32,7 +32,6 @@ public class Reservation {
 	 * @param contact contact number
 	 * @param name name reserved under
 	 * @param table table id
-	 * @param timeStamp time of reservation
 	 * @param reservedForTime duration of reservation
 	 */
 	public Reservation(int pax, int contact, String name, int table,  Calendar reservedForTime) {

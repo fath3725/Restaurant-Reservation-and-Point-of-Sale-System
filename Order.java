@@ -47,7 +47,7 @@ public class Order extends Menu {
 	}
 	/**
 	 * Changes the staff ID of this order.
-	 * @param orderTableID This order's new staff ID.
+	 * @param orderStaffID This order's new staff ID.
 	 */
 	public void setOrderStaffID(int orderStaffID) {
 		this.orderStaffID = orderStaffID;
@@ -143,7 +143,7 @@ public class Order extends Menu {
 	
 	/**
 	 * Edit the quantity of the menu item in this order.
-	 * @param menu
+	 * @param menu Menu instance for reference when editing items
 	 */
 	public void editItems(Menu menu) {
 		Scanner sc = new Scanner(System.in);

@@ -52,7 +52,7 @@ public class AlaCarte extends MenuItem {
 	}
 	/**
 	 * Create a clone of a AlaCarte instance.
-	 * @param ac
+	 * @param ac AlaCarte instance to clone
 	 * @return cloned AlaCarte instance.
 	 */
 	public static AlaCarte cloneAlaCarte(AlaCarte ac){
@@ -130,7 +130,7 @@ public class AlaCarte extends MenuItem {
 	}
 	/**
 	 * Sets the category of this menuitem.
-	 * @param category 
+	 * @param category category to be set for this AlaCarte
 	 */
 	public void setCategory(AlaCarteCategory category) {
 		this.category = category;

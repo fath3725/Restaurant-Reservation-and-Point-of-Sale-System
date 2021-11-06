@@ -230,6 +230,7 @@ public class Restaurant {
 	}
 	/**
 	 * Prints all available table.
+	 * @return count of available tables
 	 */
 	public int printAvailableTables() {
 		int count = 0;

@@ -75,7 +75,7 @@ public class Menu {
 	}
 	/**
 	 * Adds alaCartes into this Menu.
-	 * @param menu
+	 * @param menu Menu instance for reference when adding
 	 */
 	public void addItems(Menu menu) {
 		Scanner sc = new Scanner(System.in);
