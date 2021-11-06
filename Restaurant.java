@@ -610,6 +610,7 @@ public class Restaurant {
         // Close the file.
         out.close();
 	}
+
 	/**
 	 * Gets the menu of this restaurant.
 	 * @return this menu.

@@ -87,6 +87,14 @@ public class Order extends Menu {
 			finalAmount = finalAmount + total;
 			System.out.println(this.promotionPackages.get(i).getQuantity()+" - "+this.promotionPackages.get(i).getName()+"		"+total+"\n");
 		}
+
+		for(int i=0; i<this.promotionPackages.size(); i++){
+			if(this.promotionPackages.get(i).getQuantity() == 0)
+				continue;
+			double total = (this.promotionPackages.get(i).getPrice()) * (this.promotionPackages.get(i).getQuantity());
+			finalAmount = finalAmount + total;
+			System.out.println(this.promotionPackages.get(i).getQuantity()+" - "+this.promotionPackages.get(i).getName()+"		"+total);
+		}
 		return finalAmount;
 	}
 	/**
@@ -221,4 +229,5 @@ public class Order extends Menu {
 		}
 		
 	}
+	
 }
