@@ -143,6 +143,7 @@ public class Order extends Menu {
 	
 	/**
 	 * Edit the quantity of the menu item in this order.
+	 * @param menu
 	 */
 	public void editItems(Menu menu) {
 		Scanner sc = new Scanner(System.in);

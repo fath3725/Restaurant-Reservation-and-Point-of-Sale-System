@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class AlaCarte extends MenuItem {
-
+	
 	private AlaCarteCategory category;
 	/**
 	 * Creates a new AlaCarte with the given alacarteId, name, price and description, quantity and category.
@@ -15,6 +15,10 @@ public class AlaCarte extends MenuItem {
 		super(alacarteId,name,price,description);
 		this.category=category;
 	}
+	/**
+	 * Create new AlaCarte instance.
+	 * @return new AlaCarte instance.
+	 */
 	public static AlaCarte newAlaCarte(){
 		Scanner sc = new Scanner(System.in);
 		System.out.print("AlaCarte id: ");
@@ -48,6 +52,7 @@ public class AlaCarte extends MenuItem {
 	}
 	/**
 	 * Create a clone of a AlaCarte instance.
+	 * @param ac
 	 * @return cloned AlaCarte instance.
 	 */
 	public static AlaCarte cloneAlaCarte(AlaCarte ac){
@@ -125,6 +130,7 @@ public class AlaCarte extends MenuItem {
 	}
 	/**
 	 * Sets the category of this menuitem.
+	 * @param category 
 	 */
 	public void setCategory(AlaCarteCategory category) {
 		this.category = category;

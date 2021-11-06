@@ -247,6 +247,7 @@ public class Restaurant {
 	/**
 	 * Prints all available table with table size larger than user's input.
 	 * @param pax user's input for pax
+	 * @return count of available tables
 	 */
 	public int printAvailableTables(int pax) {
 		int count = 0;
@@ -264,6 +265,7 @@ public class Restaurant {
 	}
 	/**
 	 * Prints all occupied table.
+	 * @return count of occupied tables
 	 */
 	public int printOccupiedTables() {
 		int count = 0;
@@ -508,6 +510,7 @@ public class Restaurant {
 	}
 	/**
 	 * Allows user to remove a specific order from the orders array when customers made payment.
+	 * @param tableID id of table to remove
 	 */
 	public void removeOrder(int tableID) {
 		if (orders.size()==0) {

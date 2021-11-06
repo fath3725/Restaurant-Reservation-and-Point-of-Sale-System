@@ -28,12 +28,12 @@ public class Reservation {
 
 	/**
 	 * Creates a new reservation with the given pax, contact, name, table and time reserved.
-	 * @param pax
-	 * @param contact
-	 * @param name
-	 * @param table
-	 * @param timeStamp
-	 * @param reservedForTime
+	 * @param pax number of people
+	 * @param contact contact number
+	 * @param name name reserved under
+	 * @param table table id
+	 * @param timeStamp time of reservation
+	 * @param reservedForTime duration of reservation
 	 */
 	public Reservation(int pax, int contact, String name, int table,  Calendar reservedForTime) {
 		this.paxReserved = pax;

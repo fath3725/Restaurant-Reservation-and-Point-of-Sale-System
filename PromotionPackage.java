@@ -19,6 +19,7 @@ public class PromotionPackage extends MenuItem {
 	}
 	/**
 	 * Create new Promotion Package instance.
+	 * @param alaCartes alaCartes currently in Menu
 	 * @return new PromotionPackage instance.
 	 */
 	public static PromotionPackage newPromotionPackage(ArrayList<AlaCarte> alaCartes){
@@ -69,6 +70,7 @@ public class PromotionPackage extends MenuItem {
 	}
 	/**
 	 * Create a clone of a Promotion Package instance.
+	 * @param pp promotion package to clone
 	 * @return cloned PromotionPackage instance.
 	 */
 	public static PromotionPackage clonePromotionPackage(PromotionPackage pp){
@@ -76,6 +78,7 @@ public class PromotionPackage extends MenuItem {
 	}
 	/**
 	 * Edits the attributes of this promotionPackage.
+	 * @param alaCartes currently in Menu
 	 */
 	public void editPromotionPackage(ArrayList<AlaCarte> alaCartes){
 		Scanner sc = new Scanner(System.in);
@@ -164,6 +167,7 @@ public class PromotionPackage extends MenuItem {
 	}
 	/**
 	 * Adds AlaCartes to the packageItems of this promotionPackage.
+	 * @param item AlaCarte instance to add
 	 */
 	public void addPackageItem(AlaCarte item) {
 		boolean found=false;
@@ -179,6 +183,7 @@ public class PromotionPackage extends MenuItem {
 	}
 	/**
 	 * Removes AlaCartes from the packageItems of this promotionPackage.
+	 * @param id id of AlaCarte packageitem to remove
 	 */
 	public void removePackageItem(int id) {
 		boolean found=false;

@@ -32,6 +32,7 @@ class MenuItem {
 	}
 	/**
 	 * Sets the id of this menuitem.
+	 * @param id
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -45,6 +46,7 @@ class MenuItem {
 	}
 	/**
 	 * Sets the name of this menuitem.
+	 * @param name
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -58,6 +60,7 @@ class MenuItem {
 	}
 	/**
 	 * Sets the price of this menuitem.
+	 * @param price
 	 */
 	public void setPrice(float price) {
 		this.price = price;
@@ -71,8 +74,8 @@ class MenuItem {
 	}
 	/**
 	 * Sets the description of this menuitem.
+	 * @param description
 	 */
-	//Set MenuItem Description
 	public void setDescription(String description) {
 		this.description = description;
 	}
@@ -85,6 +88,7 @@ class MenuItem {
 	}
 	/**
 	 * Sets the quantity of this menuitem.
+	 * @param quantity
 	 */
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;

@@ -14,14 +14,14 @@ public class Menu {
 	}
 	/**
 	 * Gets the alaCartes of this Menu.
-	 * @return ArrayList<AlaCarte>alaCartes
+	 * @return an ArrayList of AlaCarte currently in menu
 	 */
 	public ArrayList<AlaCarte> getAlaCarte(){
 		return this.alaCartes;
 	}
 	/**
 	 * Gets the alaCartes of this Menu.
-	 * @return ArrayList<PromotionPackage>promotionPackages
+	 * @return an ArrayList of PromotionPackage currently in menu
 	 */
 	public ArrayList<PromotionPackage> getPromotionPackage(){
 		return this.promotionPackages;
@@ -75,6 +75,7 @@ public class Menu {
 	}
 	/**
 	 * Adds alaCartes into this Menu.
+	 * @param menu
 	 */
 	public void addItems(Menu menu) {
 		Scanner sc = new Scanner(System.in);
