@@ -46,7 +46,16 @@ public class AlaCarte extends MenuItem {
 		AlaCarte newalacarte = new AlaCarte(alacarteId,name,price,description,accat);
 		return newalacarte;
 	}
-
+	/**
+	 * Create a clone of a AlaCarte instance.
+	 * @return cloned AlaCarte instance.
+	 */
+	public static AlaCarte cloneAlaCarte(AlaCarte ac){
+		return new AlaCarte(ac.getId(),ac.getName(),ac.getPrice(),ac.getDescription(),ac.getCategory());
+	}
+	/**
+	 * Edits the attributes of this promotionPackage.
+	 */
 	public void editAlaCarte(){
 		Scanner sc = new Scanner(System.in);
 		while (true){

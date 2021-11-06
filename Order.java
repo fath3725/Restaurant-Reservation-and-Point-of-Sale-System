@@ -115,7 +115,7 @@ public class Order extends Menu {
 				int alaCarteQuantity = sc.nextInt();
 				for(int i=0; i<menu.getAlaCarte().size(); i++){
 					if(menu.getAlaCarte().get(i).getId() == alaCarteID){
-						AlaCarte temp = menu.getAlaCarte().get(i); //might need to clone here instead
+						AlaCarte temp = AlaCarte.cloneAlaCarte(menu.getAlaCarte().get(i)); //clone instance
 						temp.setQuantity(alaCarteQuantity);
 						this.alaCartes.add(temp);
 						break;
@@ -130,7 +130,7 @@ public class Order extends Menu {
 				int packQuantity = sc.nextInt();
 				for(int i=0; i<menu.getPromotionPackage().size(); i++){
 					if(menu.getPromotionPackage().get(i).getId() == packID){
-						PromotionPackage temp = menu.getPromotionPackage().get(i);
+						PromotionPackage temp = PromotionPackage.clonePromotionPackage(menu.getPromotionPackage().get(i)); //clone instance
 						temp.setQuantity(packQuantity);
 						this.promotionPackages.add(temp);
 						break;
@@ -147,7 +147,7 @@ public class Order extends Menu {
 	public void editItems(Menu menu) {
 		Scanner sc = new Scanner(System.in);
 		while(true){
-			System.out.print("Next Action?\n"+"1. Add item\n"+"2. Remove item\n"+"3. Change quantity\n"+"4. Exit\n");
+			System.out.print("Next Action?\n"+"1. Add item\n"+"2. Remove item\n"+"3. Change quantity\n"+"4. Exit\nChoice: ");
 			int type = sc.nextInt();
 			if (type==1){
 				addItems(menu);
@@ -189,7 +189,7 @@ public class Order extends Menu {
 					break;
 			}
 			else if(type==3){
-				System.out.print("Edit quantity of which Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
+				System.out.print("Edit quantity of which Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit\nChoice: ");
 				int choice = sc.nextInt();
 				if(choice == 1){
 					System.out.println("Select Ala Carte id to edit quantity, or enter -1 to quit: ");
@@ -223,11 +223,7 @@ public class Order extends Menu {
 						}
 					}
 				}
-				else
-					break;
-			}
+			} else if (type==4) break;
 		}
-		
 	}
-	
 }

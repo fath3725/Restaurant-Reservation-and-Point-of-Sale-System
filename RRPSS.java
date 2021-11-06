@@ -6,39 +6,76 @@ public class RRPSS {
 		
 		Restaurant restaurant = new Restaurant();
 		Scanner sc = new Scanner(System.in);
-		int choice, innerChoice;
 		while (true) {
+			System.out.println("-----------------------RRPSS MAIN MENU-------------------------");
+			System.out.println("(1) Menu options");
+			System.out.println("(2) Staff options");
+			System.out.println("(3) Table options");
+			System.out.println("(4) Member options");
+			System.out.println("(5) Order options");
+			System.out.println("(6) Reservation options");
+			System.out.println("(7) Seat customer");
+			System.out.println("(8) Payment");
+			System.out.println("(9) Generate Total Revenue Report");
+			System.out.println("(10) Exit");
 			System.out.println("---------------------------------------------------------------");
+			System.out.print("Choice: ");
+			int choice = sc.nextInt();
+			switch(choice){
+				case 1:
+					MenuOptions(restaurant);
+					break;
+				case 2:
+					StaffOptions(restaurant);
+					break;
+				case 3:
+					TableOptions(restaurant);
+					break;
+				case 4:
+					MemberOptions(restaurant);
+					break;
+				case 5:
+					OrderOptions(restaurant);
+					break;
+				case 6:
+					ReservationOptions(restaurant);
+					break;
+				case 7:
+					restaurant.seatCustomer();
+					break;
+				case 8:
+					restaurant.paymentCustomer();
+					break;
+				case 9:
+					try {
+						restaurant.transferToTxt();
+					} catch (FileNotFoundException e) {
+						e.printStackTrace();
+					}
+					break;
+				case 10:
+					System.out.println("Program terminating ...");
+					return;
+				default:
+					System.out.println("Invalid Command.");
+					break;
+			}
+		}
+	}
+
+	private static void MenuOptions(Restaurant restaurant){
+		Scanner sc = new Scanner(System.in);
+		while(true){
+			System.out.println("------------------------Menu Options---------------------------");
 			System.out.println("(1) Add item into Menu"); //add menu item into menu
 			System.out.println("(2) Remove item from Menu"); //remove menu item from menu
 			System.out.println("(3) View Menu"); //view current menu
 			System.out.println("(4) Edit current Menu"); //edit current menu 
-			System.out.println("(5) Add Staff into Restaurant"); //add staff into restaurant 
-			System.out.println("(6) Remove Staff from Restaurant"); //remove staff from restaurant 
-			System.out.println("(7) View all Staffs"); //view all staff
-			System.out.println("(8) Add Tables into Restaurant"); //add table into restaurant
-			System.out.println("(9) Remove Tables from Restaurant"); //remove table from restaurant
-			System.out.println("(10) View all Tables"); //view all table either all or available only
-			System.out.println("(11) Add Member into Restaurant"); //add member into restaurant
-			System.out.println("(12) Remove Member from Restaurant"); //remove member from restaurant
-			System.out.println("(13) View all Members"); //view all member
-			System.out.println("(14) Create Order"); //create order
-			System.out.println("(15) Remove Order"); //remove order 
-			System.out.println("(16) View specific Order"); //view specific order
-			System.out.println("(17) View all Orders"); //view all current order
-			System.out.println("(18) Edit Orders"); //edit an order
-			System.out.println("(19) Create Reservation"); //create reservation
-			System.out.println("(20) Cancel Reservation"); //cancel reservation, if reserved customer is seated, reservation will be removed and placed into records automatically
-			System.out.println("(21) View all Reservations"); //view current reservations
-			System.out.println("(22) Seat Customer"); //set tables status to occupy and set pax
-			System.out.println("(23) Pay and Print Invoice"); //set tables status to available and set pax to 0, print invoice
-			System.out.println("(24) Create Total Revenue Report"); //create txt file which contains all order information
-			System.out.println("(25) Exit");
+			System.out.println("(5) Back to RRPSS main");
 			System.out.println("---------------------------------------------------------------");
-			System.out.print("Enter the number of your choice: ");
-			choice = sc.nextInt();
-			if (choice==25)break;
-			switch(choice) {
+			System.out.print("Choice: ");
+			int choice = sc.nextInt();
+			switch(choice){
 				case 1:
 					restaurant.getMenu().addItems(restaurant.getMenu());
 					break;
@@ -49,7 +86,7 @@ public class RRPSS {
 					System.out.println("(1) View Ala Carte Menu");
 					System.out.println("(2) View Promotion Packages Menu");
 					System.out.println("Enter the number of your choice: ");
-					innerChoice = sc.nextInt();
+					int innerChoice = sc.nextInt();
 					switch(innerChoice) {
 						case 1: 
 							restaurant.getMenu().viewAlaCartes();
@@ -58,32 +95,74 @@ public class RRPSS {
 							restaurant.getMenu().viewPromotionPackages();
 							break;
 						default:
-							System.out.println("Returning to main page");
+							System.out.println("Returning to menu options page");
 					}
 					break;
 				case 4:
 					restaurant.getMenu().editItems();
 					break;
 				case 5:
+					return;
+				default:
+					System.out.println("Invalid Command.");
+					break;
+			}
+		}
+	}
+
+	private static void StaffOptions(Restaurant restaurant){
+		Scanner sc = new Scanner(System.in);
+		while(true){
+			System.out.println("------------------------Staff Options---------------------------");
+			System.out.println("(1) Add Staff into Restaurant"); //add staff into restaurant 
+			System.out.println("(2) Remove Staff from Restaurant"); //remove staff from restaurant 
+			System.out.println("(3) View all Staffs"); //view all staff
+			System.out.println("(4) Back to RRPSS main");
+			System.out.println("---------------------------------------------------------------");
+			System.out.print("Choice: ");
+			int choice = sc.nextInt();
+			switch(choice){
+				case 1:
 					restaurant.addStaff();
 					break;
-				case 6:
+				case 2:
 					restaurant.removeStaff();
 					break;
-				case 7:
+				case 3:
 					restaurant.viewStaff();
 					break;
-				case 8:
+				case 4:
+					return;
+				default:
+					System.out.println("Invalid Command.");
+					break;
+			}
+		}
+	}
+
+	private static void TableOptions(Restaurant restaurant){
+		Scanner sc = new Scanner(System.in);
+		while(true){
+			System.out.println("------------------------Table Options---------------------------");
+			System.out.println("(1) Add Tables into Restaurant"); //add table into restaurant
+			System.out.println("(2) Remove Tables from Restaurant"); //remove table from restaurant
+			System.out.println("(3) View all Tables"); //view all table either all or available only
+			System.out.println("(4) Back to RRPSS main");
+			System.out.println("---------------------------------------------------------------");
+			System.out.print("Choice: ");
+			int choice = sc.nextInt();
+			switch(choice){
+				case 1:
 					restaurant.addTable();
 					break;
-				case 9:
+				case 2:
 					restaurant.removeTable();
 					break;
-				case 10:
+				case 3:
 					System.out.println("(1) View all Tables");
 					System.out.println("(2) View available Tables only");
 					System.out.println("Enter the number of your choice: ");
-					innerChoice = sc.nextInt();
+					int innerChoice = sc.nextInt();
 					switch(innerChoice) {
 						case 1: 
 							restaurant.viewTable();
@@ -96,63 +175,114 @@ public class RRPSS {
 							break;
 					}
 					break;
-				case 11:
-					restaurant.addMember();
-					break;
-				case 12:
-					restaurant.removeMember();
-					break;
-				case 13:
-					restaurant.viewMember();
-					break;
-				case 14:
-					restaurant.addOrder();
-					break;
-				case 15:
-					restaurant.removeOrder();
-					break;
-				case 16:
-					restaurant.printSpecificOrder();
-					break;
-				case 17:
-					restaurant.printAllOrder();
-					break;
-				case 18:
-					restaurant.editOrder();
-					break;
-				case 19:
-					restaurant.addReservation();
-					break;
-				case 20:
-					restaurant.removeReservation();
-					break;
-				case 21:
-					restaurant.viewCurrentReservations();
-					break;
-				case 22:
-					restaurant.seatCustomer();
-					break;
-				case 23:
-					restaurant.paymentCustomer();
-					break;
-				case 24:
-					try {
-						restaurant.transferToTxt();
-					} catch (FileNotFoundException e) {
-						e.printStackTrace();
-					}
-					break;
-				case 25:
-					System.out.println("Program terminating ...");
-					break;
+				case 4:
+					return;
 				default:
 					System.out.println("Invalid Command.");
 					break;
-				}
-			
 			}
-		sc.close();
+		}
+	}
+
+	private static void MemberOptions(Restaurant restaurant){
+		Scanner sc = new Scanner(System.in);
+		while(true){
+			System.out.println("------------------------Member Options--------------------------");
+			System.out.println("(1) Add Member into Restaurant"); //add member into restaurant
+			System.out.println("(2) Remove Member from Restaurant"); //remove member from restaurant
+			System.out.println("(3) View all Members"); //view all member
+			System.out.println("(4) Back to RRPSS main");
+			System.out.println("---------------------------------------------------------------");
+			System.out.print("Choice: ");
+			int choice = sc.nextInt();
+			switch(choice){
+				case 1:
+					restaurant.addMember();
+					break;
+				case 2:
+					restaurant.removeMember();
+					break;
+				case 3:
+					restaurant.viewMember();
+					break;
+				case 4:
+					return;
+				default:
+					System.out.println("Invalid Command.");
+					break;
+			}
+		}
+	}
+
+	private static void OrderOptions(Restaurant restaurant){
+		Scanner sc = new Scanner(System.in);
+		while(true){
+			System.out.println("------------------------Order Options---------------------------");
+			System.out.println("(1) Create Order"); //create order
+			System.out.println("(2) Remove Order"); //remove order 
+			System.out.println("(3) View specific Order"); //view specific order
+			System.out.println("(4) View all Orders"); //view all current order
+			System.out.println("(5) Edit Orders"); //edit an order
+			System.out.println("(6) Back to RRPSS main");
+			System.out.println("---------------------------------------------------------------");
+			System.out.print("Choice: ");
+			int choice = sc.nextInt();
+			switch(choice){
+				case 1:
+					restaurant.addOrder();
+					break;
+				case 2:
+					restaurant.removeOrder();
+					break;
+				case 3:
+					restaurant.printSpecificOrder();
+					break;
+				case 4:
+					restaurant.printAllOrder();
+					break;
+				case 5:
+					restaurant.editOrder();
+					break;
+				case 6:
+					return;
+				default:
+					System.out.println("Invalid Command.");
+					break;
+			}
+		}
+	}
+
+	private static void ReservationOptions(Restaurant restaurant){
+		Scanner sc = new Scanner(System.in);
+		while(true){
+			System.out.println("--------------------Reservation Options------------------------");
+			System.out.println("(1) Create Reservation"); //create reservation
+			System.out.println("(2) Cancel Reservation"); //cancel reservation, if reserved customer is seated, reservation will be removed and placed into records automatically
+			System.out.println("(3) View all Reservations"); //view current reservations
+			System.out.println("(4) Back to RRPSS main");
+			System.out.println("---------------------------------------------------------------");
+			System.out.print("Choice: ");
+			int choice = sc.nextInt();
+			switch(choice){
+				case 1:
+					restaurant.addReservation();
+					break;
+				case 2:
+					restaurant.removeReservation();
+					break;
+				case 3:
+					restaurant.viewCurrentReservations();
+					break;
+				case 4:
+					return;
+				default:
+					System.out.println("Invalid Command.");
+					break;
+			}
+		}
 	}
 }
+
+	
 
 	

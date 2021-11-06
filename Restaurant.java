@@ -359,8 +359,8 @@ public class Restaurant {
 	public void seatCustomer(){
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Reservation? (True/False): ");
-		boolean answer = sc.nextBoolean();
-		sc.nextLine();
+		String in = sc.next();
+		boolean answer = Boolean.parseBoolean(in);
 		if(!answer) {
 			System.out.print("How many pax?: ");
 			int numberOfPeople = sc.nextInt();
