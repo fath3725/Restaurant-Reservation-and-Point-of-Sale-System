@@ -359,8 +359,8 @@ public class Restaurant {
 	public void seatCustomer(){
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Reservation? (True/False): ");
-		String in = sc.next();
-		boolean answer = Boolean.parseBoolean(in);
+		boolean answer = sc.nextBoolean();
+		sc.nextLine();
 		if(!answer) {
 			System.out.print("How many pax?: ");
 			int numberOfPeople = sc.nextInt();
@@ -536,7 +536,6 @@ public class Restaurant {
 		int temp = printOccupiedTables();
 		if(temp == 0) {
 			System.out.println("No table occupied to remove order");
-			
 			return;
 		}
 		System.out.print("Choose table ID to remove order (Enter -1 to terminate process): ");
@@ -592,7 +591,7 @@ public class Restaurant {
 				return;
 			}
 		}
-		
+		System.out.print("No order for such table ID");
 	}
 	/**
 	 * Allows user to view all order in the orders array.
@@ -606,7 +605,7 @@ public class Restaurant {
 			System.out.println("-----------------------------------------------------");
 			System.out.println("Order for Table ID: "+orders.get(i).getOrderTableID());
 			double finalAmt = orders.get(i).viewOrder();
-			System.out.printf("Current Total for Table ID-"+orders.get(i).getOrderTableID()+" exclude GST: %.2f", finalAmt);
+			System.out.printf("Current Total for Table ID-"+orders.get(i).getOrderTableID()+" exclude GST: %.2f\n", finalAmt);
 		}
 	}
 	/**

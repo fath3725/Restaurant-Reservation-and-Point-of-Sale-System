@@ -105,7 +105,8 @@ public class Order extends Menu {
 		Scanner sc = new Scanner(System.in);
 		int type = 0;
 		while(type<3) {
-			System.out.print("Add Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Terminate");
+			System.out.print("Add Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Terminate\n");
+			System.out.println("Choice: ");
 			type = sc.nextInt();
 			if (type==1){
 				menu.viewAlaCartes();
