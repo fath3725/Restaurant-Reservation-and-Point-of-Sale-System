@@ -147,7 +147,7 @@ public class Order extends Menu {
 	public void editItems(Menu menu) {
 		Scanner sc = new Scanner(System.in);
 		while(true){
-			System.out.print("Next Action?\n"+"1. Add item\n"+"2. Remove item\n"+"3. Change quantity\n"+"4. Exit\n");
+			System.out.print("Next Action?\n"+"1. Add item\n"+"2. Remove item\n"+"3. Change quantity\n"+"4. Exit\nChoice: ");
 			int type = sc.nextInt();
 			if (type==1){
 				addItems(menu);
@@ -189,7 +189,7 @@ public class Order extends Menu {
 					break;
 			}
 			else if(type==3){
-				System.out.print("Edit quantity of which Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
+				System.out.print("Edit quantity of which Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit\nChoice: ");
 				int choice = sc.nextInt();
 				if(choice == 1){
 					System.out.println("Select Ala Carte id to edit quantity, or enter -1 to quit: ");
@@ -223,9 +223,7 @@ public class Order extends Menu {
 						}
 					}
 				}
-				else
-					break;
-			}
+			} else if (type==4) break;
 		}
 		
 	}
