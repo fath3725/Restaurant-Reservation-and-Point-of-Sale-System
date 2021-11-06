@@ -65,6 +65,13 @@ public class PromotionPackage extends MenuItem {
 		return newpromotionpackage;
 	}
 	/**
+	 * Create a clone of a Promotion Package instance.
+	 * @return cloned PromotionPackage instance.
+	 */
+	public PromotionPackage clonePromotionPackage(PromotionPackage pp){
+		return new PromotionPackage(pp.getId(),pp.getName(),pp.getPrice(),pp.getDescription(),pp.getPackageItems());
+	}
+	/**
 	 * Edits the attributes of this promotionPackage.
 	 */
 	public void editPromotionPackage(ArrayList<AlaCarte> alaCartes){
