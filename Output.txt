@@ -342,6 +342,7 @@ Description: Cheese on bread
 
 Id: 4
 AlaCarte removed.
+Invalid ID
 Select Ala Carte id to remove, or enter -1 to quit: 
 ----------AlaCartes----------
 Main courses-----------------

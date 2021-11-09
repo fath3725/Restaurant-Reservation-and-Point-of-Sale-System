@@ -157,7 +157,7 @@ public class Restaurant {
 	 * Creates and add a new table into the tables array.
 	 */
 	public void addTable() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		System.out.print("Enter table size (Even number between two to ten): ");
 		int tableSize = sc.nextInt();
 		if(tableSize%2 != 0 || tableSize>10 || tableSize<2){
@@ -318,24 +318,17 @@ public class Restaurant {
 	 * Creates and add a new reservation into the current reservation array.
 	 */
 	public void addReservation() {
-<<<<<<< HEAD
-		Scanner sc = RRPSS.sc;
-		System.out.print("Enter number of pax: ");
-		int noOfPax = sc.nextInt();
-		System.out.println(noOfPax);
-=======
 		if(tables.size()==0) {
 			System.out.println("No table in the restaurant");
 			return;
 		}
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		System.out.print("Enter number of pax: ");
 		int noOfPax = sc.nextInt();
 		if(noOfPax>10 || noOfPax<2) {
 			System.out.println("No available for "+noOfPax+" pax");
 			return;
 		}
->>>>>>> quang1
 		System.out.print("Enter customer's contact number: ");
 		int contactNumber = sc.nextInt();
 		System.out.println(contactNumber);
@@ -682,7 +675,7 @@ public class Restaurant {
 	 * Allows user to edit a existing order.
 	 */
 	public void editOrder() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		if (orders.size()==0) {
 			System.out.println("No orders to edit");
 			return;
