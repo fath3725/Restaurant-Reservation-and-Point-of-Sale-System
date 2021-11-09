@@ -1,1 +1,6 @@
 have to clone stuff when ordering
+
+add reservation must check table status (examine each status,)
+remove reservation must check table status (examine each status)
+a table has multiple reservation??
+if a table is occupied2reserved, and then the order is paid, should it be available?

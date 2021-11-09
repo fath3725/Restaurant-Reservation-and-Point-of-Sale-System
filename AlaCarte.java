@@ -40,7 +40,7 @@ public class AlaCarte extends MenuItem {
 				accat=AlaCarteCategory.DESSERT;
 				break;
 			default:
-				System.out.println("Not a valid category.");
+				System.out.println("Not a valid category. It is set as Main Course");
 				break;
 		}
 		AlaCarte newalacarte = new AlaCarte(alacarteId,name,price,description,accat);
