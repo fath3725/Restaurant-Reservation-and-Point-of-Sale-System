@@ -86,16 +86,16 @@ public class PromotionPackage extends MenuItem {
 	 * Edits the attributes of this promotionPackage.
 	 * @param alaCartes currently in Menu
 	 */
-	public void editPromotionPackage(ArrayList<AlaCarte> alaCartes){
+	public void editPromotionPackage(ArrayList<PromotionPackage> promotionPackages,ArrayList<AlaCarte> alaCartes){
 		Scanner sc = RRPSS.sc;
 		while (true){
 			System.out.println(
 				"------ITEM INFO------"+
-				"Id: "+getId()+
+				"\nId: "+getId()+
 				"\nName: "+getName()+
 				"\nPrice: "+getPrice()+
 				"\nDescription: "+getDescription()+
-				"---------------------"+
+				"\n---------------------"+
 				"\nWhat attribute would you like to edit?"+
 				"\n1.Id"+
 				"\n2.Price"+
@@ -107,10 +107,23 @@ public class PromotionPackage extends MenuItem {
 			int choice = sc.nextInt();
 			System.out.println(choice);
 			if (choice==1){
-				System.out.printf("Id: %d\nNew id: ",this.getId());
-				int packageid = sc.nextInt();
-				System.out.println(packageid);
-				this.setId(packageid);
+				while(true){
+					System.out.printf("Id: %d\nNew id: ",this.getId());
+					int packageid = sc.nextInt();
+					System.out.println(packageid);
+					boolean exists=false;
+					for (PromotionPackage pp : promotionPackages){
+						if (pp.getId()==packageid){
+							System.out.println("Id already exists. Try again.");
+							exists=true;
+							break;
+						}
+					}
+					if (!exists){
+						this.setId(packageid);
+						break;
+					}
+				}
 			}else if (choice==2){
 				System.out.printf("Price: %s\nNew price: ");
 				float packageprice = sc.nextFloat();

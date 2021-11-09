@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AlaCarte extends MenuItem {
@@ -66,17 +67,17 @@ public class AlaCarte extends MenuItem {
 	/**
 	 * Edits the attributes of this promotionPackage.
 	 */
-	public void editAlaCarte(){
+	public void editAlaCarte(ArrayList<AlaCarte> alaCartes){
 		Scanner sc = RRPSS.sc;
 		while (true){
 			System.out.println(
 				"------ITEM INFO------"+
-				"Id: "+getId()+
+				"\nId: "+getId()+
 				"\nName: "+getName()+
 				"\nPrice: "+getPrice()+
 				"\nCategory: "+getCategory()+
 				"\nDescription: "+getDescription()+
-				"---------------------"+
+				"\n---------------------"+
 				"\nWhat attribute would you like to edit?"+
 				"\n1.Id"+
 				"\n2.Price"+
@@ -88,10 +89,23 @@ public class AlaCarte extends MenuItem {
 			int choice = sc.nextInt();
 			System.out.println(choice);
 			if (choice==1){
-				System.out.printf("Id: %d\nNew id: ",this.getId());
-				int alacarteid = sc.nextInt();
-				System.out.println(alacarteid);
-				this.setId(alacarteid);
+				while(true){
+					System.out.printf("Id: %d\nNew id: ",this.getId());
+					int packageid = sc.nextInt();
+					System.out.println(packageid);
+					boolean exists=false;
+					for (AlaCarte ac : alaCartes){
+						if (ac.getId()==packageid){
+							System.out.println("Id already exists. Try again.");
+							exists=true;
+							break;
+						}
+					}
+					if (!exists){
+						this.setId(packageid);
+						break;
+					}
+				}
 			}else if (choice==2){
 				System.out.printf("Price: %s\nNew price: ",this.getPrice());
 				float alacarteprice = sc.nextFloat();

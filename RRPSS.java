@@ -4,21 +4,21 @@ import java.util.*;
 public class RRPSS {
 	public static Scanner sc;
 	public static void main(String[] args){
-		// try {
-		// 	PrintStream o = new PrintStream(new File("Output.txt"));
-		// 	System.setOut(o);
-		// } catch (FileNotFoundException e1) {
-		// 	e1.printStackTrace();
-		// }
-		// try {
-		// 	File f= new File("testcases.txt"); // file to read testcaseinput from
-		// 	// sc = new Scanner(f);
-		// } catch (FileNotFoundException e1) {
-		// 	sc = new Scanner(System.in);
-		// 	e1.printStackTrace();
-		// }
+		try {
+			PrintStream o = new PrintStream(new File("Output.txt"));
+			System.setOut(o);
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+		try {
+			File f= new File("testcases.txt"); // file to read testcaseinput from
+			sc = new Scanner(f);
+		} catch (FileNotFoundException e1) {
+			sc = new Scanner(System.in);
+			e1.printStackTrace();
+		}
 		//end of readwrite
-		sc = new Scanner(System.in); //comment this out when readwrite
+		// sc = new Scanner(System.in); //comment this out when readwrite
 		Restaurant restaurant = new Restaurant();
 		while (true) {
 			System.out.println("-----------------------RRPSS MAIN MENU-------------------------");

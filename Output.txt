@@ -1,0 +1,497 @@
+How many tables will this restaurant have?
+Number of Tables: 1
+Enter table size (Even number between two to ten): 1
+Invalid size, Even number between two to ten
+Enter table size (Even number between two to ten): 2
+How many staffs will this restaurant have? : 1
+Enter Staff's full name: francis
+Enter Staff's gender (Female/Male): Male
+Enter Staff's job title: Manager
+Manager
+-----------------------RRPSS MAIN MENU-------------------------
+(1) Menu options
+(2) Staff options
+(3) Table options
+(4) Member options
+(5) Order options
+(6) Reservation options
+(7) Seat customer
+(8) Payment
+(9) Generate Total Revenue Report
+(10) Exit
+---------------------------------------------------------------
+Choice: 1
+------------------------Menu Options---------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 3
+(1) View Ala Carte Menu
+(2) View Promotion Packages Menu
+Choice: 1
+No AlaCartes in menu at the moment
+------------------------Menu Options---------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 3
+(1) View Ala Carte Menu
+(2) View Promotion Packages Menu
+Choice: 2
+No PromotionPackages in menu at the moment
+------------------------Menu Options---------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 1
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 1
+AlaCarte id: 1
+AlaCarte name: Fish and chips
+AlaCarte price: 5.5
+AlaCarte description: Homemade crispy fish and chips topped with cajun sauce
+AlaCarte category: 
+1.MAIN_COURSE
+2.DRINK
+3.DESSERT
+Category: 1
+New alacarte added.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 1
+AlaCarte id: 1
+AlaCarte name: Fish fingers
+AlaCarte price: 2.5
+AlaCarte description: 
+AlaCarte category: 
+1.MAIN_COURSE
+2.DRINK
+3.DESSERT
+Category: 1
+Alacarte with this id already exists. Use a different id.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 1
+AlaCarte id: 2
+AlaCarte name: Large soft drink
+AlaCarte price: 2.5
+AlaCarte description: 12 oz
+AlaCarte category: 
+1.MAIN_COURSE
+2.DRINK
+3.DESSERT
+Category: 2
+New alacarte added.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 1
+AlaCarte id: 3
+AlaCarte name: Lobster ice cream
+AlaCarte price: 3.5
+AlaCarte description: Buttery lobster meets buttery vanilla in this classic concoction.
+AlaCarte category: 
+1.MAIN_COURSE
+2.DRINK
+3.DESSERT
+Category: 3
+New alacarte added.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 1
+AlaCarte id: 4
+AlaCarte name: Cheesy bread
+AlaCarte price: 5.0
+AlaCarte description: Cheese on bread
+AlaCarte category: 
+1.MAIN_COURSE
+2.DRINK
+3.DESSERT
+Category: 1
+New alacarte added.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 2
+New Promotion Package creation
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade crispy fish and chips topped with cajun sauce
+
+Drinks-----------------------
+AlaCarte Id: 2
+Name: Large soft drink
+Price: 2.5
+Description: 12 oz
+
+Desserts---------------------
+AlaCarte Id: 3
+Name: Lobster ice cream
+Price: 3.5
+Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
+AlaCarte Id: 4
+Name: Cheesy bread
+Price: 5.0
+Description: Cheese on bread
+
+Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.
+Id: 1
+Quantity: 1
+Added AlaCarte.
+Continue?
+Id: 2
+Quantity: 1
+Added AlaCarte.
+Continue?
+Id: 3
+Quantity: 1
+Added AlaCarte.
+Continue?
+Id: 99
+Not a valid AlaCarte id.
+Id: -1
+Promotion Package id: 1
+Promotion Package name: Seafood combo
+Promotion Package price: 9.9
+Promotion Package description: Taste the sea with our new combo!
+New promotion package added.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 2
+New Promotion Package creation
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade crispy fish and chips topped with cajun sauce
+
+Drinks-----------------------
+AlaCarte Id: 2
+Name: Large soft drink
+Price: 2.5
+Description: 12 oz
+
+Desserts---------------------
+AlaCarte Id: 3
+Name: Lobster ice cream
+Price: 3.5
+Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
+AlaCarte Id: 4
+Name: Cheesy bread
+Price: 5.0
+Description: Cheese on bread
+
+Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.
+Id: 1
+Quantity: 2
+Added AlaCarte.
+Continue?
+Id: 2
+Quantity: 2
+Added AlaCarte.
+Continue?
+Id: 3
+Quantity: 2
+Added AlaCarte.
+Continue?
+Id: -1
+Promotion Package id: 2
+Promotion Package name: Seafood Duo combo
+Promotion Package price: 18.0
+Promotion Package description: Bring a friend to enjoy our seafood combo at low prices!
+New promotion package added.
+Add Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Choice: 3
+------------------------Menu Options---------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 3
+(1) View Ala Carte Menu
+(2) View Promotion Packages Menu
+Choice: 1
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade crispy fish and chips topped with cajun sauce
+
+Drinks-----------------------
+AlaCarte Id: 2
+Name: Large soft drink
+Price: 2.5
+Description: 12 oz
+
+Desserts---------------------
+AlaCarte Id: 3
+Name: Lobster ice cream
+Price: 3.5
+Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
+AlaCarte Id: 4
+Name: Cheesy bread
+Price: 5.0
+Description: Cheese on bread
+
+------------------------Menu Options---------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 3
+(1) View Ala Carte Menu
+(2) View Promotion Packages Menu
+Choice: 2
+----------PromotionPackages----------
+Promotion Package Id: 1
+Name: Seafood combo
+Price: 9.9
+Description: Taste the sea with our new combo!
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   1xFish and chips
+2   1xLarge soft drink
+3   1xLobster ice cream
+
+Promotion Package Id: 2
+Name: Seafood Duo combo
+Price: 18.0
+Description: Bring a friend to enjoy our seafood combo at low prices!
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   2xFish and chips
+2   2xLarge soft drink
+3   2xLobster ice cream
+
+------------------------Menu Options---------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 2
+Remove Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Type: 1
+Select Ala Carte id to remove, or enter -1 to quit: 
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade crispy fish and chips topped with cajun sauce
+
+Drinks-----------------------
+AlaCarte Id: 2
+Name: Large soft drink
+Price: 2.5
+Description: 12 oz
+
+Desserts---------------------
+AlaCarte Id: 3
+Name: Lobster ice cream
+Price: 3.5
+Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
+AlaCarte Id: 4
+Name: Cheesy bread
+Price: 5.0
+Description: Cheese on bread
+
+Id: 4
+AlaCarte removed.
+Select Ala Carte id to remove, or enter -1 to quit: 
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade crispy fish and chips topped with cajun sauce
+
+Drinks-----------------------
+AlaCarte Id: 2
+Name: Large soft drink
+Price: 2.5
+Description: 12 oz
+
+Desserts---------------------
+AlaCarte Id: 3
+Name: Lobster ice cream
+Price: 3.5
+Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
+Id: -1
+Remove Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Type: 3
+------------------------Menu Options---------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 3
+(1) View Ala Carte Menu
+(2) View Promotion Packages Menu
+Choice: 1
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade crispy fish and chips topped with cajun sauce
+
+Drinks-----------------------
+AlaCarte Id: 2
+Name: Large soft drink
+Price: 2.5
+Description: 12 oz
+
+Desserts---------------------
+AlaCarte Id: 3
+Name: Lobster ice cream
+Price: 3.5
+Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
+------------------------Menu Options---------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 3
+(1) View Ala Carte Menu
+(2) View Promotion Packages Menu
+Choice: 2
+----------PromotionPackages----------
+Promotion Package Id: 1
+Name: Seafood combo
+Price: 9.9
+Description: Taste the sea with our new combo!
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   1xFish and chips
+2   1xLarge soft drink
+3   1xLobster ice cream
+
+Promotion Package Id: 2
+Name: Seafood Duo combo
+Price: 18.0
+Description: Bring a friend to enjoy our seafood combo at low prices!
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   2xFish and chips
+2   2xLarge soft drink
+3   2xLobster ice cream
+
+------------------------Menu Options---------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 4
+Edit Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Type: 1
+Select Ala Carte id to edit, or enter -1 to quit: 
+----------AlaCartes----------
+Main courses-----------------
+AlaCarte Id: 1
+Name: Fish and chips
+Price: 5.5
+Description: Homemade crispy fish and chips topped with cajun sauce
+
+Drinks-----------------------
+AlaCarte Id: 2
+Name: Large soft drink
+Price: 2.5
+Description: 12 oz
+
+Desserts---------------------
+AlaCarte Id: 3
+Name: Lobster ice cream
+Price: 3.5
+Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
+Id: 1
+------ITEM INFO------
+Id: 1
+Name: Fish and chips
+Price: 5.5
+Category: MAIN_COURSE
+Description: Homemade crispy fish and chips topped with cajun sauce
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.Category
+6.Exit
+Choice: 1
+Id: 1
+New id: 2
+Id already exists. Try again.
+Id: 1
+New id: 1
+Id already exists. Try again.
+Id: 1
+New id: 3
+Id already exists. Try again.
+Id: 1
+New id: 2
+Id already exists. Try again.
+Id: 1
+New id: 

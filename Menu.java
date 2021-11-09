@@ -210,7 +210,7 @@ public class Menu {
 					if (id==-1) break;
 					for (int i=0;i<alaCartes.size();i++){
 						if (id==alaCartes.get(i).getId()){
-							alaCartes.get(i).editAlaCarte();
+							alaCartes.get(i).editAlaCarte(this.alaCartes);
 							break;
 						}
 					}
@@ -225,7 +225,7 @@ public class Menu {
 					if (id==-1) break;
 					for (int i=0;i<promotionPackages.size();i++){
 						if (id == promotionPackages.get(i).getId()){
-							promotionPackages.get(i).editPromotionPackage(alaCartes);
+							promotionPackages.get(i).editPromotionPackage(this.promotionPackages,this.alaCartes);
 							break;
 						}
 					}
