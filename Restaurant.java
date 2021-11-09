@@ -48,13 +48,15 @@ public class Restaurant {
 		this.orders = new ArrayList<Order>();
 		this.orderRecord = new ArrayList<Order>();
 		this.currentReservations = new ArrayList<Reservation>();
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		System.out.print("How many tables will this restaurant have?\nNumber of Tables: ");
 		int numOfTable = sc.nextInt();
+		System.out.println(numOfTable);
 		for(int i=0; i<numOfTable; i++){
 			while(true) {
 				System.out.print("Enter table size (Even number between two to ten): ");
 				int tableSize = sc.nextInt();
+				System.out.println(tableSize);
 				if(tableSize%2 != 0 || tableSize>10 || tableSize<2){
 					System.out.println("Invalid size, Even number between two to ten");
 					continue;
@@ -65,14 +67,17 @@ public class Restaurant {
 		}
 		System.out.print("How many staffs will this restaurant have? : ");
 		int numOfStaff = sc.nextInt();
+		System.out.println(numOfStaff);
 		sc.nextLine();
 		for(int i=0; i<numOfStaff; i++){
 			System.out.print("Enter Staff's full name: ");
 			String staffName = sc.nextLine();
+			System.out.println(staffName);
 			String staffGender;
 			while(true){
 				System.out.print("Enter Staff's gender (Female/Male): ");
 				staffGender=sc.nextLine();
+				System.out.println(staffGender);
 				if (!staffGender.equals("Female") && !staffGender.equals("Male")){
 					System.out.println("Invalid gender. Gender is binary.");
 					continue;
@@ -81,31 +86,34 @@ public class Restaurant {
 			}
 			System.out.print("Enter Staff's job title: ");
 			String staffJob = sc.nextLine();
+			System.out.println(staffJob);
+			System.out.println(staffJob);
 			staffs.add(new Staff(staffName, staffGender, staffJob)); //adds new staff into arraylist
 		}
-
-		
 	}
 	/**
 	 * Creates and add a new staff into the staffs array.
 	 * Checks whether staff already exist before addition.
 	 */
 	public void addStaff() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		System.out.println("Enter Staff's full name: ");
 		String staffName = sc.nextLine();
+		System.out.println(staffName);
 		String staffGender;
 		while(true){
 			System.out.print("Enter Staff's gender (Female/Male): ");
 			staffGender=sc.nextLine();
+			System.out.println(staffGender);
 			if (!staffGender.equals("Female") && !staffGender.equals("Male")){
-				System.out.println("Invalid gender. Gender is binary.");
+				System.out.println("Invalid gender.");
 				continue;
 			}
 			break;
 		}
 		System.out.print("Enter Staff's job title: ");
 		String staffJob = sc.nextLine();
+		System.out.println(staffJob);
 		for(int i=0; i<staffs.size(); i++){
 			if(staffName.equals(staffs.get(i).getName()) && staffGender.equals(staffs.get(i).getGender()) && staffJob.equals(staffs.get(i).getJobTitle())){
 				System.out.println("Staff already exist");
@@ -128,10 +136,11 @@ public class Restaurant {
 	 * Prints all staff information and allow user to choose which staff to remove.
 	 */
 	public void removeStaff() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		viewStaff();
 		System.out.print("Which staff to remove? (Enter invalid choice to terminate process): ");
 		int temp = sc.nextInt();
+		System.out.println(temp);
 		if(temp > staffs.size() || temp <= 0){
 			
 			return;
@@ -145,9 +154,10 @@ public class Restaurant {
 	 * Creates and add a new table into the tables array.
 	 */
 	public void addTable() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		System.out.print("Enter table size: ");
 		int tableSize = sc.nextInt();
+		System.out.println(tableSize);
 		tables.add(new Table(tableSize));
 		
 	}
@@ -163,10 +173,11 @@ public class Restaurant {
 	 * Prints all table information and allow user to choose which table to remove.
 	 */
 	public void removeTable() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		viewTable();
 		System.out.print("Which table to remove? (Enter invalid choice to terminate process): ");
 		int temp = sc.nextInt();
+		System.out.println(temp);
 		if(temp > tables.size()){
 			
 			return;
@@ -179,13 +190,15 @@ public class Restaurant {
 	 * Creates and add a new member into the members array.
 	 */
 	public void addMember() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		System.out.print("Enter Member's full name: ");
 		String memName = sc.nextLine();
+		System.out.println(memName);
 		String memGender;
 		while(true){
 			System.out.print("Enter Staff's gender (Female/Male): ");
 			memGender=sc.nextLine();
+			System.out.println(memGender);
 			if (!memGender.equals("Female") && !memGender.equals("Male")){
 				System.out.println("Invalid gender. Gender is binary.");
 				continue;
@@ -194,6 +207,7 @@ public class Restaurant {
 		}
 		System.out.println("Enter Member's phone number: ");
 		int memPhone = sc.nextInt();
+		System.out.println(memPhone);
 		for(int i=0; i<members.size(); i++){
 			if(memName.equals(members.get(i).getName()) && memGender.equals(members.get(i).getGender()) && members.get(i).getPhoneNumber() == memPhone){
 				System.out.println("Member already exist");
@@ -216,10 +230,11 @@ public class Restaurant {
 	 * Prints all member information and allow user to choose which member to remove.
 	 */
 	public void removeMember() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		viewMember();
 		System.out.print("Which member to remove? (Enter invalid choice to terminate process): ");
 		int temp = sc.nextInt();
+		System.out.println(temp);
 		if(temp > members.size()){
 			
 			return;
@@ -286,28 +301,36 @@ public class Restaurant {
 	 * Creates and add a new reservation into the current reservation array.
 	 */
 	public void addReservation() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		System.out.print("Enter number of pax: ");
 		int noOfPax = sc.nextInt();
+		System.out.println(noOfPax);
 		System.out.print("Enter customer's contact number: ");
 		int contactNumber = sc.nextInt();
+		System.out.println(contactNumber);
 		sc.nextLine();
 		System.out.print("Enter customer's name: ");
 		String customerName = sc.nextLine();
+		System.out.println(customerName);
 		viewTable();
 		System.out.println("Enter table ID selected for reservation: ");
 		int resTableID = sc.nextInt();
+		System.out.println(resTableID);
 		Date now = new Date();
 		System.out.println("Now is: "+ now.toString());
 		System.out.println("Only can make reservation for this year...");
 		System.out.print("What month do you want the reservation? (Enter 1-12): ");
 		int month = sc.nextInt();
+		System.out.println(month);
 		System.out.print("What day do you want the reservation? (Enter 1-30/31): ");
 		int day = sc.nextInt();
+		System.out.println(day);
 		System.out.print("What time do you want the reservation? (Enter the hour 1-24): ");
 		int hour = sc.nextInt();
+		System.out.println(hour);
 		System.out.print("What time do you want the reservation? (Enter the minutes 1-60): ");
 		int min = sc.nextInt();
+		System.out.println(min);
 		Calendar cal = Calendar.getInstance();
 		int year = cal.get(Calendar.YEAR); //assume reservation can only make for the current year
 		Calendar reservedTableTime = new GregorianCalendar(year, month-1, day, hour-1, min); // NOTE!!! : Month from 0 to 11 and book table 1hour before.
@@ -324,10 +347,11 @@ public class Restaurant {
 	 * Prints all current reservation information and allow user to choose which reservation to cancel.
 	 */
 	public void removeReservation() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		viewCurrentReservations();
 		System.out.print("Which reservation to remove? (Enter invalid choice to terminate process): ");
 		int temp = sc.nextInt();
+		System.out.println(temp);
 		if(temp > currentReservations.size()){
 			
 			return;
@@ -360,13 +384,15 @@ public class Restaurant {
 	 * If no: check for table availability and assign a table based on pax and sets the table's status to OCCUPIED
 	 */
 	public void seatCustomer(){
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		System.out.print("Reservation? (True/False): ");
 		String in = sc.next();
+		System.out.println(in);
 		boolean answer = Boolean.parseBoolean(in);
 		if(!answer) {
 			System.out.print("How many pax?: ");
 			int numberOfPeople = sc.nextInt();
+			System.out.println(numberOfPeople);
 			int check = printAvailableTables(numberOfPeople);
 			if(check == 0) {				
 				
@@ -374,6 +400,7 @@ public class Restaurant {
 			}
 			System.out.println("Choose table ID to seat customer? (Enter invalid choice to terminate process): ");
 			int temp = sc.nextInt();
+			System.out.println(temp);
 			for(int i=0; i<tables.size(); i++){
 				if((tables.get(i)).getTableID() == temp){
 					System.out.println("Customer Seated at Table "+(tables.get(i)).getTableID());
@@ -387,8 +414,10 @@ public class Restaurant {
 		else{
 			System.out.print("Name reserved under: ");
 			String reservedBy = sc.nextLine();
+			System.out.println(reservedBy);
 			System.out.print("Contact Number reserved under: ");
 			int reservedCon = sc.nextInt();
+			System.out.println(reservedCon);
 			for(int i=0; i<currentReservations.size(); i++){
 				if(reservedBy.equals(currentReservations.get(i).getNameReservedUnder()) && currentReservations.get(i).getContactReservedUnder() == reservedCon){
 					for(int j=0; j<tables.size(); j++) {
@@ -410,7 +439,7 @@ public class Restaurant {
 	 * Print this final invoice and moves old order into array to be stored under records.
 	 */
 	public void paymentCustomer(){
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		int temp = printOccupiedTables();
 		if(temp == 0) {
 			System.out.println("No table to checkout");
@@ -419,6 +448,7 @@ public class Restaurant {
 		}
 		System.out.println("Choose table ID for payment (Enter -1 to terminate process): ");
 		int choice = sc.nextInt();
+		System.out.println(choice);
 		if(choice == -1){
 			return;
 		}
@@ -451,7 +481,7 @@ public class Restaurant {
 	 * Allows user to create a new order to add into the orders array.
 	 */
 	public void addOrder() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		int temp = printOccupiedTables();
 		if(temp == 0) {
 			System.out.println("No table occupied to place order");
@@ -459,6 +489,7 @@ public class Restaurant {
 		}
 		System.out.print("Choose table ID to place order (Enter -1 to terminate process): ");
 		int orderTableID = sc.nextInt();
+		System.out.println(orderTableID);
 
 		if(orderTableID == -1){
 			
@@ -466,6 +497,7 @@ public class Restaurant {
 		}
 		System.out.print("Enter Staff's ID: ");
 		int orderStaffID = sc.nextInt();
+		System.out.println(orderStaffID);
 		orders.add(new Order(orderStaffID, orderTableID));
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID){
@@ -484,7 +516,7 @@ public class Restaurant {
 			System.out.println("No orders to remove");
 			return;
 		}
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		int temp = printOccupiedTables();
 		if(temp == 0) {
 			System.out.println("No table occupied to remove order");
@@ -493,12 +525,14 @@ public class Restaurant {
 		}
 		System.out.print("Choose table ID to remove order (Enter -1 to terminate process): ");
 		int orderTableID = sc.nextInt();
+		System.out.println(orderTableID);
 		if(orderTableID == -1){
 			
 			return;
 		}
 		System.out.print("Enter Staff's ID: ");
 		int orderStaffID = sc.nextInt();
+		System.out.println(orderStaffID);
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID && orders.get(i).getOrderStaffID() == orderStaffID) {
 				System.out.println("Order for table ID "+orders.get(i).getOrderTableID()+" removed");
@@ -534,9 +568,10 @@ public class Restaurant {
 			System.out.println("No orders to print");
 			return;
 		}
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		System.out.print("Enter Table's ID: ");
 		int orderTableID = sc.nextInt();
+		System.out.println(orderTableID);
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID){
 				double finalAmt = orders.get(i).viewOrder();
@@ -566,7 +601,7 @@ public class Restaurant {
 	 * Allows user to edit a existing order.
 	 */
 	public void editOrder() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		printAllOrder();
 		if (orders.size()==0) {
 			System.out.println("No orders to edit");
@@ -574,6 +609,7 @@ public class Restaurant {
 		}
 		System.out.print("Choose Table ID of order to edit: ");
 		int orderTableID = sc.nextInt();
+		System.out.println(orderTableID);
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID){
 				orders.get(i).editItems(menu);

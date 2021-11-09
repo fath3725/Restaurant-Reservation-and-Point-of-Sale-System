@@ -1,11 +1,27 @@
-import java.io.FileNotFoundException;
+// import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.*;
+import java.nio.file.Paths;
 
 public class RRPSS {
+	public static Scanner sc;
 	public static void main(String[] args){
-		
+		String currdir = Paths.get(".").toAbsolutePath().normalize().toString()+"/CZ2002-Project/";
+		try {
+			PrintStream o = new PrintStream(new File("A.txt"));
+			System.setOut(o);
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+		try {
+			File f= new File("Testcases.txt");
+			sc = new Scanner(f);
+		} catch (FileNotFoundException e1) {
+			sc = new Scanner(System.in);
+			e1.printStackTrace();
+		}
+
 		Restaurant restaurant = new Restaurant();
-		Scanner sc = new Scanner(System.in);
 		while (true) {
 			System.out.println("-----------------------RRPSS MAIN MENU-------------------------");
 			System.out.println("(1) Menu options");
@@ -21,6 +37,7 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
+			System.out.println(choice);
 			switch(choice){
 				case 1:
 					MenuOptions(restaurant);
