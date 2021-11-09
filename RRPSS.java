@@ -1,26 +1,25 @@
-// import java.io.FileNotFoundException;
 import java.io.*;
 import java.util.*;
-import java.nio.file.Paths;
 
 public class RRPSS {
 	public static Scanner sc;
 	public static void main(String[] args){
-		String currdir = Paths.get(".").toAbsolutePath().normalize().toString()+"/CZ2002-Project/";
+		//handle readwrite
+		// String currdir = Paths.get(".").toAbsolutePath().normalize().toString()+"/CZ2002-Project/";
 		try {
-			PrintStream o = new PrintStream(new File("A.txt"));
+			PrintStream o = new PrintStream(new File("Output.txt"));
 			System.setOut(o);
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
 		try {
-			File f= new File("Testcases.txt");
+			File f= new File("testcase1.txt"); // file to read testcaseinput from
 			sc = new Scanner(f);
 		} catch (FileNotFoundException e1) {
 			sc = new Scanner(System.in);
 			e1.printStackTrace();
 		}
-
+		//end of readwrite
 		Restaurant restaurant = new Restaurant();
 		while (true) {
 			System.out.println("-----------------------RRPSS MAIN MENU-------------------------");
