@@ -105,7 +105,7 @@ public class Order extends Menu {
 		Scanner sc = RRPSS.sc;
 		int type = 0;
 		while(type<3) {
-			System.out.print("Add Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Terminate");
+			System.out.print("Add Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Terminate\n");
 			type = sc.nextInt();
 			if (type==1){
 				menu.viewAlaCartes();
@@ -121,6 +121,7 @@ public class Order extends Menu {
 						break;
 					}
 				}
+				System.out.println("Invalid ID");
 			}
 			else if(type==2){
 				menu.viewPromotionPackages();
@@ -136,6 +137,7 @@ public class Order extends Menu {
 						break;
 					}
 				}
+				System.out.println("Invalid ID");
 			}
 		}
 		

@@ -107,7 +107,7 @@ public class Menu {
 				System.out.println("New Promotion Package creation");
 				menu.viewAlaCartes();
 				if (alaCartes.size()==0){
-					System.out.println("No alacartes to add into package. Cannot make new package.");
+					System.out.println("Cannot make new package.");
 					continue;
 				}
 				PromotionPackage newPromotionPackage=PromotionPackage.newPromotionPackage(alaCartes);
@@ -141,6 +141,10 @@ public class Menu {
 					continue;
 				}
 				while(true){
+					if (alaCartes.size()==0){
+						System.out.println("No alacartes in menu to remove");
+						break;
+					}
 					System.out.println("Select Ala Carte id to remove, or enter -1 to quit: ");
 					viewAlaCartes();
 					System.out.print("Id: ");
@@ -167,6 +171,7 @@ public class Menu {
 							break;
 						}
 					}
+					System.out.println("Invalid ID");
 				}
 			} else if (type==2){
 				if (promotionPackages.size()==0){
@@ -174,6 +179,10 @@ public class Menu {
 					continue;
 				}
 				while(true){
+					if (promotionPackages.size()==0){
+						System.out.println("No promotion packages in menu to remove");
+						break;
+					}
 					System.out.println("Select Promotion package id to remove, or enter -1 to quit: ");
 					viewPromotionPackages();
 					System.out.print("Id: ");
@@ -186,6 +195,7 @@ public class Menu {
 							break;
 						}
 					}
+					System.out.println("Invalid ID");
 				}
 			} else if (type==3) break;
 		}
@@ -204,6 +214,7 @@ public class Menu {
 				while(true){
 					System.out.println("Select Ala Carte id to edit, or enter -1 to quit: ");
 					viewAlaCartes();
+					if (alaCartes.size()==0) break;
 					System.out.print("Id: ");
 					int id=sc.nextInt();
 					System.out.println(id);
@@ -214,11 +225,13 @@ public class Menu {
 							break;
 						}
 					}
+					System.out.println("Invalid Ala Carte ID");
 				}
 			} else if (type==2){
 				while(true){
 					System.out.println("Select Promotion package id to edit, or enter -1 to quit: ");
 					viewPromotionPackages();
+					if(promotionPackages.size()==0) break;
 					System.out.print("Id: ");
 					int id = sc.nextInt();
 					System.out.println(id);
@@ -229,6 +242,7 @@ public class Menu {
 							break;
 						}
 					}
+					System.out.println("Invalid Promotion package ID");
 				}
 			} else if (type==3) break;
 		}
