@@ -1,7 +1,0 @@
-How many tables will this restaurant have?
-Number of Tables: 1
-Enter table size (Even number between two to ten): 2
-How many staffs will this restaurant have? : 1
-Enter Staff's full name: francis
-Enter Staff's gender (Female/Male): Male
-Enter Staff's job title: 

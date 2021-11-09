@@ -4,22 +4,21 @@ import java.util.*;
 public class RRPSS {
 	public static Scanner sc;
 	public static void main(String[] args){
-		//handle readwrite
-		// String currdir = Paths.get(".").toAbsolutePath().normalize().toString()+"/CZ2002-Project/";
-		try {
-			PrintStream o = new PrintStream(new File("Output.txt"));
-			System.setOut(o);
-		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
-		}
-		try {
-			File f= new File("testcase1.txt"); // file to read testcaseinput from
-			sc = new Scanner(f);
-		} catch (FileNotFoundException e1) {
-			sc = new Scanner(System.in);
-			e1.printStackTrace();
-		}
+		// try {
+		// 	PrintStream o = new PrintStream(new File("Output.txt"));
+		// 	System.setOut(o);
+		// } catch (FileNotFoundException e1) {
+		// 	e1.printStackTrace();
+		// }
+		// try {
+		// 	File f= new File("testcases.txt"); // file to read testcaseinput from
+		// 	// sc = new Scanner(f);
+		// } catch (FileNotFoundException e1) {
+		// 	sc = new Scanner(System.in);
+		// 	e1.printStackTrace();
+		// }
 		//end of readwrite
+		sc = new Scanner(System.in); //comment this out when readwrite
 		Restaurant restaurant = new Restaurant();
 		while (true) {
 			System.out.println("-----------------------RRPSS MAIN MENU-------------------------");
@@ -80,7 +79,6 @@ public class RRPSS {
 	}
 
 	private static void MenuOptions(Restaurant restaurant){
-		Scanner sc = new Scanner(System.in);
 		while(true){
 			System.out.println("------------------------Menu Options---------------------------");
 			System.out.println("(1) Add item into Menu"); //add menu item into menu
@@ -91,6 +89,7 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
+			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.getMenu().addItems(restaurant.getMenu());
@@ -101,8 +100,9 @@ public class RRPSS {
 				case 3:
 					System.out.println("(1) View Ala Carte Menu");
 					System.out.println("(2) View Promotion Packages Menu");
-					System.out.println("Enter the number of your choice: ");
+					System.out.print("Choice: ");
 					int innerChoice = sc.nextInt();
+					System.out.println(innerChoice);
 					switch(innerChoice) {
 						case 1: 
 							restaurant.getMenu().viewAlaCartes();
@@ -127,7 +127,6 @@ public class RRPSS {
 	}
 
 	private static void StaffOptions(Restaurant restaurant){
-		Scanner sc = new Scanner(System.in);
 		while(true){
 			System.out.println("------------------------Staff Options---------------------------");
 			System.out.println("(1) Add Staff into Restaurant"); //add staff into restaurant 
@@ -137,6 +136,7 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
+			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.addStaff();
@@ -157,7 +157,6 @@ public class RRPSS {
 	}
 
 	private static void TableOptions(Restaurant restaurant){
-		Scanner sc = new Scanner(System.in);
 		while(true){
 			System.out.println("------------------------Table Options---------------------------");
 			System.out.println("(1) Add Tables into Restaurant"); //add table into restaurant
@@ -167,6 +166,7 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
+			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.addTable();
@@ -177,8 +177,9 @@ public class RRPSS {
 				case 3:
 					System.out.println("(1) View all Tables");
 					System.out.println("(2) View available Tables only");
-					System.out.println("Enter the number of your choice: ");
+					System.out.print("Choice: ");
 					int innerChoice = sc.nextInt();
+					System.out.println(innerChoice);
 					switch(innerChoice) {
 						case 1: 
 							restaurant.viewTable();
@@ -201,7 +202,6 @@ public class RRPSS {
 	}
 
 	private static void MemberOptions(Restaurant restaurant){
-		Scanner sc = new Scanner(System.in);
 		while(true){
 			System.out.println("------------------------Member Options--------------------------");
 			System.out.println("(1) Add Member into Restaurant"); //add member into restaurant
@@ -211,6 +211,7 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
+			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.addMember();
@@ -231,7 +232,6 @@ public class RRPSS {
 	}
 
 	private static void OrderOptions(Restaurant restaurant){
-		Scanner sc = new Scanner(System.in);
 		while(true){
 			System.out.println("------------------------Order Options---------------------------");
 			System.out.println("(1) Create Order"); //create order
@@ -243,6 +243,7 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
+			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.addOrder();
@@ -269,7 +270,6 @@ public class RRPSS {
 	}
 
 	private static void ReservationOptions(Restaurant restaurant){
-		Scanner sc = new Scanner(System.in);
 		while(true){
 			System.out.println("--------------------Reservation Options------------------------");
 			System.out.println("(1) Create Reservation"); //create reservation
@@ -279,6 +279,7 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
+			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.addReservation();

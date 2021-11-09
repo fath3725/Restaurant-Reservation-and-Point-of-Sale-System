@@ -78,7 +78,7 @@ public class Menu {
 	 * @param menu Menu instance for reference when adding
 	 */
 	public void addItems(Menu menu) {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		while(true){
 			System.out.print("Add Menu Item type?\n"+
 											"1. Ala Carte\n"+
@@ -86,6 +86,7 @@ public class Menu {
 											"3. Exit\n"+
 											"Choice: ");
 			int type = sc.nextInt();
+			System.out.println(type);
 
 			if (type==1){
 				AlaCarte newAlaCarte=AlaCarte.newAlaCarte();
@@ -129,10 +130,11 @@ public class Menu {
 	 * Removes from alaCartes/promotionPackages in this Menu.
 	 */
 	public void removeItems() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		while(true){
 			System.out.print("Remove Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit\nType: ");
 			int type = sc.nextInt();
+			System.out.println(type);
 			if (type==1){
 				if (alaCartes.size()==0){
 					System.out.println("No alacartes in menu to remove");
@@ -143,6 +145,7 @@ public class Menu {
 					viewAlaCartes();
 					System.out.print("Id: ");
 					int id = sc.nextInt();
+					System.out.println(id);
 					if (id==-1) break;
 					for (int i=0;i<alaCartes.size();i++){
 						if (id == alaCartes.get(i).getId()){
@@ -175,6 +178,7 @@ public class Menu {
 					viewPromotionPackages();
 					System.out.print("Id: ");
 					int id = sc.nextInt();
+					System.out.println(id);
 					if (id==-1) break;
 					for (int i=0;i<promotionPackages.size();i++){
 						if (id == promotionPackages.get(i).getId()){
@@ -191,16 +195,18 @@ public class Menu {
 	 * Edit from alaCartes/promotionpackages in this Menu.
 	 */
 	public void editItems() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		while(true){
 			System.out.print("Edit Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit\nType: ");
 			int type = sc.nextInt();
+			System.out.println(type);
 			if (type==1){
 				while(true){
 					System.out.println("Select Ala Carte id to edit, or enter -1 to quit: ");
 					viewAlaCartes();
 					System.out.print("Id: ");
 					int id=sc.nextInt();
+					System.out.println(id);
 					if (id==-1) break;
 					for (int i=0;i<alaCartes.size();i++){
 						if (id==alaCartes.get(i).getId()){
@@ -215,6 +221,7 @@ public class Menu {
 					viewPromotionPackages();
 					System.out.print("Id: ");
 					int id = sc.nextInt();
+					System.out.println(id);
 					if (id==-1) break;
 					for (int i=0;i<promotionPackages.size();i++){
 						if (id == promotionPackages.get(i).getId()){

@@ -102,7 +102,7 @@ public class Order extends Menu {
 	 * @param menu So that the order can be chosen from the menu directly.
 	 */
 	public void addItems(Menu menu) {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		int type = 0;
 		while(type<3) {
 			System.out.print("Add Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Terminate");
@@ -146,21 +146,24 @@ public class Order extends Menu {
 	 * @param menu Menu instance for reference when editing items
 	 */
 	public void editItems(Menu menu) {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = RRPSS.sc;
 		while(true){
 			System.out.print("Next Action?\n"+"1. Add item\n"+"2. Remove item\n"+"3. Change quantity\n"+"4. Exit\nChoice: ");
 			int type = sc.nextInt();
+			System.out.println(type);
 			if (type==1){
 				addItems(menu);
 			}
 			else if(type==2){
 				System.out.print("Remove Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
 				int choice = sc.nextInt();
+				System.out.println(choice);
 				if(choice == 1){
 					System.out.println("Select Ala Carte id to remove, or enter -1 to quit: ");
 					viewAlaCartes();
 					System.out.print("Id: ");
 					int id=sc.nextInt();
+					System.out.println(id);
 					if(id == -1)
 						break;
 					for (int i=0; i<this.alaCartes.size(); i++){
@@ -176,6 +179,7 @@ public class Order extends Menu {
 					viewPromotionPackages();
 					System.out.print("Id: ");
 					int id=sc.nextInt();
+					System.out.println(id);
 					if(id == -1)
 						break;
 					for (int i=0; i<this.promotionPackages.size(); i++){
@@ -192,17 +196,20 @@ public class Order extends Menu {
 			else if(type==3){
 				System.out.print("Edit quantity of which Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit\nChoice: ");
 				int choice = sc.nextInt();
+				System.out.println(choice);
 				if(choice == 1){
 					System.out.println("Select Ala Carte id to edit quantity, or enter -1 to quit: ");
 					viewAlaCartes();
 					System.out.print("Id: ");
 					int id=sc.nextInt();
+					System.out.println(id);
 					if(id == -1)
 						break;
 					for (int i=0; i<this.alaCartes.size(); i++){
 						if (id == this.alaCartes.get(i).getId()){		
 							System.out.println("Enter new quantity: ");
 							int newAmt = sc.nextInt();
+							System.out.println(newAmt);
 							this.alaCartes.get(i).setQuantity(newAmt);
 							break;
 						}
@@ -213,12 +220,14 @@ public class Order extends Menu {
 					viewPromotionPackages();
 					System.out.print("Id: ");
 					int id=sc.nextInt();
+					System.out.println(id);
 					if(id == -1)
 						break;
 					for (int i=0; i<this.promotionPackages.size(); i++){
 						if (id == this.promotionPackages.get(i).getId()){		
 							System.out.println("Enter new quantity: ");
 							int newAmt = sc.nextInt();
+							System.out.println(newAmt);
 							this.promotionPackages.get(i).setQuantity(newAmt);
 							break;
 						}
