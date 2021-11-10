@@ -432,10 +432,18 @@ public class Restaurant {
 		System.out.println("Reservation removed");
 		for(int i=0; i<tables.size(); i++){
 			if(tables.get(i).getTableID() == toRemove){
-				////what if the table is currently occupied?
-				tables.get(i).setStatus(Status.AVAILABLE);
-				
-				return;
+				if(tables.get(i).getStatus() == Status.RESERVED){
+					tables.get(i).setStatus(Status.AVAILABLE);
+					return;
+				}
+				else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
+					tables.get(i).setStatus(Status.OCCUPIED);
+					return;
+				}
+				else{
+					tables.get(i).setStatus(Status.AVAILABLE);
+					return;
+				}
 			}
 		}
 		
