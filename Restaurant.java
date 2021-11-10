@@ -440,6 +440,9 @@ public class Restaurant {
 					tables.get(i).setStatus(Status.OCCUPIED);
 					return;
 				}
+				else if(tables.get(i).getStatus() == Status.OCCUPIED){
+					return;
+				}
 				else{
 					tables.get(i).setStatus(Status.AVAILABLE);
 					return;
