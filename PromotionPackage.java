@@ -125,18 +125,18 @@ public class PromotionPackage extends MenuItem {
 					}
 				}
 			}else if (choice==2){
-				System.out.printf("Price: %s\nNew price: ");
+				System.out.printf("Price: %s\nNew price: ",this.getPrice());
 				float packageprice = sc.nextFloat();
 				System.out.println(packageprice);
 				this.setPrice(packageprice);
 			}else if (choice==3){
-				System.out.printf("Name: %s\nNew name: ");
+				System.out.printf("Name: %s\nNew name: ",this.getName());
 				sc.nextLine();
 				String packagename = sc.nextLine();
 				System.out.println(packagename);
 				this.setName(packagename);
 			}else if (choice==4){
-				System.out.printf("Description: %s\nNew description: ");
+				System.out.printf("Description: %s\nNew description: ",this.getDescription());
 				sc.nextLine();
 				String packagedescription = sc.nextLine();
 				System.out.println(packagedescription);

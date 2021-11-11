@@ -234,9 +234,6 @@ public class Menu {
 									}
 								}
 							}
-							for (PromotionPackage pp : promotionPackages){
-								pp.viewPackageItems();
-							}
 							System.out.println("Finished editing item.");
 							break;
 						}
@@ -258,11 +255,12 @@ public class Menu {
 						if (id == promotionPackages.get(i).getId()){
 							found = true;
 							promotionPackages.get(i).editPromotionPackage(this.promotionPackages,this.alaCartes);
+							System.out.println("Finished editing item.");
 							break;
 						}
 					}
 					if (!found)
-					System.out.println("Invalid Promotion package ID");
+						System.out.println("Invalid Promotion package ID");
 				}
 			} else if (type==3) break;
 		}

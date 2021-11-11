@@ -1,8 +1,10 @@
 How many tables will this restaurant have?
-Number of Tables: 1
-Enter table size (Even number between two to ten): 1
-Invalid size, Even number between two to ten
+Number of Tables: 3
 Enter table size (Even number between two to ten): 2
+Enter table size (Even number between two to ten): 4
+Enter table size (Even number between two to ten): 5
+Invalid size, Even number between two to ten
+Enter table size (Even number between two to ten): 6
 How many staffs will this restaurant have? : 1
 Enter Staff's full name: francis
 Enter Staff's gender (Female/Male): Male
@@ -171,6 +173,10 @@ Id: 3
 Quantity: 1
 Added AlaCarte.
 Continue?
+Id: 4
+Quantity: 1
+Added AlaCarte.
+Continue?
 Id: 99
 Not a valid AlaCarte id.
 Id: -1
@@ -290,6 +296,7 @@ Id  Quantity_and_Name
 1   1xFish and chips
 2   1xLarge soft drink
 3   1xLobster ice cream
+4   1xCheesy bread
 
 Promotion Package Id: 2
 Name: Seafood Duo combo
@@ -342,6 +349,7 @@ Description: Cheese on bread
 
 Id: 4
 AlaCarte removed.
+Package 1 has removed alacarte id 4 from its packageItems
 Invalid ID
 Select Ala Carte id to remove, or enter -1 to quit: 
 ----------AlaCartes----------
@@ -593,16 +601,6 @@ What attribute would you like to edit?
 Choice: 6
 Edited items in package 0
 Edited items in package 1
-Package Items:
-Id  Quantity_and_Name
-1   1xFish and chips
-2   1xLarge soft drink
-3   1xLobster ice cream
-Package Items:
-Id  Quantity_and_Name
-1   2xFish and chips
-2   2xLarge soft drink
-3   2xLobster ice cream
 Finished editing item.
 Select Ala Carte id to edit, or enter -1 to quit: 
 ----------AlaCartes----------
@@ -638,7 +636,7 @@ Description: Taste the sea with our new combo!
 Package contains:
 Package Items:
 Id  Quantity_and_Name
-1   1xFish and chips
+1   1xFried ice cream
 2   1xLarge soft drink
 3   1xLobster ice cream
 
@@ -649,8 +647,193 @@ Description: Bring a friend to enjoy our seafood combo at low prices!
 Package contains:
 Package Items:
 Id  Quantity_and_Name
-1   2xFish and chips
+1   1xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 
-Id: 
+Id: 2
+------ITEM INFO------
+Id: 2
+Name: Seafood Duo combo
+Price: 18.0
+Description: Bring a friend to enjoy our seafood combo at low prices!
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.PackageItems
+6.Exit
+Choice: 1
+Id: 2
+New id: 1
+Id already exists. Try again.
+Id: 2
+New id: 3
+------ITEM INFO------
+Id: 3
+Name: Seafood Duo combo
+Price: 18.0
+Description: Bring a friend to enjoy our seafood combo at low prices!
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.PackageItems
+6.Exit
+Choice: 1
+Id: 3
+New id: 2
+------ITEM INFO------
+Id: 2
+Name: Seafood Duo combo
+Price: 18.0
+Description: Bring a friend to enjoy our seafood combo at low prices!
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.PackageItems
+6.Exit
+Choice: 2
+Price: 18.0
+New price: 18.5
+------ITEM INFO------
+Id: 2
+Name: Seafood Duo combo
+Price: 18.5
+Description: Bring a friend to enjoy our seafood combo at low prices!
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.PackageItems
+6.Exit
+Choice: 3
+Name: Seafood Duo combo
+New name: Seafood Buddy combo
+------ITEM INFO------
+Id: 2
+Name: Seafood Buddy combo
+Price: 18.5
+Description: Bring a friend to enjoy our seafood combo at low prices!
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.PackageItems
+6.Exit
+Choice: 4
+Description: Bring a friend to enjoy our seafood combo at low prices!
+New description: Great seafood deal for you and a buddy!
+------ITEM INFO------
+Id: 2
+Name: Seafood Buddy combo
+Price: 18.5
+Description: Great seafood deal for you and a buddy!
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.PackageItems
+6.Exit
+Choice: 5
+Package Items:
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+1.Remove item from package
+2.Add item to package
+Choice: 2
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+Menu AlaCarte Items: 
+1 Fried ice cream
+2 Large soft drink
+3 Lobster ice cream
+Add which Id: 
+1
+How many of it?
+Quantity: 1
+------ITEM INFO------
+Id: 2
+Name: Seafood Buddy combo
+Price: 18.5
+Description: Great seafood deal for you and a buddy!
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.PackageItems
+6.Exit
+Choice: 6
+Finished editing item.
+Select Promotion package id to edit, or enter -1 to quit: 
+----------PromotionPackages----------
+Promotion Package Id: 1
+Name: Seafood combo
+Price: 9.9
+Description: Taste the sea with our new combo!
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   1xLarge soft drink
+3   1xLobster ice cream
+
+Promotion Package Id: 2
+Name: Seafood Buddy combo
+Price: 18.5
+Description: Great seafood deal for you and a buddy!
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+
+Id: -1
+Edit Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Type: 3
+------------------------Menu Options---------------------------
+(1) Add item into Menu
+(2) Remove item from Menu
+(3) View Menu
+(4) Edit current Menu
+(5) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 5
+-----------------------RRPSS MAIN MENU-------------------------
+(1) Menu options
+(2) Staff options
+(3) Table options
+(4) Member options
+(5) Order options
+(6) Reservation options
+(7) Seat customer
+(8) Payment
+(9) Generate Total Revenue Report
+(10) Exit
+---------------------------------------------------------------
+Choice: 

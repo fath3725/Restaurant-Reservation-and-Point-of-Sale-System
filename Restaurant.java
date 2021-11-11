@@ -405,7 +405,6 @@ public class Restaurant {
 						System.out.println("There is already a reservation for that table ID in the same period");
 						return;
 					}
-					
 				}
 			}
 		}

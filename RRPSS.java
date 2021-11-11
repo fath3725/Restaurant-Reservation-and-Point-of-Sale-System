@@ -11,7 +11,7 @@ public class RRPSS {
 			e1.printStackTrace();
 		}
 		try {
-			File f= new File("testcases.txt"); // file to read testcaseinput from
+			File f= new File("Test Case Project CZ2002.txt"); // file to read testcaseinput from
 			sc = new Scanner(f);
 		} catch (FileNotFoundException e1) {
 			sc = new Scanner(System.in);
