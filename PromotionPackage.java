@@ -84,7 +84,8 @@ public class PromotionPackage extends MenuItem {
 	}
 	/**
 	 * Edits the attributes of this promotionPackage.
-	 * @param alaCartes currently in Menu
+	 * @param alaCartes List of AlaCartes currently in Menu
+	 * @param promotionPackages List of PromotionPackages currently in Menu
 	 */
 	public void editPromotionPackage(ArrayList<PromotionPackage> promotionPackages,ArrayList<AlaCarte> alaCartes){
 		Scanner sc = RRPSS.sc;

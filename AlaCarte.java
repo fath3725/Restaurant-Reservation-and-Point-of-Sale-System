@@ -66,6 +66,8 @@ public class AlaCarte extends MenuItem {
 	}
 	/**
 	 * Edits the attributes of this promotionPackage.
+	 * @param alaCartes The list of AlaCartes in menu
+	 * @return edited AlaCarte instance
 	 */
 	public AlaCarte editAlaCarte(ArrayList<AlaCarte> alaCartes){
 		Scanner sc = RRPSS.sc;
