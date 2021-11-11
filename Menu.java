@@ -228,8 +228,7 @@ public class Menu {
 							for (int k=0;k<promotionPackages.size();k++){
 								for (int j=0;j<promotionPackages.get(k).getPackageItems().size();j++){
 									if (promotionPackages.get(k).getPackageItems().get(j).getId()==id){
-										AlaCarte toedit = promotionPackages.get(k).getPackageItems().get(j);
-										toedit = editedAlacarte;
+										promotionPackages.get(k).getPackageItems().set(j,editedAlacarte);
 										System.out.printf("Edited items in package %d\n",k);
 										break;
 									}

@@ -408,6 +408,7 @@ public class Restaurant {
 					
 				}
 			}
+		}
 	}
 	
 	/**
@@ -727,6 +728,7 @@ public class Restaurant {
         // Write the name of four oceans to the file
 		if(orderRecord.size()==0) {
 			System.out.println("No item sold");
+			out.close();//maybe need remove if this affects scanner in RRPSS
 			return;
 		}
         for(int i=0; i<orderRecord.size(); i++){
