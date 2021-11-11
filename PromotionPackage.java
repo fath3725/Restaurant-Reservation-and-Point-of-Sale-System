@@ -95,7 +95,9 @@ public class PromotionPackage extends MenuItem {
 				"\nId: "+getId()+
 				"\nName: "+getName()+
 				"\nPrice: "+getPrice()+
-				"\nDescription: "+getDescription()+
+				"\nDescription: "+getDescription());
+			viewPackageItems();
+			System.out.println(
 				"\n---------------------"+
 				"\nWhat attribute would you like to edit?"+
 				"\n1.Id"+
@@ -154,25 +156,49 @@ public class PromotionPackage extends MenuItem {
 					System.out.println("Remove which Id: ");
 					int packageitemid = sc.nextInt();
 					System.out.println(packageitemid);
-					removePackageItem(packageitemid);
+					Boolean removed = false;
+					while(!removed){
+						for (AlaCarte ac : packageItems){
+							if (ac.getId()==packageitemid){
+								removePackageItem(packageitemid);
+								removed=true;
+								break;
+							}
+						}
+						if (!removed) System.out.println("PackageItem id not in package.");
+					}
 				}else if (option==2){
 					System.out.println("Menu AlaCarte Items: ");
 					for(int i=0; i<alaCartes.size(); i++){
 						System.out.printf("%d %s\n",alaCartes.get(i).getId(),alaCartes.get(i).getName());
 					}
-					System.out.println("Add which Id: ");
-					int packageitemid = sc.nextInt();
-					System.out.println(packageitemid);
-					for (int i=0;i<alaCartes.size();i++){
-						if (packageitemid==alaCartes.get(i).getId()){
-							AlaCarte toadd = AlaCarte.cloneAlaCarte(alaCartes.get(i));
-							System.out.print("How many of it?\nQuantity: ");
-							int quantity = sc.nextInt();
-							System.out.println(quantity);
-							toadd.setQuantity(quantity);
-							addPackageItem(toadd);
-							break;
+					boolean added=false;
+					while (!added){
+						System.out.print("Add which Id: ");
+						int packageitemid = sc.nextInt();
+						System.out.println(packageitemid);
+						for (int i=0;i<alaCartes.size();i++){
+							if (packageitemid==alaCartes.get(i).getId()){
+								AlaCarte toadd = AlaCarte.cloneAlaCarte(alaCartes.get(i));
+								System.out.print("How many of it?\nQuantity: ");
+								int quantity = sc.nextInt();
+								System.out.println(quantity);
+								for (int j=0;j<packageItems.size();j++){
+									if (packageItems.get(j).getId()==packageitemid){
+										packageItems.get(j).setQuantity(getQuantity()+quantity);
+										added=true;
+										break;
+									}
+								}
+								if (!added){
+									toadd.setQuantity(quantity);
+									addPackageItem(toadd);
+								}
+								System.out.println("Added package item.");
+								break;
+							}
 						}
+						if (!added) System.out.println("AlaCarte id not in Menu.");
 					}
 				}
 			}else if (choice==6) break;

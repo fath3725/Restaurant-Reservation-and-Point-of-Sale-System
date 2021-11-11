@@ -657,6 +657,12 @@ Id: 2
 Name: Seafood Duo combo
 Price: 18.0
 Description: Bring a friend to enjoy our seafood combo at low prices!
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+
 ---------------------
 What attribute would you like to edit?
 1.Id
@@ -676,6 +682,12 @@ Id: 3
 Name: Seafood Duo combo
 Price: 18.0
 Description: Bring a friend to enjoy our seafood combo at low prices!
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+
 ---------------------
 What attribute would you like to edit?
 1.Id
@@ -692,6 +704,12 @@ Id: 2
 Name: Seafood Duo combo
 Price: 18.0
 Description: Bring a friend to enjoy our seafood combo at low prices!
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+
 ---------------------
 What attribute would you like to edit?
 1.Id
@@ -708,6 +726,12 @@ Id: 2
 Name: Seafood Duo combo
 Price: 18.5
 Description: Bring a friend to enjoy our seafood combo at low prices!
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+
 ---------------------
 What attribute would you like to edit?
 1.Id
@@ -724,6 +748,12 @@ Id: 2
 Name: Seafood Buddy combo
 Price: 18.5
 Description: Bring a friend to enjoy our seafood combo at low prices!
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+
 ---------------------
 What attribute would you like to edit?
 1.Id
@@ -740,6 +770,12 @@ Id: 2
 Name: Seafood Buddy combo
 Price: 18.5
 Description: Great seafood deal for you and a buddy!
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+
 ---------------------
 What attribute would you like to edit?
 1.Id
@@ -767,15 +803,21 @@ Menu AlaCarte Items:
 1 Fried ice cream
 2 Large soft drink
 3 Lobster ice cream
-Add which Id: 
-1
+Add which Id: 1
 How many of it?
 Quantity: 1
+Added package item.
 ------ITEM INFO------
 Id: 2
 Name: Seafood Buddy combo
 Price: 18.5
 Description: Great seafood deal for you and a buddy!
+Package Items:
+Id  Quantity_and_Name
+1   2xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+
 ---------------------
 What attribute would you like to edit?
 1.Id
@@ -795,7 +837,7 @@ Description: Taste the sea with our new combo!
 Package contains:
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   1xLarge soft drink
 3   1xLobster ice cream
 
@@ -806,7 +848,7 @@ Description: Great seafood deal for you and a buddy!
 Package contains:
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 
