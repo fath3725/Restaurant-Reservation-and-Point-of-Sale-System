@@ -386,12 +386,28 @@ public class Restaurant {
 			System.out.println("Invalid table ID ");
 			return;
 		}
-		
-		currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID, reservedForTime));
-		timer = new Timer();
-		Date time = reservedTableTime.getTime(); //table reserving time which is 1 hour before actual booking time
-		timer.schedule(new TimerReservation(tables, currentReservations, resTableID, reservedForTime, reservedTillTime), time); 
-		//creates a timer at 1hour before actual booking time that sets table to reserve and creates the 30min grace period timer
+		for(int i=0;i<tables.size();i++) {
+			if(tables.get(i).getTableID() == resTableID) {
+				for(int j=0; j<currentReservations.size(); j++){
+					Calendar oneHrBefore = (Calendar) currentReservations.get(j).getReservedForTime().clone();
+					oneHrBefore.add(Calendar.HOUR, -1);
+					Calendar oneHrAfter = (Calendar) currentReservations.get(j).getReservedForTime().clone();
+					oneHrAfter.add(Calendar.HOUR, 1);
+					if(currentReservations.get(j).getReservedForTime().after(oneHrBefore) && currentReservations.get(j).getReservedForTime().before(oneHrAfter)){
+						currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID, reservedForTime));
+						timer = new Timer();
+						Date time = reservedTableTime.getTime(); //table reserving time which is 1 hour before actual booking time
+						timer.schedule(new TimerReservation(tables, currentReservations, resTableID, reservedForTime, reservedTillTime), time);
+						return;
+						//creates a timer at 1hour before actual booking time that sets table to reserve and creates the 30min grace period timer
+					}
+					else{
+						System.out.println("There is already a reservation for that table ID in the same period");
+						return;
+					}
+					
+				}
+			}
 	}
 	
 	/**
@@ -416,10 +432,21 @@ public class Restaurant {
 		System.out.println("Reservation removed");
 		for(int i=0; i<tables.size(); i++){
 			if(tables.get(i).getTableID() == toRemove){
-				////what if the table is currently occupied?
-				tables.get(i).setStatus(Status.AVAILABLE);
-				
-				return;
+				if(tables.get(i).getStatus() == Status.RESERVED){
+					tables.get(i).setStatus(Status.AVAILABLE);
+					return;
+				}
+				else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
+					tables.get(i).setStatus(Status.OCCUPIED);
+					return;
+				}
+				else if(tables.get(i).getStatus() == Status.OCCUPIED){
+					return;
+				}
+				else{
+					tables.get(i).setStatus(Status.AVAILABLE);
+					return;
+				}
 			}
 		}
 		
