@@ -386,31 +386,28 @@ public class Restaurant {
 			System.out.println("Invalid table ID ");
 			return;
 		}
-		for(int i=0;i<tables.size();i++) {
-			if(tables.get(i).getTableID() == resTableID) {
-				for(int j=0; j<currentReservations.size(); j++){
-					Calendar oneHrBefore = (Calendar) currentReservations.get(j).getReservedForTime().clone();
-					oneHrBefore.add(Calendar.HOUR, -1);
-					Calendar oneHrAfter = (Calendar) currentReservations.get(j).getReservedForTime().clone();
-					oneHrAfter.add(Calendar.HOUR, 1);
-					if(currentReservations.get(j).getReservedForTime().after(oneHrBefore) && currentReservations.get(j).getReservedForTime().before(oneHrAfter)){
-						currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID, reservedForTime));
-						timer = new Timer();
-						Date time = reservedTableTime.getTime(); //table reserving time which is 1 hour before actual booking time
-						timer.schedule(new TimerReservation(tables, currentReservations, resTableID, reservedForTime, reservedTillTime), time);
-						return;
-						//creates a timer at 1hour before actual booking time that sets table to reserve and creates the 30min grace period timer
-					}
-					else{
-						System.out.println("There is already a reservation for that table ID in the same period");
-						return;
-					}
-					
+		for(int i=0;i<currentReservations.size();i++) {
+			if(currentReservations.get(i).getTableReserved() == resTableID){
+				Calendar oneHrBefore = (Calendar) currentReservations.get(i).getReservedForTime().clone();
+				oneHrBefore.add(Calendar.HOUR, -1);
+				Calendar oneHrAfter = (Calendar) currentReservations.get(i).getReservedForTime().clone();
+				oneHrAfter.add(Calendar.HOUR, 1);
+				if(currentReservations.get(i).getReservedForTime().after(oneHrBefore) && currentReservations.get(i).getReservedForTime().before(oneHrAfter)){
+					continue;
+				}
+				else{
+					System.out.println("There is already a reservation for that table ID in the same period");
+					return;
 				}
 			}
 		}
+		currentReservations.add(new Reservation(noOfPax, contactNumber, customerName, resTableID, reservedForTime));
+		timer = new Timer();
+		Date time = reservedTableTime.getTime(); //table reserving time which is 1 hour before actual booking time
+		timer.schedule(new TimerReservation(tables, currentReservations, resTableID, reservedForTime, reservedTillTime), time);
+		return;
+		//creates a timer at 1hour before actual booking time that sets table to reserve and creates the 30min grace period timer
 	}
-	
 	/**
 	 * Prints all current reservation information and allow user to choose which reservation to cancel.
 	 */
