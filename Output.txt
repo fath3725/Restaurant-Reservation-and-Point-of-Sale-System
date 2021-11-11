@@ -486,13 +486,171 @@ Id: 1
 New id: 2
 Id already exists. Try again.
 Id: 1
+New id: 4
+------ITEM INFO------
+Id: 4
+Name: Fish and chips
+Price: 5.5
+Category: MAIN_COURSE
+Description: Homemade crispy fish and chips topped with cajun sauce
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.Category
+6.Exit
+Choice: 1
+Id: 4
 New id: 1
-Id already exists. Try again.
+------ITEM INFO------
 Id: 1
-New id: 3
-Id already exists. Try again.
+Name: Fish and chips
+Price: 5.5
+Category: MAIN_COURSE
+Description: Homemade crispy fish and chips topped with cajun sauce
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.Category
+6.Exit
+Choice: 2
+Price: 5.5
+New price: 5.9
+------ITEM INFO------
 Id: 1
-New id: 2
-Id already exists. Try again.
+Name: Fish and chips
+Price: 5.9
+Category: MAIN_COURSE
+Description: Homemade crispy fish and chips topped with cajun sauce
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.Category
+6.Exit
+Choice: 3
+Name: Fish and chips
+New name: Fried ice cream
+------ITEM INFO------
 Id: 1
-New id: 
+Name: Fried ice cream
+Price: 5.9
+Category: MAIN_COURSE
+Description: Homemade crispy fish and chips topped with cajun sauce
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.Category
+6.Exit
+Choice: 4
+Description: Homemade crispy fish and chips topped with cajun sauce
+New description: Ice cream deep fried
+------ITEM INFO------
+Id: 1
+Name: Fried ice cream
+Price: 5.9
+Category: MAIN_COURSE
+Description: Ice cream deep fried
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.Category
+6.Exit
+Choice: 5
+AlaCarte category:
+1.MAIN_COURSE
+2.DRINK
+3.DESSERT
+Category: 3
+Category set as dessert
+------ITEM INFO------
+Id: 1
+Name: Fried ice cream
+Price: 5.9
+Category: DESSERT
+Description: Ice cream deep fried
+---------------------
+What attribute would you like to edit?
+1.Id
+2.Price
+3.Name
+4.Description
+5.Category
+6.Exit
+Choice: 6
+Edited items in package 0
+Edited items in package 1
+Package Items:
+Id  Quantity_and_Name
+1   1xFish and chips
+2   1xLarge soft drink
+3   1xLobster ice cream
+Package Items:
+Id  Quantity_and_Name
+1   2xFish and chips
+2   2xLarge soft drink
+3   2xLobster ice cream
+Finished editing item.
+Select Ala Carte id to edit, or enter -1 to quit: 
+----------AlaCartes----------
+Desserts---------------------
+AlaCarte Id: 1
+Name: Fried ice cream
+Price: 5.9
+Description: Ice cream deep fried
+
+Drinks-----------------------
+AlaCarte Id: 2
+Name: Large soft drink
+Price: 2.5
+Description: 12 oz
+
+AlaCarte Id: 3
+Name: Lobster ice cream
+Price: 3.5
+Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
+Id: -1
+Edit Menu Item type?
+1. Ala Carte
+2. Promotion Package
+3. Exit
+Type: 2
+Select Promotion package id to edit, or enter -1 to quit: 
+----------PromotionPackages----------
+Promotion Package Id: 1
+Name: Seafood combo
+Price: 9.9
+Description: Taste the sea with our new combo!
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   1xFish and chips
+2   1xLarge soft drink
+3   1xLobster ice cream
+
+Promotion Package Id: 2
+Name: Seafood Duo combo
+Price: 18.0
+Description: Bring a friend to enjoy our seafood combo at low prices!
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   2xFish and chips
+2   2xLarge soft drink
+3   2xLobster ice cream
+
+Id: 

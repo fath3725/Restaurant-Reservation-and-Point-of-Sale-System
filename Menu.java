@@ -20,7 +20,7 @@ public class Menu {
 		return this.alaCartes;
 	}
 	/**
-	 * Gets the alaCartes of this Menu.
+	 * Gets the promotion packages of this Menu.
 	 * @return an ArrayList of PromotionPackage currently in menu
 	 */
 	public ArrayList<PromotionPackage> getPromotionPackage(){
@@ -219,13 +219,31 @@ public class Menu {
 					int id=sc.nextInt();
 					System.out.println(id);
 					if (id==-1) break;
+					boolean found = false;
 					for (int i=0;i<alaCartes.size();i++){
 						if (id==alaCartes.get(i).getId()){
-							alaCartes.get(i).editAlaCarte(this.alaCartes);
+							found = true;
+							AlaCarte editedAlacarte = alaCartes.get(i).editAlaCarte(this.alaCartes);
+							//we have to edit from promotion package also
+							for (int k=0;k<promotionPackages.size();k++){
+								for (int j=0;j<promotionPackages.get(k).getPackageItems().size();j++){
+									if (promotionPackages.get(k).getPackageItems().get(j).getId()==id){
+										AlaCarte toedit = promotionPackages.get(k).getPackageItems().get(j);
+										toedit = editedAlacarte;
+										System.out.printf("Edited items in package %d\n",k);
+										break;
+									}
+								}
+							}
+							for (PromotionPackage pp : promotionPackages){
+								pp.viewPackageItems();
+							}
+							System.out.println("Finished editing item.");
 							break;
 						}
 					}
-					System.out.println("Invalid Ala Carte ID");
+					if (!found)
+						System.out.println("Invalid Ala Carte ID");
 				}
 			} else if (type==2){
 				while(true){
@@ -236,12 +254,15 @@ public class Menu {
 					int id = sc.nextInt();
 					System.out.println(id);
 					if (id==-1) break;
+					boolean found = false;
 					for (int i=0;i<promotionPackages.size();i++){
 						if (id == promotionPackages.get(i).getId()){
+							found = true;
 							promotionPackages.get(i).editPromotionPackage(this.promotionPackages,this.alaCartes);
 							break;
 						}
 					}
+					if (!found)
 					System.out.println("Invalid Promotion package ID");
 				}
 			} else if (type==3) break;

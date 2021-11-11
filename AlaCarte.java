@@ -67,7 +67,7 @@ public class AlaCarte extends MenuItem {
 	/**
 	 * Edits the attributes of this promotionPackage.
 	 */
-	public void editAlaCarte(ArrayList<AlaCarte> alaCartes){
+	public AlaCarte editAlaCarte(ArrayList<AlaCarte> alaCartes){
 		Scanner sc = RRPSS.sc;
 		while (true){
 			System.out.println(
@@ -146,7 +146,7 @@ public class AlaCarte extends MenuItem {
 				}
 			}else break;
 		}
-		
+		return new AlaCarte(this.getId(),this.getName(),this.getPrice(),this.getDescription(),this.getCategory());
 	}
 	/**
 	 * Gets the category of this menuitem.
