@@ -647,7 +647,7 @@ Description: Bring a friend to enjoy our seafood combo at low prices!
 Package contains:
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 
@@ -659,7 +659,7 @@ Price: 18.0
 Description: Bring a friend to enjoy our seafood combo at low prices!
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 
@@ -684,7 +684,7 @@ Price: 18.0
 Description: Bring a friend to enjoy our seafood combo at low prices!
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 
@@ -706,7 +706,7 @@ Price: 18.0
 Description: Bring a friend to enjoy our seafood combo at low prices!
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 
@@ -728,7 +728,7 @@ Price: 18.5
 Description: Bring a friend to enjoy our seafood combo at low prices!
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 
@@ -750,7 +750,7 @@ Price: 18.5
 Description: Bring a friend to enjoy our seafood combo at low prices!
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 
@@ -772,7 +772,7 @@ Price: 18.5
 Description: Great seafood deal for you and a buddy!
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 
@@ -788,7 +788,7 @@ Choice: 5
 Package Items:
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 1.Remove item from package
@@ -796,7 +796,7 @@ Id  Quantity_and_Name
 Choice: 2
 Package Items:
 Id  Quantity_and_Name
-1   1xFried ice cream
+1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 Menu AlaCarte Items: 
@@ -806,6 +806,7 @@ Menu AlaCarte Items:
 Add which Id: 1
 How many of it?
 Quantity: 1
+3
 Added package item.
 ------ITEM INFO------
 Id: 2
@@ -814,7 +815,7 @@ Price: 18.5
 Description: Great seafood deal for you and a buddy!
 Package Items:
 Id  Quantity_and_Name
-1   2xFried ice cream
+1   3xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 
@@ -837,7 +838,7 @@ Description: Taste the sea with our new combo!
 Package contains:
 Package Items:
 Id  Quantity_and_Name
-1   2xFried ice cream
+1   1xFried ice cream
 2   1xLarge soft drink
 3   1xLobster ice cream
 
@@ -848,7 +849,7 @@ Description: Great seafood deal for you and a buddy!
 Package contains:
 Package Items:
 Id  Quantity_and_Name
-1   2xFried ice cream
+1   3xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
 

@@ -185,7 +185,7 @@ public class PromotionPackage extends MenuItem {
 								System.out.println(quantity);
 								for (int j=0;j<packageItems.size();j++){
 									if (packageItems.get(j).getId()==packageitemid){
-										packageItems.get(j).setQuantity(getQuantity()+quantity);
+										packageItems.get(j).setQuantity(packageItems.get(j).getQuantity()+quantity);
 										added=true;
 										break;
 									}

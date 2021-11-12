@@ -223,12 +223,15 @@ public class Menu {
 					for (int i=0;i<alaCartes.size();i++){
 						if (id==alaCartes.get(i).getId()){
 							found = true;
-							AlaCarte editedAlacarte = alaCartes.get(i).editAlaCarte(this.alaCartes);
+							alaCartes.get(i).editAlaCarte(this.alaCartes);
 							//we have to edit from promotion package also
 							for (int k=0;k<promotionPackages.size();k++){
+								ArrayList<AlaCarte>packageitemlist = promotionPackages.get(k).getPackageItems();
 								for (int j=0;j<promotionPackages.get(k).getPackageItems().size();j++){
 									if (promotionPackages.get(k).getPackageItems().get(j).getId()==id){
-										promotionPackages.get(k).getPackageItems().set(j,editedAlacarte);
+										AlaCarte temp = AlaCarte.cloneAlaCarte(alaCartes.get(i));
+										temp.setQuantity(packageitemlist.get(j).getQuantity());
+										packageitemlist.set(j, temp);
 										System.out.printf("Edited items in package %d\n",k);
 										break;
 									}
