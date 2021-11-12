@@ -153,6 +153,11 @@ Name: Fish and chips
 Price: 5.5
 Description: Homemade crispy fish and chips topped with cajun sauce
 
+AlaCarte Id: 4
+Name: Cheesy bread
+Price: 5.0
+Description: Cheese on bread
+
 Drinks-----------------------
 AlaCarte Id: 2
 Name: Large soft drink
@@ -165,10 +170,6 @@ Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
 
-AlaCarte Id: 4
-Name: Cheesy bread
-Price: 5.0
-Description: Cheese on bread
 ----------------------------------
 
 Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.
@@ -210,6 +211,11 @@ Name: Fish and chips
 Price: 5.5
 Description: Homemade crispy fish and chips topped with cajun sauce
 
+AlaCarte Id: 4
+Name: Cheesy bread
+Price: 5.0
+Description: Cheese on bread
+
 Drinks-----------------------
 AlaCarte Id: 2
 Name: Large soft drink
@@ -222,10 +228,6 @@ Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
 
-AlaCarte Id: 4
-Name: Cheesy bread
-Price: 5.0
-Description: Cheese on bread
 ----------------------------------
 
 Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.
@@ -271,6 +273,11 @@ Name: Fish and chips
 Price: 5.5
 Description: Homemade crispy fish and chips topped with cajun sauce
 
+AlaCarte Id: 4
+Name: Cheesy bread
+Price: 5.0
+Description: Cheese on bread
+
 Drinks-----------------------
 AlaCarte Id: 2
 Name: Large soft drink
@@ -283,10 +290,6 @@ Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
 
-AlaCarte Id: 4
-Name: Cheesy bread
-Price: 5.0
-Description: Cheese on bread
 ----------------------------------
 
 ------------------------Menu Options---------------------------
@@ -347,6 +350,11 @@ Name: Fish and chips
 Price: 5.5
 Description: Homemade crispy fish and chips topped with cajun sauce
 
+AlaCarte Id: 4
+Name: Cheesy bread
+Price: 5.0
+Description: Cheese on bread
+
 Drinks-----------------------
 AlaCarte Id: 2
 Name: Large soft drink
@@ -359,10 +367,6 @@ Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
 
-AlaCarte Id: 4
-Name: Cheesy bread
-Price: 5.0
-Description: Cheese on bread
 ----------------------------------
 
 Select Ala Carte id to remove, or enter -1 to quit: 
@@ -389,6 +393,7 @@ AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
 ----------------------------------
 
 Select Ala Carte id to remove, or enter -1 to quit: 
@@ -428,6 +433,7 @@ AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
 ----------------------------------
 
 ------------------------Menu Options---------------------------
@@ -499,6 +505,7 @@ AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
 ----------------------------------
 
 Id: 1
@@ -646,22 +653,25 @@ Finished editing item.
 Select Ala Carte id to edit, or enter -1 to quit: 
 -------------Menu AlaCartes-------------
 
-Desserts---------------------
-AlaCarte Id: 1
-Name: Fried ice cream
-Price: 5.9
-Description: Ice cream deep fried
-
+Main courses-----------------
+**No main courses in menu**
 Drinks-----------------------
 AlaCarte Id: 2
 Name: Large soft drink
 Price: 2.5
 Description: 12 oz
 
+Desserts---------------------
+AlaCarte Id: 1
+Name: Fried ice cream
+Price: 5.9
+Description: Ice cream deep fried
+
 AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
 ----------------------------------
 
 Id: -1
@@ -1342,22 +1352,25 @@ Add Order Item type?
 Choice:1
 -------------Menu AlaCartes-------------
 
-Desserts---------------------
-AlaCarte Id: 1
-Name: Fried ice cream
-Price: 5.9
-Description: Ice cream deep fried
-
+Main courses-----------------
+**No main courses in menu**
 Drinks-----------------------
 AlaCarte Id: 2
 Name: Large soft drink
 Price: 2.5
 Description: 12 oz
 
+Desserts---------------------
+AlaCarte Id: 1
+Name: Fried ice cream
+Price: 5.9
+Description: Ice cream deep fried
+
 AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
 ----------------------------------
 
 Enter AlaCarte ID to add: 3
@@ -1421,11 +1434,16 @@ Choice: 1
 Select Ala Carte id to edit quantity, or enter -1 to quit: 
 -------------Menu AlaCartes-------------
 
+Main courses-----------------
+**No main courses in menu**
+Drinks-----------------------
+**No drinks in menu**
 Desserts---------------------
 AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
 ----------------------------------
 
 Id: 3
@@ -1505,7 +1523,7 @@ Choice: 1
 Enter number of pax: 2
 Enter customer's contact number: 123456
 Enter customer's name: quang
-Now is: Fri Nov 12 19:29:50 SGT 2021
+Now is: Fri Nov 12 19:14:58 SGT 2021
 Only can make reservation for this year...
 What month do you want the reservation? (Enter 1-12): 11
 What day do you want the reservation? (Enter 1-30/31): 12
@@ -1522,7 +1540,7 @@ Choice: 1
 Enter number of pax: 3
 Enter customer's contact number: 12345
 Enter customer's name: abc
-Now is: Fri Nov 12 19:29:50 SGT 2021
+Now is: Fri Nov 12 19:14:58 SGT 2021
 Only can make reservation for this year...
 What month do you want the reservation? (Enter 1-12): 11
 What day do you want the reservation? (Enter 1-30/31): 12
@@ -1650,22 +1668,25 @@ Add Order Item type?
 Choice:1
 -------------Menu AlaCartes-------------
 
-Desserts---------------------
-AlaCarte Id: 1
-Name: Fried ice cream
-Price: 5.9
-Description: Ice cream deep fried
-
+Main courses-----------------
+**No main courses in menu**
 Drinks-----------------------
 AlaCarte Id: 2
 Name: Large soft drink
 Price: 2.5
 Description: 12 oz
 
+Desserts---------------------
+AlaCarte Id: 1
+Name: Fried ice cream
+Price: 5.9
+Description: Ice cream deep fried
+
 AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
 ----------------------------------
 
 Enter AlaCarte ID to add: 2
@@ -1698,22 +1719,25 @@ Add Order Item type?
 Choice:1
 -------------Menu AlaCartes-------------
 
-Desserts---------------------
-AlaCarte Id: 1
-Name: Fried ice cream
-Price: 5.9
-Description: Ice cream deep fried
-
+Main courses-----------------
+**No main courses in menu**
 Drinks-----------------------
 AlaCarte Id: 2
 Name: Large soft drink
 Price: 2.5
 Description: 12 oz
 
+Desserts---------------------
+AlaCarte Id: 1
+Name: Fried ice cream
+Price: 5.9
+Description: Ice cream deep fried
+
 AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+
 ----------------------------------
 
 Enter AlaCarte ID to add: 2
@@ -1823,11 +1847,45 @@ Order for table ID 2 paid and removed
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
+Choice: 3
+------------------------Table Options---------------------------
+(1) Add Tables into Restaurant
+(2) Remove Tables from Restaurant
+(3) View all Tables
+(4) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 3
+(1) View all Tables
+(2) View available Tables only
+Choice: 1
+1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
+2. Table ID: 1 -Status: OCCUPIED -Current Pax: 4/4
+3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
+------------------------Table Options---------------------------
+(1) Add Tables into Restaurant
+(2) Remove Tables from Restaurant
+(3) View all Tables
+(4) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 4
+-----------------------RRPSS MAIN MENU-------------------------
+(1) Menu options
+(2) Staff options
+(3) Table options
+(4) Member options
+(5) Order options
+(6) Reservation options
+(7) Seat customer
+(8) Payment
+(9) Generate Total Revenue Report
+(10) Exit
+---------------------------------------------------------------
 Choice: 7
 Reservation? (True/False): False
 How many pax?: 2
 List of available tables for 2 or more pax are as follows: 
 Table ID: 0 -Table Size: 2
+Table ID: 2 -Table Size: 6
 Choose table ID to seat customer? (Enter invalid choice to terminate process): 
 0
 Customer Seated at Table 0
@@ -1856,7 +1914,6 @@ Choice: 1
 List of occupied tables are as follows: 
 Table ID: 0 -Currently seated: 2/2
 Table ID: 1 -Currently seated: 4/4
-Table ID: 2 -Currently seated: 5/6
 Choose table ID to place order (Enter -1 to terminate process): 0
 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
 Enter Staff's ID: 0
@@ -1922,7 +1979,6 @@ Choice: 8
 List of occupied tables are as follows: 
 Table ID: 0 -Currently seated: 2/2
 Table ID: 1 -Currently seated: 4/4
-Table ID: 2 -Currently seated: 5/6
 Choose table ID for payment (Enter -1 to terminate process): 
 0
 Are you a member?: (True/False) 
@@ -1955,6 +2011,39 @@ Print orders by period:
 Choice: 1
 Day (Sunday=1 to Saturday=7): 
 6
+-----------------------RRPSS MAIN MENU-------------------------
+(1) Menu options
+(2) Staff options
+(3) Table options
+(4) Member options
+(5) Order options
+(6) Reservation options
+(7) Seat customer
+(8) Payment
+(9) Generate Total Revenue Report
+(10) Exit
+---------------------------------------------------------------
+Choice: 3
+------------------------Table Options---------------------------
+(1) Add Tables into Restaurant
+(2) Remove Tables from Restaurant
+(3) View all Tables
+(4) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 3
+(1) View all Tables
+(2) View available Tables only
+Choice: 1
+1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
+2. Table ID: 1 -Status: OCCUPIED -Current Pax: 4/4
+3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
+------------------------Table Options---------------------------
+(1) Add Tables into Restaurant
+(2) Remove Tables from Restaurant
+(3) View all Tables
+(4) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 4
 -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options

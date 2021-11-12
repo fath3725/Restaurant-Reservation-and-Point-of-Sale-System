@@ -1,16 +1,16 @@
 1) Order --------
 1 - Large soft drink		2.5
 
-Time stamp of order: Fri Nov 12 18:01:06 SGT 2021
+Time stamp of order: Fri Nov 12 19:14:58 SGT 2021
 Total amount for the order above = 2.50
 2) Order --------
 1 - Large soft drink		2.5
 
-Time stamp of order: Fri Nov 12 18:01:06 SGT 2021
-Total amount for the order above = 2.50
+Time stamp of order: Fri Nov 12 19:14:58 SGT 2021
+Total amount for the order above = 2.38
 3) Order --------
 3 - Seafood Buddy combo		55.5
 
-Time stamp of order: Fri Nov 12 18:01:06 SGT 2021
+Time stamp of order: Fri Nov 12 19:14:58 SGT 2021
 Total amount for the order above = 55.50
 Total Sales Revenue = 69.95

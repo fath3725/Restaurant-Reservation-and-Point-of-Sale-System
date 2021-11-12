@@ -34,26 +34,45 @@ public class Menu {
 			System.out.println("No AlaCartes in menu at the moment");
 			return;
 		}
-		boolean mainc=true,drinks=true,desserts=true;
 		System.out.println("-------------Menu AlaCartes-------------");
+		System.out.println();
+		boolean mainc=false,drink=false,dessert=false;
+		System.out.println("Main courses-----------------");
 		for (int i=0; i<alaCartes.size(); i++){
-			System.out.println();
-			if (alaCartes.get(i).getCategory()==AlaCarteCategory.MAIN_COURSE && mainc){
-				System.out.println("Main courses-----------------");
-				mainc=false;
-			}else if (alaCartes.get(i).getCategory()==AlaCarteCategory.DRINK && drinks){
-				System.out.println("Drinks-----------------------");
-				drinks=false;
-			}else if (alaCartes.get(i).getCategory()==AlaCarteCategory.DESSERT && desserts){
-				System.out.println("Desserts---------------------");
-				desserts=false;
+			if (alaCartes.get(i).getCategory()==AlaCarteCategory.MAIN_COURSE){
+				mainc=true;
+				System.out.println("AlaCarte Id: "+alaCartes.get(i).getId());
+				System.out.println("Name: "+alaCartes.get(i).getName());
+				System.out.println("Price: "+alaCartes.get(i).getPrice());
+				System.out.println("Description: "+alaCartes.get(i).getDescription());
+				System.out.println();
 			}
-			System.out.println("AlaCarte Id: "+alaCartes.get(i).getId());
-			System.out.println("Name: "+alaCartes.get(i).getName());
-			System.out.println("Price: "+alaCartes.get(i).getPrice());
-			System.out.println("Description: "+alaCartes.get(i).getDescription());
-			
 		}
+		if (!mainc)System.out.println("**No main courses in menu**");
+		System.out.println("Drinks-----------------------");
+		for (int i=0; i<alaCartes.size(); i++){
+			if (alaCartes.get(i).getCategory()==AlaCarteCategory.DRINK){
+				drink=true;
+				System.out.println("AlaCarte Id: "+alaCartes.get(i).getId());
+				System.out.println("Name: "+alaCartes.get(i).getName());
+				System.out.println("Price: "+alaCartes.get(i).getPrice());
+				System.out.println("Description: "+alaCartes.get(i).getDescription());
+				System.out.println();
+			}
+		}
+		if (!drink)System.out.println("**No drinks in menu**");
+		System.out.println("Desserts---------------------");
+		for (int i=0; i<alaCartes.size(); i++){
+			if (alaCartes.get(i).getCategory()==AlaCarteCategory.DESSERT){
+				dessert=true;
+				System.out.println("AlaCarte Id: "+alaCartes.get(i).getId());
+				System.out.println("Name: "+alaCartes.get(i).getName());
+				System.out.println("Price: "+alaCartes.get(i).getPrice());
+				System.out.println("Description: "+alaCartes.get(i).getDescription());
+				System.out.println();
+			}
+		}
+		if (!dessert)System.out.println("**No desserts in menu :(**");
 		System.out.println("----------------------------------");
 		System.out.println();
 	}
