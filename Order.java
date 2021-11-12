@@ -77,24 +77,16 @@ public class Order extends Menu {
 				continue;
 			double total = (this.alaCartes.get(i).getPrice()) * (this.alaCartes.get(i).getQuantity());
 			finalAmount = finalAmount + total;
-			System.out.println(this.alaCartes.get(i).getQuantity()+" - "+this.alaCartes.get(i).getName()+"		"+total+"\n");
+			System.out.println(this.alaCartes.get(i).getQuantity()+" - "+this.alaCartes.get(i).getName()+"		"+total);
 		}
-
 		for(int i=0; i<this.promotionPackages.size(); i++){
 			if(this.promotionPackages.get(i).getQuantity() == 0)
 				continue;
 			double total = (this.promotionPackages.get(i).getPrice()) * (this.promotionPackages.get(i).getQuantity());
 			finalAmount = finalAmount + total;
-			System.out.println(this.promotionPackages.get(i).getQuantity()+" - "+this.promotionPackages.get(i).getName()+"		"+total+"\n");
+			System.out.println(this.promotionPackages.get(i).getQuantity()+" - "+this.promotionPackages.get(i).getName()+"		"+total);
 		}
-
-		for(int i=0; i<this.promotionPackages.size(); i++){
-			if(this.promotionPackages.get(i).getQuantity() == 0)
-				continue;
-			double total = (this.promotionPackages.get(i).getPrice()) * (this.promotionPackages.get(i).getQuantity());
-			finalAmount = finalAmount + total;
-			System.out.println(this.promotionPackages.get(i).getQuantity()+" - "+this.promotionPackages.get(i).getName()+"		"+total+"\n");
-		}
+		
 		return finalAmount;
 	}
 	/**
@@ -107,37 +99,46 @@ public class Order extends Menu {
 		while(type<3) {
 			System.out.print("Add Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Terminate\n");
 			type = sc.nextInt();
+			System.out.println("Choice:"+type);
 			if (type==1){
 				menu.viewAlaCartes();
 				System.out.print("Enter AlaCarte ID to add: ");
 				int alaCarteID = sc.nextInt();
+				System.out.println(alaCarteID);
 				System.out.print("Enter quantity: ");
 				int alaCarteQuantity = sc.nextInt();
+				System.out.println(alaCarteQuantity);
+				boolean found = false;
 				for(int i=0; i<menu.getAlaCarte().size(); i++){
 					if(menu.getAlaCarte().get(i).getId() == alaCarteID){
 						AlaCarte temp = AlaCarte.cloneAlaCarte(menu.getAlaCarte().get(i)); //clone instance
 						temp.setQuantity(alaCarteQuantity);
 						this.alaCartes.add(temp);
+						found = true;
 						break;
 					}
 				}
-				System.out.println("Invalid ID");
+				if(!found) System.out.println("Invalid ID");
 			}
 			else if(type==2){
 				menu.viewPromotionPackages();
 				System.out.print("Enter Package ID to add: ");
 				int packID = sc.nextInt();
+				System.out.println(packID);
 				System.out.print("Enter quantity: ");
 				int packQuantity = sc.nextInt();
+				System.out.println(packQuantity);
+				boolean found = false;
 				for(int i=0; i<menu.getPromotionPackage().size(); i++){
 					if(menu.getPromotionPackage().get(i).getId() == packID){
 						PromotionPackage temp = PromotionPackage.clonePromotionPackage(menu.getPromotionPackage().get(i)); //clone instance
 						temp.setQuantity(packQuantity);
 						this.promotionPackages.add(temp);
+						found = true;
 						break;
 					}
 				}
-				System.out.println("Invalid ID");
+				if(!found) System.out.println("Invalid ID");
 			}
 		}
 		
@@ -202,6 +203,7 @@ public class Order extends Menu {
 				if(choice == 1){
 					System.out.println("Select Ala Carte id to edit quantity, or enter -1 to quit: ");
 					viewAlaCartes();
+					if (this.alaCartes.size()==0) continue;
 					System.out.print("Id: ");
 					int id=sc.nextInt();
 					System.out.println(id);
@@ -220,6 +222,7 @@ public class Order extends Menu {
 				else if(choice==2){
 					System.out.println("Select Promotion Package id to edit quantity, or enter -1 to quit: ");
 					viewPromotionPackages();
+					if (this.promotionPackages.size()==0) continue;
 					System.out.print("Id: ");
 					int id=sc.nextInt();
 					System.out.println(id);
