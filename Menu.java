@@ -35,8 +35,9 @@ public class Menu {
 			return;
 		}
 		boolean mainc=true,drinks=true,desserts=true;
-		System.out.println("----------AlaCartes----------");
+		System.out.println("-------------Menu AlaCartes-------------");
 		for (int i=0; i<alaCartes.size(); i++){
+			System.out.println();
 			if (alaCartes.get(i).getCategory()==AlaCarteCategory.MAIN_COURSE && mainc){
 				System.out.println("Main courses-----------------");
 				mainc=false;
@@ -51,8 +52,10 @@ public class Menu {
 			System.out.println("Name: "+alaCartes.get(i).getName());
 			System.out.println("Price: "+alaCartes.get(i).getPrice());
 			System.out.println("Description: "+alaCartes.get(i).getDescription());
-			System.out.println("");
+			
 		}
+		System.out.println("----------------------------------");
+		System.out.println();
 	}
 	/**
 	 * Views the promotionPackages of this Menu.
@@ -62,16 +65,18 @@ public class Menu {
 			System.out.println("No PromotionPackages in menu at the moment");
 			return;
 		}
-		System.out.println("----------PromotionPackages----------");
+		System.out.println("----------Menu PromotionPackages----------");
 		for (int i=0; i<promotionPackages.size(); i++){
+			System.out.println();
 			System.out.println("Promotion Package Id: "+promotionPackages.get(i).getId());
 			System.out.println("Name: "+promotionPackages.get(i).getName());
 			System.out.println("Price: "+promotionPackages.get(i).getPrice());
 			System.out.println("Description: "+promotionPackages.get(i).getDescription());
 			System.out.println("Package contains:");
 			promotionPackages.get(i).viewPackageItems();
-			System.out.println("");
 		}
+		System.out.println("-------------------------------------");
+		System.out.println();
 	}
 	/**
 	 * Adds alaCartes into this Menu.
@@ -89,6 +94,7 @@ public class Menu {
 			System.out.println(type);
 
 			if (type==1){
+				System.out.println("------New AlaCarte creation-----");
 				AlaCarte newAlaCarte=AlaCarte.newAlaCarte();
 				boolean exists=false;
 				for (AlaCarte ac : alaCartes){
@@ -101,10 +107,11 @@ public class Menu {
 				if (!exists){
 					alaCartes.add(newAlaCarte);
 					System.out.println("New alacarte added.");
+					System.out.println("");
 				}
 			} 
 			else if (type==2){
-				System.out.println("New Promotion Package creation");
+				System.out.println("-----New Promotion Package creation-----");
 				menu.viewAlaCartes();
 				if (alaCartes.size()==0){
 					System.out.println("Cannot make new package.");
@@ -145,8 +152,8 @@ public class Menu {
 						System.out.println("No alacartes in menu to remove");
 						break;
 					}
-					System.out.println("Select Ala Carte id to remove, or enter -1 to quit: ");
 					viewAlaCartes();
+					System.out.println("Select Ala Carte id to remove, or enter -1 to quit: ");
 					System.out.print("Id: ");
 					int id = sc.nextInt();
 					System.out.println(id);
@@ -183,8 +190,8 @@ public class Menu {
 						System.out.println("No promotion packages in menu to remove");
 						break;
 					}
-					System.out.println("Select Promotion package id to remove, or enter -1 to quit: ");
 					viewPromotionPackages();
+					System.out.println("Select Promotion package id to remove, or enter -1 to quit: ");
 					System.out.print("Id: ");
 					int id = sc.nextInt();
 					System.out.println(id);
@@ -246,9 +253,9 @@ public class Menu {
 				}
 			} else if (type==2){
 				while(true){
-					System.out.println("Select Promotion package id to edit, or enter -1 to quit: ");
 					viewPromotionPackages();
 					if(promotionPackages.size()==0) break;
+					System.out.println("Select Promotion package id to edit, or enter -1 to quit");
 					System.out.print("Id: ");
 					int id = sc.nextInt();
 					System.out.println(id);

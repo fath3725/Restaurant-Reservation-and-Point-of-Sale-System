@@ -536,6 +536,7 @@ public class Restaurant {
 			System.out.println("Are you a member?: (True/False) ");
 			Boolean answer = sc.nextBoolean();
 			System.out.println(answer);
+			orders.get(i).setMember(answer);
 			sc.nextLine();
 			if(answer){
 				System.out.print("Member name: ");
@@ -765,42 +766,100 @@ public class Restaurant {
 		}
 		System.out.print("This table has no order");
 	}
+	/**
+	 * Print past 
+	 */
 	public void transferToTxt() throws FileNotFoundException {
 		// Open the file.
-        PrintWriter out = new PrintWriter("Final Sales Report.txt"); // Step 2
+		PrintWriter out = new PrintWriter("Final Sales Report.txt"); // Step 2
 		double finalAmt = 0;
-        // Write the name of four oceans to the file
+
 		if(orderRecord.size()==0) {
 			System.out.println("No item sold");
 			out.close();//maybe need remove if this affects scanner in RRPSS
 			return;
 		}
-        for(int i=0; i<orderRecord.size(); i++){
-			out.println((i+1)+") Order --------");
-			double finalAmount=0;
-			for(int j=0; j<orderRecord.get(i).alaCartes.size(); j++){
-				if(orderRecord.get(i).alaCartes.get(j).getQuantity() == 0)
-					continue;
-				double total = (orderRecord.get(i).alaCartes.get(j).getPrice()) * (orderRecord.get(i).alaCartes.get(j).getQuantity());
-				finalAmount = finalAmount + total;
-				finalAmt = finalAmt + total;
-				out.println(orderRecord.get(i).alaCartes.get(j).getQuantity()+" - "+orderRecord.get(i).alaCartes.get(j).getName()+"		"+total+"\n");
-			}
 
-			for(int j=0; j<orderRecord.get(i).promotionPackages.size(); j++){
-				if(orderRecord.get(i).promotionPackages.get(j).getQuantity() == 0)
-					continue;
-				double total = (orderRecord.get(i).promotionPackages.get(j).getPrice()) * (orderRecord.get(i).promotionPackages.get(j).getQuantity());
-				finalAmount = finalAmount + total;
-				finalAmt = finalAmt + total;
-				out.println(orderRecord.get(i).promotionPackages.get(j).getQuantity()+" - "+orderRecord.get(i).promotionPackages.get(j).getName()+"		"+total+"\n");
+		Scanner sc = RRPSS.sc;
+		System.out.println("Print orders by period: ");
+		System.out.println("(1) Day");
+		System.out.println("(2) Month");
+		System.out.print("Choice: ");
+		int choice = sc.nextInt();
+		System.out.println(choice);
+		int day, month;
+		if (choice ==1){
+			System.out.println("Day (Sunday=1 to Saturday=7): ");
+			day = sc.nextInt();
+			System.out.println(day);
+			for(int i=0; i<orderRecord.size(); i++){
+				int dayOfWeek = orderRecord.get(i).getTimeStamp().get(Calendar.DAY_OF_WEEK);
+				if(dayOfWeek == day){
+					out.println((i+1)+") Order --------");
+					double finalAmount=0;
+					for(int j=0; j<orderRecord.get(i).alaCartes.size(); j++){
+						if(orderRecord.get(i).alaCartes.get(j).getQuantity() == 0)
+							continue;
+						double total = (orderRecord.get(i).alaCartes.get(j).getPrice()) * (orderRecord.get(i).alaCartes.get(j).getQuantity());
+						finalAmount = finalAmount + total;
+						finalAmt = finalAmt + total;
+						out.println(orderRecord.get(i).alaCartes.get(j).getQuantity()+" - "+orderRecord.get(i).alaCartes.get(j).getName()+"		"+total+"\n");
+					}
+		
+					for(int j=0; j<orderRecord.get(i).promotionPackages.size(); j++){
+						if(orderRecord.get(i).promotionPackages.get(j).getQuantity() == 0)
+							continue;
+						double total = (orderRecord.get(i).promotionPackages.get(j).getPrice()) * (orderRecord.get(i).promotionPackages.get(j).getQuantity());
+						finalAmount = finalAmount + total;
+						out.println(orderRecord.get(i).promotionPackages.get(j).getQuantity()+" - "+orderRecord.get(i).promotionPackages.get(j).getName()+"		"+total+"\n");
+					}
+					out.println("Time stamp of order: "+orderRecord.get(i).getTimeStamp().getTime());
+					if (orderRecord.get(i).getMember()==true)
+						finalAmount*=0.95;
+					finalAmt+=finalAmount;
+					out.printf("Total amount for the order above = %.2f\n", finalAmount);
+				}
+				}
+				out.printf("Total Sales Revenue = %.2f\n", finalAmt*1.07);
+				// Close the file.
+				out.close();
 			}
-			out.println("Time stamp of order: "+orderRecord.get(i).getTimeStamp().getTime());
-			out.printf("Total amount for the order above = %.2f\n", finalAmount);
+		else if (choice==2){
+			System.out.println("Month (1-12): ");
+			month = sc.nextInt();
+			System.out.println(month);
+			for(int i=0; i<orderRecord.size(); i++){
+				int recordedMonth = orderRecord.get(i).getTimeStamp().get(Calendar.MONTH);
+				if(recordedMonth == (month-1)){
+					out.println((i+1)+") Order --------");
+					double finalAmount=0;
+					for(int j=0; j<orderRecord.get(i).alaCartes.size(); j++){
+						if(orderRecord.get(i).alaCartes.get(j).getQuantity() == 0)
+							continue;
+						double total = (orderRecord.get(i).alaCartes.get(j).getPrice()) * (orderRecord.get(i).alaCartes.get(j).getQuantity());
+						finalAmount = finalAmount + total;
+						finalAmt = finalAmt + total;
+						out.println(orderRecord.get(i).alaCartes.get(j).getQuantity()+" - "+orderRecord.get(i).alaCartes.get(j).getName()+"		"+total+"\n");
+					}
+		
+					for(int j=0; j<orderRecord.get(i).promotionPackages.size(); j++){
+						if(orderRecord.get(i).promotionPackages.get(j).getQuantity() == 0)
+							continue;
+						double total = (orderRecord.get(i).promotionPackages.get(j).getPrice()) * (orderRecord.get(i).promotionPackages.get(j).getQuantity());
+						finalAmount = finalAmount + total;
+						out.println(orderRecord.get(i).promotionPackages.get(j).getQuantity()+" - "+orderRecord.get(i).promotionPackages.get(j).getName()+"		"+total+"\n");
+					}
+					out.println("Time stamp of order: "+orderRecord.get(i).getTimeStamp().getTime());
+					if (orderRecord.get(i).getMember()==true)
+						finalAmount*=0.95;
+					finalAmt+=finalAmount;
+					out.printf("Total amount for the order above = %.2f\n", finalAmount);
+				}
+			}
+			out.printf("Total Sales Revenue = %.2f\n", finalAmt*1.07);
+			// Close the file.
+			out.close();
 		}
-		out.printf("Total Sales Revenue = %.2f\n", finalAmt);
-        // Close the file.
-        out.close();
 	}
 	/**
 	 * Gets the menu of this restaurant.

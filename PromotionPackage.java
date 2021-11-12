@@ -91,14 +91,14 @@ public class PromotionPackage extends MenuItem {
 		Scanner sc = RRPSS.sc;
 		while (true){
 			System.out.println(
-				"------ITEM INFO------"+
+				"------EDITING PRMOTION PACKAGE INFO------"+
 				"\nId: "+getId()+
 				"\nName: "+getName()+
 				"\nPrice: "+getPrice()+
 				"\nDescription: "+getDescription());
 			viewPackageItems();
 			System.out.println(
-				"\n---------------------"+
+				"\n---------------------------------------"+
 				"\nWhat attribute would you like to edit?"+
 				"\n1.Id"+
 				"\n2.Price"+
@@ -106,9 +106,11 @@ public class PromotionPackage extends MenuItem {
 				"\n4.Description"+
 				"\n5.PackageItems"+
 				"\n6.Exit");
+			System.out.println("----------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
 			System.out.println(choice);
+			System.out.println("----------------------------");
 			if (choice==1){
 				while(true){
 					System.out.printf("Id: %d\nNew id: ",this.getId());
@@ -148,7 +150,9 @@ public class PromotionPackage extends MenuItem {
 				System.out.println("Package Items:");
 				viewPackageItems();
 				System.out.println("1.Remove item from package\n2.Add item to package");
+				System.out.println("----------------------------");
 				System.out.print("Choice: ");
+				System.out.println("----------------------------");
 				int option = sc.nextInt();
 				System.out.println(option);
 				viewPackageItems();

@@ -60,6 +60,7 @@ Add Menu Item type?
 2. Promotion Package
 3. Exit
 Choice: 1
+------New AlaCarte creation-----
 AlaCarte id: 1
 AlaCarte name: Fish and chips
 AlaCarte price: 5.5
@@ -70,11 +71,13 @@ AlaCarte category:
 3.DESSERT
 Category: 1
 New alacarte added.
+
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
 Choice: 1
+------New AlaCarte creation-----
 AlaCarte id: 1
 AlaCarte name: Fish fingers
 AlaCarte price: 2.5
@@ -90,6 +93,7 @@ Add Menu Item type?
 2. Promotion Package
 3. Exit
 Choice: 1
+------New AlaCarte creation-----
 AlaCarte id: 2
 AlaCarte name: Large soft drink
 AlaCarte price: 2.5
@@ -100,11 +104,13 @@ AlaCarte category:
 3.DESSERT
 Category: 2
 New alacarte added.
+
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
 Choice: 1
+------New AlaCarte creation-----
 AlaCarte id: 3
 AlaCarte name: Lobster ice cream
 AlaCarte price: 3.5
@@ -115,11 +121,13 @@ AlaCarte category:
 3.DESSERT
 Category: 3
 New alacarte added.
+
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
 Choice: 1
+------New AlaCarte creation-----
 AlaCarte id: 4
 AlaCarte name: Cheesy bread
 AlaCarte price: 5.0
@@ -130,13 +138,15 @@ AlaCarte category:
 3.DESSERT
 Category: 1
 New alacarte added.
+
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
 Choice: 2
-New Promotion Package creation
-----------AlaCartes----------
+-----New Promotion Package creation-----
+-------------Menu AlaCartes-------------
+
 Main courses-----------------
 AlaCarte Id: 1
 Name: Fish and chips
@@ -159,6 +169,7 @@ AlaCarte Id: 4
 Name: Cheesy bread
 Price: 5.0
 Description: Cheese on bread
+----------------------------------
 
 Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.
 Id: 1
@@ -190,8 +201,9 @@ Add Menu Item type?
 2. Promotion Package
 3. Exit
 Choice: 2
-New Promotion Package creation
-----------AlaCartes----------
+-----New Promotion Package creation-----
+-------------Menu AlaCartes-------------
+
 Main courses-----------------
 AlaCarte Id: 1
 Name: Fish and chips
@@ -214,6 +226,7 @@ AlaCarte Id: 4
 Name: Cheesy bread
 Price: 5.0
 Description: Cheese on bread
+----------------------------------
 
 Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.
 Id: 1
@@ -250,7 +263,8 @@ Choice: 3
 (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
 Choice: 1
-----------AlaCartes----------
+-------------Menu AlaCartes-------------
+
 Main courses-----------------
 AlaCarte Id: 1
 Name: Fish and chips
@@ -273,6 +287,7 @@ AlaCarte Id: 4
 Name: Cheesy bread
 Price: 5.0
 Description: Cheese on bread
+----------------------------------
 
 ------------------------Menu Options---------------------------
 (1) Add item into Menu
@@ -285,7 +300,8 @@ Choice: 3
 (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
 Choice: 2
-----------PromotionPackages----------
+----------Menu PromotionPackages----------
+
 Promotion Package Id: 1
 Name: Seafood combo
 Price: 9.9
@@ -308,6 +324,7 @@ Id  Quantity_and_Name
 1   2xFish and chips
 2   2xLarge soft drink
 3   2xLobster ice cream
+-------------------------------------
 
 ------------------------Menu Options---------------------------
 (1) Add item into Menu
@@ -322,8 +339,8 @@ Remove Menu Item type?
 2. Promotion Package
 3. Exit
 Type: 1
-Select Ala Carte id to remove, or enter -1 to quit: 
-----------AlaCartes----------
+-------------Menu AlaCartes-------------
+
 Main courses-----------------
 AlaCarte Id: 1
 Name: Fish and chips
@@ -346,13 +363,15 @@ AlaCarte Id: 4
 Name: Cheesy bread
 Price: 5.0
 Description: Cheese on bread
+----------------------------------
 
+Select Ala Carte id to remove, or enter -1 to quit: 
 Id: 4
 AlaCarte removed.
 Package 1 has removed alacarte id 4 from its packageItems
 Invalid ID
-Select Ala Carte id to remove, or enter -1 to quit: 
-----------AlaCartes----------
+-------------Menu AlaCartes-------------
+
 Main courses-----------------
 AlaCarte Id: 1
 Name: Fish and chips
@@ -370,7 +389,9 @@ AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+----------------------------------
 
+Select Ala Carte id to remove, or enter -1 to quit: 
 Id: -1
 Remove Menu Item type?
 1. Ala Carte
@@ -388,7 +409,8 @@ Choice: 3
 (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
 Choice: 1
-----------AlaCartes----------
+-------------Menu AlaCartes-------------
+
 Main courses-----------------
 AlaCarte Id: 1
 Name: Fish and chips
@@ -406,6 +428,7 @@ AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+----------------------------------
 
 ------------------------Menu Options---------------------------
 (1) Add item into Menu
@@ -418,7 +441,8 @@ Choice: 3
 (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
 Choice: 2
-----------PromotionPackages----------
+----------Menu PromotionPackages----------
+
 Promotion Package Id: 1
 Name: Seafood combo
 Price: 9.9
@@ -440,6 +464,7 @@ Id  Quantity_and_Name
 1   2xFish and chips
 2   2xLarge soft drink
 3   2xLobster ice cream
+-------------------------------------
 
 ------------------------Menu Options---------------------------
 (1) Add item into Menu
@@ -455,7 +480,8 @@ Edit Menu Item type?
 3. Exit
 Type: 1
 Select Ala Carte id to edit, or enter -1 to quit: 
-----------AlaCartes----------
+-------------Menu AlaCartes-------------
+
 Main courses-----------------
 AlaCarte Id: 1
 Name: Fish and chips
@@ -473,15 +499,16 @@ AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+----------------------------------
 
 Id: 1
-------ITEM INFO------
+--------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fish and chips
 Price: 5.5
 Category: MAIN_COURSE
 Description: Homemade crispy fish and chips topped with cajun sauce
----------------------
+----------------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -489,19 +516,21 @@ What attribute would you like to edit?
 4.Description
 5.Category
 6.Exit
+----------------------------
 Choice: 1
+----------------------------
 Id: 1
 New id: 2
 Id already exists. Try again.
 Id: 1
 New id: 4
-------ITEM INFO------
+--------------EDITING ALACARTE INFO-------------
 Id: 4
 Name: Fish and chips
 Price: 5.5
 Category: MAIN_COURSE
 Description: Homemade crispy fish and chips topped with cajun sauce
----------------------
+----------------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -509,16 +538,18 @@ What attribute would you like to edit?
 4.Description
 5.Category
 6.Exit
+----------------------------
 Choice: 1
+----------------------------
 Id: 4
 New id: 1
-------ITEM INFO------
+--------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fish and chips
 Price: 5.5
 Category: MAIN_COURSE
 Description: Homemade crispy fish and chips topped with cajun sauce
----------------------
+----------------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -526,16 +557,18 @@ What attribute would you like to edit?
 4.Description
 5.Category
 6.Exit
+----------------------------
 Choice: 2
+----------------------------
 Price: 5.5
 New price: 5.9
-------ITEM INFO------
+--------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fish and chips
 Price: 5.9
 Category: MAIN_COURSE
 Description: Homemade crispy fish and chips topped with cajun sauce
----------------------
+----------------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -543,16 +576,18 @@ What attribute would you like to edit?
 4.Description
 5.Category
 6.Exit
+----------------------------
 Choice: 3
+----------------------------
 Name: Fish and chips
 New name: Fried ice cream
-------ITEM INFO------
+--------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fried ice cream
 Price: 5.9
 Category: MAIN_COURSE
 Description: Homemade crispy fish and chips topped with cajun sauce
----------------------
+----------------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -560,16 +595,18 @@ What attribute would you like to edit?
 4.Description
 5.Category
 6.Exit
+----------------------------
 Choice: 4
+----------------------------
 Description: Homemade crispy fish and chips topped with cajun sauce
 New description: Ice cream deep fried
-------ITEM INFO------
+--------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fried ice cream
 Price: 5.9
 Category: MAIN_COURSE
 Description: Ice cream deep fried
----------------------
+----------------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -577,20 +614,22 @@ What attribute would you like to edit?
 4.Description
 5.Category
 6.Exit
+----------------------------
 Choice: 5
+----------------------------
 AlaCarte category:
 1.MAIN_COURSE
 2.DRINK
 3.DESSERT
 Category: 3
 Category set as dessert
-------ITEM INFO------
+--------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fried ice cream
 Price: 5.9
 Category: DESSERT
 Description: Ice cream deep fried
----------------------
+----------------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -598,12 +637,15 @@ What attribute would you like to edit?
 4.Description
 5.Category
 6.Exit
+----------------------------
 Choice: 6
+----------------------------
 Edited items in package 0
 Edited items in package 1
 Finished editing item.
 Select Ala Carte id to edit, or enter -1 to quit: 
-----------AlaCartes----------
+-------------Menu AlaCartes-------------
+
 Desserts---------------------
 AlaCarte Id: 1
 Name: Fried ice cream
@@ -620,6 +662,7 @@ AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+----------------------------------
 
 Id: -1
 Edit Menu Item type?
@@ -627,8 +670,8 @@ Edit Menu Item type?
 2. Promotion Package
 3. Exit
 Type: 2
-Select Promotion package id to edit, or enter -1 to quit: 
-----------PromotionPackages----------
+----------Menu PromotionPackages----------
+
 Promotion Package Id: 1
 Name: Seafood combo
 Price: 9.9
@@ -650,9 +693,11 @@ Id  Quantity_and_Name
 1   2xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
+-------------------------------------
 
+Select Promotion package id to edit, or enter -1 to quit
 Id: 2
-------ITEM INFO------
+------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Duo combo
 Price: 18.0
@@ -663,7 +708,7 @@ Id  Quantity_and_Name
 2   2xLarge soft drink
 3   2xLobster ice cream
 
----------------------
+---------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -671,13 +716,15 @@ What attribute would you like to edit?
 4.Description
 5.PackageItems
 6.Exit
+----------------------------
 Choice: 1
+----------------------------
 Id: 2
 New id: 1
 Id already exists. Try again.
 Id: 2
 New id: 3
-------ITEM INFO------
+------EDITING PRMOTION PACKAGE INFO------
 Id: 3
 Name: Seafood Duo combo
 Price: 18.0
@@ -688,7 +735,7 @@ Id  Quantity_and_Name
 2   2xLarge soft drink
 3   2xLobster ice cream
 
----------------------
+---------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -696,10 +743,12 @@ What attribute would you like to edit?
 4.Description
 5.PackageItems
 6.Exit
+----------------------------
 Choice: 1
+----------------------------
 Id: 3
 New id: 2
-------ITEM INFO------
+------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Duo combo
 Price: 18.0
@@ -710,7 +759,7 @@ Id  Quantity_and_Name
 2   2xLarge soft drink
 3   2xLobster ice cream
 
----------------------
+---------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -718,10 +767,12 @@ What attribute would you like to edit?
 4.Description
 5.PackageItems
 6.Exit
+----------------------------
 Choice: 2
+----------------------------
 Price: 18.0
 New price: 18.5
-------ITEM INFO------
+------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Duo combo
 Price: 18.5
@@ -732,7 +783,7 @@ Id  Quantity_and_Name
 2   2xLarge soft drink
 3   2xLobster ice cream
 
----------------------
+---------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -740,10 +791,12 @@ What attribute would you like to edit?
 4.Description
 5.PackageItems
 6.Exit
+----------------------------
 Choice: 3
+----------------------------
 Name: Seafood Duo combo
 New name: Seafood Buddy combo
-------ITEM INFO------
+------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Buddy combo
 Price: 18.5
@@ -754,7 +807,7 @@ Id  Quantity_and_Name
 2   2xLarge soft drink
 3   2xLobster ice cream
 
----------------------
+---------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -762,10 +815,12 @@ What attribute would you like to edit?
 4.Description
 5.PackageItems
 6.Exit
+----------------------------
 Choice: 4
+----------------------------
 Description: Bring a friend to enjoy our seafood combo at low prices!
 New description: Great seafood deal for you and a buddy!
-------ITEM INFO------
+------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Buddy combo
 Price: 18.5
@@ -776,7 +831,7 @@ Id  Quantity_and_Name
 2   2xLarge soft drink
 3   2xLobster ice cream
 
----------------------
+---------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -784,7 +839,9 @@ What attribute would you like to edit?
 4.Description
 5.PackageItems
 6.Exit
+----------------------------
 Choice: 5
+----------------------------
 Package Items:
 Package Items:
 Id  Quantity_and_Name
@@ -793,7 +850,9 @@ Id  Quantity_and_Name
 3   2xLobster ice cream
 1.Remove item from package
 2.Add item to package
-Choice: 2
+----------------------------
+Choice: ----------------------------
+2
 Package Items:
 Id  Quantity_and_Name
 1   2xFried ice cream
@@ -806,9 +865,8 @@ Menu AlaCarte Items:
 Add which Id: 1
 How many of it?
 Quantity: 1
-3
 Added package item.
-------ITEM INFO------
+------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Buddy combo
 Price: 18.5
@@ -819,7 +877,7 @@ Id  Quantity_and_Name
 2   2xLarge soft drink
 3   2xLobster ice cream
 
----------------------
+---------------------------------------
 What attribute would you like to edit?
 1.Id
 2.Price
@@ -827,10 +885,12 @@ What attribute would you like to edit?
 4.Description
 5.PackageItems
 6.Exit
+----------------------------
 Choice: 6
+----------------------------
 Finished editing item.
-Select Promotion package id to edit, or enter -1 to quit: 
-----------PromotionPackages----------
+----------Menu PromotionPackages----------
+
 Promotion Package Id: 1
 Name: Seafood combo
 Price: 9.9
@@ -852,7 +912,9 @@ Id  Quantity_and_Name
 1   3xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
+-------------------------------------
 
+Select Promotion package id to edit, or enter -1 to quit
 Id: -1
 Edit Menu Item type?
 1. Ala Carte
@@ -1206,7 +1268,8 @@ Add Order Item type?
 2. Promotion Package
 3. Terminate
 Choice:2
-----------PromotionPackages----------
+----------Menu PromotionPackages----------
+
 Promotion Package Id: 1
 Name: Seafood combo
 Price: 9.9
@@ -1214,7 +1277,7 @@ Description: Taste the sea with our new combo!
 Package contains:
 Package Items:
 Id  Quantity_and_Name
-1   2xFried ice cream
+1   1xFried ice cream
 2   1xLarge soft drink
 3   1xLobster ice cream
 
@@ -1225,9 +1288,10 @@ Description: Great seafood deal for you and a buddy!
 Package contains:
 Package Items:
 Id  Quantity_and_Name
-1   2xFried ice cream
+1   3xFried ice cream
 2   2xLarge soft drink
 3   2xLobster ice cream
+-------------------------------------
 
 Enter Package ID to add: 1
 Enter quantity: 2
@@ -1276,7 +1340,8 @@ Add Order Item type?
 2. Promotion Package
 3. Terminate
 Choice:1
-----------AlaCartes----------
+-------------Menu AlaCartes-------------
+
 Desserts---------------------
 AlaCarte Id: 1
 Name: Fried ice cream
@@ -1293,6 +1358,7 @@ AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+----------------------------------
 
 Enter AlaCarte ID to add: 3
 Enter quantity: 2
@@ -1312,7 +1378,8 @@ Remove Order Item type?
 2. Promotion Package
 3. Exit2
 Select Promotion Package id to remove, or enter -1 to quit: 
-----------PromotionPackages----------
+----------Menu PromotionPackages----------
+
 Promotion Package Id: 1
 Name: Seafood combo
 Price: 9.9
@@ -1320,9 +1387,10 @@ Description: Taste the sea with our new combo!
 Package contains:
 Package Items:
 Id  Quantity_and_Name
-1   2xFried ice cream
+1   1xFried ice cream
 2   1xLarge soft drink
 3   1xLobster ice cream
+-------------------------------------
 
 Id: 1
 Promotion Package ID-1 is removed from order
@@ -1351,12 +1419,14 @@ Edit quantity of which Order Item type?
 3. Exit
 Choice: 1
 Select Ala Carte id to edit quantity, or enter -1 to quit: 
-----------AlaCartes----------
+-------------Menu AlaCartes-------------
+
 Desserts---------------------
 AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+----------------------------------
 
 Id: 3
 Enter new quantity: 
@@ -1435,7 +1505,7 @@ Choice: 1
 Enter number of pax: 2
 Enter customer's contact number: 123456
 Enter customer's name: quang
-Now is: Fri Nov 12 18:09:21 SGT 2021
+Now is: Fri Nov 12 19:29:50 SGT 2021
 Only can make reservation for this year...
 What month do you want the reservation? (Enter 1-12): 11
 What day do you want the reservation? (Enter 1-30/31): 12
@@ -1452,7 +1522,7 @@ Choice: 1
 Enter number of pax: 3
 Enter customer's contact number: 12345
 Enter customer's name: abc
-Now is: Fri Nov 12 18:09:21 SGT 2021
+Now is: Fri Nov 12 19:29:50 SGT 2021
 Only can make reservation for this year...
 What month do you want the reservation? (Enter 1-12): 11
 What day do you want the reservation? (Enter 1-30/31): 12
@@ -1467,7 +1537,6 @@ Enter table ID selected for reservation: 2
 ---------------------------------------------------------------
 Choice: 3
 1) quang -Contact No.: 123456 -Table ID: 0 -Pax: 2 -Date Reserved: Fri Nov 12 19:00:00 SGT 2021
-2) abc -Contact No.: 12345 -Table ID: 2 -Pax: 3 -Date Reserved: Fri Nov 12 17:30:00 SGT 2021
 --------------------Reservation Options------------------------
 (1) Create Reservation
 (2) Cancel Reservation
@@ -1579,7 +1648,8 @@ Add Order Item type?
 2. Promotion Package
 3. Terminate
 Choice:1
-----------AlaCartes----------
+-------------Menu AlaCartes-------------
+
 Desserts---------------------
 AlaCarte Id: 1
 Name: Fried ice cream
@@ -1596,6 +1666,7 @@ AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+----------------------------------
 
 Enter AlaCarte ID to add: 2
 Enter quantity: 1
@@ -1625,7 +1696,8 @@ Add Order Item type?
 2. Promotion Package
 3. Terminate
 Choice:1
-----------AlaCartes----------
+-------------Menu AlaCartes-------------
+
 Desserts---------------------
 AlaCarte Id: 1
 Name: Fried ice cream
@@ -1642,6 +1714,7 @@ AlaCarte Id: 3
 Name: Lobster ice cream
 Price: 3.5
 Description: Buttery lobster meets buttery vanilla in this classic concoction.
+----------------------------------
 
 Enter AlaCarte ID to add: 2
 Enter quantity: 1
@@ -1696,12 +1769,14 @@ Table ID: 1 -Currently seated: 4/4
 Table ID: 2 -Currently seated: 5/6
 Choose table ID for payment (Enter -1 to terminate process): 
 0
+Are you a member?: (True/False) 
+false
 ----------------Invoice----------------
 ---------------------------------------
 1 - Large soft drink		2.5
 ---------------------------------------
 Sub Total: 2.50
-7% GST: 0.18
+7-percent GST: 0.18
 Total: 2.68
 -----Thank you for dining with us!-----
 Order for table ID 0 paid and removed
@@ -1723,15 +1798,163 @@ Table ID: 1 -Currently seated: 4/4
 Table ID: 2 -Currently seated: 5/6
 Choose table ID for payment (Enter -1 to terminate process): 
 2
+Are you a member?: (True/False) 
+true
+Member name: faithful
+Member contact number: 995
 ----------------Invoice----------------
 ---------------------------------------
 1 - Large soft drink		2.5
 ---------------------------------------
 Sub Total: 2.50
-7% GST: 0.18
-Total: 2.68
+7-percent GST: 0.18
+Total: 2.54
 -----Thank you for dining with us!-----
 Order for table ID 2 paid and removed
+-----------------------RRPSS MAIN MENU-------------------------
+(1) Menu options
+(2) Staff options
+(3) Table options
+(4) Member options
+(5) Order options
+(6) Reservation options
+(7) Seat customer
+(8) Payment
+(9) Generate Total Revenue Report
+(10) Exit
+---------------------------------------------------------------
+Choice: 7
+Reservation? (True/False): False
+How many pax?: 2
+List of available tables for 2 or more pax are as follows: 
+Table ID: 0 -Table Size: 2
+Choose table ID to seat customer? (Enter invalid choice to terminate process): 
+0
+Customer Seated at Table 0
+-----------------------RRPSS MAIN MENU-------------------------
+(1) Menu options
+(2) Staff options
+(3) Table options
+(4) Member options
+(5) Order options
+(6) Reservation options
+(7) Seat customer
+(8) Payment
+(9) Generate Total Revenue Report
+(10) Exit
+---------------------------------------------------------------
+Choice: 5
+------------------------Order Options---------------------------
+(1) Create Order
+(2) Remove Order
+(3) View specific Order
+(4) View all Orders
+(5) Edit Orders
+(6) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 1
+List of occupied tables are as follows: 
+Table ID: 0 -Currently seated: 2/2
+Table ID: 1 -Currently seated: 4/4
+Table ID: 2 -Currently seated: 5/6
+Choose table ID to place order (Enter -1 to terminate process): 0
+1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
+Enter Staff's ID: 0
+Add Order Item type?
+1. Ala Carte
+2. Promotion Package
+3. Terminate
+Choice:2
+----------Menu PromotionPackages----------
+
+Promotion Package Id: 1
+Name: Seafood combo
+Price: 9.9
+Description: Taste the sea with our new combo!
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   1xFried ice cream
+2   1xLarge soft drink
+3   1xLobster ice cream
+
+Promotion Package Id: 2
+Name: Seafood Buddy combo
+Price: 18.5
+Description: Great seafood deal for you and a buddy!
+Package contains:
+Package Items:
+Id  Quantity_and_Name
+1   3xFried ice cream
+2   2xLarge soft drink
+3   2xLobster ice cream
+-------------------------------------
+
+Enter Package ID to add: 2
+Enter quantity: 3
+Add Order Item type?
+1. Ala Carte
+2. Promotion Package
+3. Terminate
+Choice:3
+------------------------Order Options---------------------------
+(1) Create Order
+(2) Remove Order
+(3) View specific Order
+(4) View all Orders
+(5) Edit Orders
+(6) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 6
+-----------------------RRPSS MAIN MENU-------------------------
+(1) Menu options
+(2) Staff options
+(3) Table options
+(4) Member options
+(5) Order options
+(6) Reservation options
+(7) Seat customer
+(8) Payment
+(9) Generate Total Revenue Report
+(10) Exit
+---------------------------------------------------------------
+Choice: 8
+List of occupied tables are as follows: 
+Table ID: 0 -Currently seated: 2/2
+Table ID: 1 -Currently seated: 4/4
+Table ID: 2 -Currently seated: 5/6
+Choose table ID for payment (Enter -1 to terminate process): 
+0
+Are you a member?: (True/False) 
+false
+----------------Invoice----------------
+---------------------------------------
+3 - Seafood Buddy combo		55.5
+---------------------------------------
+Sub Total: 55.50
+7-percent GST: 3.89
+Total: 59.39
+-----Thank you for dining with us!-----
+Order for table ID 0 paid and removed
+-----------------------RRPSS MAIN MENU-------------------------
+(1) Menu options
+(2) Staff options
+(3) Table options
+(4) Member options
+(5) Order options
+(6) Reservation options
+(7) Seat customer
+(8) Payment
+(9) Generate Total Revenue Report
+(10) Exit
+---------------------------------------------------------------
+Choice: 9
+Print orders by period: 
+(1) Day
+(2) Month
+Choice: 1
+Day (Sunday=1 to Saturday=7): 
+6
 -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options

@@ -1,4 +1,3 @@
-import java.util.Date;
 import java.util.*;
 
 public class Order extends Menu {
@@ -13,7 +12,8 @@ public class Order extends Menu {
 	/**
 	 * The time stamp at which the order was placed.
 	 */
-	private Date timeStamp;
+	private Calendar timeStamp;
+	boolean member;
 	/**
 	 * Creates a new order with the given staff ID and table ID.
 	 * @param orderStaffID This staff's ID.
@@ -22,7 +22,7 @@ public class Order extends Menu {
 	public Order(int orderStaffID, int orderTableID) {
 		this.orderStaffID = orderStaffID;
 		this.orderTableID = orderTableID;
-		this.timeStamp = new Date();
+		this.timeStamp = Calendar.getInstance();
 	}
 	/**
 	 * Gets the table ID that the order belongs to.
@@ -56,14 +56,14 @@ public class Order extends Menu {
 	 * Gets the time stamp of when the order was placed.
 	 * @return this timeStamp
 	 */
-	public Date getTimeStamp() {
+	public Calendar getTimeStamp() {
 		return this.timeStamp;
 	}
 	/**
 	 * Changes the time stamp of this order.
 	 * @param timeStamp This timeStamp's new time stamp.
 	 */
-	public void setTimeStamp(Date timeStamp) {
+	public void setTimeStamp(Calendar timeStamp) {
 		this.timeStamp = timeStamp;
 	}
 	/**
@@ -240,5 +240,13 @@ public class Order extends Menu {
 				}
 			} else if (type==4) break;
 		}
+	}
+
+	public boolean getMember(){
+		return member;
+	}
+
+	public void setMember(boolean member){
+		this.member=member;
 	}
 }

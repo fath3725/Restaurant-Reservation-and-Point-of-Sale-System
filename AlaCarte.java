@@ -72,13 +72,13 @@ public class AlaCarte extends MenuItem {
 		Scanner sc = RRPSS.sc;
 		while (true){
 			System.out.println(
-				"------ITEM INFO------"+
+				"--------------EDITING ALACARTE INFO-------------"+
 				"\nId: "+getId()+
 				"\nName: "+getName()+
 				"\nPrice: "+getPrice()+
 				"\nCategory: "+getCategory()+
 				"\nDescription: "+getDescription()+
-				"\n---------------------"+
+				"\n----------------------------------------------"+
 				"\nWhat attribute would you like to edit?"+
 				"\n1.Id"+
 				"\n2.Price"+
@@ -86,9 +86,11 @@ public class AlaCarte extends MenuItem {
 				"\n4.Description"+
 				"\n5.Category"+
 				"\n6.Exit");
+			System.out.println("----------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
 			System.out.println(choice);
+			System.out.println("----------------------------");
 			if (choice==1){
 				while(true){
 					System.out.printf("Id: %d\nNew id: ",this.getId());

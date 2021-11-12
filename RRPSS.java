@@ -4,12 +4,13 @@ import java.util.*;
 public class RRPSS {
 	public static Scanner sc;
 	public static void main(String[] args){
-		try {
-			PrintStream o = new PrintStream(new File("Output.txt"));
-			System.setOut(o);
-		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
-		}
+		//start readwrite
+		// try {
+		// 	PrintStream o = new PrintStream(new File("Output.txt"));
+		// 	System.setOut(o);
+		// } catch (FileNotFoundException e1) {
+		// 	e1.printStackTrace();
+		// }
 		try {
 			File f= new File("Test Case Project CZ2002.txt"); // file to read testcaseinput from
 			sc = new Scanner(f);
@@ -70,6 +71,7 @@ public class RRPSS {
 					break;
 				case 10:
 					System.out.println("Program terminating ...");
+					sc.close();
 					return;
 				default:
 					System.out.println("Invalid Command.");
