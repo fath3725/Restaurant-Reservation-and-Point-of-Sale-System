@@ -555,10 +555,10 @@ public class Restaurant {
 						System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
 						System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt)*0.95);
 						System.out.println("-----Thank you for dining with us!-----");
-						if(tables.get(i).getStatus() == Status.OCCUPIED){
+						if(tables.get(i).getStatus().equals(Status.OCCUPIED)){
 							tables.get(i).setStatus(Status.AVAILABLE);
 						}
-						else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
+						else if(tables.get(i).getStatus().equals(Status.OCCUPIED2RESERVED)){
 							tables.get(i).setStatus(Status.RESERVED);
 						}
 					tables.get(i).setTablePax(0);
@@ -576,11 +576,13 @@ public class Restaurant {
 				System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
 				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
 				System.out.println("-----Thank you for dining with us!-----");
-				if(tables.get(i).getStatus() == Status.OCCUPIED){
+				if(tables.get(i).getStatus().equals(Status.OCCUPIED)){
 					tables.get(i).setStatus(Status.AVAILABLE);
+					tables.get(i).setTablePax(0);
 				}
-				else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
+				else if(tables.get(i).getStatus().equals(Status.OCCUPIED2RESERVED)){
 					tables.get(i).setStatus(Status.RESERVED);
+					tables.get(i).setTablePax(0);
 				}
 				tables.get(i).setTablePax(0);
 				orderRecord.add(orders.get(i));
@@ -596,11 +598,13 @@ public class Restaurant {
 				System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
 				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
 				System.out.println("-----Thank you for dining with us!-----");
-				if(tables.get(i).getStatus() == Status.OCCUPIED){
+				if(tables.get(i).getStatus().equals(Status.OCCUPIED)){
 					tables.get(i).setStatus(Status.AVAILABLE);
+					tables.get(i).setTablePax(0);
 				}
-				else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
+				else if(tables.get(i).getStatus().equals(Status.OCCUPIED2RESERVED)){
 					tables.get(i).setStatus(Status.RESERVED);
+					tables.get(i).setTablePax(0);
 				}
 				tables.get(i).setTablePax(0);
 				orderRecord.add(orders.get(i));
@@ -625,7 +629,6 @@ public class Restaurant {
 		System.out.println(orderTableID);
 
 		if(orderTableID == -1){
-			
 			return;
 		}
 		for(int i=0;i<tables.size();i++) {
