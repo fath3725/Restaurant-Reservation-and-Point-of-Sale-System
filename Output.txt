@@ -1,16 +1,6 @@
 How many tables will this restaurant have?
-Number of Tables: 3
-Enter table size (Even number between two to ten): 2
-Enter table size (Even number between two to ten): 4
-Enter table size (Even number between two to ten): 5
-Invalid size, Even number between two to ten
-Enter table size (Even number between two to ten): 6
-How many staffs will this restaurant have? : 1
-Enter Staff's full name: francis
-Enter Staff's gender (Female/Male): Male
-Enter Staff's job title: Manager
-Manager
------------------------RRPSS MAIN MENU-------------------------
+Number of Tables: Enter table size (Even number between two to ten): Enter table size (Even number between two to ten): Enter table size (Even number between two to ten): Invalid size, Even number between two to ten
+Enter table size (Even number between two to ten): How many staffs will this restaurant have? : Enter Staff's full name: Enter Staff's gender (Female/Male): Enter Staff's job title: -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
 (3) Table options
@@ -22,16 +12,14 @@ Manager
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 1
-------------------------Menu Options---------------------------
+Choice: ------------------------Menu Options---------------------------
 (1) Add item into Menu
 (2) Remove item from Menu
 (3) View Menu
 (4) Edit current Menu
 (5) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View Ala Carte Menu
+Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
 Choice: 1
 No AlaCartes in menu at the moment
@@ -42,8 +30,7 @@ No AlaCartes in menu at the moment
 (4) Edit current Menu
 (5) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View Ala Carte Menu
+Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
 Choice: 2
 No PromotionPackages in menu at the moment
@@ -54,97 +41,65 @@ No PromotionPackages in menu at the moment
 (4) Edit current Menu
 (5) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 1
-Add Menu Item type?
+Choice: Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Choice: 1
-------New AlaCarte creation-----
-AlaCarte id: 1
-AlaCarte name: Fish and chips
-AlaCarte price: 5.5
-AlaCarte description: Homemade crispy fish and chips topped with cajun sauce
-AlaCarte category: 
+Choice: ------New AlaCarte creation-----
+AlaCarte id: AlaCarte name: AlaCarte price: AlaCarte description: AlaCarte category: 
 1.MAIN_COURSE
 2.DRINK
 3.DESSERT
-Category: 1
-New alacarte added.
+Category: New alacarte added.
 
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Choice: 1
-------New AlaCarte creation-----
-AlaCarte id: 1
-AlaCarte name: Fish fingers
-AlaCarte price: 2.5
-AlaCarte description: 
-AlaCarte category: 
+Choice: ------New AlaCarte creation-----
+AlaCarte id: AlaCarte name: AlaCarte price: AlaCarte description: AlaCarte category: 
 1.MAIN_COURSE
 2.DRINK
 3.DESSERT
-Category: 1
-Alacarte with this id already exists. Use a different id.
+Category: Alacarte with this id already exists. Use a different id.
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Choice: 1
-------New AlaCarte creation-----
-AlaCarte id: 2
-AlaCarte name: Large soft drink
-AlaCarte price: 2.5
-AlaCarte description: 12 oz
-AlaCarte category: 
+Choice: ------New AlaCarte creation-----
+AlaCarte id: AlaCarte name: AlaCarte price: AlaCarte description: AlaCarte category: 
 1.MAIN_COURSE
 2.DRINK
 3.DESSERT
-Category: 2
-New alacarte added.
+Category: New alacarte added.
 
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Choice: 1
-------New AlaCarte creation-----
-AlaCarte id: 3
-AlaCarte name: Lobster ice cream
-AlaCarte price: 3.5
-AlaCarte description: Buttery lobster meets buttery vanilla in this classic concoction.
-AlaCarte category: 
+Choice: ------New AlaCarte creation-----
+AlaCarte id: AlaCarte name: AlaCarte price: AlaCarte description: AlaCarte category: 
 1.MAIN_COURSE
 2.DRINK
 3.DESSERT
-Category: 3
-New alacarte added.
+Category: New alacarte added.
 
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Choice: 1
-------New AlaCarte creation-----
-AlaCarte id: 4
-AlaCarte name: Cheesy bread
-AlaCarte price: 5.0
-AlaCarte description: Cheese on bread
-AlaCarte category: 
+Choice: ------New AlaCarte creation-----
+AlaCarte id: AlaCarte name: AlaCarte price: AlaCarte description: AlaCarte category: 
 1.MAIN_COURSE
 2.DRINK
 3.DESSERT
-Category: 1
-New alacarte added.
+Category: New alacarte added.
 
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Choice: 2
------New Promotion Package creation-----
+Choice: -----New Promotion Package creation-----
 -------------Menu AlaCartes-------------
 
 Main courses-----------------
@@ -173,36 +128,21 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 ----------------------------------
 
 Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.
-Id: 1
-Quantity: 1
-Added AlaCarte.
+Id: Quantity: Added AlaCarte.
 Continue?
-Id: 2
-Quantity: 1
-Added AlaCarte.
+Id: Quantity: Added AlaCarte.
 Continue?
-Id: 3
-Quantity: 1
-Added AlaCarte.
+Id: Quantity: Added AlaCarte.
 Continue?
-Id: 4
-Quantity: 1
-Added AlaCarte.
+Id: Quantity: Added AlaCarte.
 Continue?
-Id: 99
-Not a valid AlaCarte id.
-Id: -1
-Promotion Package id: 1
-Promotion Package name: Seafood combo
-Promotion Package price: 9.9
-Promotion Package description: Taste the sea with our new combo!
-New promotion package added.
+Id: Not a valid AlaCarte id.
+Id: Promotion Package id: Promotion Package name: Promotion Package price: Promotion Package description: New promotion package added.
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Choice: 2
------New Promotion Package creation-----
+Choice: -----New Promotion Package creation-----
 -------------Menu AlaCartes-------------
 
 Main courses-----------------
@@ -231,38 +171,25 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 ----------------------------------
 
 Key in id of AlaCarte from the menu to add into your Package. Enter -1 to finish adding.
-Id: 1
-Quantity: 2
-Added AlaCarte.
+Id: Quantity: Added AlaCarte.
 Continue?
-Id: 2
-Quantity: 2
-Added AlaCarte.
+Id: Quantity: Added AlaCarte.
 Continue?
-Id: 3
-Quantity: 2
-Added AlaCarte.
+Id: Quantity: Added AlaCarte.
 Continue?
-Id: -1
-Promotion Package id: 2
-Promotion Package name: Seafood Duo combo
-Promotion Package price: 18.0
-Promotion Package description: Bring a friend to enjoy our seafood combo at low prices!
-New promotion package added.
+Id: Promotion Package id: Promotion Package name: Promotion Package price: Promotion Package description: New promotion package added.
 Add Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Choice: 3
-------------------------Menu Options---------------------------
+Choice: ------------------------Menu Options---------------------------
 (1) Add item into Menu
 (2) Remove item from Menu
 (3) View Menu
 (4) Edit current Menu
 (5) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View Ala Carte Menu
+Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
 Choice: 1
 -------------Menu AlaCartes-------------
@@ -299,8 +226,7 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 (4) Edit current Menu
 (5) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View Ala Carte Menu
+Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
 Choice: 2
 ----------Menu PromotionPackages----------
@@ -336,13 +262,11 @@ Id  Quantity_and_Name
 (4) Edit current Menu
 (5) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 2
-Remove Menu Item type?
+Choice: Remove Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Type: 1
--------------Menu AlaCartes-------------
+Type: -------------Menu AlaCartes-------------
 
 Main courses-----------------
 AlaCarte Id: 1
@@ -370,8 +294,7 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 ----------------------------------
 
 Select Ala Carte id to remove, or enter -1 to quit: 
-Id: 4
-AlaCarte removed.
+Id: AlaCarte removed.
 Package 1 has removed alacarte id 4 from its packageItems
 Invalid ID
 -------------Menu AlaCartes-------------
@@ -397,21 +320,18 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 ----------------------------------
 
 Select Ala Carte id to remove, or enter -1 to quit: 
-Id: -1
-Remove Menu Item type?
+Id: Remove Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Type: 3
-------------------------Menu Options---------------------------
+Type: ------------------------Menu Options---------------------------
 (1) Add item into Menu
 (2) Remove item from Menu
 (3) View Menu
 (4) Edit current Menu
 (5) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View Ala Carte Menu
+Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
 Choice: 1
 -------------Menu AlaCartes-------------
@@ -443,8 +363,7 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 (4) Edit current Menu
 (5) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View Ala Carte Menu
+Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
 Choice: 2
 ----------Menu PromotionPackages----------
@@ -479,13 +398,11 @@ Id  Quantity_and_Name
 (4) Edit current Menu
 (5) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 4
-Edit Menu Item type?
+Choice: Edit Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Type: 1
-Select Ala Carte id to edit, or enter -1 to quit: 
+Type: Select Ala Carte id to edit, or enter -1 to quit: 
 -------------Menu AlaCartes-------------
 
 Main courses-----------------
@@ -508,8 +425,7 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 
 ----------------------------------
 
-Id: 1
---------------EDITING ALACARTE INFO-------------
+Id: --------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fish and chips
 Price: 5.5
@@ -524,14 +440,11 @@ What attribute would you like to edit?
 5.Category
 6.Exit
 ----------------------------
-Choice: 1
-----------------------------
+Choice: ----------------------------
 Id: 1
-New id: 2
-Id already exists. Try again.
+New id: Id already exists. Try again.
 Id: 1
-New id: 4
---------------EDITING ALACARTE INFO-------------
+New id: --------------EDITING ALACARTE INFO-------------
 Id: 4
 Name: Fish and chips
 Price: 5.5
@@ -546,11 +459,9 @@ What attribute would you like to edit?
 5.Category
 6.Exit
 ----------------------------
-Choice: 1
-----------------------------
+Choice: ----------------------------
 Id: 4
-New id: 1
---------------EDITING ALACARTE INFO-------------
+New id: --------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fish and chips
 Price: 5.5
@@ -565,11 +476,9 @@ What attribute would you like to edit?
 5.Category
 6.Exit
 ----------------------------
-Choice: 2
-----------------------------
+Choice: ----------------------------
 Price: 5.5
-New price: 5.9
---------------EDITING ALACARTE INFO-------------
+New price: --------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fish and chips
 Price: 5.9
@@ -584,11 +493,9 @@ What attribute would you like to edit?
 5.Category
 6.Exit
 ----------------------------
-Choice: 3
-----------------------------
+Choice: ----------------------------
 Name: Fish and chips
-New name: Fried ice cream
---------------EDITING ALACARTE INFO-------------
+New name: --------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fried ice cream
 Price: 5.9
@@ -603,11 +510,9 @@ What attribute would you like to edit?
 5.Category
 6.Exit
 ----------------------------
-Choice: 4
-----------------------------
+Choice: ----------------------------
 Description: Homemade crispy fish and chips topped with cajun sauce
-New description: Ice cream deep fried
---------------EDITING ALACARTE INFO-------------
+New description: --------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fried ice cream
 Price: 5.9
@@ -622,14 +527,12 @@ What attribute would you like to edit?
 5.Category
 6.Exit
 ----------------------------
-Choice: 5
-----------------------------
+Choice: ----------------------------
 AlaCarte category:
 1.MAIN_COURSE
 2.DRINK
 3.DESSERT
-Category: 3
-Category set as dessert
+Category: Category set as dessert
 --------------EDITING ALACARTE INFO-------------
 Id: 1
 Name: Fried ice cream
@@ -645,8 +548,7 @@ What attribute would you like to edit?
 5.Category
 6.Exit
 ----------------------------
-Choice: 6
-----------------------------
+Choice: ----------------------------
 Edited items in package 0
 Edited items in package 1
 Finished editing item.
@@ -674,13 +576,11 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 
 ----------------------------------
 
-Id: -1
-Edit Menu Item type?
+Id: Edit Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Type: 2
-----------Menu PromotionPackages----------
+Type: ----------Menu PromotionPackages----------
 
 Promotion Package Id: 1
 Name: Seafood combo
@@ -706,8 +606,7 @@ Id  Quantity_and_Name
 -------------------------------------
 
 Select Promotion package id to edit, or enter -1 to quit
-Id: 2
-------EDITING PRMOTION PACKAGE INFO------
+Id: ------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Duo combo
 Price: 18.0
@@ -727,14 +626,11 @@ What attribute would you like to edit?
 5.PackageItems
 6.Exit
 ----------------------------
-Choice: 1
-----------------------------
+Choice: ----------------------------
 Id: 2
-New id: 1
-Id already exists. Try again.
+New id: Id already exists. Try again.
 Id: 2
-New id: 3
-------EDITING PRMOTION PACKAGE INFO------
+New id: ------EDITING PRMOTION PACKAGE INFO------
 Id: 3
 Name: Seafood Duo combo
 Price: 18.0
@@ -754,11 +650,9 @@ What attribute would you like to edit?
 5.PackageItems
 6.Exit
 ----------------------------
-Choice: 1
-----------------------------
+Choice: ----------------------------
 Id: 3
-New id: 2
-------EDITING PRMOTION PACKAGE INFO------
+New id: ------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Duo combo
 Price: 18.0
@@ -778,11 +672,9 @@ What attribute would you like to edit?
 5.PackageItems
 6.Exit
 ----------------------------
-Choice: 2
-----------------------------
+Choice: ----------------------------
 Price: 18.0
-New price: 18.5
-------EDITING PRMOTION PACKAGE INFO------
+New price: ------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Duo combo
 Price: 18.5
@@ -802,11 +694,9 @@ What attribute would you like to edit?
 5.PackageItems
 6.Exit
 ----------------------------
-Choice: 3
-----------------------------
+Choice: ----------------------------
 Name: Seafood Duo combo
-New name: Seafood Buddy combo
-------EDITING PRMOTION PACKAGE INFO------
+New name: ------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Buddy combo
 Price: 18.5
@@ -826,11 +716,9 @@ What attribute would you like to edit?
 5.PackageItems
 6.Exit
 ----------------------------
-Choice: 4
-----------------------------
+Choice: ----------------------------
 Description: Bring a friend to enjoy our seafood combo at low prices!
-New description: Great seafood deal for you and a buddy!
-------EDITING PRMOTION PACKAGE INFO------
+New description: ------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Buddy combo
 Price: 18.5
@@ -850,8 +738,7 @@ What attribute would you like to edit?
 5.PackageItems
 6.Exit
 ----------------------------
-Choice: 5
-----------------------------
+Choice: ----------------------------
 Package Items:
 Package Items:
 Id  Quantity_and_Name
@@ -862,7 +749,6 @@ Id  Quantity_and_Name
 2.Add item to package
 ----------------------------
 Choice: ----------------------------
-2
 Package Items:
 Id  Quantity_and_Name
 1   2xFried ice cream
@@ -872,10 +758,8 @@ Menu AlaCarte Items:
 1 Fried ice cream
 2 Large soft drink
 3 Lobster ice cream
-Add which Id: 1
-How many of it?
-Quantity: 1
-Added package item.
+Add which Id: How many of it?
+Quantity: Added package item.
 ------EDITING PRMOTION PACKAGE INFO------
 Id: 2
 Name: Seafood Buddy combo
@@ -896,8 +780,7 @@ What attribute would you like to edit?
 5.PackageItems
 6.Exit
 ----------------------------
-Choice: 6
-----------------------------
+Choice: ----------------------------
 Finished editing item.
 ----------Menu PromotionPackages----------
 
@@ -925,21 +808,18 @@ Id  Quantity_and_Name
 -------------------------------------
 
 Select Promotion package id to edit, or enter -1 to quit
-Id: -1
-Edit Menu Item type?
+Id: Edit Menu Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Type: 3
-------------------------Menu Options---------------------------
+Type: ------------------------Menu Options---------------------------
 (1) Add item into Menu
 (2) Remove item from Menu
 (3) View Menu
 (4) Edit current Menu
 (5) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 5
------------------------RRPSS MAIN MENU-------------------------
+Choice: -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
 (3) Table options
@@ -951,35 +831,28 @@ Choice: 5
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 2
+Choice: ------------------------Staff Options---------------------------
+(1) Add Staff into Restaurant
+(2) Remove Staff from Restaurant
+(3) View all Staffs
+(4) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
 ------------------------Staff Options---------------------------
 (1) Add Staff into Restaurant
 (2) Remove Staff from Restaurant
 (3) View all Staffs
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
+Choice: Enter Staff's full name: 
+Enter Staff's gender (Female/Male): Enter Staff's job title: Staff added
 ------------------------Staff Options---------------------------
 (1) Add Staff into Restaurant
 (2) Remove Staff from Restaurant
 (3) View all Staffs
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 1
-Enter Staff's full name: 
-Tyson
-Enter Staff's gender (Female/Male): Female
-Enter Staff's job title: intern
-Staff added
-------------------------Staff Options---------------------------
-(1) Add Staff into Restaurant
-(2) Remove Staff from Restaurant
-(3) View all Staffs
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: 3
-1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
+Choice: 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
 2. Tyson -Gender: Female -Staff ID: 1 -Job Title: intern
 ------------------------Staff Options---------------------------
 (1) Add Staff into Restaurant
@@ -987,27 +860,23 @@ Choice: 3
 (3) View all Staffs
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 2
-1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
+Choice: 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
 2. Tyson -Gender: Female -Staff ID: 1 -Job Title: intern
-Enter staff position to remove: (Enter invalid choice to terminate process): 2
-Staff removed
+Enter staff position to remove: (Enter invalid choice to terminate process): Staff removed
 ------------------------Staff Options---------------------------
 (1) Add Staff into Restaurant
 (2) Remove Staff from Restaurant
 (3) View all Staffs
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
+Choice: 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
 ------------------------Staff Options---------------------------
 (1) Add Staff into Restaurant
 (2) Remove Staff from Restaurant
 (3) View all Staffs
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 4
------------------------RRPSS MAIN MENU-------------------------
+Choice: -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
 (3) Table options
@@ -1019,15 +888,13 @@ Choice: 4
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 3
-------------------------Table Options---------------------------
+Choice: ------------------------Table Options---------------------------
 (1) Add Tables into Restaurant
 (2) Remove Tables from Restaurant
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View all Tables
+Choice: (1) View all Tables
 (2) View available Tables only
 Choice: 1
 1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
@@ -1039,17 +906,14 @@ Choice: 1
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 1
-Enter table size (Even number between two to ten): 8
-Table added
+Choice: Enter table size (Even number between two to ten): Table added
 ------------------------Table Options---------------------------
 (1) Add Tables into Restaurant
 (2) Remove Tables from Restaurant
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View all Tables
+Choice: (1) View all Tables
 (2) View available Tables only
 Choice: 1
 1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
@@ -1062,21 +926,18 @@ Choice: 1
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 2
-1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
+Choice: 1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
 2. Table ID: 1 -Status: AVAILABLE -Current Pax: 0/4
 3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
 4. Table ID: 3 -Status: AVAILABLE -Current Pax: 0/8
-Enter table position to remove: (Enter invalid choice to terminate process): 4
-Table removed
+Enter table position to remove: (Enter invalid choice to terminate process): Table removed
 ------------------------Table Options---------------------------
 (1) Add Tables into Restaurant
 (2) Remove Tables from Restaurant
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View all Tables
+Choice: (1) View all Tables
 (2) View available Tables only
 Choice: 1
 1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
@@ -1088,8 +949,7 @@ Choice: 1
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 4
------------------------RRPSS MAIN MENU-------------------------
+Choice: -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
 (3) Table options
@@ -1101,26 +961,20 @@ Choice: 4
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 4
+Choice: ------------------------Member Options--------------------------
+(1) Add Member into Restaurant
+(2) Remove Member from Restaurant
+(3) View all Members
+(4) Back to RRPSS main
+---------------------------------------------------------------
+Choice: No Member in the restaurant
 ------------------------Member Options--------------------------
 (1) Add Member into Restaurant
 (2) Remove Member from Restaurant
 (3) View all Members
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-No Member in the restaurant
-------------------------Member Options--------------------------
-(1) Add Member into Restaurant
-(2) Remove Member from Restaurant
-(3) View all Members
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: 1
-Enter Member's full name: loyal
-Enter Memberx's gender (Female/Male): Male
-Enter Member's phone number: 
-999
+Choice: Enter Member's full name: Enter Memberx's gender (Female/Male): Enter Member's phone number: 
 New member added
 ------------------------Member Options--------------------------
 (1) Add Member into Restaurant
@@ -1128,11 +982,7 @@ New member added
 (3) View all Members
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 1
-Enter Member's full name: faithful
-Enter Memberx's gender (Female/Male): Female
-Enter Member's phone number: 
-995
+Choice: Enter Member's full name: Enter Memberx's gender (Female/Male): Enter Member's phone number: 
 New member added
 ------------------------Member Options--------------------------
 (1) Add Member into Restaurant
@@ -1140,8 +990,7 @@ New member added
 (3) View all Members
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-1) loyal -Gender: Male -Member ID: 0 -Phone Number: 999
+Choice: 1) loyal -Gender: Male -Member ID: 0 -Phone Number: 999
 2) faithful -Gender: Female -Member ID: 1 -Phone Number: 995
 ------------------------Member Options--------------------------
 (1) Add Member into Restaurant
@@ -1149,27 +998,23 @@ Choice: 3
 (3) View all Members
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 2
-1) loyal -Gender: Male -Member ID: 0 -Phone Number: 999
+Choice: 1) loyal -Gender: Male -Member ID: 0 -Phone Number: 999
 2) faithful -Gender: Female -Member ID: 1 -Phone Number: 995
-Enter member position to remove: (Enter invalid choice to terminate process): 1
-Member removed
+Enter member position to remove: (Enter invalid choice to terminate process): Member removed
 ------------------------Member Options--------------------------
 (1) Add Member into Restaurant
 (2) Remove Member from Restaurant
 (3) View all Members
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-1) faithful -Gender: Female -Member ID: 1 -Phone Number: 995
+Choice: 1) faithful -Gender: Female -Member ID: 1 -Phone Number: 995
 ------------------------Member Options--------------------------
 (1) Add Member into Restaurant
 (2) Remove Member from Restaurant
 (3) View all Members
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 4
------------------------RRPSS MAIN MENU-------------------------
+Choice: -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
 (3) Table options
@@ -1181,14 +1026,10 @@ Choice: 4
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 7
-Reservation? (True/False): False
-How many pax?: 4
-List of available tables for 4 or more pax are as follows: 
+Choice: Reservation? (True/False): How many pax?: List of available tables for 4 or more pax are as follows: 
 Table ID: 1 -Table Size: 4
 Table ID: 2 -Table Size: 6
 Choose table ID to seat customer? (Enter invalid choice to terminate process): 
-1
 Customer Seated at Table 1
 -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
@@ -1202,15 +1043,13 @@ Customer Seated at Table 1
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 3
-------------------------Table Options---------------------------
+Choice: ------------------------Table Options---------------------------
 (1) Add Tables into Restaurant
 (2) Remove Tables from Restaurant
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View all Tables
+Choice: (1) View all Tables
 (2) View available Tables only
 Choice: 1
 1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
@@ -1222,8 +1061,7 @@ Choice: 1
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View all Tables
+Choice: (1) View all Tables
 (2) View available Tables only
 Choice: 2
 List of available tables are as follows: 
@@ -1235,8 +1073,7 @@ Table ID: 2 -Table Size: 6
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 4
------------------------RRPSS MAIN MENU-------------------------
+Choice: -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
 (3) Table options
@@ -1248,7 +1085,15 @@ Choice: 4
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 5
+Choice: ------------------------Order Options---------------------------
+(1) Create Order
+(2) Remove Order
+(3) View specific Order
+(4) View all Orders
+(5) Edit Orders
+(6) Back to RRPSS main
+---------------------------------------------------------------
+Choice: No orders to print
 ------------------------Order Options---------------------------
 (1) Create Order
 (2) Remove Order
@@ -1257,28 +1102,14 @@ Choice: 5
 (5) Edit Orders
 (6) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 4
-No orders to print
-------------------------Order Options---------------------------
-(1) Create Order
-(2) Remove Order
-(3) View specific Order
-(4) View all Orders
-(5) Edit Orders
-(6) Back to RRPSS main
----------------------------------------------------------------
-Choice: 1
-List of occupied tables are as follows: 
+Choice: List of occupied tables are as follows: 
 Table ID: 1 -Currently seated: 4/4
-Choose table ID to place order (Enter -1 to terminate process): 1
-1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
-Enter Staff's ID: 0
-Add Order Item type?
+Choose table ID to place order (Enter -1 to terminate process): 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
+Enter Staff's ID: Add Order Item type?
 1. Ala Carte
 2. Promotion Package
 3. Terminate
-Choice:2
-----------Menu PromotionPackages----------
+Choice:----------Menu PromotionPackages----------
 
 Promotion Package Id: 1
 Name: Seafood combo
@@ -1303,14 +1134,11 @@ Id  Quantity_and_Name
 3   2xLobster ice cream
 -------------------------------------
 
-Enter Package ID to add: 1
-Enter quantity: 2
-Add Order Item type?
+Enter Package ID to add: Enter quantity: Add Order Item type?
 1. Ala Carte
 2. Promotion Package
 3. Terminate
-Choice:3
-------------------------Order Options---------------------------
+Choice:------------------------Order Options---------------------------
 (1) Create Order
 (2) Remove Order
 (3) View specific Order
@@ -1318,8 +1146,7 @@ Choice:3
 (5) Edit Orders
 (6) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 4
------------------------------------------------------
+Choice: -----------------------------------------------------
 Order for Table ID: 1
 2 - Seafood combo		19.799999237060547
 Current Total for Table ID-1 exclude GST: 19.80
@@ -1332,25 +1159,21 @@ Current Total for Table ID-1 exclude GST: 19.80
 (5) Edit Orders
 (6) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 5
------------------------------------------------------
+Choice: -----------------------------------------------------
 Order for Table ID: 1
 2 - Seafood combo		19.799999237060547
 Current Total for Table ID-1 exclude GST: 19.80
 
-Choose Table ID of order to edit: 1
-Next Action?
+Choose Table ID of order to edit: Next Action?
 1. Add item
 2. Remove item
 3. Change quantity
 4. Exit
-Choice: 1
-Add Order Item type?
+Choice: Add Order Item type?
 1. Ala Carte
 2. Promotion Package
 3. Terminate
-Choice:1
--------------Menu AlaCartes-------------
+Choice:-------------Menu AlaCartes-------------
 
 Main courses-----------------
 **No main courses in menu**
@@ -1373,24 +1196,19 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 
 ----------------------------------
 
-Enter AlaCarte ID to add: 3
-Enter quantity: 2
-Add Order Item type?
+Enter AlaCarte ID to add: Enter quantity: Add Order Item type?
 1. Ala Carte
 2. Promotion Package
 3. Terminate
-Choice:3
-Next Action?
+Choice:Next Action?
 1. Add item
 2. Remove item
 3. Change quantity
 4. Exit
-Choice: 2
-Remove Order Item type?
+Choice: Remove Order Item type?
 1. Ala Carte
 2. Promotion Package
-3. Exit2
-Select Promotion Package id to remove, or enter -1 to quit: 
+3. ExitSelect Promotion Package id to remove, or enter -1 to quit: 
 ----------Menu PromotionPackages----------
 
 Promotion Package Id: 1
@@ -1405,33 +1223,28 @@ Id  Quantity_and_Name
 3   1xLobster ice cream
 -------------------------------------
 
-Id: 1
-Promotion Package ID-1 is removed from order
+Id: Promotion Package ID-1 is removed from order
 Next Action?
 1. Add item
 2. Remove item
 3. Change quantity
 4. Exit
-Choice: 3
-Edit quantity of which Order Item type?
+Choice: Edit quantity of which Order Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Choice: 2
-Select Promotion Package id to edit quantity, or enter -1 to quit: 
+Choice: Select Promotion Package id to edit quantity, or enter -1 to quit: 
 No PromotionPackages in menu at the moment
 Next Action?
 1. Add item
 2. Remove item
 3. Change quantity
 4. Exit
-Choice: 3
-Edit quantity of which Order Item type?
+Choice: Edit quantity of which Order Item type?
 1. Ala Carte
 2. Promotion Package
 3. Exit
-Choice: 1
-Select Ala Carte id to edit quantity, or enter -1 to quit: 
+Choice: Select Ala Carte id to edit quantity, or enter -1 to quit: 
 -------------Menu AlaCartes-------------
 
 Main courses-----------------
@@ -1446,16 +1259,13 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 
 ----------------------------------
 
-Id: 3
-Enter new quantity: 
-4
+Id: Enter new quantity: 
 Next Action?
 1. Add item
 2. Remove item
 3. Change quantity
 4. Exit
-Choice: 4
-------------------------Order Options---------------------------
+Choice: ------------------------Order Options---------------------------
 (1) Create Order
 (2) Remove Order
 (3) View specific Order
@@ -1463,9 +1273,7 @@ Choice: 4
 (5) Edit Orders
 (6) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-Enter Table's ID: 1
-4 - Lobster ice cream		14.0
+Choice: Enter Table's ID: 4 - Lobster ice cream		14.0
 Current Total exclude GST: 14.00
 ------------------------Order Options---------------------------
 (1) Create Order
@@ -1475,12 +1283,9 @@ Current Total exclude GST: 14.00
 (5) Edit Orders
 (6) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 2
-List of occupied tables are as follows: 
+Choice: List of occupied tables are as follows: 
 Table ID: 1 -Currently seated: 4/4
-Choose table ID having an order (Enter -1 to terminate process): 1
-Enter Staff's ID: 0
-Order for table ID 1 removed
+Choose table ID having an order (Enter -1 to terminate process): Enter Staff's ID: Order for table ID 1 removed
 ------------------------Order Options---------------------------
 (1) Create Order
 (2) Remove Order
@@ -1489,8 +1294,7 @@ Order for table ID 1 removed
 (5) Edit Orders
 (6) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 4
-No orders to print
+Choice: No orders to print
 ------------------------Order Options---------------------------
 (1) Create Order
 (2) Remove Order
@@ -1499,8 +1303,7 @@ No orders to print
 (5) Edit Orders
 (6) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 6
------------------------RRPSS MAIN MENU-------------------------
+Choice: -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
 (3) Table options
@@ -1512,57 +1315,40 @@ Choice: 6
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 6
---------------------Reservation Options------------------------
+Choice: --------------------Reservation Options------------------------
 (1) Create Reservation
 (2) Cancel Reservation
 (3) View all Reservations
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 1
-Enter number of pax: 2
-Enter customer's contact number: 123456
-Enter customer's name: quang
-Now is: Fri Nov 12 19:14:58 SGT 2021
+Choice: Enter number of pax: Enter customer's contact number: 123456
+Enter customer's name: Now is: Fri Nov 12 20:58:06 SGT 2021
 Only can make reservation for this year...
-What month do you want the reservation? (Enter 1-12): 11
-What day do you want the reservation? (Enter 1-30/31): 12
-What time do you want the reservation? (Enter the hour 1-24): 18
-What time do you want the reservation? (Enter the minutes 1-60): 60
-Enter table ID selected for reservation: 0
---------------------Reservation Options------------------------
+What month do you want the reservation? (Enter 1-12): What day do you want the reservation? (Enter 1-30/31): 12
+What time do you want the reservation? (Enter the hour 1-24): What time do you want the reservation? (Enter the minutes 1-60): Enter table ID selected for reservation: --------------------Reservation Options------------------------
 (1) Create Reservation
 (2) Cancel Reservation
 (3) View all Reservations
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 1
-Enter number of pax: 3
-Enter customer's contact number: 12345
-Enter customer's name: abc
-Now is: Fri Nov 12 19:14:58 SGT 2021
+Choice: Enter number of pax: Enter customer's contact number: 12345
+Enter customer's name: Now is: Fri Nov 12 20:58:06 SGT 2021
 Only can make reservation for this year...
-What month do you want the reservation? (Enter 1-12): 11
-What day do you want the reservation? (Enter 1-30/31): 12
-What time do you want the reservation? (Enter the hour 1-24): 17
-What time do you want the reservation? (Enter the minutes 1-60): 30
-Enter table ID selected for reservation: 2
+What month do you want the reservation? (Enter 1-12): What day do you want the reservation? (Enter 1-30/31): 12
+What time do you want the reservation? (Enter the hour 1-24): What time do you want the reservation? (Enter the minutes 1-60): Enter table ID selected for reservation: --------------------Reservation Options------------------------
+(1) Create Reservation
+(2) Cancel Reservation
+(3) View all Reservations
+(4) Back to RRPSS main
+---------------------------------------------------------------
+Choice: 1) abc -Contact No.: 12345 -Table ID: 2 -Pax: 3 -Date Reserved: Fri Nov 12 17:30:00 SGT 2021
 --------------------Reservation Options------------------------
 (1) Create Reservation
 (2) Cancel Reservation
 (3) View all Reservations
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-1) quang -Contact No.: 123456 -Table ID: 0 -Pax: 2 -Date Reserved: Fri Nov 12 19:00:00 SGT 2021
---------------------Reservation Options------------------------
-(1) Create Reservation
-(2) Cancel Reservation
-(3) View all Reservations
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: 4
------------------------RRPSS MAIN MENU-------------------------
+Choice: -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
 (3) Table options
@@ -1574,18 +1360,16 @@ Choice: 4
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 3
-------------------------Table Options---------------------------
+Choice: ------------------------Table Options---------------------------
 (1) Add Tables into Restaurant
 (2) Remove Tables from Restaurant
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 3
-(1) View all Tables
+Choice: (1) View all Tables
 (2) View available Tables only
 Choice: 1
-1. Table ID: 0 -Status: RESERVED -Current Pax: 0/2
+1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
 2. Table ID: 1 -Status: OCCUPIED -Current Pax: 4/4
 3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
 ------------------------Table Options---------------------------
@@ -1594,7 +1378,20 @@ Choice: 1
 (3) View all Tables
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 4
+Choice: -----------------------RRPSS MAIN MENU-------------------------
+(1) Menu options
+(2) Staff options
+(3) Table options
+(4) Member options
+(5) Order options
+(6) Reservation options
+(7) Seat customer
+(8) Payment
+(9) Generate Total Revenue Report
+(10) Exit
+---------------------------------------------------------------
+Choice: Reservation? (True/False): Name reserved under: Contact Number reserved under: Invalid Reservation!
+Returning to main page
 -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
@@ -1607,30 +1404,9 @@ Choice: 4
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 7
-Reservation? (True/False): True
-Name reserved under: quang
-Contact Number reserved under: 123456
-Customer Seated at Table 0
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: 7
-Reservation? (True/False): False
-How many pax?: 5
-List of available tables for 5 or more pax are as follows: 
+Choice: Reservation? (True/False): How many pax?: List of available tables for 5 or more pax are as follows: 
 Table ID: 2 -Table Size: 6
 Choose table ID to seat customer? (Enter invalid choice to terminate process): 
-2
 Customer Seated at Table 2
 -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
@@ -1644,7 +1420,18 @@ Customer Seated at Table 2
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 5
+Choice: ------------------------Order Options---------------------------
+(1) Create Order
+(2) Remove Order
+(3) View specific Order
+(4) View all Orders
+(5) Edit Orders
+(6) Back to RRPSS main
+---------------------------------------------------------------
+Choice: List of occupied tables are as follows: 
+Table ID: 1 -Currently seated: 4/4
+Table ID: 2 -Currently seated: 5/6
+Choose table ID to place order (Enter -1 to terminate process): Invalid Table ID
 ------------------------Order Options---------------------------
 (1) Create Order
 (2) Remove Order
@@ -1653,20 +1440,46 @@ Choice: 5
 (5) Edit Orders
 (6) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 1
-List of occupied tables are as follows: 
-Table ID: 0 -Currently seated: 2/2
+Choice: Invalid Command.
+------------------------Order Options---------------------------
+(1) Create Order
+(2) Remove Order
+(3) View specific Order
+(4) View all Orders
+(5) Edit Orders
+(6) Back to RRPSS main
+---------------------------------------------------------------
+Choice: List of occupied tables are as follows: 
 Table ID: 1 -Currently seated: 4/4
 Table ID: 2 -Currently seated: 5/6
-Choose table ID to place order (Enter -1 to terminate process): 0
-1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
-Enter Staff's ID: 0
-Add Order Item type?
+Choose table ID to place order (Enter -1 to terminate process): 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
+Enter Staff's ID: Invalid Staff ID
+------------------------Order Options---------------------------
+(1) Create Order
+(2) Remove Order
+(3) View specific Order
+(4) View all Orders
+(5) Edit Orders
+(6) Back to RRPSS main
+---------------------------------------------------------------
+Choice: No orders to print
+------------------------Order Options---------------------------
+(1) Create Order
+(2) Remove Order
+(3) View specific Order
+(4) View all Orders
+(5) Edit Orders
+(6) Back to RRPSS main
+---------------------------------------------------------------
+Choice: List of occupied tables are as follows: 
+Table ID: 1 -Currently seated: 4/4
+Table ID: 2 -Currently seated: 5/6
+Choose table ID to place order (Enter -1 to terminate process): 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
+Enter Staff's ID: Add Order Item type?
 1. Ala Carte
 2. Promotion Package
 3. Terminate
-Choice:1
--------------Menu AlaCartes-------------
+Choice:-------------Menu AlaCartes-------------
 
 Main courses-----------------
 **No main courses in menu**
@@ -1689,14 +1502,11 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 
 ----------------------------------
 
-Enter AlaCarte ID to add: 2
-Enter quantity: 1
-Add Order Item type?
+Enter AlaCarte ID to add: Enter quantity: Add Order Item type?
 1. Ala Carte
 2. Promotion Package
 3. Terminate
-Choice:3
-------------------------Order Options---------------------------
+Choice:------------------------Order Options---------------------------
 (1) Create Order
 (2) Remove Order
 (3) View specific Order
@@ -1704,63 +1514,7 @@ Choice:3
 (5) Edit Orders
 (6) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 1
-List of occupied tables are as follows: 
-Table ID: 0 -Currently seated: 2/2
-Table ID: 1 -Currently seated: 4/4
-Table ID: 2 -Currently seated: 5/6
-Choose table ID to place order (Enter -1 to terminate process): 2
-1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
-Enter Staff's ID: 0
-Add Order Item type?
-1. Ala Carte
-2. Promotion Package
-3. Terminate
-Choice:1
--------------Menu AlaCartes-------------
-
-Main courses-----------------
-**No main courses in menu**
-Drinks-----------------------
-AlaCarte Id: 2
-Name: Large soft drink
-Price: 2.5
-Description: 12 oz
-
-Desserts---------------------
-AlaCarte Id: 1
-Name: Fried ice cream
-Price: 5.9
-Description: Ice cream deep fried
-
-AlaCarte Id: 3
-Name: Lobster ice cream
-Price: 3.5
-Description: Buttery lobster meets buttery vanilla in this classic concoction.
-
-----------------------------------
-
-Enter AlaCarte ID to add: 2
-Enter quantity: 1
-Add Order Item type?
-1. Ala Carte
-2. Promotion Package
-3. Terminate
-Choice:3
-------------------------Order Options---------------------------
-(1) Create Order
-(2) Remove Order
-(3) View specific Order
-(4) View all Orders
-(5) Edit Orders
-(6) Back to RRPSS main
----------------------------------------------------------------
-Choice: 4
------------------------------------------------------
-Order for Table ID: 0
-1 - Large soft drink		2.5
-Current Total for Table ID-0 exclude GST: 2.50
------------------------------------------------------
+Choice: -----------------------------------------------------
 Order for Table ID: 2
 1 - Large soft drink		2.5
 Current Total for Table ID-2 exclude GST: 2.50
@@ -1773,8 +1527,7 @@ Current Total for Table ID-2 exclude GST: 2.50
 (5) Edit Orders
 (6) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 6
------------------------RRPSS MAIN MENU-------------------------
+Choice: -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
 (3) Table options
@@ -1786,24 +1539,10 @@ Choice: 6
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 8
-List of occupied tables are as follows: 
-Table ID: 0 -Currently seated: 2/2
+Choice: List of occupied tables are as follows: 
 Table ID: 1 -Currently seated: 4/4
 Table ID: 2 -Currently seated: 5/6
 Choose table ID for payment (Enter -1 to terminate process): 
-0
-Are you a member?: (True/False) 
-false
-----------------Invoice----------------
----------------------------------------
-1 - Large soft drink		2.5
----------------------------------------
-Sub Total: 2.50
-7-percent GST: 0.18
-Total: 2.68
------Thank you for dining with us!-----
-Order for table ID 0 paid and removed
 -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
@@ -1816,245 +1555,4 @@ Order for table ID 0 paid and removed
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: 8
-List of occupied tables are as follows: 
-Table ID: 1 -Currently seated: 4/4
-Table ID: 2 -Currently seated: 5/6
-Choose table ID for payment (Enter -1 to terminate process): 
-2
-Are you a member?: (True/False) 
-true
-Member name: faithful
-Member contact number: 995
-----------------Invoice----------------
----------------------------------------
-1 - Large soft drink		2.5
----------------------------------------
-Sub Total: 2.50
-7-percent GST: 0.18
-Total: 2.54
------Thank you for dining with us!-----
-Order for table ID 2 paid and removed
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: 3
-------------------------Table Options---------------------------
-(1) Add Tables into Restaurant
-(2) Remove Tables from Restaurant
-(3) View all Tables
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: 3
-(1) View all Tables
-(2) View available Tables only
-Choice: 1
-1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
-2. Table ID: 1 -Status: OCCUPIED -Current Pax: 4/4
-3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
-------------------------Table Options---------------------------
-(1) Add Tables into Restaurant
-(2) Remove Tables from Restaurant
-(3) View all Tables
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: 4
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: 7
-Reservation? (True/False): False
-How many pax?: 2
-List of available tables for 2 or more pax are as follows: 
-Table ID: 0 -Table Size: 2
-Table ID: 2 -Table Size: 6
-Choose table ID to seat customer? (Enter invalid choice to terminate process): 
-0
-Customer Seated at Table 0
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: 5
-------------------------Order Options---------------------------
-(1) Create Order
-(2) Remove Order
-(3) View specific Order
-(4) View all Orders
-(5) Edit Orders
-(6) Back to RRPSS main
----------------------------------------------------------------
-Choice: 1
-List of occupied tables are as follows: 
-Table ID: 0 -Currently seated: 2/2
-Table ID: 1 -Currently seated: 4/4
-Choose table ID to place order (Enter -1 to terminate process): 0
-1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
-Enter Staff's ID: 0
-Add Order Item type?
-1. Ala Carte
-2. Promotion Package
-3. Terminate
-Choice:2
-----------Menu PromotionPackages----------
-
-Promotion Package Id: 1
-Name: Seafood combo
-Price: 9.9
-Description: Taste the sea with our new combo!
-Package contains:
-Package Items:
-Id  Quantity_and_Name
-1   1xFried ice cream
-2   1xLarge soft drink
-3   1xLobster ice cream
-
-Promotion Package Id: 2
-Name: Seafood Buddy combo
-Price: 18.5
-Description: Great seafood deal for you and a buddy!
-Package contains:
-Package Items:
-Id  Quantity_and_Name
-1   3xFried ice cream
-2   2xLarge soft drink
-3   2xLobster ice cream
--------------------------------------
-
-Enter Package ID to add: 2
-Enter quantity: 3
-Add Order Item type?
-1. Ala Carte
-2. Promotion Package
-3. Terminate
-Choice:3
-------------------------Order Options---------------------------
-(1) Create Order
-(2) Remove Order
-(3) View specific Order
-(4) View all Orders
-(5) Edit Orders
-(6) Back to RRPSS main
----------------------------------------------------------------
-Choice: 6
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: 8
-List of occupied tables are as follows: 
-Table ID: 0 -Currently seated: 2/2
-Table ID: 1 -Currently seated: 4/4
-Choose table ID for payment (Enter -1 to terminate process): 
-0
-Are you a member?: (True/False) 
-false
-----------------Invoice----------------
----------------------------------------
-3 - Seafood Buddy combo		55.5
----------------------------------------
-Sub Total: 55.50
-7-percent GST: 3.89
-Total: 59.39
------Thank you for dining with us!-----
-Order for table ID 0 paid and removed
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: 9
-Print orders by period: 
-(1) Day
-(2) Month
-Choice: 1
-Day (Sunday=1 to Saturday=7): 
-6
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: 3
-------------------------Table Options---------------------------
-(1) Add Tables into Restaurant
-(2) Remove Tables from Restaurant
-(3) View all Tables
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: 3
-(1) View all Tables
-(2) View available Tables only
-Choice: 1
-1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
-2. Table ID: 1 -Status: OCCUPIED -Current Pax: 4/4
-3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
-------------------------Table Options---------------------------
-(1) Add Tables into Restaurant
-(2) Remove Tables from Restaurant
-(3) View all Tables
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: 4
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: 10
-Program terminating ...
+Choice: 

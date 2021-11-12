@@ -24,21 +24,16 @@ public class AlaCarte extends MenuItem {
 		Scanner sc = RRPSS.sc;
 		System.out.print("AlaCarte id: ");
 		int alacarteId = sc.nextInt();
-		System.out.println(alacarteId);
 		System.out.print("AlaCarte name: ");
 		sc.nextLine();
 		String name = sc.nextLine();
-		System.out.println(name);
 		System.out.print("AlaCarte price: ");
 		Float price = sc.nextFloat();
-		System.out.println(price);
 		System.out.print("AlaCarte description: ");
 		sc.nextLine();
 		String description = sc.nextLine();
-		System.out.println(description);
 		System.out.print("AlaCarte category: "+"\n1.MAIN_COURSE\n2.DRINK\n3.DESSERT\nCategory: ");
 		int category=sc.nextInt();
-		System.out.println(category);
 		AlaCarteCategory accat = AlaCarteCategory.MAIN_COURSE;
 		switch(category){
 			case 1:
@@ -89,13 +84,11 @@ public class AlaCarte extends MenuItem {
 			System.out.println("----------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
-			System.out.println(choice);
 			System.out.println("----------------------------");
 			if (choice==1){
 				while(true){
 					System.out.printf("Id: %d\nNew id: ",this.getId());
 					int packageid = sc.nextInt();
-					System.out.println(packageid);
 					boolean exists=false;
 					for (AlaCarte ac : alaCartes){
 						if (ac.getId()==packageid){
@@ -112,24 +105,20 @@ public class AlaCarte extends MenuItem {
 			}else if (choice==2){
 				System.out.printf("Price: %s\nNew price: ",this.getPrice());
 				float alacarteprice = sc.nextFloat();
-				System.out.println(alacarteprice);
 				this.setPrice(alacarteprice);
 			}else if (choice==3){
 				System.out.printf("Name: %s\nNew name: ",this.getName());
 				sc.nextLine();
 				String alacartename = sc.nextLine();
-				System.out.println(alacartename);
 				this.setName(alacartename);
 			}else if (choice==4){
 				System.out.printf("Description: %s\nNew description: ",this.getDescription());
 				sc.nextLine();
 				String alacartedescription = sc.nextLine();
-				System.out.println(alacartedescription);
 				this.setDescription(alacartedescription);
 			}else if (choice==5){
 				System.out.print("AlaCarte category:"+"\n1.MAIN_COURSE\n2.DRINK\n3.DESSERT\nCategory: ");
 				int category=sc.nextInt();
-				System.out.println(category);
 				switch(category){
 					case 1:
 						this.setCategory(AlaCarteCategory.MAIN_COURSE);

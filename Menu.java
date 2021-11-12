@@ -110,7 +110,6 @@ public class Menu {
 											"3. Exit\n"+
 											"Choice: ");
 			int type = sc.nextInt();
-			System.out.println(type);
 
 			if (type==1){
 				System.out.println("------New AlaCarte creation-----");
@@ -160,7 +159,6 @@ public class Menu {
 		while(true){
 			System.out.print("Remove Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit\nType: ");
 			int type = sc.nextInt();
-			System.out.println(type);
 			if (type==1){
 				if (alaCartes.size()==0){
 					System.out.println("No alacartes in menu to remove");
@@ -175,7 +173,6 @@ public class Menu {
 					System.out.println("Select Ala Carte id to remove, or enter -1 to quit: ");
 					System.out.print("Id: ");
 					int id = sc.nextInt();
-					System.out.println(id);
 					if (id==-1) break;
 					for (int i=0;i<alaCartes.size();i++){
 						if (id == alaCartes.get(i).getId()){
@@ -213,7 +210,6 @@ public class Menu {
 					System.out.println("Select Promotion package id to remove, or enter -1 to quit: ");
 					System.out.print("Id: ");
 					int id = sc.nextInt();
-					System.out.println(id);
 					if (id==-1) break;
 					for (int i=0;i<promotionPackages.size();i++){
 						if (id == promotionPackages.get(i).getId()){
@@ -235,7 +231,6 @@ public class Menu {
 		while(true){
 			System.out.print("Edit Menu Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit\nType: ");
 			int type = sc.nextInt();
-			System.out.println(type);
 			if (type==1){
 				while(true){
 					System.out.println("Select Ala Carte id to edit, or enter -1 to quit: ");
@@ -243,7 +238,6 @@ public class Menu {
 					if (alaCartes.size()==0) break;
 					System.out.print("Id: ");
 					int id=sc.nextInt();
-					System.out.println(id);
 					if (id==-1) break;
 					boolean found = false;
 					for (int i=0;i<alaCartes.size();i++){
@@ -277,7 +271,6 @@ public class Menu {
 					System.out.println("Select Promotion package id to edit, or enter -1 to quit");
 					System.out.print("Id: ");
 					int id = sc.nextInt();
-					System.out.println(id);
 					if (id==-1) break;
 					boolean found = false;
 					for (int i=0;i<promotionPackages.size();i++){

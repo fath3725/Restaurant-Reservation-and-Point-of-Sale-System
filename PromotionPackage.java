@@ -29,7 +29,6 @@ public class PromotionPackage extends MenuItem {
 		while (true){
 			System.out.print("Id: ");
 			int id = sc.nextInt();
-			System.out.println(id);
 			if (id==-1) break;
 			boolean found=false;
 			for (int i=0;i<alaCartes.size();i++){
@@ -37,7 +36,6 @@ public class PromotionPackage extends MenuItem {
 					AlaCarte newalacarte = AlaCarte.cloneAlaCarte(alaCartes.get(i)); 
 					System.out.print("Quantity: ");
 					int quantity = sc.nextInt();
-					System.out.println(quantity);
 					//check if packageitems already contains item
 					for (AlaCarte a : packageItems){
 						if (a.getId()==id){
@@ -59,18 +57,14 @@ public class PromotionPackage extends MenuItem {
 		}
 		System.out.print("Promotion Package id: ");
 		int packageId = sc.nextInt();
-		System.out.println(packageId);
 		System.out.print("Promotion Package name: ");
 		sc.nextLine();
 		String name = sc.nextLine();
-		System.out.println(name);
 		System.out.print("Promotion Package price: ");
 		Float price = sc.nextFloat();
-		System.out.println(price);
 		System.out.print("Promotion Package description: ");
 		sc.nextLine();
 		String description = sc.nextLine();
-		System.out.println(description);
 		PromotionPackage newpromotionpackage = new PromotionPackage(packageId,name,price,description,packageItems);
 		return newpromotionpackage;
 	}
@@ -109,13 +103,12 @@ public class PromotionPackage extends MenuItem {
 			System.out.println("----------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
-			System.out.println(choice);
 			System.out.println("----------------------------");
 			if (choice==1){
 				while(true){
 					System.out.printf("Id: %d\nNew id: ",this.getId());
 					int packageid = sc.nextInt();
-					System.out.println(packageid);
+
 					boolean exists=false;
 					for (PromotionPackage pp : promotionPackages){
 						if (pp.getId()==packageid){
@@ -132,19 +125,16 @@ public class PromotionPackage extends MenuItem {
 			}else if (choice==2){
 				System.out.printf("Price: %s\nNew price: ",this.getPrice());
 				float packageprice = sc.nextFloat();
-				System.out.println(packageprice);
 				this.setPrice(packageprice);
 			}else if (choice==3){
 				System.out.printf("Name: %s\nNew name: ",this.getName());
 				sc.nextLine();
 				String packagename = sc.nextLine();
-				System.out.println(packagename);
 				this.setName(packagename);
 			}else if (choice==4){
 				System.out.printf("Description: %s\nNew description: ",this.getDescription());
 				sc.nextLine();
 				String packagedescription = sc.nextLine();
-				System.out.println(packagedescription);
 				this.setDescription(packagedescription);
 			}else if (choice==5){
 				System.out.println("Package Items:");
@@ -154,12 +144,10 @@ public class PromotionPackage extends MenuItem {
 				System.out.print("Choice: ");
 				System.out.println("----------------------------");
 				int option = sc.nextInt();
-				System.out.println(option);
 				viewPackageItems();
 				if (option==1){
 					System.out.println("Remove which Id: ");
 					int packageitemid = sc.nextInt();
-					System.out.println(packageitemid);
 					Boolean removed = false;
 					while(!removed){
 						for (AlaCarte ac : packageItems){
@@ -180,13 +168,12 @@ public class PromotionPackage extends MenuItem {
 					while (!added){
 						System.out.print("Add which Id: ");
 						int packageitemid = sc.nextInt();
-						System.out.println(packageitemid);
 						for (int i=0;i<alaCartes.size();i++){
 							if (packageitemid==alaCartes.get(i).getId()){
 								AlaCarte toadd = AlaCarte.cloneAlaCarte(alaCartes.get(i));
 								System.out.print("How many of it?\nQuantity: ");
 								int quantity = sc.nextInt();
-								System.out.println(quantity);
+
 								for (int j=0;j<packageItems.size();j++){
 									if (packageItems.get(j).getId()==packageitemid){
 										packageItems.get(j).setQuantity(packageItems.get(j).getQuantity()+quantity);

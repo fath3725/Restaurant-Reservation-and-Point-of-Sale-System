@@ -98,16 +98,14 @@ public class Order extends Menu {
 		int type = 0;
 		while(type<3) {
 			System.out.print("Add Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Terminate\n");
+			System.out.print("Choice:");
 			type = sc.nextInt();
-			System.out.println("Choice:"+type);
 			if (type==1){
 				menu.viewAlaCartes();
 				System.out.print("Enter AlaCarte ID to add: ");
 				int alaCarteID = sc.nextInt();
-				System.out.println(alaCarteID);
 				System.out.print("Enter quantity: ");
 				int alaCarteQuantity = sc.nextInt();
-				System.out.println(alaCarteQuantity);
 				boolean found = false;
 				for(int i=0; i<menu.getAlaCarte().size(); i++){
 					if(menu.getAlaCarte().get(i).getId() == alaCarteID){
@@ -124,10 +122,8 @@ public class Order extends Menu {
 				menu.viewPromotionPackages();
 				System.out.print("Enter Package ID to add: ");
 				int packID = sc.nextInt();
-				System.out.println(packID);
 				System.out.print("Enter quantity: ");
 				int packQuantity = sc.nextInt();
-				System.out.println(packQuantity);
 				boolean found = false;
 				for(int i=0; i<menu.getPromotionPackage().size(); i++){
 					if(menu.getPromotionPackage().get(i).getId() == packID){
@@ -153,20 +149,17 @@ public class Order extends Menu {
 		while(true){
 			System.out.print("Next Action?\n"+"1. Add item\n"+"2. Remove item\n"+"3. Change quantity\n"+"4. Exit\nChoice: ");
 			int type = sc.nextInt();
-			System.out.println(type);
 			if (type==1){
 				addItems(menu);
 			}
 			else if(type==2){
 				System.out.print("Remove Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit");
 				int choice = sc.nextInt();
-				System.out.println(choice);
 				if(choice == 1){
 					System.out.println("Select Ala Carte id to remove, or enter -1 to quit: ");
 					viewAlaCartes();
 					System.out.print("Id: ");
 					int id=sc.nextInt();
-					System.out.println(id);
 					if(id == -1)
 						break;
 					for (int i=0; i<this.alaCartes.size(); i++){
@@ -182,7 +175,6 @@ public class Order extends Menu {
 					viewPromotionPackages();
 					System.out.print("Id: ");
 					int id=sc.nextInt();
-					System.out.println(id);
 					if(id == -1)
 						break;
 					for (int i=0; i<this.promotionPackages.size(); i++){
@@ -199,21 +191,18 @@ public class Order extends Menu {
 			else if(type==3){
 				System.out.print("Edit quantity of which Order Item type?\n"+"1. Ala Carte\n"+"2. Promotion Package\n"+"3. Exit\nChoice: ");
 				int choice = sc.nextInt();
-				System.out.println(choice);
 				if(choice == 1){
 					System.out.println("Select Ala Carte id to edit quantity, or enter -1 to quit: ");
 					viewAlaCartes();
 					if (this.alaCartes.size()==0) continue;
 					System.out.print("Id: ");
 					int id=sc.nextInt();
-					System.out.println(id);
 					if(id == -1)
 						break;
 					for (int i=0; i<this.alaCartes.size(); i++){
 						if (id == this.alaCartes.get(i).getId()){		
 							System.out.println("Enter new quantity: ");
 							int newAmt = sc.nextInt();
-							System.out.println(newAmt);
 							this.alaCartes.get(i).setQuantity(newAmt);
 							break;
 						}
@@ -225,14 +214,12 @@ public class Order extends Menu {
 					if (this.promotionPackages.size()==0) continue;
 					System.out.print("Id: ");
 					int id=sc.nextInt();
-					System.out.println(id);
 					if(id == -1)
 						break;
 					for (int i=0; i<this.promotionPackages.size(); i++){
 						if (id == this.promotionPackages.get(i).getId()){		
 							System.out.println("Enter new quantity: ");
 							int newAmt = sc.nextInt();
-							System.out.println(newAmt);
 							this.promotionPackages.get(i).setQuantity(newAmt);
 							break;
 						}

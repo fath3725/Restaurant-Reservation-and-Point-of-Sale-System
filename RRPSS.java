@@ -36,7 +36,6 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
-			System.out.println(choice);
 			switch(choice){
 				case 1:
 					MenuOptions(restaurant);
@@ -91,7 +90,6 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
-			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.getMenu().addItems(restaurant.getMenu());
@@ -138,7 +136,6 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
-			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.addStaff();
@@ -168,7 +165,6 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
-			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.addTable();
@@ -213,7 +209,6 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
-			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.addMember();
@@ -245,7 +240,6 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
-			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.addOrder();
@@ -281,7 +275,6 @@ public class RRPSS {
 			System.out.println("---------------------------------------------------------------");
 			System.out.print("Choice: ");
 			int choice = sc.nextInt();
-			System.out.println(choice);
 			switch(choice){
 				case 1:
 					restaurant.addReservation();
