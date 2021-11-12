@@ -257,6 +257,10 @@ False
 6
 8
 0
+False
 8
 2
+True
+faithful
+995
 10
