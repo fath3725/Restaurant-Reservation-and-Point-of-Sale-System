@@ -518,29 +518,81 @@ public class Restaurant {
 	 * Print this final invoice and moves old order into array to be stored under records.
 	 */
 	public void paymentCustomer(){
-		Scanner sc = RRPSS.sc;
-		int temp = printOccupiedTables();
-		if(temp == 0) {
+	    Scanner sc = RRPSS.sc;
+	    int temp = printOccupiedTables();
+	    if(temp == 0) {
 			System.out.println("No table to checkout");
-			
 			return;
-		}
-		System.out.println("Choose table ID for payment (Enter -1 to terminate process): ");
-		int choice = sc.nextInt();
-		System.out.println(choice);
-		if(choice == -1){
+	    }
+	    System.out.println("Choose table ID for payment (Enter -1 to terminate process): ");
+	    int choice = sc.nextInt();
+	    System.out.println(choice);
+	    if(choice == -1){
 			return;
-		}
-			
-		for(int i=0; i<orders.size(); i++){
+	    }
+
+	    for(int i=0; i<orders.size(); i++){
 			if((orders.get(i)).getOrderTableID() == choice){
+			System.out.println("Are you a member?: (True/False) ");
+			Boolean answer = sc.nextBoolean();
+			System.out.println(answer);
+			sc.nextLine();
+			if(answer){
+				System.out.print("Member name: ");
+				String memberName = sc.nextLine();
+				System.out.println(memberName);
+				System.out.print("Member contact number: ");
+				int memberContact = sc.nextInt();
+				System.out.println(memberContact);
+				for(int j=0; j<members.size(); j++){
+					if(memberName.equals(members.get(j).getName()) && members.get(j).getPhoneNumber() == memberContact){
+						System.out.println("----------------Invoice----------------");
+						System.out.println("---------------------------------------");
+						double finalAmt = (orders.get(i)).viewOrder();
+						System.out.println("---------------------------------------");
+						System.out.printf("Sub Total: %.2f\n",finalAmt);
+						System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
+						System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt)*0.95);
+						System.out.println("-----Thank you for dining with us!-----");
+						if(tables.get(i).getStatus() == Status.OCCUPIED){
+							tables.get(i).setStatus(Status.AVAILABLE);
+						}
+						else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
+							tables.get(i).setStatus(Status.RESERVED);
+						}
+					tables.get(i).setTablePax(0);
+					orderRecord.add(orders.get(i));
+					removeOrder(choice);
+					return;
+					}
+				}
+				System.out.println("Invalid Member!...");
 				System.out.println("----------------Invoice----------------");
 				System.out.println("---------------------------------------");
 				double finalAmt = (orders.get(i)).viewOrder();
 				System.out.println("---------------------------------------");
 				System.out.printf("Sub Total: %.2f\n",finalAmt);
-				System.out.print("7% GST: ");
-				System.out.printf("%.2f\n",(finalAmt*GST));
+				System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
+				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
+				System.out.println("-----Thank you for dining with us!-----");
+				if(tables.get(i).getStatus() == Status.OCCUPIED){
+					tables.get(i).setStatus(Status.AVAILABLE);
+				}
+				else if(tables.get(i).getStatus() == Status.OCCUPIED2RESERVED){
+					tables.get(i).setStatus(Status.RESERVED);
+				}
+				tables.get(i).setTablePax(0);
+				orderRecord.add(orders.get(i));
+				removeOrder(choice);
+				return;
+			}
+			else {
+				System.out.println("----------------Invoice----------------");
+				System.out.println("---------------------------------------");
+				double finalAmt = (orders.get(i)).viewOrder();
+				System.out.println("---------------------------------------");
+				System.out.printf("Sub Total: %.2f\n",finalAmt);
+				System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
 				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
 				System.out.println("-----Thank you for dining with us!-----");
 				if(tables.get(i).getStatus() == Status.OCCUPIED){
@@ -555,8 +607,8 @@ public class Restaurant {
 				return;
 			}
 		}
-		System.out.println("Invalid table ID");
 	}
+}
 	/**
 	 * Allows user to create a new order to add into the orders array.
 	 */
