@@ -555,16 +555,25 @@ public class Restaurant {
 						System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
 						System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt)*0.95);
 						System.out.println("-----Thank you for dining with us!-----");
-						if(tables.get(i).getStatus().equals(Status.OCCUPIED)){
-							tables.get(i).setStatus(Status.AVAILABLE);
+						for(int k=0; k<tables.size(); k++){
+							if(tables.get(k).getTableID() == choice){
+								if(tables.get(k).getStatus() == Status.OCCUPIED){
+									tables.get(k).setStatus(Status.AVAILABLE);
+									tables.get(k).setTablePax(0);
+									orderRecord.add(orders.get(i));
+									removeOrder(choice);
+									return;
+								}
+								else if(tables.get(k).getStatus() == Status.OCCUPIED2RESERVED){
+									tables.get(k).setStatus(Status.RESERVED);
+									tables.get(k).setTablePax(0);
+									orderRecord.add(orders.get(i));
+									removeOrder(choice);
+									return;
+								}
+							}
 						}
-						else if(tables.get(i).getStatus().equals(Status.OCCUPIED2RESERVED)){
-							tables.get(i).setStatus(Status.RESERVED);
-						}
-					tables.get(i).setTablePax(0);
-					orderRecord.add(orders.get(i));
-					removeOrder(choice);
-					return;
+					
 					}
 				}
 				System.out.println("Invalid Member!...");
@@ -576,18 +585,24 @@ public class Restaurant {
 				System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
 				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
 				System.out.println("-----Thank you for dining with us!-----");
-				if(tables.get(i).getStatus().equals(Status.OCCUPIED)){
-					tables.get(i).setStatus(Status.AVAILABLE);
-					tables.get(i).setTablePax(0);
+				for(int k=0; k<tables.size(); k++){
+					if(tables.get(k).getTableID() == choice){
+						if(tables.get(k).getStatus() == Status.OCCUPIED){
+							tables.get(k).setStatus(Status.AVAILABLE);
+							tables.get(k).setTablePax(0);
+							orderRecord.add(orders.get(i));
+							removeOrder(choice);
+							return;
+						}
+						else if(tables.get(k).getStatus() == Status.OCCUPIED2RESERVED){
+							tables.get(k).setStatus(Status.RESERVED);
+							tables.get(k).setTablePax(0);
+							orderRecord.add(orders.get(i));
+							removeOrder(choice);
+							return;
+						}
+					}
 				}
-				else if(tables.get(i).getStatus().equals(Status.OCCUPIED2RESERVED)){
-					tables.get(i).setStatus(Status.RESERVED);
-					tables.get(i).setTablePax(0);
-				}
-				tables.get(i).setTablePax(0);
-				orderRecord.add(orders.get(i));
-				removeOrder(choice);
-				return;
 			}
 			else {
 				System.out.println("----------------Invoice----------------");
@@ -598,18 +613,24 @@ public class Restaurant {
 				System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
 				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
 				System.out.println("-----Thank you for dining with us!-----");
-				if(tables.get(i).getStatus().equals(Status.OCCUPIED)){
-					tables.get(i).setStatus(Status.AVAILABLE);
-					tables.get(i).setTablePax(0);
+				for(int k=0; k<tables.size(); k++){
+					if(tables.get(k).getTableID() == choice){
+						if(tables.get(k).getStatus() == Status.OCCUPIED){
+							tables.get(k).setStatus(Status.AVAILABLE);
+							tables.get(k).setTablePax(0);
+							orderRecord.add(orders.get(i));
+							removeOrder(choice);
+							return;
+						}
+						else if(tables.get(k).getStatus() == Status.OCCUPIED2RESERVED){
+							tables.get(k).setStatus(Status.RESERVED);
+							tables.get(k).setTablePax(0);
+							orderRecord.add(orders.get(i));
+							removeOrder(choice);
+							return;
+						}
+					}
 				}
-				else if(tables.get(i).getStatus().equals(Status.OCCUPIED2RESERVED)){
-					tables.get(i).setStatus(Status.RESERVED);
-					tables.get(i).setTablePax(0);
-				}
-				tables.get(i).setTablePax(0);
-				orderRecord.add(orders.get(i));
-				removeOrder(choice);
-				return;
 			}
 		}
 	}
@@ -685,7 +706,6 @@ public class Restaurant {
 			if(orders.get(i).getOrderTableID() == orderTableID && orders.get(i).getOrderStaffID() == orderStaffID) {
 				System.out.println("Order for table ID "+orders.get(i).getOrderTableID()+" removed");
 				orders.remove(i);
-				
 				return;
 			}
 		}
