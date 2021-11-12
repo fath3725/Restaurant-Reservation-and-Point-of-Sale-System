@@ -97,6 +97,7 @@ public class Restaurant {
 	 */
 	public void addStaff() {
 		Scanner sc = RRPSS.sc;
+		sc.nextLine();
 		System.out.println("Enter Staff's full name: ");
 		String staffName = sc.nextLine();
 		System.out.println(staffName);
@@ -160,11 +161,13 @@ public class Restaurant {
 		Scanner sc = RRPSS.sc;
 		System.out.print("Enter table size (Even number between two to ten): ");
 		int tableSize = sc.nextInt();
+		System.out.println(tableSize);
 		if(tableSize%2 != 0 || tableSize>10 || tableSize<2){
 			System.out.println("Invalid size, Even number between two to ten");
 			return;
 		}
 		this.tables.add(new Table(tableSize));
+		System.out.println("Table added");
 	}
 	/**
 	 * Prints all table information.
@@ -203,6 +206,7 @@ public class Restaurant {
 	 */
 	public void addMember() {
 		Scanner sc = RRPSS.sc;
+		sc.nextLine();
 		System.out.print("Enter Member's full name: ");
 		String memName = sc.nextLine();
 		System.out.println(memName);
@@ -270,6 +274,7 @@ public class Restaurant {
 		for(int i=0; i<tables.size(); i++){
 			if((tables.get(i)).getStatus() == Status.AVAILABLE){
 				System.out.println("Table ID: "+(tables.get(i)).getTableID()+" -Table Size: "+(tables.get(i)).getTableSize());
+				count++;
 			}
 		}
 		if(count == 0){
@@ -325,6 +330,7 @@ public class Restaurant {
 		Scanner sc = RRPSS.sc;
 		System.out.print("Enter number of pax: ");
 		int noOfPax = sc.nextInt();
+		System.out.println(noOfPax);
 		if(noOfPax>10 || noOfPax<2) {
 			System.out.println("No available for "+noOfPax+" pax");
 			return;
@@ -335,6 +341,7 @@ public class Restaurant {
 		sc.nextLine();
 		System.out.print("Enter customer's name: ");
 		String customerName = sc.nextLine();
+		System.out.println(customerName);
 		Date now = new Date();
 		System.out.println("Now is: "+ now.toString());
 		System.out.println("Only can make reservation for this year...");
@@ -356,36 +363,20 @@ public class Restaurant {
 		Calendar reservedForTime = new GregorianCalendar(year, month-1, day, hour, min); //actual booking timing
 		Calendar reservedTillTime = new GregorianCalendar(year, month-1, day, hour, min+30); //actual booking timing
 		
-		if(reservedForTime.compareTo(cal)<0) {
-			System.out.println("Reservation Date cannot be before the current time");
-			return;
-		}
 		
-		HashSet <Integer> hash = new HashSet<Integer>();
+		System.out.print("Enter table ID selected for reservation: ");
+		int resTableID = sc.nextInt();
+		System.out.println(resTableID);
 		for(int i=0;i<tables.size();i++) {
-			if(tables.get(i).getTableSize()>=noOfPax) {
-				if(tables.get(i).getStatus()==Status.AVAILABLE) {
-					System.out.println("Table ID: "+(tables.get(i)).getTableID()+" -Table Size: "+(tables.get(i)).getTableSize());
-					hash.add(tables.get(i).getTableID());
+			if(tables.get(i).getTableID() == resTableID) {
+				if(tables.get(i).getTableSize()<noOfPax) {
+					System.out.println("This table has size < "+noOfPax);
+					return;
 				}
-				else if(tables.get(i).getStatus()==Status.OCCUPIED) {
-					if (reservedTableTime.compareTo(cal)>0) {
-						System.out.println("Table ID: "+(tables.get(i)).getTableID()+" -Table Size: "+(tables.get(i)).getTableSize());
-						hash.add(tables.get(i).getTableID());
-					}
-				}
-				//if current status of table i is reserved or occupied2reserved
-				else {
-					
-				}
+				else break;
 			}
 		}
-		System.out.println("Enter table ID selected for reservation: ");
-		int resTableID = sc.nextInt();
-		if(!hash.contains(resTableID)) {
-			System.out.println("Invalid table ID ");
-			return;
-		}
+		
 		for(int i=0;i<currentReservations.size();i++) {
 			if(currentReservations.get(i).getTableReserved() == resTableID){
 				Calendar oneHrBefore = (Calendar) currentReservations.get(i).getReservedForTime().clone();
@@ -415,7 +406,7 @@ public class Restaurant {
 		Scanner sc = RRPSS.sc;
 		viewCurrentReservations();
 		if(currentReservations.size()==0) {
-			System.out.println("No reservation in the restaurant");
+			
 			return;
 		}
 		System.out.print("Enter reservation position to remove: (Enter invalid choice to terminate process): ");
@@ -499,8 +490,10 @@ public class Restaurant {
 		}
 		else{
 			System.out.print("Name reserved under: ");
-			String reservedBy = sc.nextLine();
 			sc.nextLine();
+			String reservedBy = sc.nextLine();
+			System.out.println(reservedBy);
+			
 			System.out.print("Contact Number reserved under: ");
 			int reservedCon = sc.nextInt();
 			System.out.println(reservedCon);
@@ -546,7 +539,8 @@ public class Restaurant {
 				double finalAmt = (orders.get(i)).viewOrder();
 				System.out.println("---------------------------------------");
 				System.out.printf("Sub Total: %.2f\n",finalAmt);
-				System.out.printf("7% GST: %.2f\n",(finalAmt*GST));
+				System.out.print("7% GST: ");
+				System.out.printf("%.2f\n",(finalAmt*GST));
 				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
 				System.out.println("-----Thank you for dining with us!-----");
 				if(tables.get(i).getStatus() == Status.OCCUPIED){
@@ -584,7 +578,7 @@ public class Restaurant {
 		for(int i=0;i<tables.size();i++) {
 			if(tables.get(i).getTableID()==orderTableID && (tables.get(i).getStatus() == Status.OCCUPIED || tables.get(i).getStatus() == Status.OCCUPIED2RESERVED)) {
 				for(int j=0;j<orders.size();j++) {
-					if(orders.get(i).getOrderTableID()==orderTableID) {
+					if(orders.get(j).getOrderTableID()==orderTableID) {
 						System.out.println("This table has an order already");
 						return;
 					}
@@ -592,6 +586,7 @@ public class Restaurant {
 				viewStaff();
 				System.out.print("Enter Staff's ID: ");
 				int orderStaffID = sc.nextInt();
+				System.out.println(orderStaffID);
 				for(int j=0; j<staffs.size(); j++) {
 					if(staffs.get(j).getStaffId()==orderStaffID) {
 						orders.add(new Order(orderStaffID, orderTableID));
@@ -651,12 +646,12 @@ public class Restaurant {
 		}
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == tableID) {
-				System.out.print("Order for table ID "+orders.get(i).getOrderTableID()+" paid and removed");
+				System.out.println("Order for table ID "+orders.get(i).getOrderTableID()+" paid and removed");
 				orders.remove(i);
 				return;
 			}
 		}
-		System.out.print("This table has no order");
+		System.out.println("This table has no order");
 	}
 	/**
 	 * Allows user to view specific order in the orders array.
@@ -673,12 +668,12 @@ public class Restaurant {
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID){
 				double finalAmt = orders.get(i).viewOrder();
-				System.out.printf("Current Total exclude GST: %.2f", finalAmt);
+				System.out.printf("Current Total exclude GST: %.2f\n", finalAmt);
 				
 				return;
 			}
 		}
-		System.out.print("This table has no order");
+		System.out.println("This table has no order");
 	}
 	/**
 	 * Allows user to view all order in the orders array.
@@ -692,7 +687,7 @@ public class Restaurant {
 			System.out.println("-----------------------------------------------------");
 			System.out.println("Order for Table ID: "+orders.get(i).getOrderTableID());
 			double finalAmt = orders.get(i).viewOrder();
-			System.out.printf("Current Total for Table ID-"+orders.get(i).getOrderTableID()+" exclude GST: %.2f", finalAmt);
+			System.out.printf("Current Total for Table ID-"+orders.get(i).getOrderTableID()+" exclude GST: %.2f\n", finalAmt);
 		}
 		System.out.println();
 	}
