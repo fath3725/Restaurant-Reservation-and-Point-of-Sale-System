@@ -319,7 +319,6 @@ public class Restaurant {
 		}
 		System.out.print("Enter customer's contact number: ");
 		int contactNumber = sc.nextInt();
-		System.out.println(contactNumber);
 		sc.nextLine();
 		System.out.print("Enter customer's name: ");
 		String customerName = sc.nextLine();

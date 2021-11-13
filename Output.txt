@@ -21,8 +21,7 @@ Choice: ------------------------Menu Options---------------------------
 ---------------------------------------------------------------
 Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
-Choice: 1
-No AlaCartes in menu at the moment
+Choice: No AlaCartes in menu at the moment
 ------------------------Menu Options---------------------------
 (1) Add item into Menu
 (2) Remove item from Menu
@@ -32,8 +31,7 @@ No AlaCartes in menu at the moment
 ---------------------------------------------------------------
 Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
-Choice: 2
-No PromotionPackages at the moment
+Choice: No PromotionPackages at the moment
 ------------------------Menu Options---------------------------
 (1) Add item into Menu
 (2) Remove item from Menu
@@ -191,8 +189,7 @@ Choice: ------------------------Menu Options---------------------------
 ---------------------------------------------------------------
 Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
-Choice: 1
--------------AlaCartes-------------
+Choice: -------------AlaCartes-------------
 
 Main courses-----------------
 AlaCarte Id: 1
@@ -228,8 +225,7 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 ---------------------------------------------------------------
 Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
-Choice: 2
-----------PromotionPackages----------
+Choice: ----------PromotionPackages----------
 
 Promotion Package Id: 1
 Name: Seafood combo
@@ -333,8 +329,7 @@ Type: ------------------------Menu Options---------------------------
 ---------------------------------------------------------------
 Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
-Choice: 1
--------------AlaCartes-------------
+Choice: -------------AlaCartes-------------
 
 Main courses-----------------
 AlaCarte Id: 1
@@ -365,8 +360,7 @@ Description: Buttery lobster meets buttery vanilla in this classic concoction.
 ---------------------------------------------------------------
 Choice: (1) View Ala Carte Menu
 (2) View Promotion Packages Menu
-Choice: 2
-----------PromotionPackages----------
+Choice: ----------PromotionPackages----------
 
 Promotion Package Id: 1
 Name: Seafood combo
@@ -896,8 +890,7 @@ Choice: ------------------------Table Options---------------------------
 ---------------------------------------------------------------
 Choice: (1) View all Tables
 (2) View available Tables only
-Choice: 1
-1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
+Choice: 1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
 2. Table ID: 1 -Status: AVAILABLE -Current Pax: 0/4
 3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
 ------------------------Table Options---------------------------
@@ -915,8 +908,7 @@ Choice: Enter table size (Even number between two to ten): Table added
 ---------------------------------------------------------------
 Choice: (1) View all Tables
 (2) View available Tables only
-Choice: 1
-1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
+Choice: 1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
 2. Table ID: 1 -Status: AVAILABLE -Current Pax: 0/4
 3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
 4. Table ID: 3 -Status: AVAILABLE -Current Pax: 0/8
@@ -939,8 +931,7 @@ Enter table position to remove: (Enter invalid choice to terminate process): Tab
 ---------------------------------------------------------------
 Choice: (1) View all Tables
 (2) View available Tables only
-Choice: 1
-1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
+Choice: 1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
 2. Table ID: 1 -Status: AVAILABLE -Current Pax: 0/4
 3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
 ------------------------Table Options---------------------------
@@ -1051,8 +1042,7 @@ Choice: ------------------------Table Options---------------------------
 ---------------------------------------------------------------
 Choice: (1) View all Tables
 (2) View available Tables only
-Choice: 1
-1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
+Choice: 1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
 2. Table ID: 1 -Status: OCCUPIED -Current Pax: 4/4
 3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
 ------------------------Table Options---------------------------
@@ -1063,8 +1053,7 @@ Choice: 1
 ---------------------------------------------------------------
 Choice: (1) View all Tables
 (2) View available Tables only
-Choice: 2
-List of available tables are as follows: 
+Choice: List of available tables are as follows: 
 Table ID: 0 -Table Size: 2
 Table ID: 2 -Table Size: 6
 ------------------------Table Options---------------------------
@@ -1322,26 +1311,26 @@ Choice: --------------------Reservation Options------------------------
 (4) Back to RRPSS main
 ---------------------------------------------------------------
 Choice: Enter number of pax: Enter customer's contact number: 123456
-Enter customer's name: Now is: Fri Nov 12 18:00:07 SGT 2021
+Enter customer's name: Now is: Sat Nov 13 16:46:22 SGT 2021
 Only can make reservation for this year...
-What month do you want the reservation? (Enter 1-12): What day do you want the reservation? (Enter 1-30/31): 12
-What time do you want the reservation? (Enter the hour 1-24): What time do you want the reservation? (Enter the minutes 1-60): Enter table ID selected for reservation: --------------------Reservation Options------------------------
+What month do you want the reservation? (Enter 1-12): What day do you want the reservation? (Enter 1-30/31): What time do you want the reservation? (Enter the hour 1-24): What time do you want the reservation? (Enter the minutes 1-60): Enter table ID selected for reservation: Invalid table id
+--------------------Reservation Options------------------------
 (1) Create Reservation
 (2) Cancel Reservation
 (3) View all Reservations
 (4) Back to RRPSS main
 ---------------------------------------------------------------
 Choice: Enter number of pax: Enter customer's contact number: 12345
-Enter customer's name: Now is: Fri Nov 12 18:00:07 SGT 2021
+Enter customer's name: Now is: Sat Nov 13 16:46:22 SGT 2021
 Only can make reservation for this year...
-What month do you want the reservation? (Enter 1-12): What day do you want the reservation? (Enter 1-30/31): 12
-What time do you want the reservation? (Enter the hour 1-24): What time do you want the reservation? (Enter the minutes 1-60): Enter table ID selected for reservation: --------------------Reservation Options------------------------
+What month do you want the reservation? (Enter 1-12): What day do you want the reservation? (Enter 1-30/31): What time do you want the reservation? (Enter the hour 1-24): What time do you want the reservation? (Enter the minutes 1-60): Enter table ID selected for reservation: Invalid table id
+--------------------Reservation Options------------------------
 (1) Create Reservation
 (2) Cancel Reservation
 (3) View all Reservations
 (4) Back to RRPSS main
 ---------------------------------------------------------------
-Choice: 1) quang -Contact No.: 123456 -Table ID: 0 -Pax: 2 -Date Reserved: Fri Nov 12 19:00:00 SGT 2021
+Choice: No Reservation
 --------------------Reservation Options------------------------
 (1) Create Reservation
 (2) Cancel Reservation
@@ -1368,8 +1357,7 @@ Choice: ------------------------Table Options---------------------------
 ---------------------------------------------------------------
 Choice: (1) View all Tables
 (2) View available Tables only
-Choice: 1
-1. Table ID: 0 -Status: RESERVED -Current Pax: 0/2
+Choice: 1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
 2. Table ID: 1 -Status: OCCUPIED -Current Pax: 4/4
 3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
 ------------------------Table Options---------------------------
@@ -1390,7 +1378,8 @@ Choice: -----------------------RRPSS MAIN MENU-------------------------
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: Reservation? (True/False): Name reserved under: Contact Number reserved under: Customer Seated at Table 0
+Choice: Reservation? (True/False): Name reserved under: Contact Number reserved under: Invalid Reservation!
+Returning to main page
 -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
@@ -1428,42 +1417,19 @@ Choice: ------------------------Order Options---------------------------
 (6) Back to RRPSS main
 ---------------------------------------------------------------
 Choice: List of occupied tables are as follows: 
-Table ID: 0 -Currently seated: 2/2
 Table ID: 1 -Currently seated: 4/4
 Table ID: 2 -Currently seated: 5/6
-Choose table ID to place order (Enter -1 to terminate process): 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
-Enter Staff's ID: Add Order Item type?
-1. Ala Carte
-2. Promotion Package
-3. Terminate
-Choice:-------------AlaCartes-------------
-
-Main courses-----------------
-**No main courses**
-Drinks-----------------------
-AlaCarte Id: 2
-Name: Large soft drink
-Price: 2.5
-Description: 12 oz
-
-Desserts---------------------
-AlaCarte Id: 1
-Name: Fried ice cream
-Price: 5.9
-Description: Ice cream deep fried
-
-AlaCarte Id: 3
-Name: Lobster ice cream
-Price: 3.5
-Description: Buttery lobster meets buttery vanilla in this classic concoction.
-
-----------------------------------
-
-Enter AlaCarte ID to add: Enter quantity: Add Order Item type?
-1. Ala Carte
-2. Promotion Package
-3. Terminate
-Choice:------------------------Order Options---------------------------
+Choose table ID to place order (Enter -1 to terminate process): Invalid Table ID
+------------------------Order Options---------------------------
+(1) Create Order
+(2) Remove Order
+(3) View specific Order
+(4) View all Orders
+(5) Edit Orders
+(6) Back to RRPSS main
+---------------------------------------------------------------
+Choice: Invalid Command.
+------------------------Order Options---------------------------
 (1) Create Order
 (2) Remove Order
 (3) View specific Order
@@ -1472,7 +1438,28 @@ Choice:------------------------Order Options---------------------------
 (6) Back to RRPSS main
 ---------------------------------------------------------------
 Choice: List of occupied tables are as follows: 
-Table ID: 0 -Currently seated: 2/2
+Table ID: 1 -Currently seated: 4/4
+Table ID: 2 -Currently seated: 5/6
+Choose table ID to place order (Enter -1 to terminate process): 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
+Enter Staff's ID: Invalid Staff ID
+------------------------Order Options---------------------------
+(1) Create Order
+(2) Remove Order
+(3) View specific Order
+(4) View all Orders
+(5) Edit Orders
+(6) Back to RRPSS main
+---------------------------------------------------------------
+Choice: No orders to print
+------------------------Order Options---------------------------
+(1) Create Order
+(2) Remove Order
+(3) View specific Order
+(4) View all Orders
+(5) Edit Orders
+(6) Back to RRPSS main
+---------------------------------------------------------------
+Choice: List of occupied tables are as follows: 
 Table ID: 1 -Currently seated: 4/4
 Table ID: 2 -Currently seated: 5/6
 Choose table ID to place order (Enter -1 to terminate process): 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
@@ -1516,10 +1503,6 @@ Choice:------------------------Order Options---------------------------
 (6) Back to RRPSS main
 ---------------------------------------------------------------
 Choice: -----------------------------------------------------
-Order for Table ID: 0
-1 - Large soft drink		2.5
-Current Total for Table ID-0 exclude GST: 2.50 SGD
------------------------------------------------------
 Order for Table ID: 2
 1 - Large soft drink		2.5
 Current Total for Table ID-2 exclude GST: 2.50 SGD
@@ -1545,21 +1528,9 @@ Choice: -----------------------RRPSS MAIN MENU-------------------------
 (10) Exit
 ---------------------------------------------------------------
 Choice: List of occupied tables are as follows: 
-Table ID: 0 -Currently seated: 2/2
 Table ID: 1 -Currently seated: 4/4
 Table ID: 2 -Currently seated: 5/6
 Choose table ID for payment (Enter -1 to terminate process): 
-Are you a member?: (True/False) 
-false
-----------------Invoice----------------
----------------------------------------
-1 - Large soft drink		2.5
----------------------------------------
-Sub Total: 2.50 SGD
-7-percent GST: 0.18 SGD
-Total: 2.68 SGD
------Thank you for dining with us!-----
-Order for table ID 0 paid and removed
 -----------------------RRPSS MAIN MENU-------------------------
 (1) Menu options
 (2) Staff options
@@ -1572,216 +1543,4 @@ Order for table ID 0 paid and removed
 (9) Generate Total Revenue Report
 (10) Exit
 ---------------------------------------------------------------
-Choice: List of occupied tables are as follows: 
-Table ID: 1 -Currently seated: 4/4
-Table ID: 2 -Currently seated: 5/6
-Choose table ID for payment (Enter -1 to terminate process): 
-Are you a member?: (True/False) 
-true
-Member name: Member contact number: ----------------Invoice----------------
----------------------------------------
-1 - Large soft drink		2.5
----------------------------------------
-Sub Total: 2.50 SGD
-7-percent GST: 0.18 SGD
-Total: 2.54 SGD
------Thank you for dining with us!-----
-Order for table ID 2 paid and removed
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: ------------------------Table Options---------------------------
-(1) Add Tables into Restaurant
-(2) Remove Tables from Restaurant
-(3) View all Tables
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: (1) View all Tables
-(2) View available Tables only
-Choice: 1
-1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
-2. Table ID: 1 -Status: OCCUPIED -Current Pax: 4/4
-3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
-------------------------Table Options---------------------------
-(1) Add Tables into Restaurant
-(2) Remove Tables from Restaurant
-(3) View all Tables
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: -----------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: Reservation? (True/False): How many pax?: List of available tables for 2 or more pax are as follows: 
-Table ID: 0 -Table Size: 2
-Table ID: 2 -Table Size: 6
-Choose table ID to seat customer? (Enter invalid choice to terminate process): 
-Customer Seated at Table 0
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: ------------------------Order Options---------------------------
-(1) Create Order
-(2) Remove Order
-(3) View specific Order
-(4) View all Orders
-(5) Edit Orders
-(6) Back to RRPSS main
----------------------------------------------------------------
-Choice: List of occupied tables are as follows: 
-Table ID: 0 -Currently seated: 2/2
-Table ID: 1 -Currently seated: 4/4
-Choose table ID to place order (Enter -1 to terminate process): 1. francis -Gender: Male -Staff ID: 0 -Job Title: Manager
-Enter Staff's ID: Add Order Item type?
-1. Ala Carte
-2. Promotion Package
-3. Terminate
-Choice:----------PromotionPackages----------
-
-Promotion Package Id: 1
-Name: Seafood combo
-Price: 9.9
-Description: Taste the sea with our new combo!
-Package contains:
-Package Items:
-Id  Quantity_and_Name
-1   1xFried ice cream
-2   1xLarge soft drink
-3   1xLobster ice cream
-
-Promotion Package Id: 2
-Name: Seafood Buddy combo
-Price: 18.5
-Description: Great seafood deal for you and a buddy!
-Package contains:
-Package Items:
-Id  Quantity_and_Name
-1   3xFried ice cream
-2   2xLarge soft drink
-3   2xLobster ice cream
--------------------------------------
-
-Enter Package ID to add: Enter quantity: Add Order Item type?
-1. Ala Carte
-2. Promotion Package
-3. Terminate
-Choice:------------------------Order Options---------------------------
-(1) Create Order
-(2) Remove Order
-(3) View specific Order
-(4) View all Orders
-(5) Edit Orders
-(6) Back to RRPSS main
----------------------------------------------------------------
-Choice: -----------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: List of occupied tables are as follows: 
-Table ID: 0 -Currently seated: 2/2
-Table ID: 1 -Currently seated: 4/4
-Choose table ID for payment (Enter -1 to terminate process): 
-Are you a member?: (True/False) 
-false
-----------------Invoice----------------
----------------------------------------
-3 - Seafood Buddy combo		55.5
----------------------------------------
-Sub Total: 55.50 SGD
-7-percent GST: 3.89 SGD
-Total: 59.39 SGD
------Thank you for dining with us!-----
-Order for table ID 0 paid and removed
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: Print orders by period: 
-(1) Day
-(2) Month
-Choice: Day (Sunday=1 to Saturday=7): 
------------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: ------------------------Table Options---------------------------
-(1) Add Tables into Restaurant
-(2) Remove Tables from Restaurant
-(3) View all Tables
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: (1) View all Tables
-(2) View available Tables only
-Choice: 1
-1. Table ID: 0 -Status: AVAILABLE -Current Pax: 0/2
-2. Table ID: 1 -Status: OCCUPIED -Current Pax: 4/4
-3. Table ID: 2 -Status: AVAILABLE -Current Pax: 0/6
-------------------------Table Options---------------------------
-(1) Add Tables into Restaurant
-(2) Remove Tables from Restaurant
-(3) View all Tables
-(4) Back to RRPSS main
----------------------------------------------------------------
-Choice: -----------------------RRPSS MAIN MENU-------------------------
-(1) Menu options
-(2) Staff options
-(3) Table options
-(4) Member options
-(5) Order options
-(6) Reservation options
-(7) Seat customer
-(8) Payment
-(9) Generate Total Revenue Report
-(10) Exit
----------------------------------------------------------------
-Choice: Program terminating ...
+Choice: 
