@@ -353,6 +353,17 @@ public class Restaurant {
 			}
 		}
 		
+		//check whether the reservation is made +30min in advance and if its not, check if table available
+		Calendar checkForAdvance = (Calendar) cal.clone();
+		checkForAdvance.add(Calendar.MINUTE, 30);
+		for(int i=0;i<tables.size();i++) {
+			if(tables.get(i).getTableID() == resTableID) {
+				if(tables.get(i).getStatus() != Status.AVAILABLE && reservedForTime.before(checkForAdvance)){
+					System.out.println("Reservation on occupied tables must be booked 30min in advance! ");
+					return;
+				}
+			}
+		}
 		//check for clash
 		for(int i=0;i<currentReservations.size();i++) {
 			if(currentReservations.get(i).getTableReserved() == resTableID){
