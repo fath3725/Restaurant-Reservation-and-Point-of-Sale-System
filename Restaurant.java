@@ -345,6 +345,7 @@ public class Restaurant {
 		int resTableID = sc.nextInt();
 		for(int i=0;i<tables.size();i++) {
 			if(tables.get(i).getTableID() == resTableID) {
+				found = true;
 				if(tables.get(i).getTableSize()<noOfPax) {
 					System.out.println("This table has size < "+noOfPax);
 					return;
