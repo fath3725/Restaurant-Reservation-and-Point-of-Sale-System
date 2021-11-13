@@ -367,8 +367,10 @@ public class Restaurant {
 		System.out.print("Enter table ID selected for reservation: ");
 		int resTableID = sc.nextInt();
 		System.out.println(resTableID);
+		boolean found = false;
 		for(int i=0;i<tables.size();i++) {
 			if(tables.get(i).getTableID() == resTableID) {
+				found = true;
 				if(tables.get(i).getTableSize()<noOfPax) {
 					System.out.println("This table has size < "+noOfPax);
 					return;
@@ -376,7 +378,10 @@ public class Restaurant {
 				else break;
 			}
 		}
-		
+		if(!found) {
+			System.out.println("Invalid table id");
+			return;
+		}
 		for(int i=0;i<currentReservations.size();i++) {
 			if(currentReservations.get(i).getTableReserved() == resTableID){
 				Calendar oneHrBefore = (Calendar) currentReservations.get(i).getReservedForTime().clone();
