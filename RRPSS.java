@@ -102,7 +102,6 @@ public class RRPSS {
 					System.out.println("(2) View Promotion Packages Menu");
 					System.out.print("Choice: ");
 					int innerChoice = sc.nextInt();
-					System.out.println(innerChoice);
 					switch(innerChoice) {
 						case 1: 
 							restaurant.getMenu().viewAlaCartes();
@@ -177,7 +176,6 @@ public class RRPSS {
 					System.out.println("(2) View available Tables only");
 					System.out.print("Choice: ");
 					int innerChoice = sc.nextInt();
-					System.out.println(innerChoice);
 					switch(innerChoice) {
 						case 1: 
 							restaurant.viewTable();

@@ -330,7 +330,7 @@ public class Restaurant {
 		int month = sc.nextInt();
 		System.out.print("What day do you want the reservation? (Enter 1-30/31): ");
 		int day = sc.nextInt();
-		System.out.println(day);		System.out.print("What time do you want the reservation? (Enter the hour 1-24): ");
+		System.out.print("What time do you want the reservation? (Enter the hour 1-24): ");
 		int hour = sc.nextInt();
 		System.out.print("What time do you want the reservation? (Enter the minutes 1-60): ");
 		int min = sc.nextInt();
@@ -453,7 +453,6 @@ public class Restaurant {
 					System.out.println("Customer Seated at Table "+(tables.get(i)).getTableID());
 					tables.get(i).setStatus(Status.OCCUPIED);
 					tables.get(i).setTablePax(numberOfPeople);
-					
 					return;
 				}
 			}
@@ -491,13 +490,13 @@ public class Restaurant {
 	    Scanner sc = RRPSS.sc;
 	    int temp = printOccupiedTables();
 	    if(temp == 0) {
-			System.out.println("No table to checkout");
-			return;
+				System.out.println("No table to checkout");
+				return;
 	    }
 	    System.out.println("Choose table ID for payment (Enter -1 to terminate process): ");
 	    int choice = sc.nextInt();
 	    if(choice == -1){
-			return;
+				return;
 	    }
 
 	    for(int i=0; i<orders.size(); i++){
