@@ -442,7 +442,7 @@ public class Restaurant {
 			System.out.print("How many pax?: ");
 			int numberOfPeople = sc.nextInt();
 			int check = printAvailableTables(numberOfPeople);
-			if(check == 0) {				
+			if(check == 0) {
 				System.out.println("There is no available table for "+numberOfPeople+" people");
 				return;
 			}
