@@ -517,9 +517,9 @@ public class Restaurant {
 						System.out.println("---------------------------------------");
 						double finalAmt = (orders.get(i)).viewOrder();
 						System.out.println("---------------------------------------");
-						System.out.printf("Sub Total: %.2f\n",finalAmt);
-						System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
-						System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt)*0.95);
+						System.out.printf("Sub Total: %.2f SGD\n",finalAmt);
+						System.out.printf("7-percent GST: %.2f SGD\n",(finalAmt*GST));
+						System.out.printf("Total: %.2f SGD\n",((finalAmt*GST)+finalAmt)*0.95);
 						System.out.println("-----Thank you for dining with us!-----");
 						for(int k=0; k<tables.size(); k++){
 							if(tables.get(k).getTableID() == choice){
@@ -547,9 +547,9 @@ public class Restaurant {
 				System.out.println("---------------------------------------");
 				double finalAmt = (orders.get(i)).viewOrder();
 				System.out.println("---------------------------------------");
-				System.out.printf("Sub Total: %.2f\n",finalAmt);
-				System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
-				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
+				System.out.printf("Sub Total: %.2f SGD\n",finalAmt);
+				System.out.printf("7-percent GST: %.2f SGD\n",(finalAmt*GST));
+				System.out.printf("Total: %.2f SGD\n",((finalAmt*GST)+finalAmt));
 				System.out.println("-----Thank you for dining with us!-----");
 				for(int k=0; k<tables.size(); k++){
 					if(tables.get(k).getTableID() == choice){
@@ -575,9 +575,9 @@ public class Restaurant {
 				System.out.println("---------------------------------------");
 				double finalAmt = (orders.get(i)).viewOrder();
 				System.out.println("---------------------------------------");
-				System.out.printf("Sub Total: %.2f\n",finalAmt);
-				System.out.printf("7-percent GST: %.2f\n",(finalAmt*GST));
-				System.out.printf("Total: %.2f\n",((finalAmt*GST)+finalAmt));
+				System.out.printf("Sub Total: %.2f SGD\n",finalAmt);
+				System.out.printf("7-percent GST: %.2f SGD\n",(finalAmt*GST));
+				System.out.printf("Total: %.2f SGD\n",((finalAmt*GST)+finalAmt));
 				System.out.println("-----Thank you for dining with us!-----");
 				for(int k=0; k<tables.size(); k++){
 					if(tables.get(k).getTableID() == choice){
@@ -706,7 +706,7 @@ public class Restaurant {
 		for(int i=0; i<orders.size(); i++){
 			if(orders.get(i).getOrderTableID() == orderTableID){
 				double finalAmt = orders.get(i).viewOrder();
-				System.out.printf("Current Total exclude GST: %.2f\n", finalAmt);
+				System.out.printf("Current Total exclude GST: %.2f SGD\n", finalAmt);
 				
 				return;
 			}
@@ -725,7 +725,7 @@ public class Restaurant {
 			System.out.println("-----------------------------------------------------");
 			System.out.println("Order for Table ID: "+orders.get(i).getOrderTableID());
 			double finalAmt = orders.get(i).viewOrder();
-			System.out.printf("Current Total for Table ID-"+orders.get(i).getOrderTableID()+" exclude GST: %.2f\n", finalAmt);
+			System.out.printf("Current Total for Table ID-"+orders.get(i).getOrderTableID()+" exclude GST: %.2f SGD\n", finalAmt);
 		}
 		System.out.println();
 	}
@@ -799,10 +799,10 @@ public class Restaurant {
 					if (orderRecord.get(i).getMember()==true)
 						finalAmount*=0.95;
 					finalAmt+=finalAmount;
-					out.printf("Total amount for the order above = %.2f\n", finalAmount);
+					out.printf("Total amount for the order above = %.2f SGD\n", finalAmount);
 				}
 				}
-				out.printf("Total Sales Revenue = %.2f\n", finalAmt*1.07);
+				out.printf("Total Sales Revenue = %.2f SGD\n", finalAmt*1.07);
 				// Close the file.
 				out.close();
 			}
@@ -834,10 +834,10 @@ public class Restaurant {
 					if (orderRecord.get(i).getMember()==true)
 						finalAmount*=0.95;
 					finalAmt+=finalAmount;
-					out.printf("Total amount for the order above = %.2f\n", finalAmount);
+					out.printf("Total amount for the order above = %.2f SGD\n", finalAmount);
 				}
 			}
-			out.printf("Total Sales Revenue = %.2f\n", finalAmt*1.07);
+			out.printf("Total Sales Revenue = %.2f SGD\n", finalAmt*1.07);
 			// Close the file.
 			out.close();
 		}

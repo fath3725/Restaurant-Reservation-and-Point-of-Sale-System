@@ -34,7 +34,7 @@ public class Menu {
 			System.out.println("No AlaCartes in menu at the moment");
 			return;
 		}
-		System.out.println("-------------Menu AlaCartes-------------");
+		System.out.println("-------------AlaCartes-------------");
 		System.out.println();
 		boolean mainc=false,drink=false,dessert=false;
 		System.out.println("Main courses-----------------");
@@ -48,7 +48,7 @@ public class Menu {
 				System.out.println();
 			}
 		}
-		if (!mainc)System.out.println("**No main courses in menu**");
+		if (!mainc)System.out.println("**No main courses**");
 		System.out.println("Drinks-----------------------");
 		for (int i=0; i<alaCartes.size(); i++){
 			if (alaCartes.get(i).getCategory()==AlaCarteCategory.DRINK){
@@ -60,7 +60,7 @@ public class Menu {
 				System.out.println();
 			}
 		}
-		if (!drink)System.out.println("**No drinks in menu**");
+		if (!drink)System.out.println("**No drinks**");
 		System.out.println("Desserts---------------------");
 		for (int i=0; i<alaCartes.size(); i++){
 			if (alaCartes.get(i).getCategory()==AlaCarteCategory.DESSERT){
@@ -72,7 +72,7 @@ public class Menu {
 				System.out.println();
 			}
 		}
-		if (!dessert)System.out.println("**No desserts in menu :(**");
+		if (!dessert)System.out.println("**No desserts :(**");
 		System.out.println("----------------------------------");
 		System.out.println();
 	}
@@ -81,10 +81,10 @@ public class Menu {
 	 */
 	public void viewPromotionPackages(){
 		if (promotionPackages.size()==0){
-			System.out.println("No PromotionPackages in menu at the moment");
+			System.out.println("No PromotionPackages at the moment");
 			return;
 		}
-		System.out.println("----------Menu PromotionPackages----------");
+		System.out.println("----------PromotionPackages----------");
 		for (int i=0; i<promotionPackages.size(); i++){
 			System.out.println();
 			System.out.println("Promotion Package Id: "+promotionPackages.get(i).getId());
@@ -161,12 +161,12 @@ public class Menu {
 			int type = sc.nextInt();
 			if (type==1){
 				if (alaCartes.size()==0){
-					System.out.println("No alacartes in menu to remove");
+					System.out.println("No alacartes to remove");
 					continue;
 				}
 				while(true){
 					if (alaCartes.size()==0){
-						System.out.println("No alacartes in menu to remove");
+						System.out.println("No alacartes to remove");
 						break;
 					}
 					viewAlaCartes();
@@ -198,12 +198,12 @@ public class Menu {
 				}
 			} else if (type==2){
 				if (promotionPackages.size()==0){
-					System.out.println("No promotion packages in menu to remove");
+					System.out.println("No promotion packages to remove");
 					continue;
 				}
 				while(true){
 					if (promotionPackages.size()==0){
-						System.out.println("No promotion packages in menu to remove");
+						System.out.println("No promotion packages to remove");
 						break;
 					}
 					viewPromotionPackages();

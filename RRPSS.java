@@ -4,7 +4,7 @@ import java.util.*;
 public class RRPSS {
 	public static Scanner sc;
 	public static void main(String[] args){
-		//start readwrite
+		// start readwrite
 		try {
 			PrintStream o = new PrintStream(new File("Output.txt"));
 			System.setOut(o);
