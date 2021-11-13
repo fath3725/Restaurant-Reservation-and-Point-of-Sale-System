@@ -353,18 +353,19 @@ public class Restaurant {
 			}
 		}
 		
+		//check for clash
 		for(int i=0;i<currentReservations.size();i++) {
 			if(currentReservations.get(i).getTableReserved() == resTableID){
 				Calendar oneHrBefore = (Calendar) currentReservations.get(i).getReservedForTime().clone();
 				oneHrBefore.add(Calendar.HOUR, -1);
 				Calendar oneHrAfter = (Calendar) currentReservations.get(i).getReservedForTime().clone();
 				oneHrAfter.add(Calendar.HOUR, 1);
-				if(currentReservations.get(i).getReservedForTime().after(oneHrBefore) && currentReservations.get(i).getReservedForTime().before(oneHrAfter)){
-					continue;
-				}
-				else{
+				if(reservedForTime.after(oneHrBefore) && reservedForTime.before(oneHrAfter)){
 					System.out.println("There is already a reservation for that table ID in the same period");
 					return;
+				}
+				else{
+					continue;
 				}
 			}
 		}
