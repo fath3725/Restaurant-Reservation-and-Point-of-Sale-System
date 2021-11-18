@@ -53,4 +53,4 @@ Order class inherits from the Menu class and it overrides the addItem and editIt
 ## UML Sequence Diagram 
 ![photo1636716829](https://user-images.githubusercontent.com/74095679/142368915-c96d4524-7fd0-4c47-a839-4c3f0d22139f.jpeg)
 ---
-Please refer to our Test Cases file for the test cases that were run.
+Please refer to our Test Cases file for the test cases that were run. Thank you for dropping by.
