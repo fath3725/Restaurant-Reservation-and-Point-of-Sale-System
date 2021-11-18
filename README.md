@@ -21,23 +21,23 @@ When using the app for the first time, the restaurant has to be set up. So, numb
 During the design phase of our RRPSS application, examples of how real life restaurant systems would work were considered. Hence, we believe that our application is close to how a real world system would work based on the given required functional requirements. To compensate for our inexperience in how restaurants work, we had to make assumptions regarding certain aspects of the application.
 
 ### Use of Design Principles
-To achieve an application with good design, it should have loose coupling and high cohesion between the classes, which we aimed for. We identified classes and entities while still considering its reusability, extensibility and maintainability.The principles we used in our design are the Single Responsibility Principle (SRP) and Open-Closed Principle (OCP).
+To achieve an application with good design, it should have loose coupling and high cohesion between the classes, which we aimed for. We identified classes and entities while still considering its reusability, extensibility and maintainability.The principles we used in our design are the **Single Responsibility Principle (SRP)** and **Open-Closed Principle (OCP).**
 
-To achieve the **Single Responsibility Principle**, a single class should have a single responsibility as this would make changes easier to handle. As this reduces the number of classes that have to be modified in the event any changes have to be done later on. This enables us to achieve the good design principle of having loose coupling. This can be seen in our Table class which only has one responsibility. 
+To achieve the ***Single Responsibility Principle***, a single class should have a single responsibility as this would make changes easier to handle. As this reduces the number of classes that have to be modified in the event any changes have to be done later on. This enables us to achieve the good design principle of having loose coupling. This can be seen in our Table class which only has one responsibility. 
 
-For the **Open-Closed Principle** to be achieved “a module should be open for extension but closed for modification”. This describes that abstraction is key to OCP, and that a class may allow for inheritance but its methods are kept the same so that existing classes that inherit from it would not be disrupted. This principle is applied in our Person class where we can change what the modules Member and Staff do, but without changing the inherited functions.
+For the ***Open-Closed Principle*** to be achieved “a module should be open for extension but closed for modification”. This describes that abstraction is key to OCP, and that a class may allow for inheritance but its methods are kept the same so that existing classes that inherit from it would not be disrupted. This principle is applied in our Person class where we can change what the modules Member and Staff do, but without changing the inherited functions.
 
 ### Use of Object Oriented Programming Concepts
-**Encapsulation** is used for almost every class as attributes and data should be hidden to protect the data of the restaurant, its employees and its customers.
+***Encapsulation*** is used for almost every class as attributes and data should be hidden to protect the data of the restaurant, its employees and its customers.
 
-**Inheritance** is used in these following instances:
+***Inheritance*** is used in these following instances:
 MenuItem class serves as a parent class for Alacarte and PromotionPackage. 
 Person class serves as base class for both Staff and Member.
 
-**Polymorphism** is used in this instance:
+***Polymorphism*** is used in this instance:
 Order class inherits from the Menu class and it overrides the addItem and editItem functions.
 
-**Abstraction** is ***NOT*** used.
+***Abstraction*** is **NOT** used.
 
 ## Assumptions Made
   1. The table will be marked as reserved from 1 hour before the reservation timing till 0.5 hours after. For example, if a reservation is made at 12pm, the table would be        marked as reserved from 11am till 12.30pm to keep the table empty. If at 12.30pm, the customer has not arrived, the reservation will be cancelled.
